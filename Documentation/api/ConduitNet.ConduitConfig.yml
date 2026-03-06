@@ -1,0 +1,800 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.ConduitConfig
+  commentId: T:ConduitNet.ConduitConfig
+  id: ConduitConfig
+  parent: ConduitNet
+  children:
+  - ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])
+  - ConduitNet.ConduitConfig.DebugLog
+  - ConduitNet.ConduitConfig.HealthPath
+  - ConduitNet.ConduitConfig.JoinTimeout
+  - ConduitNet.ConduitConfig.LobbyIdHeader
+  - ConduitNet.ConduitConfig.ServerUrl
+  - ConduitNet.ConduitConfig.StunServers
+  - ConduitNet.ConduitConfig.SyncUserPath
+  - ConduitNet.ConduitConfig.TurnServers
+  - ConduitNet.ConduitConfig.UseHttps
+  - ConduitNet.ConduitConfig.UseWss
+  - ConduitNet.ConduitConfig.UserIdHeader
+  langs:
+  - csharp
+  - vb
+  name: ConduitConfig
+  nameWithType: ConduitConfig
+  fullName: ConduitNet.ConduitConfig
+  type: Class
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ConduitConfig
+    path: ../Runtime/Data.cs
+    startLine: 91
+  namespace: ConduitNet
+  summary: >-
+    Global configuration for Conduit. Must be set before calling Init.
+
+    'serverUrl' and 'stunServers' are required.
+  example: []
+  syntax:
+    content: public class ConduitConfig
+    content.vb: Public Class ConduitConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConduitNet.ConduitConfig.ServerUrl
+  commentId: P:ConduitNet.ConduitConfig.ServerUrl
+  id: ServerUrl
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: ServerUrl
+  nameWithType: ConduitConfig.ServerUrl
+  fullName: ConduitNet.ConduitConfig.ServerUrl
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ServerUrl
+    path: ../Runtime/Data.cs
+    startLine: 93
+  namespace: ConduitNet
+  summary: URL of the signaling/API server.
+  example: []
+  syntax:
+    content: public string ServerUrl { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ServerUrl As String
+  overload: ConduitNet.ConduitConfig.ServerUrl*
+- uid: ConduitNet.ConduitConfig.StunServers
+  commentId: P:ConduitNet.ConduitConfig.StunServers
+  id: StunServers
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: StunServers
+  nameWithType: ConduitConfig.StunServers
+  fullName: ConduitNet.ConduitConfig.StunServers
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: StunServers
+    path: ../Runtime/Data.cs
+    startLine: 95
+  namespace: ConduitNet
+  summary: List of STUN servers (required).
+  example: []
+  syntax:
+    content: public StunServer[] StunServers { get; }
+    parameters: []
+    return:
+      type: ConduitNet.StunServer[]
+    content.vb: Public ReadOnly Property StunServers As StunServer()
+  overload: ConduitNet.ConduitConfig.StunServers*
+- uid: ConduitNet.ConduitConfig.TurnServers
+  commentId: P:ConduitNet.ConduitConfig.TurnServers
+  id: TurnServers
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: TurnServers
+  nameWithType: ConduitConfig.TurnServers
+  fullName: ConduitNet.ConduitConfig.TurnServers
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: TurnServers
+    path: ../Runtime/Data.cs
+    startLine: 97
+  namespace: ConduitNet
+  summary: List of TURN servers (optional).
+  example: []
+  syntax:
+    content: public TurnServer[] TurnServers { get; }
+    parameters: []
+    return:
+      type: ConduitNet.TurnServer[]
+    content.vb: Public ReadOnly Property TurnServers As TurnServer()
+  overload: ConduitNet.ConduitConfig.TurnServers*
+- uid: ConduitNet.ConduitConfig.UseHttps
+  commentId: P:ConduitNet.ConduitConfig.UseHttps
+  id: UseHttps
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: UseHttps
+  nameWithType: ConduitConfig.UseHttps
+  fullName: ConduitNet.ConduitConfig.UseHttps
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UseHttps
+    path: ../Runtime/Data.cs
+    startLine: 100
+  namespace: ConduitNet
+  summary: Whether to use HTTPS for API requests.
+  example: []
+  syntax:
+    content: public bool UseHttps { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseHttps As Boolean
+  overload: ConduitNet.ConduitConfig.UseHttps*
+- uid: ConduitNet.ConduitConfig.UseWss
+  commentId: P:ConduitNet.ConduitConfig.UseWss
+  id: UseWss
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: UseWss
+  nameWithType: ConduitConfig.UseWss
+  fullName: ConduitNet.ConduitConfig.UseWss
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UseWss
+    path: ../Runtime/Data.cs
+    startLine: 102
+  namespace: ConduitNet
+  summary: Whether to use WSS for WebSocket connections.
+  example: []
+  syntax:
+    content: public bool UseWss { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseWss As Boolean
+  overload: ConduitNet.ConduitConfig.UseWss*
+- uid: ConduitNet.ConduitConfig.DebugLog
+  commentId: P:ConduitNet.ConduitConfig.DebugLog
+  id: DebugLog
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: DebugLog
+  nameWithType: ConduitConfig.DebugLog
+  fullName: ConduitNet.ConduitConfig.DebugLog
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: DebugLog
+    path: ../Runtime/Data.cs
+    startLine: 104
+  namespace: ConduitNet
+  summary: Enable debug logging.
+  example: []
+  syntax:
+    content: public bool DebugLog { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DebugLog As Boolean
+  overload: ConduitNet.ConduitConfig.DebugLog*
+- uid: ConduitNet.ConduitConfig.UserIdHeader
+  commentId: P:ConduitNet.ConduitConfig.UserIdHeader
+  id: UserIdHeader
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: UserIdHeader
+  nameWithType: ConduitConfig.UserIdHeader
+  fullName: ConduitNet.ConduitConfig.UserIdHeader
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UserIdHeader
+    path: ../Runtime/Data.cs
+    startLine: 106
+  namespace: ConduitNet
+  summary: Header key for user ID.
+  example: []
+  syntax:
+    content: public string UserIdHeader { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserIdHeader As String
+  overload: ConduitNet.ConduitConfig.UserIdHeader*
+- uid: ConduitNet.ConduitConfig.LobbyIdHeader
+  commentId: P:ConduitNet.ConduitConfig.LobbyIdHeader
+  id: LobbyIdHeader
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: LobbyIdHeader
+  nameWithType: ConduitConfig.LobbyIdHeader
+  fullName: ConduitNet.ConduitConfig.LobbyIdHeader
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: LobbyIdHeader
+    path: ../Runtime/Data.cs
+    startLine: 108
+  namespace: ConduitNet
+  summary: Header key for lobby ID.
+  example: []
+  syntax:
+    content: public string LobbyIdHeader { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LobbyIdHeader As String
+  overload: ConduitNet.ConduitConfig.LobbyIdHeader*
+- uid: ConduitNet.ConduitConfig.JoinTimeout
+  commentId: P:ConduitNet.ConduitConfig.JoinTimeout
+  id: JoinTimeout
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: JoinTimeout
+  nameWithType: ConduitConfig.JoinTimeout
+  fullName: ConduitNet.ConduitConfig.JoinTimeout
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: JoinTimeout
+    path: ../Runtime/Data.cs
+    startLine: 110
+  namespace: ConduitNet
+  summary: Lobby join timeout in seconds.
+  example: []
+  syntax:
+    content: public float JoinTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property JoinTimeout As Single
+  overload: ConduitNet.ConduitConfig.JoinTimeout*
+- uid: ConduitNet.ConduitConfig.SyncUserPath
+  commentId: P:ConduitNet.ConduitConfig.SyncUserPath
+  id: SyncUserPath
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: SyncUserPath
+  nameWithType: ConduitConfig.SyncUserPath
+  fullName: ConduitNet.ConduitConfig.SyncUserPath
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SyncUserPath
+    path: ../Runtime/Data.cs
+    startLine: 112
+  namespace: ConduitNet
+  summary: API path for syncing user. {0} is API URL, {1} is user ID.
+  example: []
+  syntax:
+    content: public string SyncUserPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SyncUserPath As String
+  overload: ConduitNet.ConduitConfig.SyncUserPath*
+- uid: ConduitNet.ConduitConfig.HealthPath
+  commentId: P:ConduitNet.ConduitConfig.HealthPath
+  id: HealthPath
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: HealthPath
+  nameWithType: ConduitConfig.HealthPath
+  fullName: ConduitNet.ConduitConfig.HealthPath
+  type: Property
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: HealthPath
+    path: ../Runtime/Data.cs
+    startLine: 114
+  namespace: ConduitNet
+  summary: API path for health check. {0} is API URL.
+  example: []
+  syntax:
+    content: public string HealthPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HealthPath As String
+  overload: ConduitNet.ConduitConfig.HealthPath*
+- uid: ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])
+  commentId: M:ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])
+  id: '#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])'
+  parent: ConduitNet.ConduitConfig
+  langs:
+  - csharp
+  - vb
+  name: ConduitConfig(string, StunServer[], TurnServer[])
+  nameWithType: ConduitConfig.ConduitConfig(string, StunServer[], TurnServer[])
+  fullName: ConduitNet.ConduitConfig.ConduitConfig(string, ConduitNet.StunServer[], ConduitNet.TurnServer[])
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: .ctor
+    path: ../Runtime/Data.cs
+    startLine: 116
+  namespace: ConduitNet
+  syntax:
+    content: public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null)
+    parameters:
+    - id: serverUrl
+      type: System.String
+    - id: stunServers
+      type: ConduitNet.StunServer[]
+    - id: turnServers
+      type: ConduitNet.TurnServer[]
+    content.vb: Public Sub New(serverUrl As String, stunServers As StunServer(), turnServers As TurnServer() = Nothing)
+  overload: ConduitNet.ConduitConfig.#ctor*
+  nameWithType.vb: ConduitConfig.New(String, StunServer(), TurnServer())
+  fullName.vb: ConduitNet.ConduitConfig.New(String, ConduitNet.StunServer(), ConduitNet.TurnServer())
+  name.vb: New(String, StunServer(), TurnServer())
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.ConduitConfig.ServerUrl*
+  commentId: Overload:ConduitNet.ConduitConfig.ServerUrl
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_ServerUrl
+  name: ServerUrl
+  nameWithType: ConduitConfig.ServerUrl
+  fullName: ConduitNet.ConduitConfig.ServerUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConduitNet.ConduitConfig.StunServers*
+  commentId: Overload:ConduitNet.ConduitConfig.StunServers
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_StunServers
+  name: StunServers
+  nameWithType: ConduitConfig.StunServers
+  fullName: ConduitNet.ConduitConfig.StunServers
+- uid: ConduitNet.StunServer[]
+  isExternal: true
+  href: ConduitNet.StunServer.html
+  name: StunServer[]
+  nameWithType: StunServer[]
+  fullName: ConduitNet.StunServer[]
+  nameWithType.vb: StunServer()
+  fullName.vb: ConduitNet.StunServer()
+  name.vb: StunServer()
+  spec.csharp:
+  - uid: ConduitNet.StunServer
+    name: StunServer
+    href: ConduitNet.StunServer.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: ConduitNet.StunServer
+    name: StunServer
+    href: ConduitNet.StunServer.html
+  - name: (
+  - name: )
+- uid: ConduitNet.ConduitConfig.TurnServers*
+  commentId: Overload:ConduitNet.ConduitConfig.TurnServers
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_TurnServers
+  name: TurnServers
+  nameWithType: ConduitConfig.TurnServers
+  fullName: ConduitNet.ConduitConfig.TurnServers
+- uid: ConduitNet.TurnServer[]
+  isExternal: true
+  href: ConduitNet.TurnServer.html
+  name: TurnServer[]
+  nameWithType: TurnServer[]
+  fullName: ConduitNet.TurnServer[]
+  nameWithType.vb: TurnServer()
+  fullName.vb: ConduitNet.TurnServer()
+  name.vb: TurnServer()
+  spec.csharp:
+  - uid: ConduitNet.TurnServer
+    name: TurnServer
+    href: ConduitNet.TurnServer.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: ConduitNet.TurnServer
+    name: TurnServer
+    href: ConduitNet.TurnServer.html
+  - name: (
+  - name: )
+- uid: ConduitNet.ConduitConfig.UseHttps*
+  commentId: Overload:ConduitNet.ConduitConfig.UseHttps
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseHttps
+  name: UseHttps
+  nameWithType: ConduitConfig.UseHttps
+  fullName: ConduitNet.ConduitConfig.UseHttps
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ConduitNet.ConduitConfig.UseWss*
+  commentId: Overload:ConduitNet.ConduitConfig.UseWss
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseWss
+  name: UseWss
+  nameWithType: ConduitConfig.UseWss
+  fullName: ConduitNet.ConduitConfig.UseWss
+- uid: ConduitNet.ConduitConfig.DebugLog*
+  commentId: Overload:ConduitNet.ConduitConfig.DebugLog
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_DebugLog
+  name: DebugLog
+  nameWithType: ConduitConfig.DebugLog
+  fullName: ConduitNet.ConduitConfig.DebugLog
+- uid: ConduitNet.ConduitConfig.UserIdHeader*
+  commentId: Overload:ConduitNet.ConduitConfig.UserIdHeader
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UserIdHeader
+  name: UserIdHeader
+  nameWithType: ConduitConfig.UserIdHeader
+  fullName: ConduitNet.ConduitConfig.UserIdHeader
+- uid: ConduitNet.ConduitConfig.LobbyIdHeader*
+  commentId: Overload:ConduitNet.ConduitConfig.LobbyIdHeader
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_LobbyIdHeader
+  name: LobbyIdHeader
+  nameWithType: ConduitConfig.LobbyIdHeader
+  fullName: ConduitNet.ConduitConfig.LobbyIdHeader
+- uid: ConduitNet.ConduitConfig.JoinTimeout*
+  commentId: Overload:ConduitNet.ConduitConfig.JoinTimeout
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_JoinTimeout
+  name: JoinTimeout
+  nameWithType: ConduitConfig.JoinTimeout
+  fullName: ConduitNet.ConduitConfig.JoinTimeout
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ConduitNet.ConduitConfig.SyncUserPath*
+  commentId: Overload:ConduitNet.ConduitConfig.SyncUserPath
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_SyncUserPath
+  name: SyncUserPath
+  nameWithType: ConduitConfig.SyncUserPath
+  fullName: ConduitNet.ConduitConfig.SyncUserPath
+- uid: ConduitNet.ConduitConfig.HealthPath*
+  commentId: Overload:ConduitNet.ConduitConfig.HealthPath
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_HealthPath
+  name: HealthPath
+  nameWithType: ConduitConfig.HealthPath
+  fullName: ConduitNet.ConduitConfig.HealthPath
+- uid: ConduitNet.ConduitConfig.#ctor*
+  commentId: Overload:ConduitNet.ConduitConfig.#ctor
+  href: ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig__ctor_System_String_ConduitNet_StunServer___ConduitNet_TurnServer___
+  name: ConduitConfig
+  nameWithType: ConduitConfig.ConduitConfig
+  fullName: ConduitNet.ConduitConfig.ConduitConfig
+  nameWithType.vb: ConduitConfig.New
+  fullName.vb: ConduitNet.ConduitConfig.New
+  name.vb: New

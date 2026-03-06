@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.SignalHandler
+  commentId: T:ConduitNet.SignalHandler
+  id: SignalHandler
+  parent: ConduitNet
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SignalHandler
+  nameWithType: SignalHandler
+  fullName: ConduitNet.SignalHandler
+  type: Delegate
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SignalHandler
+    path: ../Runtime/Data.cs
+    startLine: 25
+  namespace: ConduitNet
+  summary: Handler for receiving named signals.
+  example: []
+  syntax:
+    content: public delegate void SignalHandler(IUser sender, long timestamp, SendOption option)
+    parameters:
+    - id: sender
+      type: ConduitNet.IUser
+    - id: timestamp
+      type: System.Int64
+    - id: option
+      type: ConduitNet.SendOption
+    content.vb: Public Delegate Sub SignalHandler(sender As IUser, timestamp As Long, [option] As SendOption)
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

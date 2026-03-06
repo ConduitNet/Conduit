@@ -1,12 +1,13 @@
 {
-  "name": "dev.jiunkong.litep2pnet",
-  "rootNamespace": "LiteP2PNet",
+  "name": "dev.jiunkong.conduit",
+  "rootNamespace": "ConduitNet",
   "autoReferenced": true,
   "overrideReferences": false,
   "references": [
     "Unity.WebRTC",
     "endel.nativewebsocket",
-    "MessagePack.Unity"
+    "MessagePack.Unity",
+    "dev.jiunkong.conduit.shared"
   ],
   "precompiledReferences": []
 }

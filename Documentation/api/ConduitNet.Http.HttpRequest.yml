@@ -1,0 +1,1411 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Http.HttpRequest
+  commentId: T:ConduitNet.Http.HttpRequest
+  id: HttpRequest
+  parent: ConduitNet.Http
+  children:
+  - ConduitNet.Http.HttpRequest.Delete(System.String)
+  - ConduitNet.Http.HttpRequest.Get(System.String)
+  - ConduitNet.Http.HttpRequest.Patch(System.String)
+  - ConduitNet.Http.HttpRequest.Post(System.String)
+  - ConduitNet.Http.HttpRequest.Put(System.String)
+  - ConduitNet.Http.HttpRequest.Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  - ConduitNet.Http.HttpRequest.Send``1(System.Action{``0},System.Action{System.String})
+  - ConduitNet.Http.HttpRequest.SetBasicAuth(System.String,System.String)
+  - ConduitNet.Http.HttpRequest.SetBearerToken(System.String)
+  - ConduitNet.Http.HttpRequest.SetBody(System.Byte[],System.String)
+  - ConduitNet.Http.HttpRequest.SetBody(System.Object)
+  - ConduitNet.Http.HttpRequest.SetBody(System.String,System.String)
+  - ConduitNet.Http.HttpRequest.SetContentType(System.String)
+  - ConduitNet.Http.HttpRequest.SetHeader(System.String,System.String)
+  - ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  - ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  - ConduitNet.Http.HttpRequest.SetTimeout(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: HttpRequest
+  nameWithType: HttpRequest
+  fullName: ConduitNet.Http.HttpRequest
+  type: Class
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: HttpRequest
+    path: ../Runtime/HttpRequest.cs
+    startLine: 23
+  namespace: ConduitNet.Http
+  summary: >-
+    Fluent builder for UnityWebRequest.
+
+
+    <pre><code class="lang-csharp">yield return HttpRequest.Get("https://api.example.com/users")
+        .SetHeader("X-Custom", "value")
+        .SetBearerToken(token)
+        .SetQueryParams(new() { ["page"] = 1, ["limit"] = 10 })
+        .Send(onSuccess: res =&gt; Debug.Log(res.Text),
+              onError: err =&gt; Debug.LogError(err));</code></pre>
+  example: []
+  syntax:
+    content: public class HttpRequest
+    content.vb: Public Class HttpRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConduitNet.Http.HttpRequest.Get(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.Get(System.String)
+  id: Get(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Get(string)
+  nameWithType: HttpRequest.Get(string)
+  fullName: ConduitNet.Http.HttpRequest.Get(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Get
+    path: ../Runtime/HttpRequest.cs
+    startLine: 40
+  namespace: ConduitNet.Http
+  summary: Creates a GET request.
+  example: []
+  syntax:
+    content: public static HttpRequest Get(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Shared Function [Get](url As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.Get*
+  nameWithType.vb: HttpRequest.Get(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.Get(String)
+  name.vb: Get(String)
+- uid: ConduitNet.Http.HttpRequest.Post(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.Post(System.String)
+  id: Post(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Post(string)
+  nameWithType: HttpRequest.Post(string)
+  fullName: ConduitNet.Http.HttpRequest.Post(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Post
+    path: ../Runtime/HttpRequest.cs
+    startLine: 42
+  namespace: ConduitNet.Http
+  summary: Creates a POST request.
+  example: []
+  syntax:
+    content: public static HttpRequest Post(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Shared Function Post(url As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.Post*
+  nameWithType.vb: HttpRequest.Post(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.Post(String)
+  name.vb: Post(String)
+- uid: ConduitNet.Http.HttpRequest.Put(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.Put(System.String)
+  id: Put(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Put(string)
+  nameWithType: HttpRequest.Put(string)
+  fullName: ConduitNet.Http.HttpRequest.Put(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Put
+    path: ../Runtime/HttpRequest.cs
+    startLine: 44
+  namespace: ConduitNet.Http
+  summary: Creates a PUT request.
+  example: []
+  syntax:
+    content: public static HttpRequest Put(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Shared Function Put(url As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.Put*
+  nameWithType.vb: HttpRequest.Put(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.Put(String)
+  name.vb: Put(String)
+- uid: ConduitNet.Http.HttpRequest.Patch(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.Patch(System.String)
+  id: Patch(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Patch(string)
+  nameWithType: HttpRequest.Patch(string)
+  fullName: ConduitNet.Http.HttpRequest.Patch(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Patch
+    path: ../Runtime/HttpRequest.cs
+    startLine: 46
+  namespace: ConduitNet.Http
+  summary: Creates a PATCH request.
+  example: []
+  syntax:
+    content: public static HttpRequest Patch(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Shared Function Patch(url As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.Patch*
+  nameWithType.vb: HttpRequest.Patch(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.Patch(String)
+  name.vb: Patch(String)
+- uid: ConduitNet.Http.HttpRequest.Delete(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.Delete(System.String)
+  id: Delete(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Delete(string)
+  nameWithType: HttpRequest.Delete(string)
+  fullName: ConduitNet.Http.HttpRequest.Delete(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Delete
+    path: ../Runtime/HttpRequest.cs
+    startLine: 48
+  namespace: ConduitNet.Http
+  summary: Creates a DELETE request.
+  example: []
+  syntax:
+    content: public static HttpRequest Delete(string url)
+    parameters:
+    - id: url
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Shared Function Delete(url As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.Delete*
+  nameWithType.vb: HttpRequest.Delete(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.Delete(String)
+  name.vb: Delete(String)
+- uid: ConduitNet.Http.HttpRequest.SetHeader(System.String,System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetHeader(System.String,System.String)
+  id: SetHeader(System.String,System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetHeader(string, string)
+  nameWithType: HttpRequest.SetHeader(string, string)
+  fullName: ConduitNet.Http.HttpRequest.SetHeader(string, string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetHeader
+    path: ../Runtime/HttpRequest.cs
+    startLine: 53
+  namespace: ConduitNet.Http
+  summary: Adds a header to the request.
+  example: []
+  syntax:
+    content: public HttpRequest SetHeader(string key, string value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetHeader(key As String, value As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetHeader*
+  nameWithType.vb: HttpRequest.SetHeader(String, String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetHeader(String, String)
+  name.vb: SetHeader(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  id: SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetHeaders(Dictionary<string, string>)
+  nameWithType: HttpRequest.SetHeaders(Dictionary<string, string>)
+  fullName: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary<string, string>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetHeaders
+    path: ../Runtime/HttpRequest.cs
+    startLine: 59
+  namespace: ConduitNet.Http
+  summary: Adds multiple headers to the request.
+  example: []
+  syntax:
+    content: public HttpRequest SetHeaders(Dictionary<string, string> headers)
+    parameters:
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetHeaders(headers As Dictionary(Of String, String)) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetHeaders*
+  nameWithType.vb: HttpRequest.SetHeaders(Dictionary(Of String, String))
+  fullName.vb: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary(Of String, String))
+  name.vb: SetHeaders(Dictionary(Of String, String))
+- uid: ConduitNet.Http.HttpRequest.SetBearerToken(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetBearerToken(System.String)
+  id: SetBearerToken(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetBearerToken(string)
+  nameWithType: HttpRequest.SetBearerToken(string)
+  fullName: ConduitNet.Http.HttpRequest.SetBearerToken(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetBearerToken
+    path: ../Runtime/HttpRequest.cs
+    startLine: 66
+  namespace: ConduitNet.Http
+  summary: Sets a Bearer token authorization header.
+  example: []
+  syntax:
+    content: public HttpRequest SetBearerToken(string token)
+    parameters:
+    - id: token
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetBearerToken(token As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetBearerToken*
+  nameWithType.vb: HttpRequest.SetBearerToken(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBearerToken(String)
+  name.vb: SetBearerToken(String)
+- uid: ConduitNet.Http.HttpRequest.SetBasicAuth(System.String,System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetBasicAuth(System.String,System.String)
+  id: SetBasicAuth(System.String,System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetBasicAuth(string, string)
+  nameWithType: HttpRequest.SetBasicAuth(string, string)
+  fullName: ConduitNet.Http.HttpRequest.SetBasicAuth(string, string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetBasicAuth
+    path: ../Runtime/HttpRequest.cs
+    startLine: 72
+  namespace: ConduitNet.Http
+  summary: Sets a Basic authorization header.
+  example: []
+  syntax:
+    content: public HttpRequest SetBasicAuth(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetBasicAuth(username As String, password As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetBasicAuth*
+  nameWithType.vb: HttpRequest.SetBasicAuth(String, String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBasicAuth(String, String)
+  name.vb: SetBasicAuth(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.Object)
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.Object)
+  id: SetBody(System.Object)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetBody(object)
+  nameWithType: HttpRequest.SetBody(object)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(object)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetBody
+    path: ../Runtime/HttpRequest.cs
+    startLine: 81
+  namespace: ConduitNet.Http
+  summary: Serializes an object to JSON and sets it as the request body.
+  example: []
+  syntax:
+    content: public HttpRequest SetBody(object body)
+    parameters:
+    - id: body
+      type: System.Object
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetBody(body As Object) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetBody*
+  nameWithType.vb: HttpRequest.SetBody(Object)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(Object)
+  name.vb: SetBody(Object)
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.String,System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.String,System.String)
+  id: SetBody(System.String,System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetBody(string, string)
+  nameWithType: HttpRequest.SetBody(string, string)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(string, string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetBody
+    path: ../Runtime/HttpRequest.cs
+    startLine: 88
+  namespace: ConduitNet.Http
+  summary: Sets a raw string as the request body.
+  example: []
+  syntax:
+    content: public HttpRequest SetBody(string rawBody, string contentType = "text/plain")
+    parameters:
+    - id: rawBody
+      type: System.String
+    - id: contentType
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetBody(rawBody As String, contentType As String = "text/plain") As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetBody*
+  nameWithType.vb: HttpRequest.SetBody(String, String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(String, String)
+  name.vb: SetBody(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.Byte[],System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.Byte[],System.String)
+  id: SetBody(System.Byte[],System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetBody(byte[], string)
+  nameWithType: HttpRequest.SetBody(byte[], string)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(byte[], string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetBody
+    path: ../Runtime/HttpRequest.cs
+    startLine: 95
+  namespace: ConduitNet.Http
+  summary: Sets a raw byte array as the request body.
+  example: []
+  syntax:
+    content: public HttpRequest SetBody(byte[] rawBody, string contentType = "application/octet-stream")
+    parameters:
+    - id: rawBody
+      type: System.Byte[]
+    - id: contentType
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetBody(rawBody As Byte(), contentType As String = "application/octet-stream") As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetBody*
+  nameWithType.vb: HttpRequest.SetBody(Byte(), String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(Byte(), String)
+  name.vb: SetBody(Byte(), String)
+- uid: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  commentId: M:ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  id: SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetQueryParams(IDictionary<string, object>)
+  nameWithType: HttpRequest.SetQueryParams(IDictionary<string, object>)
+  fullName: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary<string, object>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetQueryParams
+    path: ../Runtime/HttpRequest.cs
+    startLine: 104
+  namespace: ConduitNet.Http
+  summary: Sets query parameters which will be appended to the URL.
+  example: []
+  syntax:
+    content: public HttpRequest SetQueryParams(IDictionary<string, object> queryParams)
+    parameters:
+    - id: queryParams
+      type: System.Collections.Generic.IDictionary{System.String,System.Object}
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetQueryParams(queryParams As IDictionary(Of String, Object)) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetQueryParams*
+  nameWithType.vb: HttpRequest.SetQueryParams(IDictionary(Of String, Object))
+  fullName.vb: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary(Of String, Object))
+  name.vb: SetQueryParams(IDictionary(Of String, Object))
+- uid: ConduitNet.Http.HttpRequest.SetTimeout(System.Int32)
+  commentId: M:ConduitNet.Http.HttpRequest.SetTimeout(System.Int32)
+  id: SetTimeout(System.Int32)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetTimeout(int)
+  nameWithType: HttpRequest.SetTimeout(int)
+  fullName: ConduitNet.Http.HttpRequest.SetTimeout(int)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetTimeout
+    path: ../Runtime/HttpRequest.cs
+    startLine: 112
+  namespace: ConduitNet.Http
+  summary: Sets the request timeout in seconds.
+  example: []
+  syntax:
+    content: public HttpRequest SetTimeout(int seconds)
+    parameters:
+    - id: seconds
+      type: System.Int32
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetTimeout(seconds As Integer) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetTimeout*
+  nameWithType.vb: HttpRequest.SetTimeout(Integer)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetTimeout(Integer)
+  name.vb: SetTimeout(Integer)
+- uid: ConduitNet.Http.HttpRequest.SetContentType(System.String)
+  commentId: M:ConduitNet.Http.HttpRequest.SetContentType(System.String)
+  id: SetContentType(System.String)
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: SetContentType(string)
+  nameWithType: HttpRequest.SetContentType(string)
+  fullName: ConduitNet.Http.HttpRequest.SetContentType(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SetContentType
+    path: ../Runtime/HttpRequest.cs
+    startLine: 118
+  namespace: ConduitNet.Http
+  summary: Sets the Content-Type header.
+  example: []
+  syntax:
+    content: public HttpRequest SetContentType(string contentType)
+    parameters:
+    - id: contentType
+      type: System.String
+    return:
+      type: ConduitNet.Http.HttpRequest
+    content.vb: Public Function SetContentType(contentType As String) As HttpRequest
+  overload: ConduitNet.Http.HttpRequest.SetContentType*
+  nameWithType.vb: HttpRequest.SetContentType(String)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetContentType(String)
+  name.vb: SetContentType(String)
+- uid: ConduitNet.Http.HttpRequest.Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  commentId: M:ConduitNet.Http.HttpRequest.Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  id: Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Send(Action<HttpResponse>, Action<string>)
+  nameWithType: HttpRequest.Send(Action<HttpResponse>, Action<string>)
+  fullName: ConduitNet.Http.HttpRequest.Send(System.Action<ConduitNet.Http.HttpResponse>, System.Action<string>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Send
+    path: ../Runtime/HttpRequest.cs
+    startLine: 126
+  namespace: ConduitNet.Http
+  summary: Sends the HTTP request.
+  example: []
+  syntax:
+    content: public IEnumerator Send(Action<HttpResponse> onSuccess = null, Action<string> onError = null)
+    parameters:
+    - id: onSuccess
+      type: System.Action{ConduitNet.Http.HttpResponse}
+    - id: onError
+      type: System.Action{System.String}
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function Send(onSuccess As Action(Of HttpResponse) = Nothing, onError As Action(Of String) = Nothing) As IEnumerator
+  overload: ConduitNet.Http.HttpRequest.Send*
+  nameWithType.vb: HttpRequest.Send(Action(Of HttpResponse), Action(Of String))
+  fullName.vb: ConduitNet.Http.HttpRequest.Send(System.Action(Of ConduitNet.Http.HttpResponse), System.Action(Of String))
+  name.vb: Send(Action(Of HttpResponse), Action(Of String))
+- uid: ConduitNet.Http.HttpRequest.Send``1(System.Action{``0},System.Action{System.String})
+  commentId: M:ConduitNet.Http.HttpRequest.Send``1(System.Action{``0},System.Action{System.String})
+  id: Send``1(System.Action{``0},System.Action{System.String})
+  parent: ConduitNet.Http.HttpRequest
+  langs:
+  - csharp
+  - vb
+  name: Send<T>(Action<T>, Action<string>)
+  nameWithType: HttpRequest.Send<T>(Action<T>, Action<string>)
+  fullName: ConduitNet.Http.HttpRequest.Send<T>(System.Action<T>, System.Action<string>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Send
+    path: ../Runtime/HttpRequest.cs
+    startLine: 163
+  namespace: ConduitNet.Http
+  summary: Sends the request and deserializes the response body as T.
+  example: []
+  syntax:
+    content: public IEnumerator Send<T>(Action<T> onSuccess, Action<string> onError = null)
+    parameters:
+    - id: onSuccess
+      type: System.Action{{T}}
+    - id: onError
+      type: System.Action{System.String}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function Send(Of T)(onSuccess As Action(Of T), onError As Action(Of String) = Nothing) As IEnumerator
+  overload: ConduitNet.Http.HttpRequest.Send*
+  nameWithType.vb: HttpRequest.Send(Of T)(Action(Of T), Action(Of String))
+  fullName.vb: ConduitNet.Http.HttpRequest.Send(Of T)(System.Action(Of T), System.Action(Of String))
+  name.vb: Send(Of T)(Action(Of T), Action(Of String))
+references:
+- uid: ConduitNet.Http
+  commentId: N:ConduitNet.Http
+  href: ConduitNet.html
+  name: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+  fullName: ConduitNet.Http
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.Http.HttpRequest.Get*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Get
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Get_System_String_
+  name: Get
+  nameWithType: HttpRequest.Get
+  fullName: ConduitNet.Http.HttpRequest.Get
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConduitNet.Http.HttpRequest
+  commentId: T:ConduitNet.Http.HttpRequest
+  parent: ConduitNet.Http
+  href: ConduitNet.Http.HttpRequest.html
+  name: HttpRequest
+  nameWithType: HttpRequest
+  fullName: ConduitNet.Http.HttpRequest
+- uid: ConduitNet.Http.HttpRequest.Post*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Post
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Post_System_String_
+  name: Post
+  nameWithType: HttpRequest.Post
+  fullName: ConduitNet.Http.HttpRequest.Post
+- uid: ConduitNet.Http.HttpRequest.Put*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Put
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Put_System_String_
+  name: Put
+  nameWithType: HttpRequest.Put
+  fullName: ConduitNet.Http.HttpRequest.Put
+- uid: ConduitNet.Http.HttpRequest.Patch*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Patch
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Patch_System_String_
+  name: Patch
+  nameWithType: HttpRequest.Patch
+  fullName: ConduitNet.Http.HttpRequest.Patch
+- uid: ConduitNet.Http.HttpRequest.Delete*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Delete
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Delete_System_String_
+  name: Delete
+  nameWithType: HttpRequest.Delete
+  fullName: ConduitNet.Http.HttpRequest.Delete
+- uid: ConduitNet.Http.HttpRequest.SetHeader*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetHeader
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeader_System_String_System_String_
+  name: SetHeader
+  nameWithType: HttpRequest.SetHeader
+  fullName: ConduitNet.Http.HttpRequest.SetHeader
+- uid: ConduitNet.Http.HttpRequest.SetHeaders*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetHeaders
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeaders_System_Collections_Generic_Dictionary_System_String_System_String__
+  name: SetHeaders
+  nameWithType: HttpRequest.SetHeaders
+  fullName: ConduitNet.Http.HttpRequest.SetHeaders
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ConduitNet.Http.HttpRequest.SetBearerToken*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBearerToken
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBearerToken_System_String_
+  name: SetBearerToken
+  nameWithType: HttpRequest.SetBearerToken
+  fullName: ConduitNet.Http.HttpRequest.SetBearerToken
+- uid: ConduitNet.Http.HttpRequest.SetBasicAuth*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBasicAuth
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBasicAuth_System_String_System_String_
+  name: SetBasicAuth
+  nameWithType: HttpRequest.SetBasicAuth
+  fullName: ConduitNet.Http.HttpRequest.SetBasicAuth
+- uid: ConduitNet.Http.HttpRequest.SetBody*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBody
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBody_System_Object_
+  name: SetBody
+  nameWithType: HttpRequest.SetBody
+  fullName: ConduitNet.Http.HttpRequest.SetBody
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: ConduitNet.Http.HttpRequest.SetQueryParams*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetQueryParams
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetQueryParams_System_Collections_Generic_IDictionary_System_String_System_Object__
+  name: SetQueryParams
+  nameWithType: HttpRequest.SetQueryParams
+  fullName: ConduitNet.Http.HttpRequest.SetQueryParams
+- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<string, object>
+  nameWithType: IDictionary<string, object>
+  fullName: System.Collections.Generic.IDictionary<string, object>
+  nameWithType.vb: IDictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.IDictionary(Of String, Object)
+  name.vb: IDictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ConduitNet.Http.HttpRequest.SetTimeout*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetTimeout
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetTimeout_System_Int32_
+  name: SetTimeout
+  nameWithType: HttpRequest.SetTimeout
+  fullName: ConduitNet.Http.HttpRequest.SetTimeout
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ConduitNet.Http.HttpRequest.SetContentType*
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetContentType
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetContentType_System_String_
+  name: SetContentType
+  nameWithType: HttpRequest.SetContentType
+  fullName: ConduitNet.Http.HttpRequest.SetContentType
+- uid: ConduitNet.Http.HttpRequest.Send*
+  commentId: Overload:ConduitNet.Http.HttpRequest.Send
+  href: ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Send_System_Action_ConduitNet_Http_HttpResponse__System_Action_System_String__
+  name: Send
+  nameWithType: HttpRequest.Send
+  fullName: ConduitNet.Http.HttpRequest.Send
+- uid: System.Action{ConduitNet.Http.HttpResponse}
+  commentId: T:System.Action{ConduitNet.Http.HttpResponse}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<HttpResponse>
+  nameWithType: Action<HttpResponse>
+  fullName: System.Action<ConduitNet.Http.HttpResponse>
+  nameWithType.vb: Action(Of HttpResponse)
+  fullName.vb: System.Action(Of ConduitNet.Http.HttpResponse)
+  name.vb: Action(Of HttpResponse)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ConduitNet.Http.HttpResponse
+    name: HttpResponse
+    href: ConduitNet.Http.HttpResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.Http.HttpResponse
+    name: HttpResponse
+    href: ConduitNet.Http.HttpResponse.html
+  - name: )
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System.Action{{T}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

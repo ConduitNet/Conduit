@@ -1,0 +1,591 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Packets.JsonPacketSerializer
+  commentId: T:ConduitNet.Packets.JsonPacketSerializer
+  id: JsonPacketSerializer
+  parent: ConduitNet.Packets
+  children:
+  - ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  - ConduitNet.Packets.JsonPacketSerializer.Serialize(System.Object,System.Type)
+  langs:
+  - csharp
+  - vb
+  name: JsonPacketSerializer
+  nameWithType: JsonPacketSerializer
+  fullName: ConduitNet.Packets.JsonPacketSerializer
+  type: Class
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: JsonPacketSerializer
+    path: ../Runtime/Packet.cs
+    startLine: 18
+  namespace: ConduitNet.Packets
+  summary: Default JSON-based packet serializer.
+  example: []
+  syntax:
+    content: 'public class JsonPacketSerializer : IPacketSerializer'
+    content.vb: Public Class JsonPacketSerializer Implements IPacketSerializer
+  inheritance:
+  - System.Object
+  implements:
+  - ConduitNet.Packets.IPacketSerializer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  commentId: M:ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  id: Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  parent: ConduitNet.Packets.JsonPacketSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ReadOnlyMemory<byte>, Type)
+  nameWithType: JsonPacketSerializer.Deserialize(ReadOnlyMemory<byte>, Type)
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory<byte>, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Deserialize
+    path: ../Runtime/Packet.cs
+    startLine: 20
+  namespace: ConduitNet.Packets
+  summary: Deserializes a byte array into an object.
+  example: []
+  syntax:
+    content: public object Deserialize(ReadOnlyMemory<byte> bytes, Type type)
+    parameters:
+    - id: bytes
+      type: System.ReadOnlyMemory{System.Byte}
+    - id: type
+      type: System.Type
+    return:
+      type: System.Object
+    content.vb: Public Function Deserialize(bytes As ReadOnlyMemory(Of Byte), type As Type) As Object
+  overload: ConduitNet.Packets.JsonPacketSerializer.Deserialize*
+  implements:
+  - ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  nameWithType.vb: JsonPacketSerializer.Deserialize(ReadOnlyMemory(Of Byte), Type)
+  fullName.vb: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory(Of Byte), System.Type)
+  name.vb: Deserialize(ReadOnlyMemory(Of Byte), Type)
+- uid: ConduitNet.Packets.JsonPacketSerializer.Serialize(System.Object,System.Type)
+  commentId: M:ConduitNet.Packets.JsonPacketSerializer.Serialize(System.Object,System.Type)
+  id: Serialize(System.Object,System.Type)
+  parent: ConduitNet.Packets.JsonPacketSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(object, Type)
+  nameWithType: JsonPacketSerializer.Serialize(object, Type)
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Serialize(object, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Serialize
+    path: ../Runtime/Packet.cs
+    startLine: 25
+  namespace: ConduitNet.Packets
+  summary: Serializes an object into a byte array.
+  example: []
+  syntax:
+    content: public byte[] Serialize(object obj, Type type)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Serialize(obj As Object, type As Type) As Byte()
+  overload: ConduitNet.Packets.JsonPacketSerializer.Serialize*
+  implements:
+  - ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  nameWithType.vb: JsonPacketSerializer.Serialize(Object, Type)
+  fullName.vb: ConduitNet.Packets.JsonPacketSerializer.Serialize(Object, System.Type)
+  name.vb: Serialize(Object, Type)
+references:
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  href: ConduitNet.html
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ConduitNet.Packets.IPacketSerializer
+  commentId: T:ConduitNet.Packets.IPacketSerializer
+  parent: ConduitNet.Packets
+  href: ConduitNet.Packets.IPacketSerializer.html
+  name: IPacketSerializer
+  nameWithType: IPacketSerializer
+  fullName: ConduitNet.Packets.IPacketSerializer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.Packets.JsonPacketSerializer.Deserialize*
+  commentId: Overload:ConduitNet.Packets.JsonPacketSerializer.Deserialize
+  href: ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  name: Deserialize
+  nameWithType: JsonPacketSerializer.Deserialize
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Deserialize
+- uid: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  parent: ConduitNet.Packets.IPacketSerializer
+  isExternal: true
+  href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  name: Deserialize(ReadOnlyMemory<byte>, Type)
+  nameWithType: IPacketSerializer.Deserialize(ReadOnlyMemory<byte>, Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory<byte>, System.Type)
+  nameWithType.vb: IPacketSerializer.Deserialize(ReadOnlyMemory(Of Byte), Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory(Of Byte), System.Type)
+  name.vb: Deserialize(ReadOnlyMemory(Of Byte), Type)
+  spec.csharp:
+  - uid: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+    name: Deserialize
+    href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  - name: (
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+    name: Deserialize
+    href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  - name: (
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.ReadOnlyMemory{System.Byte}
+  commentId: T:System.ReadOnlyMemory{System.Byte}
+  parent: System
+  definition: System.ReadOnlyMemory`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<byte>
+  nameWithType: ReadOnlyMemory<byte>
+  fullName: System.ReadOnlyMemory<byte>
+  nameWithType.vb: ReadOnlyMemory(Of Byte)
+  fullName.vb: System.ReadOnlyMemory(Of Byte)
+  name.vb: ReadOnlyMemory(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.Packets.JsonPacketSerializer.Serialize*
+  commentId: Overload:ConduitNet.Packets.JsonPacketSerializer.Serialize
+  href: ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Serialize_System_Object_System_Type_
+  name: Serialize
+  nameWithType: JsonPacketSerializer.Serialize
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Serialize
+- uid: ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  parent: ConduitNet.Packets.IPacketSerializer
+  isExternal: true
+  href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_System_Object_System_Type_
+  name: Serialize(object, Type)
+  nameWithType: IPacketSerializer.Serialize(object, Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Serialize(object, System.Type)
+  nameWithType.vb: IPacketSerializer.Serialize(Object, Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Serialize(Object, System.Type)
+  name.vb: Serialize(Object, Type)
+  spec.csharp:
+  - uid: ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+    name: Serialize
+    href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_System_Object_System_Type_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+    name: Serialize
+    href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_System_Object_System_Type_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

@@ -1,0 +1,267 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.ConnectionFailedReason
+  commentId: T:ConduitNet.ConnectionFailedReason
+  id: ConnectionFailedReason
+  parent: ConduitNet
+  children:
+  - ConduitNet.ConnectionFailedReason.BadConnection
+  - ConduitNet.ConnectionFailedReason.HostNotFound
+  - ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  - ConduitNet.ConnectionFailedReason.LobbyIsFull
+  - ConduitNet.ConnectionFailedReason.LobbyNotFound
+  - ConduitNet.ConnectionFailedReason.UserNotFound
+  langs:
+  - csharp
+  - vb
+  name: ConnectionFailedReason
+  nameWithType: ConnectionFailedReason
+  fullName: ConduitNet.ConnectionFailedReason
+  type: Enum
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: ConnectionFailedReason
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 7
+  namespace: ConduitNet
+  summary: Reasons for connection failure.
+  example: []
+  syntax:
+    content: public enum ConnectionFailedReason
+    content.vb: Public Enum ConnectionFailedReason
+- uid: ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  commentId: F:ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  id: IceConnectionFailed
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: IceConnectionFailed
+  nameWithType: ConnectionFailedReason.IceConnectionFailed
+  fullName: ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: IceConnectionFailed
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 10
+  namespace: ConduitNet
+  syntax:
+    content: IceConnectionFailed = 0
+    return:
+      type: ConduitNet.ConnectionFailedReason
+- uid: ConduitNet.ConnectionFailedReason.UserNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.UserNotFound
+  id: UserNotFound
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: UserNotFound
+  nameWithType: ConnectionFailedReason.UserNotFound
+  fullName: ConduitNet.ConnectionFailedReason.UserNotFound
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: UserNotFound
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 12
+  namespace: ConduitNet
+  syntax:
+    content: >-
+      [EnumMember(Value = "USER_NOT_FOUND")]
+
+      UserNotFound = 1
+    return:
+      type: ConduitNet.ConnectionFailedReason
+    content.vb: >-
+      <EnumMember(Value:="USER_NOT_FOUND")>
+
+      UserNotFound = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: USER_NOT_FOUND
+- uid: ConduitNet.ConnectionFailedReason.LobbyNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.LobbyNotFound
+  id: LobbyNotFound
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: LobbyNotFound
+  nameWithType: ConnectionFailedReason.LobbyNotFound
+  fullName: ConduitNet.ConnectionFailedReason.LobbyNotFound
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: LobbyNotFound
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 14
+  namespace: ConduitNet
+  syntax:
+    content: >-
+      [EnumMember(Value = "LOBBY_NOT_FOUND")]
+
+      LobbyNotFound = 2
+    return:
+      type: ConduitNet.ConnectionFailedReason
+    content.vb: >-
+      <EnumMember(Value:="LOBBY_NOT_FOUND")>
+
+      LobbyNotFound = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: LOBBY_NOT_FOUND
+- uid: ConduitNet.ConnectionFailedReason.LobbyIsFull
+  commentId: F:ConduitNet.ConnectionFailedReason.LobbyIsFull
+  id: LobbyIsFull
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: LobbyIsFull
+  nameWithType: ConnectionFailedReason.LobbyIsFull
+  fullName: ConduitNet.ConnectionFailedReason.LobbyIsFull
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: LobbyIsFull
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 16
+  namespace: ConduitNet
+  syntax:
+    content: >-
+      [EnumMember(Value = "LOBBY_FULL")]
+
+      LobbyIsFull = 3
+    return:
+      type: ConduitNet.ConnectionFailedReason
+    content.vb: >-
+      <EnumMember(Value:="LOBBY_FULL")>
+
+      LobbyIsFull = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: LOBBY_FULL
+- uid: ConduitNet.ConnectionFailedReason.HostNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.HostNotFound
+  id: HostNotFound
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: HostNotFound
+  nameWithType: ConnectionFailedReason.HostNotFound
+  fullName: ConduitNet.ConnectionFailedReason.HostNotFound
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: HostNotFound
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 18
+  namespace: ConduitNet
+  syntax:
+    content: >-
+      [EnumMember(Value = "HOST_NOT_FOUND")]
+
+      HostNotFound = 4
+    return:
+      type: ConduitNet.ConnectionFailedReason
+    content.vb: >-
+      <EnumMember(Value:="HOST_NOT_FOUND")>
+
+      HostNotFound = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: HOST_NOT_FOUND
+- uid: ConduitNet.ConnectionFailedReason.BadConnection
+  commentId: F:ConduitNet.ConnectionFailedReason.BadConnection
+  id: BadConnection
+  parent: ConduitNet.ConnectionFailedReason
+  langs:
+  - csharp
+  - vb
+  name: BadConnection
+  nameWithType: ConnectionFailedReason.BadConnection
+  fullName: ConduitNet.ConnectionFailedReason.BadConnection
+  type: Field
+  source:
+    remote:
+      path: Runtime/Enum.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: BadConnection
+    path: ../../Shared/Runtime/Enum.cs
+    startLine: 20
+  namespace: ConduitNet
+  syntax:
+    content: >-
+      [EnumMember(Value = "BAD_CONNECTION")]
+
+      BadConnection = 5
+    return:
+      type: ConduitNet.ConnectionFailedReason
+    content.vb: >-
+      <EnumMember(Value:="BAD_CONNECTION")>
+
+      BadConnection = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: BAD_CONNECTION
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.ConnectionFailedReason
+  commentId: T:ConduitNet.ConnectionFailedReason
+  parent: ConduitNet
+  href: ConduitNet.ConnectionFailedReason.html
+  name: ConnectionFailedReason
+  nameWithType: ConnectionFailedReason
+  fullName: ConduitNet.ConnectionFailedReason

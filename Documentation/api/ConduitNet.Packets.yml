@@ -1,0 +1,66 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  id: Packets
+  parent: ConduitNet
+  children:
+  - ConduitNet.Packets.IPacketSerializer
+  - ConduitNet.Packets.JsonPacketSerializer
+  - ConduitNet.Packets.PacketAttribute
+  - ConduitNet.Packets.PacketRegistry
+  langs:
+  - csharp
+  - vb
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  type: Namespace
+references:
+- uid: ConduitNet.Packets.IPacketSerializer
+  commentId: T:ConduitNet.Packets.IPacketSerializer
+  parent: ConduitNet.Packets
+  href: ConduitNet.Packets.IPacketSerializer.html
+  name: IPacketSerializer
+  nameWithType: IPacketSerializer
+  fullName: ConduitNet.Packets.IPacketSerializer
+- uid: ConduitNet.Packets.JsonPacketSerializer
+  commentId: T:ConduitNet.Packets.JsonPacketSerializer
+  href: ConduitNet.Packets.JsonPacketSerializer.html
+  name: JsonPacketSerializer
+  nameWithType: JsonPacketSerializer
+  fullName: ConduitNet.Packets.JsonPacketSerializer
+- uid: ConduitNet.Packets.PacketAttribute
+  commentId: T:ConduitNet.Packets.PacketAttribute
+  href: ConduitNet.Packets.PacketAttribute.html
+  name: PacketAttribute
+  nameWithType: PacketAttribute
+  fullName: ConduitNet.Packets.PacketAttribute
+- uid: ConduitNet.Packets.PacketRegistry
+  commentId: T:ConduitNet.Packets.PacketRegistry
+  href: ConduitNet.Packets.PacketRegistry.html
+  name: PacketRegistry
+  nameWithType: PacketRegistry
+  fullName: ConduitNet.Packets.PacketRegistry
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  href: ConduitNet.html
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html

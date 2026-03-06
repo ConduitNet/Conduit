@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.ConduitBehaviour
+  commentId: T:ConduitNet.ConduitBehaviour
+  id: ConduitBehaviour
+  parent: ConduitNet
+  children:
+  - ConduitNet.ConduitBehaviour.Awake
+  - ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  - ConduitNet.ConduitBehaviour.BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  - ConduitNet.ConduitBehaviour.BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  - ConduitNet.ConduitBehaviour.OnDestroy
+  - ConduitNet.ConduitBehaviour.UnbindAll
+  - ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  - ConduitNet.ConduitBehaviour.UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  - ConduitNet.ConduitBehaviour.UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  langs:
+  - csharp
+  - vb
+  name: ConduitBehaviour
+  nameWithType: ConduitBehaviour
+  fullName: ConduitNet.ConduitBehaviour
+  type: Class
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ConduitBehaviour
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 12
+  namespace: ConduitNet
+  summary: >-
+    Base class that inherits MonoBehaviour to register Network handlers
+
+    and automatically unregister them upon OnDestroy.
+
+    Supports both attribute-based automatic registration and manual method registration.
+  example: []
+  syntax:
+    content: 'public class ConduitBehaviour : MonoBehaviour'
+    content.vb: Public Class ConduitBehaviour Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: ConduitNet.ConduitBehaviour.Awake
+  commentId: M:ConduitNet.ConduitBehaviour.Awake
+  id: Awake
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: ConduitBehaviour.Awake()
+  fullName: ConduitNet.ConduitBehaviour.Awake()
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Awake
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 17
+  namespace: ConduitNet
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: ConduitNet.ConduitBehaviour.Awake*
+- uid: ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  commentId: M:ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  id: BindBytesHandler(ConduitNet.BytesHandler)
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: BindBytesHandler(BytesHandler)
+  nameWithType: ConduitBehaviour.BindBytesHandler(BytesHandler)
+  fullName: ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: BindBytesHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 74
+  namespace: ConduitNet
+  summary: Binds a handler for receiving byte array data. Automatically unbound OnDestroy.
+  example: []
+  syntax:
+    content: protected void BindBytesHandler(BytesHandler handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.BytesHandler
+    content.vb: Protected Sub BindBytesHandler(handler As BytesHandler)
+  overload: ConduitNet.ConduitBehaviour.BindBytesHandler*
+- uid: ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  id: UnbindBytesHandler(ConduitNet.BytesHandler)
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: UnbindBytesHandler(BytesHandler)
+  nameWithType: ConduitBehaviour.UnbindBytesHandler(BytesHandler)
+  fullName: ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnbindBytesHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 80
+  namespace: ConduitNet
+  summary: Unbinds a byte data handler.
+  example: []
+  syntax:
+    content: protected void UnbindBytesHandler(BytesHandler handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.BytesHandler
+    content.vb: Protected Sub UnbindBytesHandler(handler As BytesHandler)
+  overload: ConduitNet.ConduitBehaviour.UnbindBytesHandler*
+- uid: ConduitNet.ConduitBehaviour.BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  commentId: M:ConduitNet.ConduitBehaviour.BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  id: BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: BindSignalHandler(string, SignalHandler)
+  nameWithType: ConduitBehaviour.BindSignalHandler(string, SignalHandler)
+  fullName: ConduitNet.ConduitBehaviour.BindSignalHandler(string, ConduitNet.SignalHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: BindSignalHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 85
+  namespace: ConduitNet
+  summary: Binds a handler for receiving named signals. Automatically unbound OnDestroy.
+  example: []
+  syntax:
+    content: protected void BindSignalHandler(string signalName, SignalHandler handler)
+    parameters:
+    - id: signalName
+      type: System.String
+    - id: handler
+      type: ConduitNet.SignalHandler
+    content.vb: Protected Sub BindSignalHandler(signalName As String, handler As SignalHandler)
+  overload: ConduitNet.ConduitBehaviour.BindSignalHandler*
+  nameWithType.vb: ConduitBehaviour.BindSignalHandler(String, SignalHandler)
+  fullName.vb: ConduitNet.ConduitBehaviour.BindSignalHandler(String, ConduitNet.SignalHandler)
+  name.vb: BindSignalHandler(String, SignalHandler)
+- uid: ConduitNet.ConduitBehaviour.UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  id: UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: UnbindSignalHandler(string, SignalHandler)
+  nameWithType: ConduitBehaviour.UnbindSignalHandler(string, SignalHandler)
+  fullName: ConduitNet.ConduitBehaviour.UnbindSignalHandler(string, ConduitNet.SignalHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnbindSignalHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 91
+  namespace: ConduitNet
+  summary: Unbinds a signal handler.
+  example: []
+  syntax:
+    content: protected void UnbindSignalHandler(string signalName, SignalHandler handler)
+    parameters:
+    - id: signalName
+      type: System.String
+    - id: handler
+      type: ConduitNet.SignalHandler
+    content.vb: Protected Sub UnbindSignalHandler(signalName As String, handler As SignalHandler)
+  overload: ConduitNet.ConduitBehaviour.UnbindSignalHandler*
+  nameWithType.vb: ConduitBehaviour.UnbindSignalHandler(String, SignalHandler)
+  fullName.vb: ConduitNet.ConduitBehaviour.UnbindSignalHandler(String, ConduitNet.SignalHandler)
+  name.vb: UnbindSignalHandler(String, SignalHandler)
+- uid: ConduitNet.ConduitBehaviour.BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  commentId: M:ConduitNet.ConduitBehaviour.BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  id: BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: BindPacketHandler<T>(PacketHandler<T>)
+  nameWithType: ConduitBehaviour.BindPacketHandler<T>(PacketHandler<T>)
+  fullName: ConduitNet.ConduitBehaviour.BindPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: BindPacketHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 96
+  namespace: ConduitNet
+  summary: Binds a handler for receiving strongly-typed packets. Automatically unbound OnDestroy.
+  example: []
+  syntax:
+    content: protected void BindPacketHandler<T>(PacketHandler<T> handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.PacketHandler{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Protected Sub BindPacketHandler(Of T)(handler As PacketHandler(Of T))
+  overload: ConduitNet.ConduitBehaviour.BindPacketHandler*
+  nameWithType.vb: ConduitBehaviour.BindPacketHandler(Of T)(PacketHandler(Of T))
+  fullName.vb: ConduitNet.ConduitBehaviour.BindPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  name.vb: BindPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.ConduitBehaviour.UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  id: UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: UnbindPacketHandler<T>(PacketHandler<T>)
+  nameWithType: ConduitBehaviour.UnbindPacketHandler<T>(PacketHandler<T>)
+  fullName: ConduitNet.ConduitBehaviour.UnbindPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnbindPacketHandler
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 102
+  namespace: ConduitNet
+  summary: Unbinds a typed packet handler.
+  example: []
+  syntax:
+    content: protected void UnbindPacketHandler<T>(PacketHandler<T> handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.PacketHandler{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Protected Sub UnbindPacketHandler(Of T)(handler As PacketHandler(Of T))
+  overload: ConduitNet.ConduitBehaviour.UnbindPacketHandler*
+  nameWithType.vb: ConduitBehaviour.UnbindPacketHandler(Of T)(PacketHandler(Of T))
+  fullName.vb: ConduitNet.ConduitBehaviour.UnbindPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  name.vb: UnbindPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.ConduitBehaviour.UnbindAll
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindAll
+  id: UnbindAll
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: UnbindAll()
+  nameWithType: ConduitBehaviour.UnbindAll()
+  fullName: ConduitNet.ConduitBehaviour.UnbindAll()
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnbindAll
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 109
+  namespace: ConduitNet
+  summary: Unbinds all handlers bound through this instance.
+  example: []
+  syntax:
+    content: protected void UnbindAll()
+    content.vb: Protected Sub UnbindAll()
+  overload: ConduitNet.ConduitBehaviour.UnbindAll*
+- uid: ConduitNet.ConduitBehaviour.OnDestroy
+  commentId: M:ConduitNet.ConduitBehaviour.OnDestroy
+  id: OnDestroy
+  parent: ConduitNet.ConduitBehaviour
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: ConduitBehaviour.OnDestroy()
+  fullName: ConduitNet.ConduitBehaviour.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: Runtime/ConduitBehaviour.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnDestroy
+    path: ../Runtime/ConduitBehaviour.cs
+    startLine: 116
+  namespace: ConduitNet
+  syntax:
+    content: protected virtual void OnDestroy()
+    content.vb: Protected Overridable Sub OnDestroy()
+  overload: ConduitNet.ConduitBehaviour.OnDestroy*
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.ConduitBehaviour.Awake*
+  commentId: Overload:ConduitNet.ConduitBehaviour.Awake
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_Awake
+  name: Awake
+  nameWithType: ConduitBehaviour.Awake
+  fullName: ConduitNet.ConduitBehaviour.Awake
+- uid: ConduitNet.ConduitBehaviour.BindBytesHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindBytesHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindBytesHandler_ConduitNet_BytesHandler_
+  name: BindBytesHandler
+  nameWithType: ConduitBehaviour.BindBytesHandler
+  fullName: ConduitNet.ConduitBehaviour.BindBytesHandler
+- uid: ConduitNet.BytesHandler
+  commentId: T:ConduitNet.BytesHandler
+  parent: ConduitNet
+  href: ConduitNet.BytesHandler.html
+  name: BytesHandler
+  nameWithType: BytesHandler
+  fullName: ConduitNet.BytesHandler
+- uid: ConduitNet.ConduitBehaviour.UnbindBytesHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindBytesHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindBytesHandler_ConduitNet_BytesHandler_
+  name: UnbindBytesHandler
+  nameWithType: ConduitBehaviour.UnbindBytesHandler
+  fullName: ConduitNet.ConduitBehaviour.UnbindBytesHandler
+- uid: ConduitNet.ConduitBehaviour.BindSignalHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindSignalHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindSignalHandler_System_String_ConduitNet_SignalHandler_
+  name: BindSignalHandler
+  nameWithType: ConduitBehaviour.BindSignalHandler
+  fullName: ConduitNet.ConduitBehaviour.BindSignalHandler
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConduitNet.SignalHandler
+  commentId: T:ConduitNet.SignalHandler
+  parent: ConduitNet
+  href: ConduitNet.SignalHandler.html
+  name: SignalHandler
+  nameWithType: SignalHandler
+  fullName: ConduitNet.SignalHandler
+- uid: ConduitNet.ConduitBehaviour.UnbindSignalHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindSignalHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindSignalHandler_System_String_ConduitNet_SignalHandler_
+  name: UnbindSignalHandler
+  nameWithType: ConduitBehaviour.UnbindSignalHandler
+  fullName: ConduitNet.ConduitBehaviour.UnbindSignalHandler
+- uid: ConduitNet.ConduitBehaviour.BindPacketHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindPacketHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindPacketHandler__1_ConduitNet_PacketHandler___0__
+  name: BindPacketHandler
+  nameWithType: ConduitBehaviour.BindPacketHandler
+  fullName: ConduitNet.ConduitBehaviour.BindPacketHandler
+- uid: ConduitNet.PacketHandler{{T}}
+  commentId: T:ConduitNet.PacketHandler{``0}
+  parent: ConduitNet
+  definition: ConduitNet.PacketHandler`1
+  href: ConduitNet.PacketHandler-1.html
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+  spec.csharp:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.PacketHandler`1
+  commentId: T:ConduitNet.PacketHandler`1
+  href: ConduitNet.PacketHandler-1.html
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+  spec.csharp:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.ConduitBehaviour.UnbindPacketHandler*
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindPacketHandler
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindPacketHandler__1_ConduitNet_PacketHandler___0__
+  name: UnbindPacketHandler
+  nameWithType: ConduitBehaviour.UnbindPacketHandler
+  fullName: ConduitNet.ConduitBehaviour.UnbindPacketHandler
+- uid: ConduitNet.ConduitBehaviour.UnbindAll*
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindAll
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindAll
+  name: UnbindAll
+  nameWithType: ConduitBehaviour.UnbindAll
+  fullName: ConduitNet.ConduitBehaviour.UnbindAll
+- uid: ConduitNet.ConduitBehaviour.OnDestroy*
+  commentId: Overload:ConduitNet.ConduitBehaviour.OnDestroy
+  href: ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_OnDestroy
+  name: OnDestroy
+  nameWithType: ConduitBehaviour.OnDestroy
+  fullName: ConduitNet.ConduitBehaviour.OnDestroy

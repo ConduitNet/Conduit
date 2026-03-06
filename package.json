@@ -1,12 +1,12 @@
 {
-    "name": "dev.jiunkong.litep2pnet",
-    "version": "1.1.12",
+    "name": "dev.jiunkong.conduit",
+    "version": "2.0.0",
     "description": "A lightweight P2P networking library for Unity",
-    "displayName": "LiteP2PNet",
+    "displayName": "Conduit",
     "unity": "6000.0",
     "author": {
         "name": "Jiun Kong",
-        "email": "bukgeuk1234@gmail.com"
+        "url": "https://github.com/jiunkong"
     },
     "dependencies": {
         "com.unity.webrtc": "3.0.0",

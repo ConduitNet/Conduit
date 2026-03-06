@@ -1,0 +1,251 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Packets.IPacketSerializer
+  commentId: T:ConduitNet.Packets.IPacketSerializer
+  id: IPacketSerializer
+  parent: ConduitNet.Packets
+  children:
+  - ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  - ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  langs:
+  - csharp
+  - vb
+  name: IPacketSerializer
+  nameWithType: IPacketSerializer
+  fullName: ConduitNet.Packets.IPacketSerializer
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IPacketSerializer
+    path: ../Runtime/Packet.cs
+    startLine: 10
+  namespace: ConduitNet.Packets
+  summary: Interface for packet serialization and deserialization.
+  example: []
+  syntax:
+    content: public interface IPacketSerializer
+    content.vb: Public Interface IPacketSerializer
+  derivedClasses:
+  - ConduitNet.Packets.JsonPacketSerializer
+- uid: ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  id: Serialize(System.Object,System.Type)
+  parent: ConduitNet.Packets.IPacketSerializer
+  langs:
+  - csharp
+  - vb
+  name: Serialize(object, Type)
+  nameWithType: IPacketSerializer.Serialize(object, Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Serialize(object, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Serialize
+    path: ../Runtime/Packet.cs
+    startLine: 12
+  namespace: ConduitNet.Packets
+  summary: Serializes an object into a byte array.
+  example: []
+  syntax:
+    content: byte[] Serialize(object obj, Type type)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    return:
+      type: System.Byte[]
+    content.vb: Function Serialize(obj As Object, type As Type) As Byte()
+  overload: ConduitNet.Packets.IPacketSerializer.Serialize*
+  nameWithType.vb: IPacketSerializer.Serialize(Object, Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Serialize(Object, System.Type)
+  name.vb: Serialize(Object, Type)
+- uid: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  id: Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  parent: ConduitNet.Packets.IPacketSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ReadOnlyMemory<byte>, Type)
+  nameWithType: IPacketSerializer.Deserialize(ReadOnlyMemory<byte>, Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory<byte>, System.Type)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Packet.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Deserialize
+    path: ../Runtime/Packet.cs
+    startLine: 14
+  namespace: ConduitNet.Packets
+  summary: Deserializes a byte array into an object.
+  example: []
+  syntax:
+    content: object Deserialize(ReadOnlyMemory<byte> bytes, Type type)
+    parameters:
+    - id: bytes
+      type: System.ReadOnlyMemory{System.Byte}
+    - id: type
+      type: System.Type
+    return:
+      type: System.Object
+    content.vb: Function Deserialize(bytes As ReadOnlyMemory(Of Byte), type As Type) As Object
+  overload: ConduitNet.Packets.IPacketSerializer.Deserialize*
+  nameWithType.vb: IPacketSerializer.Deserialize(ReadOnlyMemory(Of Byte), Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory(Of Byte), System.Type)
+  name.vb: Deserialize(ReadOnlyMemory(Of Byte), Type)
+references:
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  href: ConduitNet.html
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+- uid: ConduitNet.Packets.IPacketSerializer.Serialize*
+  commentId: Overload:ConduitNet.Packets.IPacketSerializer.Serialize
+  href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_System_Object_System_Type_
+  name: Serialize
+  nameWithType: IPacketSerializer.Serialize
+  fullName: ConduitNet.Packets.IPacketSerializer.Serialize
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.Packets.IPacketSerializer.Deserialize*
+  commentId: Overload:ConduitNet.Packets.IPacketSerializer.Deserialize
+  href: ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  name: Deserialize
+  nameWithType: IPacketSerializer.Deserialize
+  fullName: ConduitNet.Packets.IPacketSerializer.Deserialize
+- uid: System.ReadOnlyMemory{System.Byte}
+  commentId: T:System.ReadOnlyMemory{System.Byte}
+  parent: System
+  definition: System.ReadOnlyMemory`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<byte>
+  nameWithType: ReadOnlyMemory<byte>
+  fullName: System.ReadOnlyMemory<byte>
+  nameWithType.vb: ReadOnlyMemory(Of Byte)
+  fullName.vb: System.ReadOnlyMemory(Of Byte)
+  name.vb: ReadOnlyMemory(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

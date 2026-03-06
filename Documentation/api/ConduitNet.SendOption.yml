@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  id: SendOption
+  parent: ConduitNet
+  children:
+  - ConduitNet.SendOption.OrderedReliable
+  - ConduitNet.SendOption.OrderedUnreliable
+  - ConduitNet.SendOption.UnorderedReliable
+  - ConduitNet.SendOption.UnorderedUnreliable
+  langs:
+  - csharp
+  - vb
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+  type: Enum
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SendOption
+    path: ../Runtime/Data.cs
+    startLine: 11
+  namespace: ConduitNet
+  summary: Data channel send options combining ordering and reliability guarantees.
+  example: []
+  syntax:
+    content: 'public enum SendOption : byte'
+    content.vb: Public Enum SendOption As Byte
+- uid: ConduitNet.SendOption.OrderedReliable
+  commentId: F:ConduitNet.SendOption.OrderedReliable
+  id: OrderedReliable
+  parent: ConduitNet.SendOption
+  langs:
+  - csharp
+  - vb
+  name: OrderedReliable
+  nameWithType: SendOption.OrderedReliable
+  fullName: ConduitNet.SendOption.OrderedReliable
+  type: Field
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OrderedReliable
+    path: ../Runtime/Data.cs
+    startLine: 13
+  namespace: ConduitNet
+  summary: Guarantees both order and reliability.
+  example: []
+  syntax:
+    content: OrderedReliable = 0
+    return:
+      type: ConduitNet.SendOption
+- uid: ConduitNet.SendOption.OrderedUnreliable
+  commentId: F:ConduitNet.SendOption.OrderedUnreliable
+  id: OrderedUnreliable
+  parent: ConduitNet.SendOption
+  langs:
+  - csharp
+  - vb
+  name: OrderedUnreliable
+  nameWithType: SendOption.OrderedUnreliable
+  fullName: ConduitNet.SendOption.OrderedUnreliable
+  type: Field
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OrderedUnreliable
+    path: ../Runtime/Data.cs
+    startLine: 15
+  namespace: ConduitNet
+  summary: Guarantees order but not reliability.
+  example: []
+  syntax:
+    content: OrderedUnreliable = 1
+    return:
+      type: ConduitNet.SendOption
+- uid: ConduitNet.SendOption.UnorderedReliable
+  commentId: F:ConduitNet.SendOption.UnorderedReliable
+  id: UnorderedReliable
+  parent: ConduitNet.SendOption
+  langs:
+  - csharp
+  - vb
+  name: UnorderedReliable
+  nameWithType: SendOption.UnorderedReliable
+  fullName: ConduitNet.SendOption.UnorderedReliable
+  type: Field
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnorderedReliable
+    path: ../Runtime/Data.cs
+    startLine: 17
+  namespace: ConduitNet
+  summary: Guarantees reliability but not order.
+  example: []
+  syntax:
+    content: UnorderedReliable = 2
+    return:
+      type: ConduitNet.SendOption
+- uid: ConduitNet.SendOption.UnorderedUnreliable
+  commentId: F:ConduitNet.SendOption.UnorderedUnreliable
+  id: UnorderedUnreliable
+  parent: ConduitNet.SendOption
+  langs:
+  - csharp
+  - vb
+  name: UnorderedUnreliable
+  nameWithType: SendOption.UnorderedUnreliable
+  fullName: ConduitNet.SendOption.UnorderedUnreliable
+  type: Field
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnorderedUnreliable
+    path: ../Runtime/Data.cs
+    startLine: 19
+  namespace: ConduitNet
+  summary: Guarantees neither order nor reliability.
+  example: []
+  syntax:
+    content: UnorderedUnreliable = 3
+    return:
+      type: ConduitNet.SendOption
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption

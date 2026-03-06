@@ -1,0 +1,2657 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Conduit
+  commentId: T:ConduitNet.Conduit
+  id: Conduit
+  parent: ConduitNet
+  children:
+  - ConduitNet.Conduit.CancelJoin
+  - ConduitNet.Conduit.Config
+  - ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  - ConduitNet.Conduit.GetRTTAsync(System.String)
+  - ConduitNet.Conduit.Host
+  - ConduitNet.Conduit.Init``3(System.String,``1,System.Action)
+  - ConduitNet.Conduit.IsConnected
+  - ConduitNet.Conduit.IsConnectedToServer
+  - ConduitNet.Conduit.IsHost
+  - ConduitNet.Conduit.IsJoining
+  - ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  - ConduitNet.Conduit.LeaveLobby
+  - ConduitNet.Conduit.Lobby
+  - ConduitNet.Conduit.LobbyService
+  - ConduitNet.Conduit.LocalUser
+  - ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  - ConduitNet.Conduit.Members
+  - ConduitNet.Conduit.OnConnectionFailed
+  - ConduitNet.Conduit.OnHostChanged
+  - ConduitNet.Conduit.OnJoinCancelled
+  - ConduitNet.Conduit.OnLobbyInitialized
+  - ConduitNet.Conduit.OnLobbyMetadataUpdated
+  - ConduitNet.Conduit.OnLobbyStateUpdated
+  - ConduitNet.Conduit.OnPeerConnected
+  - ConduitNet.Conduit.OnPeerDisconnected
+  - ConduitNet.Conduit.OnUserAccountStateUpdated
+  - ConduitNet.Conduit.OnUserJoined
+  - ConduitNet.Conduit.OnUserLeft
+  - ConduitNet.Conduit.Participants
+  - ConduitNet.Conduit.Peers
+  - ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  - ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)
+  - ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  - ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  - ConduitNet.Conduit.ResetEvents
+  - ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  - ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  - ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  - ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  - ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  - ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)
+  - ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  - ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  - ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  - ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  - ConduitNet.Conduit.UseJsonPacketSerializer
+  - ConduitNet.Conduit.UserService
+  langs:
+  - csharp
+  - vb
+  name: Conduit
+  nameWithType: Conduit
+  fullName: ConduitNet.Conduit
+  type: Class
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Conduit
+    path: ../Runtime/Conduit.cs
+    startLine: 19
+  namespace: ConduitNet
+  syntax:
+    content: 'public class Conduit : MonoBehaviour'
+    content.vb: Public Class Conduit Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: ConduitNet.Conduit.Config
+  commentId: P:ConduitNet.Conduit.Config
+  id: Config
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Conduit.Config
+  fullName: ConduitNet.Conduit.Config
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Config
+    path: ../Runtime/Conduit.cs
+    startLine: 26
+  namespace: ConduitNet
+  summary: Global configuration for Conduit. Must be set before calling Init.
+  example: []
+  syntax:
+    content: public static ConduitConfig Config { get; set; }
+    parameters: []
+    return:
+      type: ConduitNet.ConduitConfig
+    content.vb: Public Shared Property Config As ConduitConfig
+  overload: ConduitNet.Conduit.Config*
+- uid: ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  commentId: F:ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  id: UseAssemblyQualifiedNameForTypes
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UseAssemblyQualifiedNameForTypes
+  nameWithType: Conduit.UseAssemblyQualifiedNameForTypes
+  fullName: ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UseAssemblyQualifiedNameForTypes
+    path: ../Runtime/Conduit.cs
+    startLine: 29
+  namespace: ConduitNet
+  summary: 'Whether to use AssemblyQualifiedName for type serialization (default: false -&gt; FullName).'
+  example: []
+  syntax:
+    content: public static bool UseAssemblyQualifiedNameForTypes
+    return:
+      type: System.Boolean
+    content.vb: Public Shared UseAssemblyQualifiedNameForTypes As Boolean
+- uid: ConduitNet.Conduit.UserService
+  commentId: P:ConduitNet.Conduit.UserService
+  id: UserService
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UserService
+  nameWithType: Conduit.UserService
+  fullName: ConduitNet.Conduit.UserService
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UserService
+    path: ../Runtime/Conduit.cs
+    startLine: 32
+  namespace: ConduitNet
+  summary: Service for handling user-related server requests.
+  example: []
+  syntax:
+    content: public static IUserService UserService { get; set; }
+    parameters: []
+    return:
+      type: ConduitNet.IUserService
+    content.vb: Public Shared Property UserService As IUserService
+  overload: ConduitNet.Conduit.UserService*
+- uid: ConduitNet.Conduit.LobbyService
+  commentId: P:ConduitNet.Conduit.LobbyService
+  id: LobbyService
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: LobbyService
+  nameWithType: Conduit.LobbyService
+  fullName: ConduitNet.Conduit.LobbyService
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: LobbyService
+    path: ../Runtime/Conduit.cs
+    startLine: 38
+  namespace: ConduitNet
+  summary: Service for handling lobby-related server requests.
+  example: []
+  syntax:
+    content: public static ILobbyService LobbyService { get; set; }
+    parameters: []
+    return:
+      type: ConduitNet.ILobbyService
+    content.vb: Public Shared Property LobbyService As ILobbyService
+  overload: ConduitNet.Conduit.LobbyService*
+- uid: ConduitNet.Conduit.Lobby
+  commentId: P:ConduitNet.Conduit.Lobby
+  id: Lobby
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Lobby
+  nameWithType: Conduit.Lobby
+  fullName: ConduitNet.Conduit.Lobby
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Lobby
+    path: ../Runtime/Conduit.cs
+    startLine: 44
+  namespace: ConduitNet
+  summary: The currently joined lobby.
+  example: []
+  syntax:
+    content: public static ILobby Lobby { get; }
+    parameters: []
+    return:
+      type: ConduitNet.ILobby
+    content.vb: Public Shared Property Lobby As ILobby
+  overload: ConduitNet.Conduit.Lobby*
+- uid: ConduitNet.Conduit.Host
+  commentId: P:ConduitNet.Conduit.Host
+  id: Host
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: Conduit.Host
+  fullName: ConduitNet.Conduit.Host
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Host
+    path: ../Runtime/Conduit.cs
+    startLine: 50
+  namespace: ConduitNet
+  summary: The host of the current lobby.
+  example: []
+  syntax:
+    content: public static IUser Host { get; }
+    parameters: []
+    return:
+      type: ConduitNet.IUser
+    content.vb: Public Shared ReadOnly Property Host As IUser
+  overload: ConduitNet.Conduit.Host*
+- uid: ConduitNet.Conduit.IsHost
+  commentId: P:ConduitNet.Conduit.IsHost
+  id: IsHost
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: IsHost
+  nameWithType: Conduit.IsHost
+  fullName: ConduitNet.Conduit.IsHost
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IsHost
+    path: ../Runtime/Conduit.cs
+    startLine: 52
+  namespace: ConduitNet
+  summary: Whether the local user is the host.
+  example: []
+  syntax:
+    content: public static bool IsHost { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsHost As Boolean
+  overload: ConduitNet.Conduit.IsHost*
+- uid: ConduitNet.Conduit.IsConnected
+  commentId: P:ConduitNet.Conduit.IsConnected
+  id: IsConnected
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: IsConnected
+  nameWithType: Conduit.IsConnected
+  fullName: ConduitNet.Conduit.IsConnected
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IsConnected
+    path: ../Runtime/Conduit.cs
+    startLine: 54
+  namespace: ConduitNet
+  summary: Whether connected to both the signaling server and at least one peer (or is host).
+  example: []
+  syntax:
+    content: public static bool IsConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsConnected As Boolean
+  overload: ConduitNet.Conduit.IsConnected*
+- uid: ConduitNet.Conduit.Members
+  commentId: P:ConduitNet.Conduit.Members
+  id: Members
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: Conduit.Members
+  fullName: ConduitNet.Conduit.Members
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Members
+    path: ../Runtime/Conduit.cs
+    startLine: 56
+  namespace: ConduitNet
+  summary: List of lobby members (excluding host).
+  example: []
+  syntax:
+    content: public static IReadOnlyList<IUser> Members { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{ConduitNet.IUser}
+    content.vb: Public Shared ReadOnly Property Members As IReadOnlyList(Of IUser)
+  overload: ConduitNet.Conduit.Members*
+- uid: ConduitNet.Conduit.Participants
+  commentId: P:ConduitNet.Conduit.Participants
+  id: Participants
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Participants
+  nameWithType: Conduit.Participants
+  fullName: ConduitNet.Conduit.Participants
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Participants
+    path: ../Runtime/Conduit.cs
+    startLine: 59
+  namespace: ConduitNet
+  summary: List of all participants including host and members.
+  example: []
+  syntax:
+    content: public static IEnumerable<IUser> Participants { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{ConduitNet.IUser}
+    content.vb: Public Shared ReadOnly Property Participants As IEnumerable(Of IUser)
+  overload: ConduitNet.Conduit.Participants*
+- uid: ConduitNet.Conduit.Peers
+  commentId: P:ConduitNet.Conduit.Peers
+  id: Peers
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Peers
+  nameWithType: Conduit.Peers
+  fullName: ConduitNet.Conduit.Peers
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Peers
+    path: ../Runtime/Conduit.cs
+    startLine: 69
+  namespace: ConduitNet
+  summary: Array of currently connected peer IDs.
+  example: []
+  syntax:
+    content: public static string[] Peers { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly Property Peers As String()
+  overload: ConduitNet.Conduit.Peers*
+- uid: ConduitNet.Conduit.LocalUser
+  commentId: P:ConduitNet.Conduit.LocalUser
+  id: LocalUser
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: LocalUser
+  nameWithType: Conduit.LocalUser
+  fullName: ConduitNet.Conduit.LocalUser
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: LocalUser
+    path: ../Runtime/Conduit.cs
+    startLine: 72
+  namespace: ConduitNet
+  summary: Local user information.
+  example: []
+  syntax:
+    content: public static IUser LocalUser { get; }
+    parameters: []
+    return:
+      type: ConduitNet.IUser
+    content.vb: Public Shared Property LocalUser As IUser
+  overload: ConduitNet.Conduit.LocalUser*
+- uid: ConduitNet.Conduit.IsConnectedToServer
+  commentId: P:ConduitNet.Conduit.IsConnectedToServer
+  id: IsConnectedToServer
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: IsConnectedToServer
+  nameWithType: Conduit.IsConnectedToServer
+  fullName: ConduitNet.Conduit.IsConnectedToServer
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IsConnectedToServer
+    path: ../Runtime/Conduit.cs
+    startLine: 78
+  namespace: ConduitNet
+  summary: Whether connected to the signaling server.
+  example: []
+  syntax:
+    content: public static bool IsConnectedToServer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsConnectedToServer As Boolean
+  overload: ConduitNet.Conduit.IsConnectedToServer*
+- uid: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  commentId: P:ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  id: MaxDataChannelProcessingTimeMs
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: MaxDataChannelProcessingTimeMs
+  nameWithType: Conduit.MaxDataChannelProcessingTimeMs
+  fullName: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: MaxDataChannelProcessingTimeMs
+    path: ../Runtime/Conduit.cs
+    startLine: 84
+  namespace: ConduitNet
+  summary: Maximum time(ms) allowed to process data channel messages per frame.
+  example: []
+  syntax:
+    content: public static float MaxDataChannelProcessingTimeMs { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared Property MaxDataChannelProcessingTimeMs As Single
+  overload: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs*
+- uid: ConduitNet.Conduit.OnUserJoined
+  commentId: F:ConduitNet.Conduit.OnUserJoined
+  id: OnUserJoined
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnUserJoined
+  nameWithType: Conduit.OnUserJoined
+  fullName: ConduitNet.Conduit.OnUserJoined
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnUserJoined
+    path: ../Runtime/Conduit.cs
+    startLine: 92
+  namespace: ConduitNet
+  summary: 'Invoked when a user joins the lobby. Parameter: The newly joined user.'
+  example: []
+  syntax:
+    content: public static Action<IUser> OnUserJoined
+    return:
+      type: System.Action{ConduitNet.IUser}
+    content.vb: Public Shared OnUserJoined As Action(Of IUser)
+- uid: ConduitNet.Conduit.OnUserLeft
+  commentId: F:ConduitNet.Conduit.OnUserLeft
+  id: OnUserLeft
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnUserLeft
+  nameWithType: Conduit.OnUserLeft
+  fullName: ConduitNet.Conduit.OnUserLeft
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnUserLeft
+    path: ../Runtime/Conduit.cs
+    startLine: 94
+  namespace: ConduitNet
+  summary: 'Invoked when a user leaves the lobby. Parameters: (The leaving user, Whether the host changed).'
+  example: []
+  syntax:
+    content: public static Action<IUser, bool> OnUserLeft
+    return:
+      type: System.Action{ConduitNet.IUser,System.Boolean}
+    content.vb: Public Shared OnUserLeft As Action(Of IUser, Boolean)
+- uid: ConduitNet.Conduit.OnHostChanged
+  commentId: F:ConduitNet.Conduit.OnHostChanged
+  id: OnHostChanged
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnHostChanged
+  nameWithType: Conduit.OnHostChanged
+  fullName: ConduitNet.Conduit.OnHostChanged
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnHostChanged
+    path: ../Runtime/Conduit.cs
+    startLine: 96
+  namespace: ConduitNet
+  summary: 'Invoked when the lobby host changes. Parameters: (Previous host, New host).'
+  example: []
+  syntax:
+    content: public static Action<IUser, IUser> OnHostChanged
+    return:
+      type: System.Action{ConduitNet.IUser,ConduitNet.IUser}
+    content.vb: Public Shared OnHostChanged As Action(Of IUser, IUser)
+- uid: ConduitNet.Conduit.OnPeerConnected
+  commentId: F:ConduitNet.Conduit.OnPeerConnected
+  id: OnPeerConnected
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnPeerConnected
+  nameWithType: Conduit.OnPeerConnected
+  fullName: ConduitNet.Conduit.OnPeerConnected
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnPeerConnected
+    path: ../Runtime/Conduit.cs
+    startLine: 98
+  namespace: ConduitNet
+  summary: 'Invoked when a P2P connection to a peer is established. Parameter: Peer ID.'
+  example: []
+  syntax:
+    content: public static Action<string> OnPeerConnected
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Shared OnPeerConnected As Action(Of String)
+- uid: ConduitNet.Conduit.OnPeerDisconnected
+  commentId: F:ConduitNet.Conduit.OnPeerDisconnected
+  id: OnPeerDisconnected
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnPeerDisconnected
+  nameWithType: Conduit.OnPeerDisconnected
+  fullName: ConduitNet.Conduit.OnPeerDisconnected
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnPeerDisconnected
+    path: ../Runtime/Conduit.cs
+    startLine: 100
+  namespace: ConduitNet
+  summary: 'Invoked when a P2P connection to a peer is lost. Parameter: Peer ID.'
+  example: []
+  syntax:
+    content: public static Action<string> OnPeerDisconnected
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Shared OnPeerDisconnected As Action(Of String)
+- uid: ConduitNet.Conduit.OnConnectionFailed
+  commentId: F:ConduitNet.Conduit.OnConnectionFailed
+  id: OnConnectionFailed
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnConnectionFailed
+  nameWithType: Conduit.OnConnectionFailed
+  fullName: ConduitNet.Conduit.OnConnectionFailed
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnConnectionFailed
+    path: ../Runtime/Conduit.cs
+    startLine: 102
+  namespace: ConduitNet
+  summary: 'Invoked when a connection attempt fails. Parameter: Failure reason.'
+  example: []
+  syntax:
+    content: public static Action<ConnectionFailedReason> OnConnectionFailed
+    return:
+      type: System.Action{ConduitNet.ConnectionFailedReason}
+    content.vb: Public Shared OnConnectionFailed As Action(Of ConnectionFailedReason)
+- uid: ConduitNet.Conduit.OnLobbyInitialized
+  commentId: F:ConduitNet.Conduit.OnLobbyInitialized
+  id: OnLobbyInitialized
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnLobbyInitialized
+  nameWithType: Conduit.OnLobbyInitialized
+  fullName: ConduitNet.Conduit.OnLobbyInitialized
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnLobbyInitialized
+    path: ../Runtime/Conduit.cs
+    startLine: 104
+  namespace: ConduitNet
+  summary: Invoked when lobby initialization completes successfully.
+  example: []
+  syntax:
+    content: public static Action OnLobbyInitialized
+    return:
+      type: System.Action
+    content.vb: Public Shared OnLobbyInitialized As Action
+- uid: ConduitNet.Conduit.OnLobbyMetadataUpdated
+  commentId: F:ConduitNet.Conduit.OnLobbyMetadataUpdated
+  id: OnLobbyMetadataUpdated
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnLobbyMetadataUpdated
+  nameWithType: Conduit.OnLobbyMetadataUpdated
+  fullName: ConduitNet.Conduit.OnLobbyMetadataUpdated
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnLobbyMetadataUpdated
+    path: ../Runtime/Conduit.cs
+    startLine: 106
+  namespace: ConduitNet
+  summary: Invoked when lobby metadata (e.g., name, max players) changes.
+  example: []
+  syntax:
+    content: public static Action OnLobbyMetadataUpdated
+    return:
+      type: System.Action
+    content.vb: Public Shared OnLobbyMetadataUpdated As Action
+- uid: ConduitNet.Conduit.OnLobbyStateUpdated
+  commentId: F:ConduitNet.Conduit.OnLobbyStateUpdated
+  id: OnLobbyStateUpdated
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnLobbyStateUpdated
+  nameWithType: Conduit.OnLobbyStateUpdated
+  fullName: ConduitNet.Conduit.OnLobbyStateUpdated
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnLobbyStateUpdated
+    path: ../Runtime/Conduit.cs
+    startLine: 108
+  namespace: ConduitNet
+  summary: Invoked when the custom lobby state (TLobbyState) changes.
+  example: []
+  syntax:
+    content: public static Action OnLobbyStateUpdated
+    return:
+      type: System.Action
+    content.vb: Public Shared OnLobbyStateUpdated As Action
+- uid: ConduitNet.Conduit.OnUserAccountStateUpdated
+  commentId: F:ConduitNet.Conduit.OnUserAccountStateUpdated
+  id: OnUserAccountStateUpdated
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnUserAccountStateUpdated
+  nameWithType: Conduit.OnUserAccountStateUpdated
+  fullName: ConduitNet.Conduit.OnUserAccountStateUpdated
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnUserAccountStateUpdated
+    path: ../Runtime/Conduit.cs
+    startLine: 110
+  namespace: ConduitNet
+  summary: Invoked when the user account state (TAccountState) changes.
+  example: []
+  syntax:
+    content: public static Action OnUserAccountStateUpdated
+    return:
+      type: System.Action
+    content.vb: Public Shared OnUserAccountStateUpdated As Action
+- uid: ConduitNet.Conduit.OnJoinCancelled
+  commentId: F:ConduitNet.Conduit.OnJoinCancelled
+  id: OnJoinCancelled
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: OnJoinCancelled
+  nameWithType: Conduit.OnJoinCancelled
+  fullName: ConduitNet.Conduit.OnJoinCancelled
+  type: Field
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: OnJoinCancelled
+    path: ../Runtime/Conduit.cs
+    startLine: 112
+  namespace: ConduitNet
+  summary: Invoked when JoinLobby is cancelled.
+  example: []
+  syntax:
+    content: public static Action OnJoinCancelled
+    return:
+      type: System.Action
+    content.vb: Public Shared OnJoinCancelled As Action
+- uid: ConduitNet.Conduit.ResetEvents
+  commentId: M:ConduitNet.Conduit.ResetEvents
+  id: ResetEvents
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: ResetEvents()
+  nameWithType: Conduit.ResetEvents()
+  fullName: ConduitNet.Conduit.ResetEvents()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ResetEvents
+    path: ../Runtime/Conduit.cs
+    startLine: 115
+  namespace: ConduitNet
+  summary: Clears all registered static event handlers. Recommended to call during scene transitions.
+  example: []
+  syntax:
+    content: public static void ResetEvents()
+    content.vb: Public Shared Sub ResetEvents()
+  overload: ConduitNet.Conduit.ResetEvents*
+- uid: ConduitNet.Conduit.Init``3(System.String,``1,System.Action)
+  commentId: M:ConduitNet.Conduit.Init``3(System.String,``1,System.Action)
+  id: Init``3(System.String,``1,System.Action)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, Action)
+  nameWithType: Conduit.Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, Action)
+  fullName: ConduitNet.Conduit.Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, System.Action)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Init
+    path: ../Runtime/Conduit.cs
+    startLine: 137
+  namespace: ConduitNet
+  summary: Initializes Conduit. Ensure Config is set prior to calling this.
+  example: []
+  syntax:
+    content: 'public static void Init<TLobbyState, TUserProfile, TAccountState>(string userId, TUserProfile userProfile, Action onUserSynced = null) where TLobbyState : class where TUserProfile : class where TAccountState : class'
+    parameters:
+    - id: userId
+      type: System.String
+      description: Local user ID (max 256 chars).
+    - id: userProfile
+      type: '{TUserProfile}'
+      description: Local user profile data.
+    - id: onUserSynced
+      type: System.Action
+      description: Callback invoked after syncing local user state with the server.
+    typeParameters:
+    - id: TLobbyState
+    - id: TUserProfile
+    - id: TAccountState
+    content.vb: Public Shared Sub Init(Of TLobbyState As Class, TUserProfile As Class, TAccountState As Class)(userId As String, userProfile As TUserProfile, onUserSynced As Action = Nothing)
+  overload: ConduitNet.Conduit.Init*
+  nameWithType.vb: Conduit.Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, Action)
+  fullName.vb: ConduitNet.Conduit.Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, System.Action)
+  name.vb: Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, Action)
+- uid: ConduitNet.Conduit.UseJsonPacketSerializer
+  commentId: M:ConduitNet.Conduit.UseJsonPacketSerializer
+  id: UseJsonPacketSerializer
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UseJsonPacketSerializer()
+  nameWithType: Conduit.UseJsonPacketSerializer()
+  fullName: ConduitNet.Conduit.UseJsonPacketSerializer()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UseJsonPacketSerializer
+    path: ../Runtime/Conduit.cs
+    startLine: 145
+  namespace: ConduitNet
+  summary: Configures Conduit to use JSON for packet serialization (default).
+  example: []
+  syntax:
+    content: public static void UseJsonPacketSerializer()
+    content.vb: Public Shared Sub UseJsonPacketSerializer()
+  overload: ConduitNet.Conduit.UseJsonPacketSerializer*
+- uid: ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  commentId: M:ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  id: UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UseCustomPacketSerializer(IPacketSerializer)
+  nameWithType: Conduit.UseCustomPacketSerializer(IPacketSerializer)
+  fullName: ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UseCustomPacketSerializer
+    path: ../Runtime/Conduit.cs
+    startLine: 150
+  namespace: ConduitNet
+  summary: Sets a custom packet serializer.
+  example: []
+  syntax:
+    content: public static void UseCustomPacketSerializer(IPacketSerializer serializer)
+    parameters:
+    - id: serializer
+      type: ConduitNet.Packets.IPacketSerializer
+    content.vb: Public Shared Sub UseCustomPacketSerializer(serializer As IPacketSerializer)
+  overload: ConduitNet.Conduit.UseCustomPacketSerializer*
+- uid: ConduitNet.Conduit.IsJoining
+  commentId: P:ConduitNet.Conduit.IsJoining
+  id: IsJoining
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: IsJoining
+  nameWithType: Conduit.IsJoining
+  fullName: ConduitNet.Conduit.IsJoining
+  type: Property
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IsJoining
+    path: ../Runtime/Conduit.cs
+    startLine: 157
+  namespace: ConduitNet
+  summary: Whether a lobby join operation is currently in progress.
+  example: []
+  syntax:
+    content: public static bool IsJoining { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsJoining As Boolean
+  overload: ConduitNet.Conduit.IsJoining*
+- uid: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: JoinLobby(ILobby, Dictionary<string, string>)
+  nameWithType: Conduit.JoinLobby(ILobby, Dictionary<string, string>)
+  fullName: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby, System.Collections.Generic.Dictionary<string, string>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: JoinLobby
+    path: ../Runtime/Conduit.cs
+    startLine: 162
+  namespace: ConduitNet
+  summary: Joins a lobby. Establishes connection to the signaling server and connects to peers.
+  example: []
+  syntax:
+    content: public static IEnumerator JoinLobby(ILobby lobby, Dictionary<string, string> headers = null)
+    parameters:
+    - id: lobby
+      type: ConduitNet.ILobby
+      description: The lobby to join.
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Optional HTTP headers to send with the WebSocket connection request.
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Shared Function JoinLobby(lobby As ILobby, headers As Dictionary(Of String, String) = Nothing) As IEnumerator
+  overload: ConduitNet.Conduit.JoinLobby*
+  nameWithType.vb: Conduit.JoinLobby(ILobby, Dictionary(Of String, String))
+  fullName.vb: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby, System.Collections.Generic.Dictionary(Of String, String))
+  name.vb: JoinLobby(ILobby, Dictionary(Of String, String))
+- uid: ConduitNet.Conduit.CancelJoin
+  commentId: M:ConduitNet.Conduit.CancelJoin
+  id: CancelJoin
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: CancelJoin()
+  nameWithType: Conduit.CancelJoin()
+  fullName: ConduitNet.Conduit.CancelJoin()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: CancelJoin
+    path: ../Runtime/Conduit.cs
+    startLine: 165
+  namespace: ConduitNet
+  summary: Cancels an ongoing lobby join operation.
+  example: []
+  syntax:
+    content: public static void CancelJoin()
+    content.vb: Public Shared Sub CancelJoin()
+  overload: ConduitNet.Conduit.CancelJoin*
+- uid: ConduitNet.Conduit.LeaveLobby
+  commentId: M:ConduitNet.Conduit.LeaveLobby
+  id: LeaveLobby
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: LeaveLobby()
+  nameWithType: Conduit.LeaveLobby()
+  fullName: ConduitNet.Conduit.LeaveLobby()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: LeaveLobby
+    path: ../Runtime/Conduit.cs
+    startLine: 176
+  namespace: ConduitNet
+  summary: Leaves the current lobby and disconnects from all peers.
+  example: []
+  syntax:
+    content: public static void LeaveLobby()
+    content.vb: Public Shared Sub LeaveLobby()
+  overload: ConduitNet.Conduit.LeaveLobby*
+- uid: ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  commentId: M:ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  id: GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: GetRTT(string, Action<double?>)
+  nameWithType: Conduit.GetRTT(string, Action<double?>)
+  fullName: ConduitNet.Conduit.GetRTT(string, System.Action<double?>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: GetRTT
+    path: ../Runtime/Conduit.cs
+    startLine: 181
+  namespace: ConduitNet
+  summary: Measures the Round-Trip Time (RTT) to a specific peer in milliseconds using Coroutine.
+  example: []
+  syntax:
+    content: public static IEnumerator GetRTT(string peerId, Action<double?> onResult)
+    parameters:
+    - id: peerId
+      type: System.String
+    - id: onResult
+      type: System.Action{System.Nullable{System.Double}}
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Shared Function GetRTT(peerId As String, onResult As Action(Of Double?)) As IEnumerator
+  overload: ConduitNet.Conduit.GetRTT*
+  nameWithType.vb: Conduit.GetRTT(String, Action(Of Double?))
+  fullName.vb: ConduitNet.Conduit.GetRTT(String, System.Action(Of Double?))
+  name.vb: GetRTT(String, Action(Of Double?))
+- uid: ConduitNet.Conduit.GetRTTAsync(System.String)
+  commentId: M:ConduitNet.Conduit.GetRTTAsync(System.String)
+  id: GetRTTAsync(System.String)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: GetRTTAsync(string)
+  nameWithType: Conduit.GetRTTAsync(string)
+  fullName: ConduitNet.Conduit.GetRTTAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: GetRTTAsync
+    path: ../Runtime/Conduit.cs
+    startLine: 184
+  namespace: ConduitNet
+  summary: Measures the Round-Trip Time (RTT) to a specific peer async/await.
+  example: []
+  syntax:
+    content: public static Task<double?> GetRTTAsync(string peerId)
+    parameters:
+    - id: peerId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Double}}
+    content.vb: Public Shared Function GetRTTAsync(peerId As String) As Task(Of Double?)
+  overload: ConduitNet.Conduit.GetRTTAsync*
+  nameWithType.vb: Conduit.GetRTTAsync(String)
+  fullName.vb: ConduitNet.Conduit.GetRTTAsync(String)
+  name.vb: GetRTTAsync(String)
+- uid: ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  commentId: M:ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  id: SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: SendBytes(IUser, byte[], SendOption)
+  nameWithType: Conduit.SendBytes(IUser, byte[], SendOption)
+  fullName: ConduitNet.Conduit.SendBytes(ConduitNet.IUser, byte[], ConduitNet.SendOption)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SendBytes
+    path: ../Runtime/Conduit.cs
+    startLine: 193
+  namespace: ConduitNet
+  summary: Sends a byte array to a specified user.
+  example: []
+  syntax:
+    content: public static bool SendBytes(IUser user, byte[] data, SendOption option)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    - id: data
+      type: System.Byte[]
+    - id: option
+      type: ConduitNet.SendOption
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SendBytes(user As IUser, data As Byte(), [option] As SendOption) As Boolean
+  overload: ConduitNet.Conduit.SendBytes*
+  nameWithType.vb: Conduit.SendBytes(IUser, Byte(), SendOption)
+  fullName.vb: ConduitNet.Conduit.SendBytes(ConduitNet.IUser, Byte(), ConduitNet.SendOption)
+  name.vb: SendBytes(IUser, Byte(), SendOption)
+- uid: ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  commentId: M:ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  id: SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: SendSignal(IUser, string, SendOption)
+  nameWithType: Conduit.SendSignal(IUser, string, SendOption)
+  fullName: ConduitNet.Conduit.SendSignal(ConduitNet.IUser, string, ConduitNet.SendOption)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SendSignal
+    path: ../Runtime/Conduit.cs
+    startLine: 195
+  namespace: ConduitNet
+  summary: Sends a named signal to a specified user.
+  example: []
+  syntax:
+    content: public static bool SendSignal(IUser user, string signalName, SendOption option)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    - id: signalName
+      type: System.String
+    - id: option
+      type: ConduitNet.SendOption
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SendSignal(user As IUser, signalName As String, [option] As SendOption) As Boolean
+  overload: ConduitNet.Conduit.SendSignal*
+  nameWithType.vb: Conduit.SendSignal(IUser, String, SendOption)
+  fullName.vb: ConduitNet.Conduit.SendSignal(ConduitNet.IUser, String, ConduitNet.SendOption)
+  name.vb: SendSignal(IUser, String, SendOption)
+- uid: ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  commentId: M:ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  id: SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: SendPacket<T>(IUser, T, SendOption)
+  nameWithType: Conduit.SendPacket<T>(IUser, T, SendOption)
+  fullName: ConduitNet.Conduit.SendPacket<T>(ConduitNet.IUser, T, ConduitNet.SendOption)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: SendPacket
+    path: ../Runtime/Conduit.cs
+    startLine: 197
+  namespace: ConduitNet
+  summary: Sends a typed packet (decorated with [Packet]) to a specified user.
+  example: []
+  syntax:
+    content: public static bool SendPacket<T>(IUser user, T packet, SendOption option)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    - id: packet
+      type: '{T}'
+    - id: option
+      type: ConduitNet.SendOption
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SendPacket(Of T)(user As IUser, packet As T, [option] As SendOption) As Boolean
+  overload: ConduitNet.Conduit.SendPacket*
+  nameWithType.vb: Conduit.SendPacket(Of T)(IUser, T, SendOption)
+  fullName.vb: ConduitNet.Conduit.SendPacket(Of T)(ConduitNet.IUser, T, ConduitNet.SendOption)
+  name.vb: SendPacket(Of T)(IUser, T, SendOption)
+- uid: ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  commentId: M:ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  id: ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: ThrowOnRemote<TException>(IUser, string, SendOption)
+  nameWithType: Conduit.ThrowOnRemote<TException>(IUser, string, SendOption)
+  fullName: ConduitNet.Conduit.ThrowOnRemote<TException>(ConduitNet.IUser, string, ConduitNet.SendOption)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ThrowOnRemote
+    path: ../Runtime/Conduit.cs
+    startLine: 208
+  namespace: ConduitNet
+  summary: Throws an exception on a remote peer. The receiver will unconditionally throw the exception of the specified type.
+  example: []
+  syntax:
+    content: 'public static bool ThrowOnRemote<TException>(IUser user, string message, SendOption option = SendOption.OrderedReliable) where TException : Exception'
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+      description: The target user to send the exception to.
+    - id: message
+      type: System.String
+      description: The exception message.
+    - id: option
+      type: ConduitNet.SendOption
+      description: 'Send option (default: OrderedReliable).'
+    typeParameters:
+    - id: TException
+      description: The type of Exception to throw remotely.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ThrowOnRemote(Of TException As Exception)(user As IUser, message As String, [option] As SendOption = SendOption.OrderedReliable) As Boolean
+  overload: ConduitNet.Conduit.ThrowOnRemote*
+  nameWithType.vb: Conduit.ThrowOnRemote(Of TException)(IUser, String, SendOption)
+  fullName.vb: ConduitNet.Conduit.ThrowOnRemote(Of TException)(ConduitNet.IUser, String, ConduitNet.SendOption)
+  name.vb: ThrowOnRemote(Of TException)(IUser, String, SendOption)
+- uid: ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  commentId: M:ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  id: RegisterBytesHandler(ConduitNet.BytesHandler)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: RegisterBytesHandler(BytesHandler)
+  nameWithType: Conduit.RegisterBytesHandler(BytesHandler)
+  fullName: ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: RegisterBytesHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 214
+  namespace: ConduitNet
+  summary: Registers a handler for receiving byte array data.
+  example: []
+  syntax:
+    content: public static void RegisterBytesHandler(BytesHandler handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.BytesHandler
+    content.vb: Public Shared Sub RegisterBytesHandler(handler As BytesHandler)
+  overload: ConduitNet.Conduit.RegisterBytesHandler*
+- uid: ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  commentId: M:ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  id: UnregisterBytesHandler(ConduitNet.BytesHandler)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UnregisterBytesHandler(BytesHandler)
+  nameWithType: Conduit.UnregisterBytesHandler(BytesHandler)
+  fullName: ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnregisterBytesHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 217
+  namespace: ConduitNet
+  summary: Unregisters a byte data handler.
+  example: []
+  syntax:
+    content: public static bool UnregisterBytesHandler(BytesHandler handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.BytesHandler
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function UnregisterBytesHandler(handler As BytesHandler) As Boolean
+  overload: ConduitNet.Conduit.UnregisterBytesHandler*
+- uid: ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  commentId: M:ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  id: RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: RegisterSignalHandler(string, SignalHandler)
+  nameWithType: Conduit.RegisterSignalHandler(string, SignalHandler)
+  fullName: ConduitNet.Conduit.RegisterSignalHandler(string, ConduitNet.SignalHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: RegisterSignalHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 223
+  namespace: ConduitNet
+  summary: Registers a handler for receiving named signals.
+  example: []
+  syntax:
+    content: public static void RegisterSignalHandler(string signalName, SignalHandler handler)
+    parameters:
+    - id: signalName
+      type: System.String
+    - id: handler
+      type: ConduitNet.SignalHandler
+    content.vb: Public Shared Sub RegisterSignalHandler(signalName As String, handler As SignalHandler)
+  overload: ConduitNet.Conduit.RegisterSignalHandler*
+  nameWithType.vb: Conduit.RegisterSignalHandler(String, SignalHandler)
+  fullName.vb: ConduitNet.Conduit.RegisterSignalHandler(String, ConduitNet.SignalHandler)
+  name.vb: RegisterSignalHandler(String, SignalHandler)
+- uid: ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  commentId: M:ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  id: UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UnregisterSignalHandler(string, SignalHandler)
+  nameWithType: Conduit.UnregisterSignalHandler(string, SignalHandler)
+  fullName: ConduitNet.Conduit.UnregisterSignalHandler(string, ConduitNet.SignalHandler)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnregisterSignalHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 228
+  namespace: ConduitNet
+  summary: Unregisters a signal handler.
+  example: []
+  syntax:
+    content: public static bool UnregisterSignalHandler(string signalName, SignalHandler handler)
+    parameters:
+    - id: signalName
+      type: System.String
+    - id: handler
+      type: ConduitNet.SignalHandler
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function UnregisterSignalHandler(signalName As String, handler As SignalHandler) As Boolean
+  overload: ConduitNet.Conduit.UnregisterSignalHandler*
+  nameWithType.vb: Conduit.UnregisterSignalHandler(String, SignalHandler)
+  fullName.vb: ConduitNet.Conduit.UnregisterSignalHandler(String, ConduitNet.SignalHandler)
+  name.vb: UnregisterSignalHandler(String, SignalHandler)
+- uid: ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  commentId: M:ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  id: RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: RegisterPacketHandler<T>(PacketHandler<T>)
+  nameWithType: Conduit.RegisterPacketHandler<T>(PacketHandler<T>)
+  fullName: ConduitNet.Conduit.RegisterPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: RegisterPacketHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 234
+  namespace: ConduitNet
+  summary: Registers a handler for receiving strongly-typed packets.
+  example: []
+  syntax:
+    content: public static void RegisterPacketHandler<T>(PacketHandler<T> handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.PacketHandler{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub RegisterPacketHandler(Of T)(handler As PacketHandler(Of T))
+  overload: ConduitNet.Conduit.RegisterPacketHandler*
+  nameWithType.vb: Conduit.RegisterPacketHandler(Of T)(PacketHandler(Of T))
+  fullName.vb: ConduitNet.Conduit.RegisterPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  name.vb: RegisterPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  commentId: M:ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  id: UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UnregisterPacketHandler<T>(PacketHandler<T>)
+  nameWithType: Conduit.UnregisterPacketHandler<T>(PacketHandler<T>)
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnregisterPacketHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 247
+  namespace: ConduitNet
+  summary: Unregisters a typed packet handler.
+  example: []
+  syntax:
+    content: public static bool UnregisterPacketHandler<T>(PacketHandler<T> handler)
+    parameters:
+    - id: handler
+      type: ConduitNet.PacketHandler{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function UnregisterPacketHandler(Of T)(handler As PacketHandler(Of T)) As Boolean
+  overload: ConduitNet.Conduit.UnregisterPacketHandler*
+  nameWithType.vb: Conduit.UnregisterPacketHandler(Of T)(PacketHandler(Of T))
+  fullName.vb: ConduitNet.Conduit.UnregisterPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  name.vb: UnregisterPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)
+  commentId: M:ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)
+  id: RegisterPacketHandler(System.Type,System.Delegate)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: RegisterPacketHandler(Type, Delegate)
+  nameWithType: Conduit.RegisterPacketHandler(Type, Delegate)
+  fullName: ConduitNet.Conduit.RegisterPacketHandler(System.Type, System.Delegate)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: RegisterPacketHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 259
+  namespace: ConduitNet
+  syntax:
+    content: public static void RegisterPacketHandler(Type packetType, Delegate handler)
+    parameters:
+    - id: packetType
+      type: System.Type
+    - id: handler
+      type: System.Delegate
+    content.vb: Public Shared Sub RegisterPacketHandler(packetType As Type, handler As [Delegate])
+  overload: ConduitNet.Conduit.RegisterPacketHandler*
+- uid: ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)
+  commentId: M:ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)
+  id: UnregisterPacketHandler(System.Type,System.Delegate)
+  parent: ConduitNet.Conduit
+  langs:
+  - csharp
+  - vb
+  name: UnregisterPacketHandler(Type, Delegate)
+  nameWithType: Conduit.UnregisterPacketHandler(Type, Delegate)
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler(System.Type, System.Delegate)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Conduit.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: UnregisterPacketHandler
+    path: ../Runtime/Conduit.cs
+    startLine: 271
+  namespace: ConduitNet
+  syntax:
+    content: public static bool UnregisterPacketHandler(Type packetType, Delegate handler)
+    parameters:
+    - id: packetType
+      type: System.Type
+    - id: handler
+      type: System.Delegate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function UnregisterPacketHandler(packetType As Type, handler As [Delegate]) As Boolean
+  overload: ConduitNet.Conduit.UnregisterPacketHandler*
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.Conduit.Config*
+  commentId: Overload:ConduitNet.Conduit.Config
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Config
+  name: Config
+  nameWithType: Conduit.Config
+  fullName: ConduitNet.Conduit.Config
+- uid: ConduitNet.ConduitConfig
+  commentId: T:ConduitNet.ConduitConfig
+  parent: ConduitNet
+  href: ConduitNet.ConduitConfig.html
+  name: ConduitConfig
+  nameWithType: ConduitConfig
+  fullName: ConduitNet.ConduitConfig
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ConduitNet.Conduit.UserService*
+  commentId: Overload:ConduitNet.Conduit.UserService
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UserService
+  name: UserService
+  nameWithType: Conduit.UserService
+  fullName: ConduitNet.Conduit.UserService
+- uid: ConduitNet.IUserService
+  commentId: T:ConduitNet.IUserService
+  parent: ConduitNet
+  href: ConduitNet.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: ConduitNet.IUserService
+- uid: ConduitNet.Conduit.LobbyService*
+  commentId: Overload:ConduitNet.Conduit.LobbyService
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_LobbyService
+  name: LobbyService
+  nameWithType: Conduit.LobbyService
+  fullName: ConduitNet.Conduit.LobbyService
+- uid: ConduitNet.ILobbyService
+  commentId: T:ConduitNet.ILobbyService
+  parent: ConduitNet
+  href: ConduitNet.ILobbyService.html
+  name: ILobbyService
+  nameWithType: ILobbyService
+  fullName: ConduitNet.ILobbyService
+- uid: ConduitNet.Conduit.Lobby*
+  commentId: Overload:ConduitNet.Conduit.Lobby
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Lobby
+  name: Lobby
+  nameWithType: Conduit.Lobby
+  fullName: ConduitNet.Conduit.Lobby
+- uid: ConduitNet.ILobby
+  commentId: T:ConduitNet.ILobby
+  parent: ConduitNet
+  href: ConduitNet.ILobby.html
+  name: ILobby
+  nameWithType: ILobby
+  fullName: ConduitNet.ILobby
+- uid: ConduitNet.Conduit.Host*
+  commentId: Overload:ConduitNet.Conduit.Host
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Host
+  name: Host
+  nameWithType: Conduit.Host
+  fullName: ConduitNet.Conduit.Host
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: ConduitNet.Conduit.IsHost*
+  commentId: Overload:ConduitNet.Conduit.IsHost
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_IsHost
+  name: IsHost
+  nameWithType: Conduit.IsHost
+  fullName: ConduitNet.Conduit.IsHost
+- uid: ConduitNet.Conduit.IsConnected*
+  commentId: Overload:ConduitNet.Conduit.IsConnected
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnected
+  name: IsConnected
+  nameWithType: Conduit.IsConnected
+  fullName: ConduitNet.Conduit.IsConnected
+- uid: ConduitNet.Conduit.Members*
+  commentId: Overload:ConduitNet.Conduit.Members
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Members
+  name: Members
+  nameWithType: Conduit.Members
+  fullName: ConduitNet.Conduit.Members
+- uid: System.Collections.Generic.IReadOnlyList{ConduitNet.IUser}
+  commentId: T:System.Collections.Generic.IReadOnlyList{ConduitNet.IUser}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<IUser>
+  nameWithType: IReadOnlyList<IUser>
+  fullName: System.Collections.Generic.IReadOnlyList<ConduitNet.IUser>
+  nameWithType.vb: IReadOnlyList(Of IUser)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of ConduitNet.IUser)
+  name.vb: IReadOnlyList(Of IUser)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ConduitNet.Conduit.Participants*
+  commentId: Overload:ConduitNet.Conduit.Participants
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Participants
+  name: Participants
+  nameWithType: Conduit.Participants
+  fullName: ConduitNet.Conduit.Participants
+- uid: System.Collections.Generic.IEnumerable{ConduitNet.IUser}
+  commentId: T:System.Collections.Generic.IEnumerable{ConduitNet.IUser}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IUser>
+  nameWithType: IEnumerable<IUser>
+  fullName: System.Collections.Generic.IEnumerable<ConduitNet.IUser>
+  nameWithType.vb: IEnumerable(Of IUser)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ConduitNet.IUser)
+  name.vb: IEnumerable(Of IUser)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.Conduit.Peers*
+  commentId: Overload:ConduitNet.Conduit.Peers
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Peers
+  name: Peers
+  nameWithType: Conduit.Peers
+  fullName: ConduitNet.Conduit.Peers
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: ConduitNet.Conduit.LocalUser*
+  commentId: Overload:ConduitNet.Conduit.LocalUser
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_LocalUser
+  name: LocalUser
+  nameWithType: Conduit.LocalUser
+  fullName: ConduitNet.Conduit.LocalUser
+- uid: ConduitNet.Conduit.IsConnectedToServer*
+  commentId: Overload:ConduitNet.Conduit.IsConnectedToServer
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnectedToServer
+  name: IsConnectedToServer
+  nameWithType: Conduit.IsConnectedToServer
+  fullName: ConduitNet.Conduit.IsConnectedToServer
+- uid: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs*
+  commentId: Overload:ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_MaxDataChannelProcessingTimeMs
+  name: MaxDataChannelProcessingTimeMs
+  nameWithType: Conduit.MaxDataChannelProcessingTimeMs
+  fullName: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Action{ConduitNet.IUser}
+  commentId: T:System.Action{ConduitNet.IUser}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<IUser>
+  nameWithType: Action<IUser>
+  fullName: System.Action<ConduitNet.IUser>
+  nameWithType.vb: Action(Of IUser)
+  fullName.vb: System.Action(Of ConduitNet.IUser)
+  name.vb: Action(Of IUser)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action{ConduitNet.IUser,System.Boolean}
+  commentId: T:System.Action{ConduitNet.IUser,System.Boolean}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<IUser, bool>
+  nameWithType: Action<IUser, bool>
+  fullName: System.Action<ConduitNet.IUser, bool>
+  nameWithType.vb: Action(Of IUser, Boolean)
+  fullName.vb: System.Action(Of ConduitNet.IUser, Boolean)
+  name.vb: Action(Of IUser, Boolean)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: System.Action{ConduitNet.IUser,ConduitNet.IUser}
+  commentId: T:System.Action{ConduitNet.IUser,ConduitNet.IUser}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<IUser, IUser>
+  nameWithType: Action<IUser, IUser>
+  fullName: System.Action<ConduitNet.IUser, ConduitNet.IUser>
+  nameWithType.vb: Action(Of IUser, IUser)
+  fullName.vb: System.Action(Of ConduitNet.IUser, ConduitNet.IUser)
+  name.vb: Action(Of IUser, IUser)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action{ConduitNet.ConnectionFailedReason}
+  commentId: T:System.Action{ConduitNet.ConnectionFailedReason}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<ConnectionFailedReason>
+  nameWithType: Action<ConnectionFailedReason>
+  fullName: System.Action<ConduitNet.ConnectionFailedReason>
+  nameWithType.vb: Action(Of ConnectionFailedReason)
+  fullName.vb: System.Action(Of ConduitNet.ConnectionFailedReason)
+  name.vb: Action(Of ConnectionFailedReason)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ConduitNet.ConnectionFailedReason
+    name: ConnectionFailedReason
+    href: ConduitNet.ConnectionFailedReason.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ConduitNet.ConnectionFailedReason
+    name: ConnectionFailedReason
+    href: ConduitNet.ConnectionFailedReason.html
+  - name: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: ConduitNet.Conduit.ResetEvents*
+  commentId: Overload:ConduitNet.Conduit.ResetEvents
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_ResetEvents
+  name: ResetEvents
+  nameWithType: Conduit.ResetEvents
+  fullName: ConduitNet.Conduit.ResetEvents
+- uid: ConduitNet.Conduit.Init*
+  commentId: Overload:ConduitNet.Conduit.Init
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_Init__3_System_String___1_System_Action_
+  name: Init
+  nameWithType: Conduit.Init
+  fullName: ConduitNet.Conduit.Init
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{TUserProfile}'
+  commentId: '!:TUserProfile'
+  definition: TUserProfile
+  name: TUserProfile
+  nameWithType: TUserProfile
+  fullName: TUserProfile
+- uid: TUserProfile
+  name: TUserProfile
+  nameWithType: TUserProfile
+  fullName: TUserProfile
+- uid: ConduitNet.Conduit.UseJsonPacketSerializer*
+  commentId: Overload:ConduitNet.Conduit.UseJsonPacketSerializer
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UseJsonPacketSerializer
+  name: UseJsonPacketSerializer
+  nameWithType: Conduit.UseJsonPacketSerializer
+  fullName: ConduitNet.Conduit.UseJsonPacketSerializer
+- uid: ConduitNet.Conduit.UseCustomPacketSerializer*
+  commentId: Overload:ConduitNet.Conduit.UseCustomPacketSerializer
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UseCustomPacketSerializer_ConduitNet_Packets_IPacketSerializer_
+  name: UseCustomPacketSerializer
+  nameWithType: Conduit.UseCustomPacketSerializer
+  fullName: ConduitNet.Conduit.UseCustomPacketSerializer
+- uid: ConduitNet.Packets.IPacketSerializer
+  commentId: T:ConduitNet.Packets.IPacketSerializer
+  parent: ConduitNet.Packets
+  href: ConduitNet.Packets.IPacketSerializer.html
+  name: IPacketSerializer
+  nameWithType: IPacketSerializer
+  fullName: ConduitNet.Packets.IPacketSerializer
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  href: ConduitNet.html
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+- uid: ConduitNet.Conduit.IsJoining*
+  commentId: Overload:ConduitNet.Conduit.IsJoining
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_IsJoining
+  name: IsJoining
+  nameWithType: Conduit.IsJoining
+  fullName: ConduitNet.Conduit.IsJoining
+- uid: ConduitNet.Conduit.JoinLobby*
+  commentId: Overload:ConduitNet.Conduit.JoinLobby
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_JoinLobby_ConduitNet_ILobby_System_Collections_Generic_Dictionary_System_String_System_String__
+  name: JoinLobby
+  nameWithType: Conduit.JoinLobby
+  fullName: ConduitNet.Conduit.JoinLobby
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: ConduitNet.Conduit.CancelJoin*
+  commentId: Overload:ConduitNet.Conduit.CancelJoin
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_CancelJoin
+  name: CancelJoin
+  nameWithType: Conduit.CancelJoin
+  fullName: ConduitNet.Conduit.CancelJoin
+- uid: ConduitNet.Conduit.LeaveLobby*
+  commentId: Overload:ConduitNet.Conduit.LeaveLobby
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_LeaveLobby
+  name: LeaveLobby
+  nameWithType: Conduit.LeaveLobby
+  fullName: ConduitNet.Conduit.LeaveLobby
+- uid: ConduitNet.Conduit.GetRTT*
+  commentId: Overload:ConduitNet.Conduit.GetRTT
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTT_System_String_System_Action_System_Nullable_System_Double___
+  name: GetRTT
+  nameWithType: Conduit.GetRTT
+  fullName: ConduitNet.Conduit.GetRTT
+- uid: System.Action{System.Nullable{System.Double}}
+  commentId: T:System.Action{System.Nullable{System.Double}}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<double?>
+  nameWithType: Action<double?>
+  fullName: System.Action<double?>
+  nameWithType.vb: Action(Of Double?)
+  fullName.vb: System.Action(Of Double?)
+  name.vb: Action(Of Double?)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+- uid: ConduitNet.Conduit.GetRTTAsync*
+  commentId: Overload:ConduitNet.Conduit.GetRTTAsync
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTTAsync_System_String_
+  name: GetRTTAsync
+  nameWithType: Conduit.GetRTTAsync
+  fullName: ConduitNet.Conduit.GetRTTAsync
+- uid: System.Threading.Tasks.Task{System.Nullable{System.Double}}
+  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Double}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<double?>
+  nameWithType: Task<double?>
+  fullName: System.Threading.Tasks.Task<double?>
+  nameWithType.vb: Task(Of Double?)
+  fullName.vb: System.Threading.Tasks.Task(Of Double?)
+  name.vb: Task(Of Double?)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: ConduitNet.Conduit.SendBytes*
+  commentId: Overload:ConduitNet.Conduit.SendBytes
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_SendBytes_ConduitNet_IUser_System_Byte___ConduitNet_SendOption_
+  name: SendBytes
+  nameWithType: Conduit.SendBytes
+  fullName: ConduitNet.Conduit.SendBytes
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+- uid: ConduitNet.Conduit.SendSignal*
+  commentId: Overload:ConduitNet.Conduit.SendSignal
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_SendSignal_ConduitNet_IUser_System_String_ConduitNet_SendOption_
+  name: SendSignal
+  nameWithType: Conduit.SendSignal
+  fullName: ConduitNet.Conduit.SendSignal
+- uid: ConduitNet.Conduit.SendPacket*
+  commentId: Overload:ConduitNet.Conduit.SendPacket
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_SendPacket__1_ConduitNet_IUser___0_ConduitNet_SendOption_
+  name: SendPacket
+  nameWithType: Conduit.SendPacket
+  fullName: ConduitNet.Conduit.SendPacket
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ConduitNet.Conduit.ThrowOnRemote*
+  commentId: Overload:ConduitNet.Conduit.ThrowOnRemote
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_ThrowOnRemote__1_ConduitNet_IUser_System_String_ConduitNet_SendOption_
+  name: ThrowOnRemote
+  nameWithType: Conduit.ThrowOnRemote
+  fullName: ConduitNet.Conduit.ThrowOnRemote
+- uid: ConduitNet.Conduit.RegisterBytesHandler*
+  commentId: Overload:ConduitNet.Conduit.RegisterBytesHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterBytesHandler_ConduitNet_BytesHandler_
+  name: RegisterBytesHandler
+  nameWithType: Conduit.RegisterBytesHandler
+  fullName: ConduitNet.Conduit.RegisterBytesHandler
+- uid: ConduitNet.BytesHandler
+  commentId: T:ConduitNet.BytesHandler
+  parent: ConduitNet
+  href: ConduitNet.BytesHandler.html
+  name: BytesHandler
+  nameWithType: BytesHandler
+  fullName: ConduitNet.BytesHandler
+- uid: ConduitNet.Conduit.UnregisterBytesHandler*
+  commentId: Overload:ConduitNet.Conduit.UnregisterBytesHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterBytesHandler_ConduitNet_BytesHandler_
+  name: UnregisterBytesHandler
+  nameWithType: Conduit.UnregisterBytesHandler
+  fullName: ConduitNet.Conduit.UnregisterBytesHandler
+- uid: ConduitNet.Conduit.RegisterSignalHandler*
+  commentId: Overload:ConduitNet.Conduit.RegisterSignalHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterSignalHandler_System_String_ConduitNet_SignalHandler_
+  name: RegisterSignalHandler
+  nameWithType: Conduit.RegisterSignalHandler
+  fullName: ConduitNet.Conduit.RegisterSignalHandler
+- uid: ConduitNet.SignalHandler
+  commentId: T:ConduitNet.SignalHandler
+  parent: ConduitNet
+  href: ConduitNet.SignalHandler.html
+  name: SignalHandler
+  nameWithType: SignalHandler
+  fullName: ConduitNet.SignalHandler
+- uid: ConduitNet.Conduit.UnregisterSignalHandler*
+  commentId: Overload:ConduitNet.Conduit.UnregisterSignalHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterSignalHandler_System_String_ConduitNet_SignalHandler_
+  name: UnregisterSignalHandler
+  nameWithType: Conduit.UnregisterSignalHandler
+  fullName: ConduitNet.Conduit.UnregisterSignalHandler
+- uid: ConduitNet.Conduit.RegisterPacketHandler*
+  commentId: Overload:ConduitNet.Conduit.RegisterPacketHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterPacketHandler__1_ConduitNet_PacketHandler___0__
+  name: RegisterPacketHandler
+  nameWithType: Conduit.RegisterPacketHandler
+  fullName: ConduitNet.Conduit.RegisterPacketHandler
+- uid: ConduitNet.PacketHandler{{T}}
+  commentId: T:ConduitNet.PacketHandler{``0}
+  parent: ConduitNet
+  definition: ConduitNet.PacketHandler`1
+  href: ConduitNet.PacketHandler-1.html
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+  spec.csharp:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.PacketHandler`1
+  commentId: T:ConduitNet.PacketHandler`1
+  href: ConduitNet.PacketHandler-1.html
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+  spec.csharp:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.Conduit.UnregisterPacketHandler*
+  commentId: Overload:ConduitNet.Conduit.UnregisterPacketHandler
+  href: ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterPacketHandler__1_ConduitNet_PacketHandler___0__
+  name: UnregisterPacketHandler
+  nameWithType: Conduit.UnregisterPacketHandler
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Delegate
+  commentId: T:System.Delegate
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.delegate
+  name: Delegate
+  nameWithType: Delegate
+  fullName: System.Delegate

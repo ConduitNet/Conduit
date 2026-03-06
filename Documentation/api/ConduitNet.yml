@@ -1,0 +1,434 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  id: ConduitNet
+  children:
+  - ConduitNet.BytesHandler
+  - ConduitNet.BytesHandlerAttribute
+  - ConduitNet.Conduit
+  - ConduitNet.ConduitBehaviour
+  - ConduitNet.ConduitConfig
+  - ConduitNet.Conduit`3
+  - ConduitNet.ConnectionFailedReason
+  - ConduitNet.DataEndPoint
+  - ConduitNet.Http
+  - ConduitNet.ILobby
+  - ConduitNet.ILobbyService
+  - ConduitNet.IUser
+  - ConduitNet.IUserService
+  - ConduitNet.LobbyExtension
+  - ConduitNet.LobbyService`3
+  - ConduitNet.Lobby`1
+  - ConduitNet.PacketHandlerAttribute
+  - ConduitNet.PacketHandler`1
+  - ConduitNet.Packets
+  - ConduitNet.RemoteException
+  - ConduitNet.SendOption
+  - ConduitNet.SignalHandler
+  - ConduitNet.SignalHandlerAttribute
+  - ConduitNet.StunServer
+  - ConduitNet.TurnServer
+  - ConduitNet.UserExtension
+  - ConduitNet.UserService`2
+  - ConduitNet.User`2
+  - ConduitNet.Utility
+  langs:
+  - csharp
+  - vb
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+  type: Namespace
+references:
+- uid: ConduitNet.Http
+  commentId: N:ConduitNet.Http
+  href: ConduitNet.html
+  name: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+  fullName: ConduitNet.Http
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+- uid: ConduitNet.Packets
+  commentId: N:ConduitNet.Packets
+  href: ConduitNet.html
+  name: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Packets
+    name: Packets
+    href: ConduitNet.Packets.html
+- uid: ConduitNet.Utility
+  commentId: N:ConduitNet.Utility
+  href: ConduitNet.html
+  name: ConduitNet.Utility
+  nameWithType: ConduitNet.Utility
+  fullName: ConduitNet.Utility
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Utility
+    name: Utility
+    href: ConduitNet.Utility.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Utility
+    name: Utility
+    href: ConduitNet.Utility.html
+- uid: ConduitNet.BytesHandler
+  commentId: T:ConduitNet.BytesHandler
+  parent: ConduitNet
+  href: ConduitNet.BytesHandler.html
+  name: BytesHandler
+  nameWithType: BytesHandler
+  fullName: ConduitNet.BytesHandler
+- uid: ConduitNet.BytesHandlerAttribute
+  commentId: T:ConduitNet.BytesHandlerAttribute
+  href: ConduitNet.BytesHandlerAttribute.html
+  name: BytesHandlerAttribute
+  nameWithType: BytesHandlerAttribute
+  fullName: ConduitNet.BytesHandlerAttribute
+- uid: ConduitNet.Conduit
+  commentId: T:ConduitNet.Conduit
+  href: ConduitNet.Conduit.html
+  name: Conduit
+  nameWithType: Conduit
+  fullName: ConduitNet.Conduit
+- uid: ConduitNet.ConduitBehaviour
+  commentId: T:ConduitNet.ConduitBehaviour
+  href: ConduitNet.ConduitBehaviour.html
+  name: ConduitBehaviour
+  nameWithType: ConduitBehaviour
+  fullName: ConduitNet.ConduitBehaviour
+- uid: ConduitNet.ConduitConfig
+  commentId: T:ConduitNet.ConduitConfig
+  parent: ConduitNet
+  href: ConduitNet.ConduitConfig.html
+  name: ConduitConfig
+  nameWithType: ConduitConfig
+  fullName: ConduitNet.ConduitConfig
+- uid: ConduitNet.Conduit`3
+  commentId: T:ConduitNet.Conduit`3
+  href: ConduitNet.Conduit-3.html
+  name: Conduit<TLobbyState, TUserProfile, TAccountState>
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState)
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState)
+  name.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState)
+  spec.csharp:
+  - uid: ConduitNet.Conduit`3
+    name: Conduit
+    href: ConduitNet.Conduit-3.html
+  - name: <
+  - name: TLobbyState
+  - name: ','
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.Conduit`3
+    name: Conduit
+    href: ConduitNet.Conduit-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLobbyState
+  - name: ','
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+- uid: ConduitNet.ConnectionFailedReason
+  commentId: T:ConduitNet.ConnectionFailedReason
+  parent: ConduitNet
+  href: ConduitNet.ConnectionFailedReason.html
+  name: ConnectionFailedReason
+  nameWithType: ConnectionFailedReason
+  fullName: ConduitNet.ConnectionFailedReason
+- uid: ConduitNet.DataEndPoint
+  commentId: T:ConduitNet.DataEndPoint
+  href: ConduitNet.DataEndPoint.html
+  name: DataEndPoint
+  nameWithType: DataEndPoint
+  fullName: ConduitNet.DataEndPoint
+- uid: ConduitNet.ILobby
+  commentId: T:ConduitNet.ILobby
+  parent: ConduitNet
+  href: ConduitNet.ILobby.html
+  name: ILobby
+  nameWithType: ILobby
+  fullName: ConduitNet.ILobby
+- uid: ConduitNet.ILobbyService
+  commentId: T:ConduitNet.ILobbyService
+  parent: ConduitNet
+  href: ConduitNet.ILobbyService.html
+  name: ILobbyService
+  nameWithType: ILobbyService
+  fullName: ConduitNet.ILobbyService
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: ConduitNet.IUserService
+  commentId: T:ConduitNet.IUserService
+  parent: ConduitNet
+  href: ConduitNet.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: ConduitNet.IUserService
+- uid: ConduitNet.LobbyExtension
+  commentId: T:ConduitNet.LobbyExtension
+  parent: ConduitNet
+  href: ConduitNet.LobbyExtension.html
+  name: LobbyExtension
+  nameWithType: LobbyExtension
+  fullName: ConduitNet.LobbyExtension
+- uid: ConduitNet.LobbyService`3
+  commentId: T:ConduitNet.LobbyService`3
+  href: ConduitNet.LobbyService-3.html
+  name: LobbyService<TLobbyState, TUserProfile, TAccountState>
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+  name.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+  spec.csharp:
+  - uid: ConduitNet.LobbyService`3
+    name: LobbyService
+    href: ConduitNet.LobbyService-3.html
+  - name: <
+  - name: TLobbyState
+  - name: ','
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.LobbyService`3
+    name: LobbyService
+    href: ConduitNet.LobbyService-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLobbyState
+  - name: ','
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+- uid: ConduitNet.Lobby`1
+  commentId: T:ConduitNet.Lobby`1
+  parent: ConduitNet
+  href: ConduitNet.Lobby-1.html
+  name: Lobby<TLobbyState>
+  nameWithType: Lobby<TLobbyState>
+  fullName: ConduitNet.Lobby<TLobbyState>
+  nameWithType.vb: Lobby(Of TLobbyState)
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState)
+  name.vb: Lobby(Of TLobbyState)
+  spec.csharp:
+  - uid: ConduitNet.Lobby`1
+    name: Lobby
+    href: ConduitNet.Lobby-1.html
+  - name: <
+  - name: TLobbyState
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.Lobby`1
+    name: Lobby
+    href: ConduitNet.Lobby-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLobbyState
+  - name: )
+- uid: ConduitNet.PacketHandlerAttribute
+  commentId: T:ConduitNet.PacketHandlerAttribute
+  href: ConduitNet.PacketHandlerAttribute.html
+  name: PacketHandlerAttribute
+  nameWithType: PacketHandlerAttribute
+  fullName: ConduitNet.PacketHandlerAttribute
+- uid: ConduitNet.PacketHandler`1
+  commentId: T:ConduitNet.PacketHandler`1
+  href: ConduitNet.PacketHandler-1.html
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+  spec.csharp:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler
+    href: ConduitNet.PacketHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.RemoteException
+  commentId: T:ConduitNet.RemoteException
+  href: ConduitNet.RemoteException.html
+  name: RemoteException
+  nameWithType: RemoteException
+  fullName: ConduitNet.RemoteException
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+- uid: ConduitNet.SignalHandler
+  commentId: T:ConduitNet.SignalHandler
+  parent: ConduitNet
+  href: ConduitNet.SignalHandler.html
+  name: SignalHandler
+  nameWithType: SignalHandler
+  fullName: ConduitNet.SignalHandler
+- uid: ConduitNet.SignalHandlerAttribute
+  commentId: T:ConduitNet.SignalHandlerAttribute
+  href: ConduitNet.SignalHandlerAttribute.html
+  name: SignalHandlerAttribute
+  nameWithType: SignalHandlerAttribute
+  fullName: ConduitNet.SignalHandlerAttribute
+- uid: ConduitNet.StunServer
+  commentId: T:ConduitNet.StunServer
+  href: ConduitNet.StunServer.html
+  name: StunServer
+  nameWithType: StunServer
+  fullName: ConduitNet.StunServer
+- uid: ConduitNet.TurnServer
+  commentId: T:ConduitNet.TurnServer
+  href: ConduitNet.TurnServer.html
+  name: TurnServer
+  nameWithType: TurnServer
+  fullName: ConduitNet.TurnServer
+- uid: ConduitNet.UserExtension
+  commentId: T:ConduitNet.UserExtension
+  parent: ConduitNet
+  href: ConduitNet.UserExtension.html
+  name: UserExtension
+  nameWithType: UserExtension
+  fullName: ConduitNet.UserExtension
+- uid: ConduitNet.UserService`2
+  commentId: T:ConduitNet.UserService`2
+  href: ConduitNet.UserService-2.html
+  name: UserService<TUserProfile, TAccountState>
+  nameWithType: UserService<TUserProfile, TAccountState>
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState)
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState)
+  name.vb: UserService(Of TUserProfile, TAccountState)
+  spec.csharp:
+  - uid: ConduitNet.UserService`2
+    name: UserService
+    href: ConduitNet.UserService-2.html
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.UserService`2
+    name: UserService
+    href: ConduitNet.UserService-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+- uid: ConduitNet.User`2
+  commentId: T:ConduitNet.User`2
+  parent: ConduitNet
+  href: ConduitNet.User-2.html
+  name: User<TUserProfile, TAccountState>
+  nameWithType: User<TUserProfile, TAccountState>
+  fullName: ConduitNet.User<TUserProfile, TAccountState>
+  nameWithType.vb: User(Of TUserProfile, TAccountState)
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState)
+  name.vb: User(Of TUserProfile, TAccountState)
+  spec.csharp:
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  spec.vb:
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet

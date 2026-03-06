@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.BytesHandler
+  commentId: T:ConduitNet.BytesHandler
+  id: BytesHandler
+  parent: ConduitNet
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: BytesHandler
+  nameWithType: BytesHandler
+  fullName: ConduitNet.BytesHandler
+  type: Delegate
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: BytesHandler
+    path: ../Runtime/Data.cs
+    startLine: 23
+  namespace: ConduitNet
+  summary: Handler for receiving byte array data.
+  example: []
+  syntax:
+    content: public delegate void BytesHandler(IUser sender, ReadOnlyMemory<byte> data, SendOption option)
+    parameters:
+    - id: sender
+      type: ConduitNet.IUser
+    - id: data
+      type: System.ReadOnlyMemory{System.Byte}
+    - id: option
+      type: ConduitNet.SendOption
+    content.vb: Public Delegate Sub BytesHandler(sender As IUser, data As ReadOnlyMemory(Of Byte), [option] As SendOption)
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: System.ReadOnlyMemory{System.Byte}
+  commentId: T:System.ReadOnlyMemory{System.Byte}
+  parent: System
+  definition: System.ReadOnlyMemory`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<byte>
+  nameWithType: ReadOnlyMemory<byte>
+  fullName: System.ReadOnlyMemory<byte>
+  nameWithType.vb: ReadOnlyMemory(Of Byte)
+  fullName.vb: System.ReadOnlyMemory(Of Byte)
+  name.vb: ReadOnlyMemory(Of Byte)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

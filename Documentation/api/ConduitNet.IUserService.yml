@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.IUserService
+  commentId: T:ConduitNet.IUserService
+  id: IUserService
+  parent: ConduitNet
+  children:
+  - ConduitNet.IUserService.ApplyAccountState``1(ConduitNet.IUser,``0)
+  - ConduitNet.IUserService.Fetch(ConduitNet.IUser,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: IUserService
+  nameWithType: IUserService
+  fullName: ConduitNet.IUserService
+  type: Interface
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: IUserService
+    path: ../Runtime/User.cs
+    startLine: 8
+  namespace: ConduitNet
+  summary: Interface for user-related server requests.
+  example: []
+  syntax:
+    content: public interface IUserService
+    content.vb: Public Interface IUserService
+  derivedClasses:
+  - ConduitNet.UserService`2
+- uid: ConduitNet.IUserService.Fetch(ConduitNet.IUser,System.Action)
+  commentId: M:ConduitNet.IUserService.Fetch(ConduitNet.IUser,System.Action)
+  id: Fetch(ConduitNet.IUser,System.Action)
+  parent: ConduitNet.IUserService
+  langs:
+  - csharp
+  - vb
+  name: Fetch(IUser, Action)
+  nameWithType: IUserService.Fetch(IUser, Action)
+  fullName: ConduitNet.IUserService.Fetch(ConduitNet.IUser, System.Action)
+  type: Method
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Fetch
+    path: ../Runtime/User.cs
+    startLine: 10
+  namespace: ConduitNet
+  summary: Fetches up-to-date user data from the server.
+  example: []
+  syntax:
+    content: void Fetch(IUser user, Action callback = null)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    - id: callback
+      type: System.Action
+    content.vb: Sub Fetch(user As IUser, callback As Action = Nothing)
+  overload: ConduitNet.IUserService.Fetch*
+- uid: ConduitNet.IUserService.ApplyAccountState``1(ConduitNet.IUser,``0)
+  commentId: M:ConduitNet.IUserService.ApplyAccountState``1(ConduitNet.IUser,``0)
+  id: ApplyAccountState``1(ConduitNet.IUser,``0)
+  parent: ConduitNet.IUserService
+  langs:
+  - csharp
+  - vb
+  name: ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  nameWithType: IUserService.ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  fullName: ConduitNet.IUserService.ApplyAccountState<TAccountStatePatch>(ConduitNet.IUser, TAccountStatePatch)
+  type: Method
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ApplyAccountState
+    path: ../Runtime/User.cs
+    startLine: 12
+  namespace: ConduitNet
+  summary: Applies a patch to a user's account state on the server (host-only).
+  example: []
+  syntax:
+    content: void ApplyAccountState<TAccountStatePatch>(IUser user, TAccountStatePatch state)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    - id: state
+      type: '{TAccountStatePatch}'
+    typeParameters:
+    - id: TAccountStatePatch
+    content.vb: Sub ApplyAccountState(Of TAccountStatePatch)(user As IUser, state As TAccountStatePatch)
+  overload: ConduitNet.IUserService.ApplyAccountState*
+  nameWithType.vb: IUserService.ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+  fullName.vb: ConduitNet.IUserService.ApplyAccountState(Of TAccountStatePatch)(ConduitNet.IUser, TAccountStatePatch)
+  name.vb: ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.IUserService.Fetch*
+  commentId: Overload:ConduitNet.IUserService.Fetch
+  href: ConduitNet.IUserService.html#ConduitNet_IUserService_Fetch_ConduitNet_IUser_System_Action_
+  name: Fetch
+  nameWithType: IUserService.Fetch
+  fullName: ConduitNet.IUserService.Fetch
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.IUserService.ApplyAccountState*
+  commentId: Overload:ConduitNet.IUserService.ApplyAccountState
+  href: ConduitNet.IUserService.html#ConduitNet_IUserService_ApplyAccountState__1_ConduitNet_IUser___0_
+  name: ApplyAccountState
+  nameWithType: IUserService.ApplyAccountState
+  fullName: ConduitNet.IUserService.ApplyAccountState
+- uid: '{TAccountStatePatch}'
+  commentId: '!:TAccountStatePatch'
+  definition: TAccountStatePatch
+  name: TAccountStatePatch
+  nameWithType: TAccountStatePatch
+  fullName: TAccountStatePatch
+- uid: TAccountStatePatch
+  name: TAccountStatePatch
+  nameWithType: TAccountStatePatch
+  fullName: TAccountStatePatch

@@ -1,0 +1,29 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Utility
+  commentId: N:ConduitNet.Utility
+  id: Utility
+  parent: ConduitNet
+  children:
+  - ConduitNet.Utility.QueryParamBuilder
+  - ConduitNet.Utility.TypeWrapper
+  langs:
+  - csharp
+  - vb
+  name: ConduitNet.Utility
+  nameWithType: ConduitNet.Utility
+  fullName: ConduitNet.Utility
+  type: Namespace
+references:
+- uid: ConduitNet.Utility.QueryParamBuilder
+  commentId: T:ConduitNet.Utility.QueryParamBuilder
+  href: ConduitNet.Utility.QueryParamBuilder.html
+  name: QueryParamBuilder
+  nameWithType: QueryParamBuilder
+  fullName: ConduitNet.Utility.QueryParamBuilder
+- uid: ConduitNet.Utility.TypeWrapper
+  commentId: T:ConduitNet.Utility.TypeWrapper
+  href: ConduitNet.Utility.TypeWrapper.html
+  name: TypeWrapper
+  nameWithType: TypeWrapper
+  fullName: ConduitNet.Utility.TypeWrapper

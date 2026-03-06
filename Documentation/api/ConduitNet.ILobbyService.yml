@@ -1,0 +1,282 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.ILobbyService
+  commentId: T:ConduitNet.ILobbyService
+  id: ILobbyService
+  parent: ConduitNet
+  children:
+  - ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  - ConduitNet.ILobbyService.ApplyState``1(ConduitNet.ILobby,``0)
+  - ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: ILobbyService
+  nameWithType: ILobbyService
+  fullName: ConduitNet.ILobbyService
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Lobby.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ILobbyService
+    path: ../Runtime/Lobby.cs
+    startLine: 9
+  namespace: ConduitNet
+  summary: Interface for lobby-related server requests.
+  example: []
+  syntax:
+    content: public interface ILobbyService
+    content.vb: Public Interface ILobbyService
+  derivedClasses:
+  - ConduitNet.LobbyService`3
+- uid: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  commentId: M:ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  id: ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  parent: ConduitNet.ILobbyService
+  langs:
+  - csharp
+  - vb
+  name: ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  nameWithType: ILobbyService.ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  fullName: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby, string, bool?, bool?, int?)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Lobby.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ApplyMetadata
+    path: ../Runtime/Lobby.cs
+    startLine: 11
+  namespace: ConduitNet
+  summary: Applies a patch to lobby metadata on the server (host-only).
+  example: []
+  syntax:
+    content: void ApplyMetadata(ILobby lobby, string name = null, bool? isPlaying = null, bool? isPrivate = null, int? maxPlayers = null)
+    parameters:
+    - id: lobby
+      type: ConduitNet.ILobby
+    - id: name
+      type: System.String
+    - id: isPlaying
+      type: System.Nullable{System.Boolean}
+    - id: isPrivate
+      type: System.Nullable{System.Boolean}
+    - id: maxPlayers
+      type: System.Nullable{System.Int32}
+    content.vb: Sub ApplyMetadata(lobby As ILobby, name As String = Nothing, isPlaying As Boolean? = Nothing, isPrivate As Boolean? = Nothing, maxPlayers As Integer? = Nothing)
+  overload: ConduitNet.ILobbyService.ApplyMetadata*
+  nameWithType.vb: ILobbyService.ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+  fullName.vb: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby, String, Boolean?, Boolean?, Integer?)
+  name.vb: ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+- uid: ConduitNet.ILobbyService.ApplyState``1(ConduitNet.ILobby,``0)
+  commentId: M:ConduitNet.ILobbyService.ApplyState``1(ConduitNet.ILobby,``0)
+  id: ApplyState``1(ConduitNet.ILobby,``0)
+  parent: ConduitNet.ILobbyService
+  langs:
+  - csharp
+  - vb
+  name: ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  nameWithType: ILobbyService.ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  fullName: ConduitNet.ILobbyService.ApplyState<TLobbyStatePatch>(ConduitNet.ILobby, TLobbyStatePatch)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Lobby.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: ApplyState
+    path: ../Runtime/Lobby.cs
+    startLine: 13
+  namespace: ConduitNet
+  summary: Applies a patch to lobby custom state on the server (host-only).
+  example: []
+  syntax:
+    content: void ApplyState<TLobbyStatePatch>(ILobby lobby, TLobbyStatePatch state)
+    parameters:
+    - id: lobby
+      type: ConduitNet.ILobby
+    - id: state
+      type: '{TLobbyStatePatch}'
+    typeParameters:
+    - id: TLobbyStatePatch
+    content.vb: Sub ApplyState(Of TLobbyStatePatch)(lobby As ILobby, state As TLobbyStatePatch)
+  overload: ConduitNet.ILobbyService.ApplyState*
+  nameWithType.vb: ILobbyService.ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+  fullName.vb: ConduitNet.ILobbyService.ApplyState(Of TLobbyStatePatch)(ConduitNet.ILobby, TLobbyStatePatch)
+  name.vb: ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+- uid: ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby,System.Action)
+  commentId: M:ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby,System.Action)
+  id: Fetch(ConduitNet.ILobby,System.Action)
+  parent: ConduitNet.ILobbyService
+  langs:
+  - csharp
+  - vb
+  name: Fetch(ILobby, Action)
+  nameWithType: ILobbyService.Fetch(ILobby, Action)
+  fullName: ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby, System.Action)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Lobby.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Fetch
+    path: ../Runtime/Lobby.cs
+    startLine: 15
+  namespace: ConduitNet
+  summary: Fetches up-to-date lobby data from the server.
+  example: []
+  syntax:
+    content: void Fetch(ILobby lobby, Action callback = null)
+    parameters:
+    - id: lobby
+      type: ConduitNet.ILobby
+    - id: callback
+      type: System.Action
+    content.vb: Sub Fetch(lobby As ILobby, callback As Action = Nothing)
+  overload: ConduitNet.ILobbyService.Fetch*
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.ILobbyService.ApplyMetadata*
+  commentId: Overload:ConduitNet.ILobbyService.ApplyMetadata
+  href: ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyMetadata_ConduitNet_ILobby_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__
+  name: ApplyMetadata
+  nameWithType: ILobbyService.ApplyMetadata
+  fullName: ConduitNet.ILobbyService.ApplyMetadata
+- uid: ConduitNet.ILobby
+  commentId: T:ConduitNet.ILobby
+  parent: ConduitNet
+  href: ConduitNet.ILobby.html
+  name: ILobby
+  nameWithType: ILobby
+  fullName: ConduitNet.ILobby
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ConduitNet.ILobbyService.ApplyState*
+  commentId: Overload:ConduitNet.ILobbyService.ApplyState
+  href: ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyState__1_ConduitNet_ILobby___0_
+  name: ApplyState
+  nameWithType: ILobbyService.ApplyState
+  fullName: ConduitNet.ILobbyService.ApplyState
+- uid: '{TLobbyStatePatch}'
+  commentId: '!:TLobbyStatePatch'
+  definition: TLobbyStatePatch
+  name: TLobbyStatePatch
+  nameWithType: TLobbyStatePatch
+  fullName: TLobbyStatePatch
+- uid: TLobbyStatePatch
+  name: TLobbyStatePatch
+  nameWithType: TLobbyStatePatch
+  fullName: TLobbyStatePatch
+- uid: ConduitNet.ILobbyService.Fetch*
+  commentId: Overload:ConduitNet.ILobbyService.Fetch
+  href: ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_Fetch_ConduitNet_ILobby_System_Action_
+  name: Fetch
+  nameWithType: ILobbyService.Fetch
+  fullName: ConduitNet.ILobbyService.Fetch
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action

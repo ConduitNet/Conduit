@@ -1,16 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
+using ConduitNet;
 using MessagePack;
 
-namespace LiteP2PNet {
-    public static class QueryParamBuilder
-    {
-       public static string BuildUrl(string baseUrl, IDictionary<string, object> parameters)
-        {
+namespace ConduitNet.Utility {
+    public static class QueryParamBuilder {
+        public static string BuildUrl(string baseUrl, IDictionary<string, object> parameters) {
             if (string.IsNullOrWhiteSpace(baseUrl)) return string.Empty;
 
             string cleanedUrl = baseUrl.TrimEnd('/');
@@ -18,22 +17,18 @@ namespace LiteP2PNet {
 
             var sb = new StringBuilder();
 
-            foreach (var kvp in parameters)
-            {
+            foreach (var kvp in parameters) {
                 if (kvp.Value == null) continue;
 
                 // 배열 또는 리스트인지 확인 (문자열 제외)
-                if (kvp.Value is IEnumerable enumerable && !(kvp.Value is string))
-                {
-                    foreach (var item in enumerable)
-                    {
+                if (kvp.Value is IEnumerable enumerable && !(kvp.Value is string)) {
+                    foreach (var item in enumerable) {
                         if (item == null) continue;
                         // 배열 요소이므로 isArray를 true로 전달
                         AppendParam(sb, kvp.Key, item, isArray: true);
                     }
                 }
-                else
-                {
+                else {
                     // 단일 값이므로 isArray를 false로 전달
                     AppendParam(sb, kvp.Key, kvp.Value, isArray: false);
                 }
@@ -44,8 +39,7 @@ namespace LiteP2PNet {
             return $"{cleanedUrl}?{sb.ToString().TrimEnd('&')}";
         }
 
-        private static void AppendParam(StringBuilder sb, string key, object value, bool isArray)
-        {
+        private static void AppendParam(StringBuilder sb, string key, object value, bool isArray) {
             // 1. 키 처리: 배열이면 뒤에 []를 붙임
             string finalKey = isArray ? $"{key}[]" : key;
 
@@ -61,63 +55,92 @@ namespace LiteP2PNet {
     }
 
     internal static class Utils {
-        public static Range GetByteRange(ref int offset, int size) {
-            var range = offset..(offset + size);
-            offset += size;
-            return range;
+        /// <summary>
+        /// rawdata에서 offset 위치의 int 값을 배열 복사 없이 직접 읽습니다.
+        /// </summary>
+        public static int ReadInt32(byte[] rawdata, int offset) {
+            return rawdata[offset]
+                 | (rawdata[offset + 1] << 8)
+                 | (rawdata[offset + 2] << 16)
+                 | (rawdata[offset + 3] << 24);
         }
 
-        public static Range GetRemainingByteRange(int offset) {
-            return offset..^0;
+        /// <summary>
+        /// rawdata에서 offset 위치의 long 값을 배열 복사 없이 직접 읽습니다.
+        /// </summary>
+        public static long ReadInt64(byte[] rawdata, int offset) {
+            return (long)rawdata[offset]
+                 | ((long)rawdata[offset + 1] << 8)
+                 | ((long)rawdata[offset + 2] << 16)
+                 | ((long)rawdata[offset + 3] << 24)
+                 | ((long)rawdata[offset + 4] << 32)
+                 | ((long)rawdata[offset + 5] << 40)
+                 | ((long)rawdata[offset + 6] << 48)
+                 | ((long)rawdata[offset + 7] << 56);
         }
 
-        public static string GetArgumentsTypeString(List<Type> types) => $"({string.Join(", ", types.Select(t => t.Name))})";
+        /// <summary>
+        /// List&lt;byte&gt;에 int 값을 배열 할당 없이 직접 씁니다.
+        /// </summary>
+        private static void WriteInt32(List<byte> seq, int value) {
+            seq.Add((byte)value);
+            seq.Add((byte)(value >> 8));
+            seq.Add((byte)(value >> 16));
+            seq.Add((byte)(value >> 24));
+        }
 
         public static object ParseData(Type type, ref int offset, byte[] rawdata) {
-            byte[] lenBytes = rawdata[GetByteRange(ref offset, sizeof(int))];
-            int len = BitConverter.ToInt32(lenBytes, 0);
-            byte[] bytes = rawdata[GetByteRange(ref offset, len)];
-            return MessagePackSerializer.Deserialize(type, bytes);
+            int len = ReadInt32(rawdata, offset);
+            offset += sizeof(int);
+            var memory = new ReadOnlyMemory<byte>(rawdata, offset, len);
+            offset += len;
+            return MessagePackSerializer.Deserialize(type, memory);
         }
 
         public static void AppendData<T>(ref List<byte> seq, T data) {
             byte[] bytes = MessagePackSerializer.Serialize(data);
-            byte[] bytesLen = BitConverter.GetBytes(bytes.Length);
-            seq.AddRange(bytesLen);
+            WriteInt32(seq, bytes.Length);
             seq.AddRange(bytes);
         }
 
-        public static void AppendData(Type type, ref List<byte> seq, object data) {
-            byte[] bytes = MessagePackSerializer.Serialize(type, data);
-            byte[] bytesLen = BitConverter.GetBytes(bytes.Length);
-            seq.AddRange(bytesLen);
-            seq.AddRange(bytes);
+        /// <summary>
+        /// List&lt;byte&gt;의 맨 앞에 MessagePack 직렬화된 데이터를 삽입합니다.
+        /// </summary>
+        public static void InsertData<T>(List<byte> seq, T data) {
+            byte[] bytes = MessagePackSerializer.Serialize(data);
+            byte[] header = new byte[sizeof(int) + bytes.Length];
+            header[0] = (byte)bytes.Length;
+            header[1] = (byte)(bytes.Length >> 8);
+            header[2] = (byte)(bytes.Length >> 16);
+            header[3] = (byte)(bytes.Length >> 24);
+            Buffer.BlockCopy(bytes, 0, header, sizeof(int), bytes.Length);
+            seq.InsertRange(0, header);
         }
 
         public static T ParseData<T>(ref int offset, byte[] rawdata) {
-            byte[] lenBytes = rawdata[GetByteRange(ref offset, sizeof(int))];
-            int len = BitConverter.ToInt32(lenBytes, 0);
-            byte[] bytes = rawdata[GetByteRange(ref offset, len)];
-            return MessagePackSerializer.Deserialize<T>(bytes);
+            int len = ReadInt32(rawdata, offset);
+            offset += sizeof(int);
+            var memory = new ReadOnlyMemory<byte>(rawdata, offset, len);
+            offset += len;
+            return MessagePackSerializer.Deserialize<T>(memory);
         }
 
-        public static bool CheckEmptySequence(ref int offset, byte[] rawdata) {
-            byte[] lenBytes = rawdata[GetByteRange(ref offset, sizeof(int))];
-            int len = BitConverter.ToInt32(lenBytes, 0);
-
-            if (len == 0) {
-                offset += sizeof(int);
-                return true;
+        public static string GetMethodSignature(MethodInfo method) {
+            var sb = new StringBuilder();
+            sb.Append(method.ReturnType.Name);
+            sb.Append(" (");
+            var parameters = method.GetParameters();
+            for (int i = 0; i < parameters.Length; i++) {
+                if (i > 0) sb.Append(", ");
+                sb.Append(parameters[i].ParameterType.Name);
+                sb.Append(' ');
+                sb.Append(parameters[i].Name);
             }
-            else return false;
-        }
-        
-        public static void AppendEmptySequence(ref List<byte> seq) {
-            byte[] bytesLen = BitConverter.GetBytes((int)0);
-            seq.AddRange(bytesLen);
+            sb.Append(')');
+            return sb.ToString();
         }
     }
-    
+
     [MessagePackObject]
     public class TypeWrapper {
         [Key(0)]
@@ -125,7 +148,7 @@ namespace LiteP2PNet {
         [IgnoreMember]
         public Type Type {
             get => TypeName == null ? null : Type.GetType(TypeName);
-            set => TypeName = Network.useAssemblyQualifiedNameForTypes ? value.AssemblyQualifiedName : value.FullName;
+            set => TypeName = Conduit.UseAssemblyQualifiedNameForTypes ? value.AssemblyQualifiedName : value.FullName;
         }
 
         public TypeWrapper() { }
@@ -175,15 +198,13 @@ namespace LiteP2PNet {
             }
         }
 
-        public T1 this[T2 key2]
-        {
+        public T1 this[T2 key2] {
             get {
                 lock (_lock)
                     return _map2[key2];
             }
             set {
-                lock (_lock)
-                {
+                lock (_lock) {
                     if (_map2.TryGetValue(key2, out var oldKey1))
                         _map1.Remove(oldKey1);
 
@@ -231,10 +252,10 @@ namespace LiteP2PNet {
         }
 
         public bool ContainsFirst(T1 key1) {
-            lock(_lock) return _map1.ContainsKey(key1);
+            lock (_lock) return _map1.ContainsKey(key1);
         }
         public bool ContainsSecond(T2 key2) {
-            lock(_lock) return _map2.ContainsKey(key2);
+            lock (_lock) return _map2.ContainsKey(key2);
         }
     }
 }

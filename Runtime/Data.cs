@@ -2,67 +2,58 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using ConduitNet.Utility;
 using MessagePack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using UnityEditor.UI;
 
-/**
-[DataType(2), SendOption(2), None(4)] [Data]
-**/
-
-namespace LiteP2PNet {
-    [JsonConverter(typeof(StringEnumConverter))]
-    public enum ConnectionFailedReason {
-        IceConnectionFailed,
-
-        [EnumMember(Value = "USER_NOT_FOUND")]
-        UserNotFound,
-        [EnumMember(Value = "LOBBY_NOT_FOUND")]
-        LobbyNotFound,
-        [EnumMember(Value = "LOBBY_FULL")]
-        LobbyIsFull,
-        [EnumMember(Value = "HOST_NOT_FOUND")]
-        HostNotFound,     
-        [EnumMember(Value = "BAD_CONNECTION")]
-        BadConnection,
+namespace ConduitNet {
+    /// <summary>Data channel send options combining ordering and reliability guarantees.</summary>
+    public enum SendOption : byte {
+        /// <summary>Guarantees both order and reliability.</summary>
+        OrderedReliable = 0b00,
+        /// <summary>Guarantees order but not reliability.</summary>
+        OrderedUnreliable = 0b01,
+        /// <summary>Guarantees reliability but not order.</summary>
+        UnorderedReliable = 0b10,
+        /// <summary>Guarantees neither order nor reliability.</summary>
+        UnorderedUnreliable = 0b11
     }
 
-    public enum SendOption : byte {
-        OrderedReliable = 0b00,
-        OrderedUnreliable = 0b01,
-        UnorderedReliable = 0b10,
-        UnorderedUnreliable = 0b11
+    /// <summary>Handler for receiving byte array data.</summary>
+    public delegate void BytesHandler(IUser sender, ReadOnlyMemory<byte> data, SendOption option);
+    /// <summary>Handler for receiving named signals.</summary>
+    public delegate void SignalHandler(IUser sender, long timestamp, SendOption option);
+    /// <summary>Handler for receiving strongly-typed packets.</summary>
+    public delegate void PacketHandler<T>(IUser sender, long timestamp, T packet, SendOption option);
+
+    /// <summary>Marks a method as a byte data handler.</summary>
+    [AttributeUsage(AttributeTargets.Method)]
+    public class BytesHandlerAttribute : Attribute { }
+
+    /// <summary>Marks a method as a signal handler for a specific signal name.</summary>
+    [AttributeUsage(AttributeTargets.Method)]
+    public class SignalHandlerAttribute : Attribute {
+        public string SignalName { get; }
+        public SignalHandlerAttribute(string signalName) {
+            SignalName = signalName;
+        }
+    }
+
+    /// <summary>Marks a method as a packet handler for a specific packet type.</summary>
+    [AttributeUsage(AttributeTargets.Method)]
+    public class PacketHandlerAttribute : Attribute {
+        public Type PacketType { get; }
+        public PacketHandlerAttribute(Type packetType) {
+            PacketType = packetType;
+        }
     }
 
     internal enum DataType : byte {
         Byte = 0b00,
         Signal = 0b01,
         Packet = 0b10,
-        RPC = 0b11,
-    }
-
-    internal enum RpcType : byte {
-        Call = 0b0000,
-        Return = 0b0001,
-        Get = 0b0010,
-        Set = 0b0011,
-        Instantiate = 0b0100,
-        Destroy = 0b0101,
-        Error = 0b1111
-    }
-
-    [MessagePackObject]
-    public struct RpcCall {
-        [Key(0)]
-        public string methodId;
-        [Key(1)]
-        public object[] parameters;
-
-        public RpcCall(string methodId, params object[] parameters) {
-            this.methodId = methodId;
-            this.parameters = parameters;
-        }
+        Error = 0b11,
     }
 
     [MessagePackObject]
@@ -73,27 +64,6 @@ namespace LiteP2PNet {
         public string receiver;
     }
 
-    [JsonConverter(typeof(StringEnumConverter))]
-    internal enum SignalingMsgType {
-        [EnumMember(Value = "offer")]
-        Offer,
-        [EnumMember(Value = "answer")]
-        Answer,
-        [EnumMember(Value = "ice-candidate")]
-        IceCandidate,
-        [EnumMember(Value = "lobby-update")]
-        LobbyUpdate,
-        [EnumMember(Value = "connection-failed")]
-        ConnectionFailed,
-        [EnumMember(Value = "request-data")]
-        RequestData,
-        [EnumMember(Value = "response-data")]
-        ResponseData,
-        [EnumMember(Value = "apply-data")]
-        ApplyData,
-        [EnumMember(Value = "data-update")]
-        DataUpdate
-    }
     [Serializable]
     internal class SignalingMessage {
         public SignalingMsgType type;
@@ -115,108 +85,76 @@ namespace LiteP2PNet {
         public NullableInt sdpMLineIndex;
     }
 
-    [Serializable]
-    internal class LobbyUpdateDTO {
-        public string type;
-        public string target;
-        public string lobby;
+    /// <summary>
+    /// Global configuration for Conduit. Must be set before calling Init.
+    /// 'serverUrl' and 'stunServers' are required.
+    /// </summary>
+    public class ConduitConfig {
+        /// <summary>URL of the signaling/API server.</summary>
+        public string ServerUrl { get; }
+        /// <summary>List of STUN servers (required).</summary>
+        public StunServer[] StunServers { get; }
+        /// <summary>List of TURN servers (optional).</summary>
+        public TurnServer[] TurnServers { get; }
+
+        /// <summary>Whether to use HTTPS for API requests.</summary>
+        public bool UseHttps { get; set; } = false;
+        /// <summary>Whether to use WSS for WebSocket connections.</summary>
+        public bool UseWss { get; set; } = false;
+        /// <summary>Enable debug logging.</summary>
+        public bool DebugLog { get; set; } = false;
+        /// <summary>Header key for user ID.</summary>
+        public string UserIdHeader { get; set; } = "user-id";
+        /// <summary>Header key for lobby ID.</summary>
+        public string LobbyIdHeader { get; set; } = "lobby-id";
+        /// <summary>Lobby join timeout in seconds.</summary>
+        public float JoinTimeout { get; set; } = 10f;
+        /// <summary>API path for syncing user. {0} is API URL, {1} is user ID.</summary>
+        public string SyncUserPath { get; set; } = "{0}/user/sync/{1}";
+        /// <summary>API path for health check. {0} is API URL.</summary>
+        public string HealthPath { get; set; } = "{0}/health";
+        /// <summary>API path for server status check. {0} is API URL.</summary>
+        public string StatusPath { get; set; } = "{0}/status";
+
+        public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null) {
+            ServerUrl = serverUrl ?? throw new ArgumentNullException(nameof(serverUrl));
+            StunServers = stunServers ?? throw new ArgumentNullException(nameof(stunServers));
+            TurnServers = turnServers;
+        }
     }
 
-    [Serializable]
-    internal class ConnectionFailedDTO {
-        public ConnectionFailedReason reason;
-    }
-
-    [Serializable]
-    internal class DataRequestDTO {
-        public string type;
-        public string target;
-    }
-
-    [Serializable]
-    internal class DataResponseDTO {
-        public string type;
-        public string target;
-        public bool success;
-        public string data;
-    }
-
-    [JsonConverter(typeof(StringEnumConverter))]
-    internal enum DataChangeType {
-        [EnumMember(Value = "user-account")]
-        UserAccount,
-        [EnumMember(Value = "lobby-metadata")]
-        LobbyMetadata,
-        [EnumMember(Value = "lobby-state")]
-        LobbyState
-    }
-
-    [Serializable]
-    internal class DataApplyDTO {
-        public DataChangeType type;
-        public string target;
-        public string data;
-    }
-
-    [Serializable]
-    internal class DataUpdateDTO {
-        public DataChangeType type;
-        public string data;
-    }
-
-    [Serializable]
-    internal class LobbyMetadataUpdateDTO {
-        public string name;
-        public int? maxPlayers;
-        public bool? isPrivate;
-        public bool? isPlaying;
-    }
-
+    /// <summary>STUN server configuration.</summary>
     public struct StunServer {
         public string[] urls;
     }
 
+    /// <summary>TURN server configuration.</summary>
     public struct TurnServer {
         public string[] urls;
         public string username;
         public string credential;
     }
 
-    [MessagePackObject]
-    public class RpcInstantiationData {
-        [Key(0)]
-        public Dictionary<TypeWrapper, (TypeWrapper, byte[])[]> initArgs = new();
-        [Key(1)]
-        public Dictionary<TypeWrapper, NetworkId> networkIds = new();
+    /// <summary>
+    /// Exception received from a remote peer. Thrown if the original exception type
+    /// cannot be resolved or instantiated on the receiving side.
+    /// </summary>
+    public class RemoteException : Exception {
+        /// <summary>The user who sent the exception.</summary>
+        public IUser Sender { get; }
+        /// <summary>The type name of the original exception thrown remotely.</summary>
+        public string RemoteTypeName { get; }
 
-        public RpcInstantiationData() { }
-
-        public RpcInstantiationData(Dictionary<Type, NetworkId> networkIds, RpcInitArgs args) {
-            this.networkIds = networkIds.ToDictionary(x => new TypeWrapper(x.Key), x => x.Value);
-
-            foreach(var key in args.initArgs.Keys) {
-                var keyWrapper = new TypeWrapper(key);
-                var argsWrapper = args.initArgs[key].Select(
-                    x => {
-                        var t = x.GetType();
-                        return (new TypeWrapper(t), MessagePackSerializer.Serialize(t, x));
-                    }
-                ).ToArray();
-                initArgs[keyWrapper] = argsWrapper;
-            }
+        public RemoteException(IUser sender, string message, string remoteTypeName)
+            : base($"[{remoteTypeName}] {message}") {
+            Sender = sender;
+            RemoteTypeName = remoteTypeName;
         }
 
-        public RpcInitArgs GetRpcInitArgs() {
-            var result = new RpcInitArgs();
-            foreach(var key in initArgs.Keys) {
-                var args = initArgs[key].Select(
-                    x => MessagePackSerializer.Deserialize(x.Item1.Type, x.Item2)
-                );
-                result.Add(key.Type, args.ToArray());
-            }
-            return result;
+        public RemoteException(IUser sender, Exception inner)
+            : base($"Remote exception from {sender.Id}: {inner.Message}", inner) {
+            Sender = sender;
+            RemoteTypeName = inner.GetType().FullName;
         }
-
-        public Dictionary<Type, NetworkId> GetNetworkIds() => networkIds.ToDictionary(x => x.Key.Type, x => x.Value);
     }
 }

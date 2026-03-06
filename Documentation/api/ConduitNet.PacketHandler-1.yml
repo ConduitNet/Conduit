@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.PacketHandler`1
+  commentId: T:ConduitNet.PacketHandler`1
+  id: PacketHandler`1
+  parent: ConduitNet
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: PacketHandler<T>
+  nameWithType: PacketHandler<T>
+  fullName: ConduitNet.PacketHandler<T>
+  type: Delegate
+  source:
+    remote:
+      path: Runtime/Data.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: PacketHandler
+    path: ../Runtime/Data.cs
+    startLine: 27
+  namespace: ConduitNet
+  summary: Handler for receiving strongly-typed packets.
+  example: []
+  syntax:
+    content: public delegate void PacketHandler<T>(IUser sender, long timestamp, T packet, SendOption option)
+    parameters:
+    - id: sender
+      type: ConduitNet.IUser
+    - id: timestamp
+      type: System.Int64
+    - id: packet
+      type: '{T}'
+    - id: option
+      type: ConduitNet.SendOption
+    typeParameters:
+    - id: T
+    content.vb: Public Delegate Sub PacketHandler(Of T)(sender As IUser, timestamp As Long, packet As T, [option] As SendOption)
+  nameWithType.vb: PacketHandler(Of T)
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  name.vb: PacketHandler(Of T)
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ConduitNet.SendOption
+  commentId: T:ConduitNet.SendOption
+  parent: ConduitNet
+  href: ConduitNet.SendOption.html
+  name: SendOption
+  nameWithType: SendOption
+  fullName: ConduitNet.SendOption
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "**/*.cs"
+          ],
+          "exclude": [
+            "**/Editor/**",
+            "**/Tests/**",
+            "obj/**",
+            "bin/**"
+          ]
+        },
+        {
+          "src": "../../Shared",
+          "files": [
+            "**/*.cs"
+          ],
+          "exclude": [
+            "**/Editor/**",
+            "**/Tests/**",
+            "obj/**",
+            "bin/**"
+          ]
+        }
+      ],
+      "output": "api",
+      "disableGitFeatures": false,
+      "properties": {
+        "TargetFramework": "netstandard2.1"
+      },
+      "disableDefaultFilter": false,
+      "allowCompilationErrors": true,
+      "namespaceLayout": "nested"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Conduit",
+      "_appTitle": "Conduit",
+      "_enableSearch": true,
+      "pdf": false
+    },
+    "xref": [
+      "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
+    ]
+  }
+}

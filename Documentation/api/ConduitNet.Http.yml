@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Http
+  commentId: N:ConduitNet.Http
+  id: Http
+  parent: ConduitNet
+  children:
+  - ConduitNet.Http.HttpRequest
+  - ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+  fullName: ConduitNet.Http
+  type: Namespace
+references:
+- uid: ConduitNet.Http.HttpRequest
+  commentId: T:ConduitNet.Http.HttpRequest
+  parent: ConduitNet.Http
+  href: ConduitNet.Http.HttpRequest.html
+  name: HttpRequest
+  nameWithType: HttpRequest
+  fullName: ConduitNet.Http.HttpRequest
+- uid: ConduitNet.Http.HttpResponse
+  commentId: T:ConduitNet.Http.HttpResponse
+  href: ConduitNet.Http.HttpResponse.html
+  name: HttpResponse
+  nameWithType: HttpResponse
+  fullName: ConduitNet.Http.HttpResponse
+- uid: ConduitNet.Http
+  commentId: N:ConduitNet.Http
+  href: ConduitNet.html
+  name: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+  fullName: ConduitNet.Http
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html

@@ -1,0 +1,121 @@
+### YamlMime:TableOfContent
+items:
+- uid: ConduitNet
+  name: ConduitNet
+  type: Namespace
+  items:
+  - uid: ConduitNet.Http
+    name: Http
+    type: Namespace
+    items:
+    - uid: ConduitNet.Http.HttpRequest
+      name: HttpRequest
+      type: Class
+    - uid: ConduitNet.Http.HttpResponse
+      name: HttpResponse
+      type: Class
+  - uid: ConduitNet.Packets
+    name: Packets
+    type: Namespace
+    items:
+    - uid: ConduitNet.Packets.IPacketSerializer
+      name: IPacketSerializer
+      type: Interface
+    - uid: ConduitNet.Packets.JsonPacketSerializer
+      name: JsonPacketSerializer
+      type: Class
+    - uid: ConduitNet.Packets.PacketAttribute
+      name: PacketAttribute
+      type: Class
+    - uid: ConduitNet.Packets.PacketRegistry
+      name: PacketRegistry
+      type: Class
+  - uid: ConduitNet.Utility
+    name: Utility
+    type: Namespace
+    items:
+    - uid: ConduitNet.Utility.QueryParamBuilder
+      name: QueryParamBuilder
+      type: Class
+    - uid: ConduitNet.Utility.TypeWrapper
+      name: TypeWrapper
+      type: Class
+  - uid: ConduitNet.BytesHandler
+    name: BytesHandler
+    type: Delegate
+  - uid: ConduitNet.BytesHandlerAttribute
+    name: BytesHandlerAttribute
+    type: Class
+  - uid: ConduitNet.Conduit
+    name: Conduit
+    type: Class
+  - uid: ConduitNet.ConduitBehaviour
+    name: ConduitBehaviour
+    type: Class
+  - uid: ConduitNet.ConduitConfig
+    name: ConduitConfig
+    type: Class
+  - uid: ConduitNet.Conduit`3
+    name: Conduit<TLobbyState, TUserProfile, TAccountState>
+    type: Class
+  - uid: ConduitNet.ConnectionFailedReason
+    name: ConnectionFailedReason
+    type: Enum
+  - uid: ConduitNet.DataEndPoint
+    name: DataEndPoint
+    type: Struct
+  - uid: ConduitNet.ILobby
+    name: ILobby
+    type: Interface
+  - uid: ConduitNet.ILobbyService
+    name: ILobbyService
+    type: Interface
+  - uid: ConduitNet.IUser
+    name: IUser
+    type: Interface
+  - uid: ConduitNet.IUserService
+    name: IUserService
+    type: Interface
+  - uid: ConduitNet.LobbyExtension
+    name: LobbyExtension
+    type: Class
+  - uid: ConduitNet.LobbyService`3
+    name: LobbyService<TLobbyState, TUserProfile, TAccountState>
+    type: Class
+  - uid: ConduitNet.Lobby`1
+    name: Lobby<TLobbyState>
+    type: Class
+  - uid: ConduitNet.PacketHandlerAttribute
+    name: PacketHandlerAttribute
+    type: Class
+  - uid: ConduitNet.PacketHandler`1
+    name: PacketHandler<T>
+    type: Delegate
+  - uid: ConduitNet.RemoteException
+    name: RemoteException
+    type: Class
+  - uid: ConduitNet.SendOption
+    name: SendOption
+    type: Enum
+  - uid: ConduitNet.SignalHandler
+    name: SignalHandler
+    type: Delegate
+  - uid: ConduitNet.SignalHandlerAttribute
+    name: SignalHandlerAttribute
+    type: Class
+  - uid: ConduitNet.StunServer
+    name: StunServer
+    type: Struct
+  - uid: ConduitNet.TurnServer
+    name: TurnServer
+    type: Struct
+  - uid: ConduitNet.UserExtension
+    name: UserExtension
+    type: Class
+  - uid: ConduitNet.UserService`2
+    name: UserService<TUserProfile, TAccountState>
+    type: Class
+  - uid: ConduitNet.User`2
+    name: User<TUserProfile, TAccountState>
+    type: Class
+memberLayout: SamePage

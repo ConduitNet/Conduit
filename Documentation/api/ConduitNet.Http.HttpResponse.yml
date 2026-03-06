@@ -1,0 +1,655 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.Http.HttpResponse
+  commentId: T:ConduitNet.Http.HttpResponse
+  id: HttpResponse
+  parent: ConduitNet.Http
+  children:
+  - ConduitNet.Http.HttpResponse.Bytes
+  - ConduitNet.Http.HttpResponse.Deserialize``1
+  - ConduitNet.Http.HttpResponse.Headers
+  - ConduitNet.Http.HttpResponse.StatusCode
+  - ConduitNet.Http.HttpResponse.Text
+  langs:
+  - csharp
+  - vb
+  name: HttpResponse
+  nameWithType: HttpResponse
+  fullName: ConduitNet.Http.HttpResponse
+  type: Class
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: HttpResponse
+    path: ../Runtime/HttpRequest.cs
+    startLine: 180
+  namespace: ConduitNet.Http
+  summary: Wrapper for an HTTP response.
+  example: []
+  syntax:
+    content: public class HttpResponse
+    content.vb: Public Class HttpResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ConduitNet.Http.HttpResponse.StatusCode
+  commentId: P:ConduitNet.Http.HttpResponse.StatusCode
+  id: StatusCode
+  parent: ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: HttpResponse.StatusCode
+  fullName: ConduitNet.Http.HttpResponse.StatusCode
+  type: Property
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: StatusCode
+    path: ../Runtime/HttpRequest.cs
+    startLine: 182
+  namespace: ConduitNet.Http
+  summary: HTTP status code.
+  example: []
+  syntax:
+    content: public long StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property StatusCode As Long
+  overload: ConduitNet.Http.HttpResponse.StatusCode*
+- uid: ConduitNet.Http.HttpResponse.Text
+  commentId: P:ConduitNet.Http.HttpResponse.Text
+  id: Text
+  parent: ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: HttpResponse.Text
+  fullName: ConduitNet.Http.HttpResponse.Text
+  type: Property
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Text
+    path: ../Runtime/HttpRequest.cs
+    startLine: 184
+  namespace: ConduitNet.Http
+  summary: Response body as text.
+  example: []
+  syntax:
+    content: public string Text { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Text As String
+  overload: ConduitNet.Http.HttpResponse.Text*
+- uid: ConduitNet.Http.HttpResponse.Bytes
+  commentId: P:ConduitNet.Http.HttpResponse.Bytes
+  id: Bytes
+  parent: ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: Bytes
+  nameWithType: HttpResponse.Bytes
+  fullName: ConduitNet.Http.HttpResponse.Bytes
+  type: Property
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Bytes
+    path: ../Runtime/HttpRequest.cs
+    startLine: 186
+  namespace: ConduitNet.Http
+  summary: Response body as a byte array.
+  example: []
+  syntax:
+    content: public byte[] Bytes { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Bytes As Byte()
+  overload: ConduitNet.Http.HttpResponse.Bytes*
+- uid: ConduitNet.Http.HttpResponse.Headers
+  commentId: P:ConduitNet.Http.HttpResponse.Headers
+  id: Headers
+  parent: ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: HttpResponse.Headers
+  fullName: ConduitNet.Http.HttpResponse.Headers
+  type: Property
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Headers
+    path: ../Runtime/HttpRequest.cs
+    startLine: 188
+  namespace: ConduitNet.Http
+  summary: Response headers.
+  example: []
+  syntax:
+    content: public Dictionary<string, string> Headers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public ReadOnly Property Headers As Dictionary(Of String, String)
+  overload: ConduitNet.Http.HttpResponse.Headers*
+- uid: ConduitNet.Http.HttpResponse.Deserialize``1
+  commentId: M:ConduitNet.Http.HttpResponse.Deserialize``1
+  id: Deserialize``1
+  parent: ConduitNet.Http.HttpResponse
+  langs:
+  - csharp
+  - vb
+  name: Deserialize<T>()
+  nameWithType: HttpResponse.Deserialize<T>()
+  fullName: ConduitNet.Http.HttpResponse.Deserialize<T>()
+  type: Method
+  source:
+    remote:
+      path: Runtime/HttpRequest.cs
+      branch: develop
+      repo: https://github.com/jiunkong/litep2pnet.git
+    id: Deserialize
+    path: ../Runtime/HttpRequest.cs
+    startLine: 205
+  namespace: ConduitNet.Http
+  summary: Deserializes the response body JSON to the specified type.
+  example: []
+  syntax:
+    content: public T Deserialize<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function Deserialize(Of T)() As T
+  overload: ConduitNet.Http.HttpResponse.Deserialize*
+  nameWithType.vb: HttpResponse.Deserialize(Of T)()
+  fullName.vb: ConduitNet.Http.HttpResponse.Deserialize(Of T)()
+  name.vb: Deserialize(Of T)()
+references:
+- uid: ConduitNet.Http
+  commentId: N:ConduitNet.Http
+  href: ConduitNet.html
+  name: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+  fullName: ConduitNet.Http
+  spec.csharp:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+  spec.vb:
+  - uid: ConduitNet
+    name: ConduitNet
+    href: ConduitNet.html
+  - name: .
+  - uid: ConduitNet.Http
+    name: Http
+    href: ConduitNet.Http.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.Http.HttpResponse.StatusCode*
+  commentId: Overload:ConduitNet.Http.HttpResponse.StatusCode
+  href: ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_StatusCode
+  name: StatusCode
+  nameWithType: HttpResponse.StatusCode
+  fullName: ConduitNet.Http.HttpResponse.StatusCode
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ConduitNet.Http.HttpResponse.Text*
+  commentId: Overload:ConduitNet.Http.HttpResponse.Text
+  href: ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Text
+  name: Text
+  nameWithType: HttpResponse.Text
+  fullName: ConduitNet.Http.HttpResponse.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ConduitNet.Http.HttpResponse.Bytes*
+  commentId: Overload:ConduitNet.Http.HttpResponse.Bytes
+  href: ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Bytes
+  name: Bytes
+  nameWithType: HttpResponse.Bytes
+  fullName: ConduitNet.Http.HttpResponse.Bytes
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: ConduitNet.Http.HttpResponse.Headers*
+  commentId: Overload:ConduitNet.Http.HttpResponse.Headers
+  href: ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Headers
+  name: Headers
+  nameWithType: HttpResponse.Headers
+  fullName: ConduitNet.Http.HttpResponse.Headers
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ConduitNet.Http.HttpResponse.Deserialize*
+  commentId: Overload:ConduitNet.Http.HttpResponse.Deserialize
+  href: ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Deserialize__1
+  name: Deserialize
+  nameWithType: HttpResponse.Deserialize
+  fullName: ConduitNet.Http.HttpResponse.Deserialize
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

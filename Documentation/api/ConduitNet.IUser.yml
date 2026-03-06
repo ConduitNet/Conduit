@@ -1,0 +1,483 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  id: IUser
+  parent: ConduitNet
+  children:
+  - ConduitNet.IUser.Apply(ConduitNet.IUser)
+  - ConduitNet.IUser.Equals(ConduitNet.IUser)
+  - ConduitNet.IUser.HostedLobbyId
+  - ConduitNet.IUser.Id
+  - ConduitNet.IUser.JoinedLobbyId
+  langs:
+  - csharp
+  - vb
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+  type: Interface
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: IUser
+    path: ../../Shared/Runtime/User.cs
+    startLine: 39
+  namespace: ConduitNet
+  summary: Interface for user data.
+  example: []
+  syntax:
+    content: public interface IUser
+    content.vb: Public Interface IUser
+  derivedClasses:
+  - ConduitNet.User`2
+  extensionMethods:
+  - ConduitNet.IUser.ConduitNet.UserExtension.As``2
+  - ConduitNet.IUser.ConduitNet.UserExtension.TryCast``2(ConduitNet.User{{TUserProfile},{TAccountState}}@)
+- uid: ConduitNet.IUser.Id
+  commentId: P:ConduitNet.IUser.Id
+  id: Id
+  parent: ConduitNet.IUser
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IUser.Id
+  fullName: ConduitNet.IUser.Id
+  type: Property
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: Id
+    path: ../../Shared/Runtime/User.cs
+    startLine: 42
+  namespace: ConduitNet
+  summary: Unique user ID.
+  example: []
+  syntax:
+    content: string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Id As String
+  overload: ConduitNet.IUser.Id*
+- uid: ConduitNet.IUser.JoinedLobbyId
+  commentId: P:ConduitNet.IUser.JoinedLobbyId
+  id: JoinedLobbyId
+  parent: ConduitNet.IUser
+  langs:
+  - csharp
+  - vb
+  name: JoinedLobbyId
+  nameWithType: IUser.JoinedLobbyId
+  fullName: ConduitNet.IUser.JoinedLobbyId
+  type: Property
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: JoinedLobbyId
+    path: ../../Shared/Runtime/User.cs
+    startLine: 44
+  namespace: ConduitNet
+  summary: ID of the lobby the user has joined.
+  example: []
+  syntax:
+    content: string JoinedLobbyId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property JoinedLobbyId As String
+  overload: ConduitNet.IUser.JoinedLobbyId*
+- uid: ConduitNet.IUser.HostedLobbyId
+  commentId: P:ConduitNet.IUser.HostedLobbyId
+  id: HostedLobbyId
+  parent: ConduitNet.IUser
+  langs:
+  - csharp
+  - vb
+  name: HostedLobbyId
+  nameWithType: IUser.HostedLobbyId
+  fullName: ConduitNet.IUser.HostedLobbyId
+  type: Property
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: HostedLobbyId
+    path: ../../Shared/Runtime/User.cs
+    startLine: 46
+  namespace: ConduitNet
+  summary: ID of the lobby the user is hosting.
+  example: []
+  syntax:
+    content: string HostedLobbyId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property HostedLobbyId As String
+  overload: ConduitNet.IUser.HostedLobbyId*
+- uid: ConduitNet.IUser.Apply(ConduitNet.IUser)
+  commentId: M:ConduitNet.IUser.Apply(ConduitNet.IUser)
+  id: Apply(ConduitNet.IUser)
+  parent: ConduitNet.IUser
+  langs:
+  - csharp
+  - vb
+  name: Apply(IUser)
+  nameWithType: IUser.Apply(IUser)
+  fullName: ConduitNet.IUser.Apply(ConduitNet.IUser)
+  type: Method
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: Apply
+    path: ../../Shared/Runtime/User.cs
+    startLine: 49
+  namespace: ConduitNet
+  summary: Applies data from another IUser instance into this instance.
+  example: []
+  syntax:
+    content: void Apply(IUser user)
+    parameters:
+    - id: user
+      type: ConduitNet.IUser
+    content.vb: Sub Apply(user As IUser)
+  overload: ConduitNet.IUser.Apply*
+- uid: ConduitNet.IUser.Equals(ConduitNet.IUser)
+  commentId: M:ConduitNet.IUser.Equals(ConduitNet.IUser)
+  id: Equals(ConduitNet.IUser)
+  parent: ConduitNet.IUser
+  langs:
+  - csharp
+  - vb
+  name: Equals(IUser)
+  nameWithType: IUser.Equals(IUser)
+  fullName: ConduitNet.IUser.Equals(ConduitNet.IUser)
+  type: Method
+  source:
+    remote:
+      path: Runtime/User.cs
+      branch: main
+      repo: https://github.com/ConduitNet/Conduit.Shared.git
+    id: Equals
+    path: ../../Shared/Runtime/User.cs
+    startLine: 50
+  namespace: ConduitNet
+  syntax:
+    content: bool Equals(IUser other)
+    parameters:
+    - id: other
+      type: ConduitNet.IUser
+    return:
+      type: System.Boolean
+    content.vb: Function Equals(other As IUser) As Boolean
+  overload: ConduitNet.IUser.Equals*
+references:
+- uid: ConduitNet
+  commentId: N:ConduitNet
+  href: ConduitNet.html
+  name: ConduitNet
+  nameWithType: ConduitNet
+  fullName: ConduitNet
+- uid: ConduitNet.IUser.ConduitNet.UserExtension.As``2
+  commentId: M:ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  parent: ConduitNet.UserExtension
+  definition: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  name: As<TUserProfile, TAccountState>(IUser)
+  nameWithType: UserExtension.As<TUserProfile, TAccountState>(IUser)
+  fullName: ConduitNet.UserExtension.As<TUserProfile, TAccountState>(ConduitNet.IUser)
+  nameWithType.vb: UserExtension.As(Of TUserProfile, TAccountState)(IUser)
+  fullName.vb: ConduitNet.UserExtension.As(Of TUserProfile, TAccountState)(ConduitNet.IUser)
+  name.vb: As(Of TUserProfile, TAccountState)(IUser)
+  spec.csharp:
+  - uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+    name: As
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+    name: As
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: ConduitNet.IUser.ConduitNet.UserExtension.TryCast``2(ConduitNet.User{{TUserProfile},{TAccountState}}@)
+  commentId: M:ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  parent: ConduitNet.UserExtension
+  definition: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  name: TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  nameWithType: UserExtension.TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  fullName: ConduitNet.UserExtension.TryCast<TUserProfile, TAccountState>(ConduitNet.IUser, out ConduitNet.User<TUserProfile, TAccountState>)
+  nameWithType.vb: UserExtension.TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+  fullName.vb: ConduitNet.UserExtension.TryCast(Of TUserProfile, TAccountState)(ConduitNet.IUser, ConduitNet.User(Of TUserProfile, TAccountState))
+  name.vb: TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+  spec.csharp:
+  - uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+    name: TryCast
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+    name: TryCast
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: )
+- uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  commentId: M:ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  name: As<TUserProfile, TAccountState>(IUser)
+  nameWithType: UserExtension.As<TUserProfile, TAccountState>(IUser)
+  fullName: ConduitNet.UserExtension.As<TUserProfile, TAccountState>(ConduitNet.IUser)
+  nameWithType.vb: UserExtension.As(Of TUserProfile, TAccountState)(IUser)
+  fullName.vb: ConduitNet.UserExtension.As(Of TUserProfile, TAccountState)(ConduitNet.IUser)
+  name.vb: As(Of TUserProfile, TAccountState)(IUser)
+  spec.csharp:
+  - uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+    name: As
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+    name: As
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: )
+- uid: ConduitNet.UserExtension
+  commentId: T:ConduitNet.UserExtension
+  parent: ConduitNet
+  href: ConduitNet.UserExtension.html
+  name: UserExtension
+  nameWithType: UserExtension
+  fullName: ConduitNet.UserExtension
+- uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  commentId: M:ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  name: TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  nameWithType: UserExtension.TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  fullName: ConduitNet.UserExtension.TryCast<TUserProfile, TAccountState>(ConduitNet.IUser, out ConduitNet.User<TUserProfile, TAccountState>)
+  nameWithType.vb: UserExtension.TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+  fullName.vb: ConduitNet.UserExtension.TryCast(Of TUserProfile, TAccountState)(ConduitNet.IUser, ConduitNet.User(Of TUserProfile, TAccountState))
+  name.vb: TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+  spec.csharp:
+  - uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+    name: TryCast
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: <
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+    name: TryCast
+    href: ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: (
+  - uid: ConduitNet.IUser
+    name: IUser
+    href: ConduitNet.IUser.html
+  - name: ','
+  - name: " "
+  - uid: ConduitNet.User`2
+    name: User
+    href: ConduitNet.User-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUserProfile
+  - name: ','
+  - name: " "
+  - name: TAccountState
+  - name: )
+  - name: )
+- uid: ConduitNet.IUser.Id*
+  commentId: Overload:ConduitNet.IUser.Id
+  href: ConduitNet.IUser.html#ConduitNet_IUser_Id
+  name: Id
+  nameWithType: IUser.Id
+  fullName: ConduitNet.IUser.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConduitNet.IUser.JoinedLobbyId*
+  commentId: Overload:ConduitNet.IUser.JoinedLobbyId
+  href: ConduitNet.IUser.html#ConduitNet_IUser_JoinedLobbyId
+  name: JoinedLobbyId
+  nameWithType: IUser.JoinedLobbyId
+  fullName: ConduitNet.IUser.JoinedLobbyId
+- uid: ConduitNet.IUser.HostedLobbyId*
+  commentId: Overload:ConduitNet.IUser.HostedLobbyId
+  href: ConduitNet.IUser.html#ConduitNet_IUser_HostedLobbyId
+  name: HostedLobbyId
+  nameWithType: IUser.HostedLobbyId
+  fullName: ConduitNet.IUser.HostedLobbyId
+- uid: ConduitNet.IUser.Apply*
+  commentId: Overload:ConduitNet.IUser.Apply
+  href: ConduitNet.IUser.html#ConduitNet_IUser_Apply_ConduitNet_IUser_
+  name: Apply
+  nameWithType: IUser.Apply
+  fullName: ConduitNet.IUser.Apply
+- uid: ConduitNet.IUser
+  commentId: T:ConduitNet.IUser
+  parent: ConduitNet
+  href: ConduitNet.IUser.html
+  name: IUser
+  nameWithType: IUser
+  fullName: ConduitNet.IUser
+- uid: ConduitNet.IUser.Equals*
+  commentId: Overload:ConduitNet.IUser.Equals
+  href: ConduitNet.IUser.html#ConduitNet_IUser_Equals_ConduitNet_IUser_
+  name: Equals
+  nameWithType: IUser.Equals
+  fullName: ConduitNet.IUser.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
