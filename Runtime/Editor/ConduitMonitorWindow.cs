@@ -94,7 +94,7 @@ namespace ConduitNet.Editor {
                         onSuccess: res => {
                             lastServerStatus = res;
                         },
-                        onError: err => {
+                        onError: (c, err) => {
                             // Ignored or handled silently
                         }
                     ));
@@ -110,7 +110,7 @@ namespace ConduitNet.Editor {
                         sw.Stop();
                         RecordHistory(serverLatencyHistory, (float)sw.Elapsed.TotalMilliseconds);
                     },
-                    onError: err => {
+                    onError: (c, err) => {
                         sw.Stop();
                         // Optional: Handle error or skip recording
                     }

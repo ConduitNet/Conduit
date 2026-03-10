@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -30,10 +31,32 @@ namespace ConduitNet.Packets {
     }
 
     /// <summary>
+    /// Common base marker interface for all network packets.
+    /// Use <see cref="IPacket"/> or <see cref="IAutoRelayPacket"/> on your packet types;
+    /// this interface exists so that handler registration APIs can accept both.
+    /// </summary>
+    public interface INetworkPacket { }
+
+    /// <summary>
+    /// Marker interface for standard (non-relayed) network packets.
+    /// Use with <see cref="PacketAttribute"/> for compile-time enforcement in
+    /// <c>Conduit.SendPacket</c>, <c>BroadcastPacket</c>, etc.
+    /// </summary>
+    public interface IPacket : INetworkPacket { }
+
+    /// <summary>
+    /// Marker interface for packets that should be automatically relayed by the host to all peers.
+    /// Implementing this interface (together with <see cref="PacketAttribute"/>) enables compile-time
+    /// enforcement: only <c>IAutoRelayPacket</c> types are accepted by <c>Conduit.SendAutoRelayPacket</c>.
+    /// </summary>
+    public interface IAutoRelayPacket : INetworkPacket { }
+
+    /// <summary>
     /// Automatically scans and manages ID-to-Type mappings for classes decorated with the [Packet] attribute.
     /// </summary>
     public static class PacketRegistry {
         private static readonly PairMap<string, Type> _packetTypes = new();
+        private static readonly HashSet<Type> _autoRelayTypes = new();
 
         static PacketRegistry() {
             var types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(asm => asm.GetTypes()).Where(t => t.IsDefined(typeof(PacketAttribute)));
@@ -49,6 +72,9 @@ namespace ConduitNet.Packets {
                 }
 
                 _packetTypes[id] = type;
+
+                if (typeof(IAutoRelayPacket).IsAssignableFrom(type))
+                    _autoRelayTypes.Add(type);
             }
         }
 
@@ -59,6 +85,10 @@ namespace ConduitNet.Packets {
         /// <summary>Gets the packet ID associated with the given type.</summary>
         public static string GetPacketId(Type type)
             => _packetTypes.TryGetBySecond(type, out var id) ? id : null;
+
+        /// <summary>Returns true if the given packet type implements <see cref="IAutoRelayPacket"/>.</summary>
+        public static bool IsAutoRelay(Type type)
+            => _autoRelayTypes.Contains(type);
     }
 
     /// <summary>

@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ConduitNet.DTO;
@@ -14,7 +15,6 @@ using NativeWebSocket;
 using Newtonsoft.Json;
 using Unity.WebRTC;
 using UnityEngine;
-using UnityEngine.Networking;
 
 namespace ConduitNet {
     public class Conduit : MonoBehaviour {
@@ -96,42 +96,27 @@ namespace ConduitNet {
         // ── Events ──────────────────────────────────────────────────
 
         /// <summary>Invoked when a user joins the lobby. Parameter: The newly joined user.</summary>
-        public static Action<IUser> OnUserJoined;
+        public static event Action<IUser> OnUserJoined;
         /// <summary>Invoked when a user leaves the lobby. Parameters: (The leaving user, Whether the host changed).</summary>
-        public static Action<IUser, bool> OnUserLeft;
+        public static event Action<IUser, bool> OnUserLeft;
         /// <summary>Invoked when the lobby host changes. Parameters: (Previous host, New host).</summary>
-        public static Action<IUser, IUser> OnHostChanged;
+        public static event Action<IUser, IUser> OnHostChanged;
         /// <summary>Invoked when a P2P connection to a peer is established. Parameter: Peer ID.</summary>
-        public static Action<string> OnPeerConnected;
+        public static event Action<string> OnPeerConnected;
         /// <summary>Invoked when a P2P connection to a peer is lost. Parameter: Peer ID.</summary>
-        public static Action<string> OnPeerDisconnected;
+        public static event Action<string> OnPeerDisconnected;
         /// <summary>Invoked when a connection attempt fails. Parameter: Failure reason.</summary>
-        public static Action<ConnectionFailedReason> OnConnectionFailed;
+        public static event Action<ConnectionFailedReason> OnConnectionFailed;
         /// <summary>Invoked when lobby initialization completes successfully.</summary>
-        public static Action OnLobbyInitialized;
+        public static event Action OnLobbyInitialized;
         /// <summary>Invoked when lobby metadata (e.g., name, max players) changes.</summary>
-        public static Action OnLobbyMetadataUpdated;
+        public static event Action OnLobbyMetadataUpdated;
         /// <summary>Invoked when the custom lobby state (TLobbyState) changes.</summary>
-        public static Action OnLobbyStateUpdated;
+        public static event Action OnLobbyStateUpdated;
         /// <summary>Invoked when the user account state (TAccountState) changes.</summary>
-        public static Action OnUserAccountStateUpdated;
+        public static event Action OnUserAccountStateUpdated;
         /// <summary>Invoked when JoinLobby is cancelled.</summary>
-        public static Action OnJoinCancelled;
-
-        /// <summary>Clears all registered static event handlers. Recommended to call during scene transitions.</summary>
-        public static void ResetEvents() {
-            OnUserJoined = null;
-            OnUserLeft = null;
-            OnHostChanged = null;
-            OnPeerConnected = null;
-            OnPeerDisconnected = null;
-            OnConnectionFailed = null;
-            OnLobbyInitialized = null;
-            OnLobbyMetadataUpdated = null;
-            OnLobbyStateUpdated = null;
-            OnUserAccountStateUpdated = null;
-            OnJoinCancelled = null;
-        }
+        public static event Action OnJoinCancelled;
 
         // ── Initialization ──────────────────────────────────────────
 
@@ -144,18 +129,6 @@ namespace ConduitNet {
         public static void Init<TLobbyState, TUserProfile, TAccountState>(string userId, TUserProfile userProfile, Action onUserSynced = null)
             where TLobbyState : class where TUserProfile : class where TAccountState : class {
             Instance._Init<TLobbyState, TUserProfile, TAccountState>(userId, userProfile, onUserSynced);
-        }
-
-        // ── Packet Serialization ────────────────────────────────────
-
-        /// <summary>Configures Conduit to use JSON for packet serialization (default).</summary>
-        public static void UseJsonPacketSerializer() {
-            _packetSerializer = new JsonPacketSerializer();
-        }
-
-        /// <summary>Sets a custom packet serializer.</summary>
-        public static void UseCustomPacketSerializer(IPacketSerializer serializer) {
-            _packetSerializer = serializer;
         }
 
         // ── Connection ──────────────────────────────────────────────
@@ -200,17 +173,23 @@ namespace ConduitNet {
         public static bool SendBytes(IUser user, byte[] data, SendOption option) => Instance._SendBytes(user, data, option);
         /// <summary>Sends a named signal to a specified user.</summary>
         public static bool SendSignal(IUser user, string signalName, SendOption option) => Instance._SendSignal(user, signalName, option);
-        /// <summary>Sends a typed packet (decorated with [Packet]) to a specified user.</summary>
-        public static bool SendPacket<T>(IUser user, T packet, SendOption option) => Instance._SendPacket(user, packet, option);
+        /// <summary>Sends a typed packet to a specified user.</summary>
+        public static bool SendPacket<T>(IUser user, T packet, SendOption option) where T : IPacket
+            => Instance._SendPacket(user, packet, option);
 
         // ── Broadcast (Host Only) ───────────────────────────────────
 
         /// <summary>Broadcasts a byte array to all connected peers. (Host only)</summary>
-        public static void BroadcastBytes(byte[] data, SendOption option) => Instance._BroadcastBytes(LocalUser, data, option);
+        public static bool BroadcastBytes(byte[] data, SendOption option) => Instance._BroadcastBytes(LocalUser, data, option);
         /// <summary>Broadcasts a named signal to all connected peers. (Host only)</summary>
-        public static void BroadcastSignal(string signalName, SendOption option) => Instance._BroadcastSignal(LocalUser, signalName, option);
+        public static bool BroadcastSignal(string signalName, SendOption option) => Instance._BroadcastSignal(LocalUser, signalName, option);
         /// <summary>Broadcasts a typed packet to all connected peers. (Host only)</summary>
-        public static void BroadcastPacket<T>(T packet, SendOption option) => Instance._BroadcastPacket(LocalUser, packet, option);
+        public static bool BroadcastPacket<T>(T packet, SendOption option) where T : IPacket
+            => Instance._BroadcastPacket(LocalUser, packet, option);
+
+        /// <summary>Sends an <see cref="IAutoRelayPacket"/> to the host, which will relay it to all peers.</summary>
+        public static bool SendAutoRelayPacket<T>(T packet, SendOption option) where T : IAutoRelayPacket
+            => Instance._SendAutoRelayPacket(LocalUser, packet, option);
 
         // ── Spoofed (Host Only) ─────────────────────────────────────
 
@@ -219,14 +198,19 @@ namespace ConduitNet {
         /// <summary>Sends a named signal to a specified user masquerading as the specified sender. (Host only)</summary>
         public static bool SendSpoofedSignal(IUser target, IUser fakeSender, string signalName, SendOption option) => Instance._SendSignal(target, signalName, option, fakeSender);
         /// <summary>Sends a typed packet to a specified user masquerading as the specified sender. (Host only)</summary>
-        public static bool SendSpoofedPacket<T>(IUser target, IUser fakeSender, T packet, SendOption option) => Instance._SendPacket(target, packet, option, fakeSender);
+        public static bool SendSpoofedPacket<T>(IUser target, IUser fakeSender, T packet, SendOption option) where T : IPacket
+            => Instance._SendPacket(target, packet, option, fakeSender);
+        /// <summary>Sends an <see cref="IAutoRelayPacket"/> to the host, which will relay it to all peers. (Host only)</summary>
+        public static bool SendSpoofedAutoRelayPacket<T>(IUser fakeSender, T packet, SendOption option) where T : IAutoRelayPacket
+            => Instance._SendAutoRelayPacket(fakeSender, packet, option);
 
         /// <summary>Broadcasts a byte array to all peers masquerading as the specified sender. (Host only)</summary>
-        public static void BroadcastSpoofedBytes(IUser fakeSender, byte[] data, SendOption option) => Instance._BroadcastBytes(fakeSender, data, option);
+        public static bool BroadcastSpoofedBytes(IUser fakeSender, byte[] data, SendOption option) => Instance._BroadcastBytes(fakeSender, data, option);
         /// <summary>Broadcasts a named signal to all peers masquerading as the specified sender. (Host only)</summary>
-        public static void BroadcastSpoofedSignal(IUser fakeSender, string signalName, SendOption option) => Instance._BroadcastSignal(fakeSender, signalName, option);
+        public static bool BroadcastSpoofedSignal(IUser fakeSender, string signalName, SendOption option) => Instance._BroadcastSignal(fakeSender, signalName, option);
         /// <summary>Broadcasts a typed packet to all peers masquerading as the specified sender. (Host only)</summary>
-        public static void BroadcastSpoofedPacket<T>(IUser fakeSender, T packet, SendOption option) => Instance._BroadcastPacket(fakeSender, packet, option);
+        public static bool BroadcastSpoofedPacket<T>(IUser fakeSender, T packet, SendOption option) where T : IPacket
+            => Instance._BroadcastPacket(fakeSender, packet, option);
 
         // ── Remote Exception ────────────────────────────────────────
 
@@ -263,12 +247,12 @@ namespace ConduitNet {
         }
 
         /// <summary>Registers a handler for receiving strongly-typed packets.</summary>
-        public static void RegisterPacketHandler<T>(PacketHandler<T> handler) {
+        public static void RegisterPacketHandler<T>(PacketHandler<T> handler) where T : INetworkPacket {
             string packetId = PacketRegistry.GetPacketId(typeof(T));
             if (packetId == null) throw new Exception($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
 
             void wrapper(IUser sender, long timestamp, object packet, SendOption option) {
-                handler(sender, timestamp, (T)packet, option);
+                handler(new PacketContext<T>(sender, timestamp, (T)packet, option));
             }
 
             Instance._handler.packetHandlerCache[(packetId, handler)] = wrapper;
@@ -276,7 +260,7 @@ namespace ConduitNet {
         }
 
         /// <summary>Unregisters a typed packet handler.</summary>
-        public static bool UnregisterPacketHandler<T>(PacketHandler<T> handler) {
+        public static bool UnregisterPacketHandler<T>(PacketHandler<T> handler) where T : INetworkPacket {
             string packetId = PacketRegistry.GetPacketId(typeof(T));
             if (packetId == null) throw new Exception($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
 
@@ -292,12 +276,21 @@ namespace ConduitNet {
             string packetId = PacketRegistry.GetPacketId(packetType);
             if (packetId == null) throw new Exception($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
 
-            void wrapper(IUser sender, long timestamp, object packet, SendOption option) {
-                handler.DynamicInvoke(sender, timestamp, packet, option);
-            }
+            // Reflection is used only once here at registration time.
+            // The returned wrapper is a fully typed delegate with zero reflection on the hot path.
+            var factory = typeof(Conduit)
+                .GetMethod(nameof(CreatePacketWrapper), BindingFlags.NonPublic | BindingFlags.Static)
+                .MakeGenericMethod(packetType);
+            var wrapper = (Action<IUser, long, object, SendOption>)factory.Invoke(null, new object[] { handler });
 
             Instance._handler.packetHandlerCache[(packetId, handler)] = wrapper;
             Instance._handler.packetHandlerWrappers[packetId] += wrapper;
+        }
+
+        private static Action<IUser, long, object, SendOption> CreatePacketWrapper<T>(Delegate handler) {
+            var typed = (PacketHandler<T>)handler;
+            return (sender, timestamp, packet, option) =>
+                typed(new PacketContext<T>(sender, timestamp, (T)packet, option));
         }
 
         public static bool UnregisterPacketHandler(Type packetType, Delegate handler) {
@@ -360,7 +353,6 @@ namespace ConduitNet {
         private Dictionary<string, bool> _isDescriptionReadyMap = new();
         private Dictionary<string, List<RTCDataChannel>> _dataChannelListMap = new();
         private HandlerGroup _handler = new();
-        private static IPacketSerializer _packetSerializer = new JsonPacketSerializer();
 
         private class HandlerGroup {
             public BytesHandler bytesHandler;
@@ -485,7 +477,7 @@ namespace ConduitNet {
                         (LocalUser as User<TUserProfile, TAccountState>).Account = account;
                         onUserSynced?.Invoke();
                     },
-                    onError: err => Debug.LogError($"User Sync Failed: {err}")
+                    onError: (c, err) => Debug.LogError($"User Sync Failed: {err} ({c})")
                 );
         }
 
@@ -537,7 +529,7 @@ namespace ConduitNet {
 
             byte prefix = (byte)((byte)DataType.Packet << 6);
 
-            byte[] rawdata = _packetSerializer.Serialize(packet, typeof(T));
+            byte[] rawdata = Config.PacketSerializer.Serialize(packet, typeof(T));
             byte[] timestamp = BitConverter.GetBytes(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
 
             string packetId = PacketRegistry.GetPacketId(typeof(T));
@@ -551,63 +543,18 @@ namespace ConduitNet {
             return SendData(user.Id, _data, option, sender?.Id);
         }
 
-        private void _BroadcastBytes(IUser sender, byte[] data, SendOption option) {
-            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
+        private bool _SendAutoRelayPacket<T>(IUser sender, T packet, SendOption option) {
+            if (sender != null && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
+            if (Host == null) return false;
 
-            byte prefix = (byte)((byte)DataType.Byte << 6);
-            List<byte> _data = new() { prefix };
-            _data.AddRange(data);
-
-            string senderId = sender?.Id;
-            foreach (var peerId in Peers) {
-                if (peerId == senderId) continue;
-                SendData(peerId, _data, option, senderId);
+            // If we are the host, broadcast directly — no need to route through self
+            // Not spoofed
+            if (IsHost && sender.Id == LocalUser.Id) {
+                return _BroadcastPacket(sender, packet, option);
             }
-
-            // Self-reception if spoofed
-            if (senderId != LocalUser.Id) {
-                _dataChannelQueue.Enqueue(new DataChannelMessage {
-                    rawdata = _data.ToArray(),
-                    option = option,
-                    sender = senderId,
-                    offset = 0
-                });
-            }
-        }
-
-        private void _BroadcastSignal(IUser sender, string signalName, SendOption option) {
-            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
-
-            byte prefix = (byte)((byte)DataType.Signal << 6);
-            byte[] rawdata = Encoding.UTF8.GetBytes(signalName);
-            byte[] timestamp = BitConverter.GetBytes(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
-
-            List<byte> _data = new() { prefix };
-            _data.AddRange(timestamp);
-            _data.AddRange(rawdata);
-
-            string senderId = sender?.Id;
-            foreach (var peerId in Peers) {
-                if (peerId == senderId) continue;
-                SendData(peerId, _data, option, senderId);
-            }
-
-            // Self-reception if spoofed
-            if (senderId != LocalUser.Id) {
-                _dataChannelQueue.Enqueue(new DataChannelMessage {
-                    rawdata = _data.ToArray(),
-                    option = option,
-                    sender = senderId,
-                    offset = 0
-                });
-            }
-        }
-
-        private void _BroadcastPacket<T>(IUser sender, T packet, SendOption option) {
-            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
 
             byte prefix = (byte)((byte)DataType.Packet << 6);
-            byte[] rawdata = _packetSerializer.Serialize(packet, typeof(T));
+            byte[] rawdata = Config.PacketSerializer.Serialize(packet, typeof(T));
             byte[] timestamp = BitConverter.GetBytes(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
 
             string packetId = PacketRegistry.GetPacketId(typeof(T));
@@ -618,10 +565,34 @@ namespace ConduitNet {
             Utils.AppendData(ref _data, packetId);
             _data.AddRange(rawdata);
 
+            // host and spoofed
+            if (IsHost && sender.Id != LocalUser.Id) {
+                _dataChannelQueue.Enqueue(new DataChannelMessage {
+                    rawdata = _data.ToArray(),
+                    option = option,
+                    sender = sender.Id,
+                    offset = 0
+                });
+
+                return _BroadcastPacket(sender, packet, option);
+            }
+
+            return SendData(Host.Id, _data, option);
+        }
+
+        private bool _BroadcastBytes(IUser sender, byte[] data, SendOption option) {
+            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
+
+            byte prefix = (byte)((byte)DataType.Byte << 6);
+            List<byte> _data = new() { prefix };
+            _data.AddRange(data);
+
+            bool result = true;
+
             string senderId = sender?.Id;
             foreach (var peerId in Peers) {
                 if (peerId == senderId) continue;
-                SendData(peerId, _data, option, senderId);
+                result &= SendData(peerId, _data, option, senderId);
             }
 
             // Self-reception if spoofed
@@ -633,6 +604,76 @@ namespace ConduitNet {
                     offset = 0
                 });
             }
+
+            return result;
+        }
+
+        private bool _BroadcastSignal(IUser sender, string signalName, SendOption option) {
+            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
+
+            byte prefix = (byte)((byte)DataType.Signal << 6);
+            byte[] rawdata = Encoding.UTF8.GetBytes(signalName);
+            byte[] timestamp = BitConverter.GetBytes(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+
+            List<byte> _data = new() { prefix };
+            _data.AddRange(timestamp);
+            _data.AddRange(rawdata);
+
+            bool result = true;
+
+            string senderId = sender?.Id;
+            foreach (var peerId in Peers) {
+                if (peerId == senderId) continue;
+                result &= SendData(peerId, _data, option, senderId);
+            }
+
+            // Self-reception if spoofed
+            if (senderId != LocalUser.Id) {
+                _dataChannelQueue.Enqueue(new DataChannelMessage {
+                    rawdata = _data.ToArray(),
+                    option = option,
+                    sender = senderId,
+                    offset = 0
+                });
+            }
+
+            return result;
+        }
+
+        private bool _BroadcastPacket<T>(IUser sender, T packet, SendOption option) {
+            if (!IsHost) throw new InvalidOperationException("Only host can broadcast.");
+
+            byte prefix = (byte)((byte)DataType.Packet << 6);
+            byte[] rawdata = Config.PacketSerializer.Serialize(packet, typeof(T));
+            byte[] timestamp = BitConverter.GetBytes(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+
+            string packetId = PacketRegistry.GetPacketId(typeof(T));
+            if (packetId == null) throw new Exception($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
+
+            List<byte> _data = new() { prefix };
+            _data.AddRange(timestamp);
+            Utils.AppendData(ref _data, packetId);
+            _data.AddRange(rawdata);
+
+            bool result = true;
+
+            string senderId = sender?.Id;
+            foreach (var peerId in Peers) {
+                if (peerId == senderId) continue;
+                result &= SendData(peerId, _data, option, senderId);
+            }
+
+            // Self-reception if spoofed
+            if (senderId != LocalUser.Id) {
+                _dataChannelQueue.Enqueue(new DataChannelMessage {
+                    rawdata = _data.ToArray(),
+                    option = option,
+                    sender = senderId,
+                    offset = 0
+                });
+            }
+
+            return result;
         }
 
         private bool _SendError(IUser user, Type exceptionType, string message, SendOption option) {
@@ -1123,15 +1164,17 @@ namespace ConduitNet {
             IUser senderUser = Participants.FirstOrDefault(p => p.Id == sender);
             if (senderUser == null) return;
 
+            int contentStart = offset; // position right after the DataEndPoint header
+
             switch (rawdata[offset++] >> 6) {
                 case (byte)DataType.Byte:
-                    _handler.bytesHandler?.Invoke(senderUser, new ReadOnlyMemory<byte>(rawdata, offset, rawdata.Length - offset), option);
+                    _handler.bytesHandler?.Invoke(new BytesContext(senderUser, new ReadOnlyMemory<byte>(rawdata, offset, rawdata.Length - offset), option));
                     break;
                 case (byte)DataType.Signal: {
                         long timestamp = Utils.ReadInt64(rawdata, offset);
                         offset += sizeof(long);
                         if (_handler.signalHandlers.TryGetValue(Encoding.UTF8.GetString(rawdata, offset, rawdata.Length - offset), out var signalHandler))
-                            signalHandler?.Invoke(senderUser, timestamp, option);
+                            signalHandler?.Invoke(new SignalContext(senderUser, timestamp, option));
                         break;
                     }
                 case (byte)DataType.Packet: {
@@ -1146,7 +1189,19 @@ namespace ConduitNet {
 
                         var packetData = new ReadOnlyMemory<byte>(rawdata, offset, rawdata.Length - offset);
 
-                        var data = _packetSerializer.Deserialize(packetData, packetType);
+                        var data = Config.PacketSerializer.Deserialize(packetData, packetType);
+
+                        // [AutoRelay]: host re-addresses and forwards the payload to all other peers.
+                        // We use SendData (not raw channel.Send) so each peer gets a fresh DataEndPoint
+                        // with the correct receiver. The payload starts at contentStart (type byte onwards),
+                        // excluding the original DataEndPoint that was addressed to the host.
+                        if (IsHost && PacketRegistry.IsAutoRelay(packetType)) {
+                            var segment = new ArraySegment<byte>(rawdata, contentStart, rawdata.Length - contentStart);
+                            foreach (var peerId in Peers) {
+                                if (peerId == senderUser.Id) continue;
+                                SendData(peerId, new List<byte>(segment), option, senderUser.Id);
+                            }
+                        }
 
                         if (_handler.packetHandlerWrappers.TryGetValue(packetId, out var packetHandlerWrapper)) {
                             packetHandlerWrapper?.Invoke(senderUser, timestamp, data, option);

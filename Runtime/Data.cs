@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using ConduitNet.Packets;
 using ConduitNet.Utility;
 using MessagePack;
 using Newtonsoft.Json;
@@ -20,12 +21,50 @@ namespace ConduitNet {
         UnorderedUnreliable = 0b11
     }
 
+    public readonly struct BytesContext {
+        public readonly IUser Sender;
+        public readonly ReadOnlyMemory<byte> Data;
+        public readonly SendOption Option;
+
+        public BytesContext(IUser sender, ReadOnlyMemory<byte> data, SendOption option) {
+            Sender = sender;
+            Data = data;
+            Option = option;
+        }
+    }
+
+    public readonly struct SignalContext {
+        public readonly IUser Sender;
+        public readonly long Timestamp;
+        public readonly SendOption Option;
+
+        public SignalContext(IUser sender, long timestamp, SendOption option) {
+            Sender = sender;
+            Timestamp = timestamp;
+            Option = option;
+        }
+    }
+
+    public readonly struct PacketContext<T> {
+        public readonly IUser Sender;
+        public readonly long Timestamp;
+        public readonly T Packet;
+        public readonly SendOption Option;
+
+        public PacketContext(IUser sender, long timestamp, T packet, SendOption option) {
+            Sender = sender;
+            Timestamp = timestamp;
+            Packet = packet;
+            Option = option;
+        }
+    }
+
     /// <summary>Handler for receiving byte array data.</summary>
-    public delegate void BytesHandler(IUser sender, ReadOnlyMemory<byte> data, SendOption option);
+    public delegate void BytesHandler(BytesContext context);
     /// <summary>Handler for receiving named signals.</summary>
-    public delegate void SignalHandler(IUser sender, long timestamp, SendOption option);
+    public delegate void SignalHandler(SignalContext context);
     /// <summary>Handler for receiving strongly-typed packets.</summary>
-    public delegate void PacketHandler<T>(IUser sender, long timestamp, T packet, SendOption option);
+    public delegate void PacketHandler<T>(PacketContext<T> context);
 
     /// <summary>Marks a method as a byte data handler.</summary>
     [AttributeUsage(AttributeTargets.Method)]
@@ -46,6 +85,29 @@ namespace ConduitNet {
         public Type PacketType { get; }
         public PacketHandlerAttribute(Type packetType) {
             PacketType = packetType;
+        }
+    }
+
+    /// <summary>Sender filter options for handler attributes.</summary>
+    public enum SenderFilter {
+        /// <summary>Accept from any sender (default).</summary>
+        Any,
+        /// <summary>Accept only from the host.</summary>
+        Host,
+        /// <summary>Accept only from non-host members.</summary>
+        Member
+    }
+
+    /// <summary>
+    /// Filters handler invocations by sender type.
+    /// Can be combined with any handler attribute ([BytesHandler], [SignalHandler], [PacketHandler]).
+    /// <code>[SenderFilter(SenderFilter.Host)]</code>
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Method)]
+    public class SenderFilterAttribute : Attribute {
+        public SenderFilter Filter { get; }
+        public SenderFilterAttribute(SenderFilter filter) {
+            Filter = filter;
         }
     }
 
@@ -115,6 +177,8 @@ namespace ConduitNet {
         public string HealthPath { get; set; } = "{0}/health";
         /// <summary>API path for server status check. {0} is API URL.</summary>
         public string StatusPath { get; set; } = "{0}/status";
+        /// <summary>Packet serializer to use. Defaults to JsonPacketSerializer.</summary>
+        public IPacketSerializer PacketSerializer { get; set; } = new JsonPacketSerializer();
 
         public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null) {
             ServerUrl = serverUrl ?? throw new ArgumentNullException(nameof(serverUrl));

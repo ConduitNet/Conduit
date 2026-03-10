@@ -124,7 +124,7 @@ namespace ConduitNet.Http {
         // ── Send ────────────────────────────────────────────────
 
         /// <summary>Sends the HTTP request.</summary>
-        public IEnumerator Send(Action<HttpResponse> onSuccess = null, Action<string> onError = null) {
+        public IEnumerator Send(Action<HttpResponse> onSuccess = null, Action<long, string> onError = null) {
             string finalUrl = _queryParams != null
                 ? QueryParamBuilder.BuildUrl(_url, _queryParams)
                 : _url;
@@ -150,7 +150,7 @@ namespace ConduitNet.Http {
                     onSuccess?.Invoke(new HttpResponse(request));
                 }
                 else {
-                    onError?.Invoke(request.error);
+                    onError?.Invoke(request.responseCode, request.error);
                 }
             }
             finally {
@@ -161,7 +161,7 @@ namespace ConduitNet.Http {
         /// <summary>
         /// Sends the request and deserializes the response body as T.
         /// </summary>
-        public IEnumerator Send<T>(Action<T> onSuccess, Action<string> onError = null) {
+        public IEnumerator Send<T>(Action<T> onSuccess, Action<long, string> onError = null) {
             yield return Send(
                 onSuccess: res => {
                     try {
@@ -169,7 +169,7 @@ namespace ConduitNet.Http {
                         onSuccess?.Invoke(data);
                     }
                     catch (Exception ex) {
-                        onError?.Invoke($"Deserialization failed: {ex.Message}");
+                        onError?.Invoke(0, $"Deserialization failed: {ex.Message}");
                     }
                 },
                 onError: onError
