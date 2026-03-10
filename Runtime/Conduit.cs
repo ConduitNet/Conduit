@@ -170,12 +170,12 @@ namespace ConduitNet {
         // ── Send ────────────────────────────────────────────────────
 
         /// <summary>Sends a byte array to a specified user.</summary>
-        public static bool SendBytes(IUser user, byte[] data, SendOption option) => Instance._SendBytes(user, data, option);
+        public static bool SendBytes(IUser user, byte[] data, SendOption option) => Instance._SendBytes(user, data, option, LocalUser);
         /// <summary>Sends a named signal to a specified user.</summary>
-        public static bool SendSignal(IUser user, string signalName, SendOption option) => Instance._SendSignal(user, signalName, option);
+        public static bool SendSignal(IUser user, string signalName, SendOption option) => Instance._SendSignal(user, signalName, option, LocalUser);
         /// <summary>Sends a typed packet to a specified user.</summary>
         public static bool SendPacket<T>(IUser user, T packet, SendOption option) where T : IPacket
-            => Instance._SendPacket(user, packet, option);
+            => Instance._SendPacket(user, packet, option, LocalUser);
 
         // ── Broadcast (Host Only) ───────────────────────────────────
 
@@ -497,8 +497,8 @@ namespace ConduitNet {
             onResult(null);
         }
 
-        private bool _SendBytes(IUser user, byte[] data, SendOption option, IUser sender = null) {
-            if (sender != null && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
+        private bool _SendBytes(IUser user, byte[] data, SendOption option, IUser sender) {
+            if (!sender.Equals(LocalUser) && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
 
             byte prefix = (byte)((byte)DataType.Byte << 6);
 
@@ -509,8 +509,8 @@ namespace ConduitNet {
             return SendData(user.Id, _data, option, sender?.Id);
         }
 
-        private bool _SendSignal(IUser user, string signalName, SendOption option, IUser sender = null) {
-            if (sender != null && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
+        private bool _SendSignal(IUser user, string signalName, SendOption option, IUser sender) {
+            if (!sender.Equals(LocalUser) && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
 
             byte prefix = (byte)((byte)DataType.Signal << 6);
 
@@ -524,8 +524,8 @@ namespace ConduitNet {
             return SendData(user.Id, _data, option, sender?.Id);
         }
 
-        private bool _SendPacket<T>(IUser user, T packet, SendOption option, IUser sender = null) {
-            if (sender != null && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
+        private bool _SendPacket<T>(IUser user, T packet, SendOption option, IUser sender) {
+            if (!sender.Equals(LocalUser) && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
 
             byte prefix = (byte)((byte)DataType.Packet << 6);
 
@@ -544,7 +544,7 @@ namespace ConduitNet {
         }
 
         private bool _SendAutoRelayPacket<T>(IUser sender, T packet, SendOption option) {
-            if (sender != null && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
+            if (!sender.Equals(LocalUser) && !IsHost) throw new InvalidOperationException("Only host can spoof sender.");
             if (Host == null) return false;
 
             // If we are the host, broadcast directly — no need to route through self
@@ -1106,8 +1106,8 @@ namespace ConduitNet {
             var connection = _peerConnectionMap[message.from];
             yield return connection.SetRemoteDescription(ref answer);
 
-            _isDescriptionReadyMap[message.from] = true;
             ProcessQueuedRemoteIceCandidates(message.from);
+            _isDescriptionReadyMap[message.from] = true;
         }
 
         private void HandleIceCandidate(SignalingMessage message) {
@@ -1124,13 +1124,13 @@ namespace ConduitNet {
             }
             else {
                 if (_debugLog) Debug.Log($"Queued Remote ICE Candidate: {candidate.Candidate}");
-            }
 
-            if (_remoteIceCandidatesMap.ContainsKey(message.from)) {
-                _remoteIceCandidatesMap[message.from].Add(candidate);
-            }
-            else {
-                _remoteIceCandidatesMap.Add(message.from, new() { candidate });
+                if (_remoteIceCandidatesMap.ContainsKey(message.from)) {
+                    _remoteIceCandidatesMap[message.from].Add(candidate);
+                }
+                else {
+                    _remoteIceCandidatesMap.Add(message.from, new() { candidate });
+                }
             }
         }
 
@@ -1146,6 +1146,10 @@ namespace ConduitNet {
                 // Transfer data to destination if host (relay immediately)
                 if (IsHost && _dataChannelListMap.TryGetValue(endpoint.receiver, out var channels)) {
                     var channel = channels[(byte)option];
+                    if (channel == null) {
+                        Debug.LogError($"Data channel for {option} is not ready for peer {endpoint.receiver}. Relay dropped.");
+                        return;
+                    }
                     channel.Send(rawdata);
                 }
                 return;
