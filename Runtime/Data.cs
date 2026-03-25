@@ -88,26 +88,30 @@ namespace ConduitNet {
         }
     }
 
-    /// <summary>Sender filter options for handler attributes.</summary>
-    public enum SenderFilter {
-        /// <summary>Accept from any sender (default).</summary>
+    /// <summary>Role options used by RequireRoleAttribute for sender/receiver filtering.</summary>
+    public enum Role {
+        /// <summary>Match any role (default).</summary>
         Any,
-        /// <summary>Accept only from the host.</summary>
+        /// <summary>Match only the host.</summary>
         Host,
-        /// <summary>Accept only from non-host members.</summary>
+        /// <summary>Match only non-host members.</summary>
         Member
     }
 
     /// <summary>
-    /// Filters handler invocations by sender type.
+    /// Filters handler invocations by sender and/or receiver (self) role.
     /// Can be combined with any handler attribute ([BytesHandler], [SignalHandler], [PacketHandler]).
-    /// <code>[SenderFilter(SenderFilter.Host)]</code>
+    /// <code>[RequireRole(sender: Role.Host)]</code>
+    /// <code>[RequireRole(receiver: Role.Member)]</code>
+    /// <code>[RequireRole(sender: Role.Host, receiver: Role.Member)]</code>
     /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
-    public class SenderFilterAttribute : Attribute {
-        public SenderFilter Filter { get; }
-        public SenderFilterAttribute(SenderFilter filter) {
-            Filter = filter;
+    public class RequireRoleAttribute : Attribute {
+        public Role Sender   { get; }
+        public Role Receiver { get; }
+        public RequireRoleAttribute(Role sender = Role.Any, Role receiver = Role.Any) {
+            Sender   = sender;
+            Receiver = receiver;
         }
     }
 
@@ -179,6 +183,11 @@ namespace ConduitNet {
         public string StatusPath { get; set; } = "{0}/status";
         /// <summary>Packet serializer to use. Defaults to JsonPacketSerializer.</summary>
         public IPacketSerializer PacketSerializer { get; set; } = new JsonPacketSerializer();
+
+        /// <summary>Whether to use AssemblyQualifiedName for type serialization (default: false -> FullName).</summary>
+        public bool UseAssemblyQualifiedNameForTypes = false;
+        /// <summary>Maximum time(ms) allowed to process data channel messages per frame.</summary>
+        public float MaxDataChannelProcessingTimeMs { get; set; } = 5f;
 
         public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null) {
             ServerUrl = serverUrl ?? throw new ArgumentNullException(nameof(serverUrl));

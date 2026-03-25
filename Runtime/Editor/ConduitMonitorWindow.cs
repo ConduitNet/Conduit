@@ -64,7 +64,7 @@ namespace ConduitNet.Editor {
             if (!Application.isPlaying) return;
 
             // Server Latency Ping (measured via API HTTP request latency)
-            if (Conduit.IsConnectedToServer && Conduit.ApiUrl != null) {
+            if (Conduit.ApiUrl != null) {
                 conduit.StartCoroutine(MeasureServerLatency(Conduit.ApiUrl));
             }
 
@@ -84,8 +84,9 @@ namespace ConduitNet.Editor {
 
         private void PollServerStatus(Conduit conduit) {
             if (!Application.isPlaying) return;
+            if (Conduit.Config == null) return;
 
-            if (Conduit.IsConnectedToServer && Conduit.ApiUrl != null) {
+            if (Conduit.ApiUrl != null) {
                 string statusUrl = string.Format(Conduit.Config.StatusPath, Conduit.ApiUrl);
 
                 conduit.StartCoroutine(ConduitNet.Http.HttpRequest.Get(statusUrl)
@@ -102,6 +103,7 @@ namespace ConduitNet.Editor {
         }
 
         private IEnumerator MeasureServerLatency(string apiUrl) {
+            if (Conduit.Config == null) yield break;
             var sw = System.Diagnostics.Stopwatch.StartNew();
             yield return ConduitNet.Http.HttpRequest.Get(string.Format(Conduit.Config.HealthPath, apiUrl))
                 .SetTimeout(2)
@@ -145,13 +147,15 @@ namespace ConduitNet.Editor {
             }
 
             scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
-
-            DrawSignalingSection(conduit);
-            DrawServerStatusSection();
-            DrawLobbySection();
-            DrawPeersSection(conduit);
-
-            EditorGUILayout.EndScrollView();
+            try {
+                DrawSignalingSection(conduit);
+                DrawServerStatusSection();
+                DrawLobbySection();
+                DrawPeersSection(conduit);
+            }
+            finally {
+                EditorGUILayout.EndScrollView();
+            }
 
             // Restore original label width
             EditorGUIUtility.labelWidth = originalLabelWidth;
@@ -279,9 +283,10 @@ namespace ConduitNet.Editor {
 
             EditorGUI.indentLevel++;
 
-            int queueCount = conduit._dataChannelQueue.Count;
+            int queueCount = conduit._dataChannelQueue?.Count ?? 0;
             EditorGUILayout.LabelField("Pending Data Channel Queue", queueCount.ToString());
-            EditorGUILayout.LabelField("Max DC Processing Time", Conduit.MaxDataChannelProcessingTimeMs.ToString() + " ms");
+            string maxDcTime = Conduit.Config != null ? Conduit.Config.MaxDataChannelProcessingTimeMs.ToString() + " ms" : "N/A";
+            EditorGUILayout.LabelField("Max DC Processing Time", maxDcTime);
 
             EditorGUILayout.Space();
 

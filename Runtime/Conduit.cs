@@ -26,9 +26,6 @@ namespace ConduitNet {
         /// <summary>Global configuration for Conduit. Must be set before calling Init.</summary>
         public static ConduitConfig Config { get; set; }
 
-        /// <summary>Whether to use AssemblyQualifiedName for type serialization (default: false -> FullName).</summary>
-        public static bool UseAssemblyQualifiedNameForTypes = false;
-
         /// <summary>Service for handling user-related server requests.</summary>
         public static IUserService UserService {
             get => Instance._userService;
@@ -86,12 +83,6 @@ namespace ConduitNet {
 
         /// <summary>The evaluated WS/WSS WebSocket URL currently in use by the engine.</summary>
         public static string SocketUrl => Instance?._socketUrl;
-
-        /// <summary>Maximum time(ms) allowed to process data channel messages per frame.</summary>
-        public static float MaxDataChannelProcessingTimeMs {
-            get => Instance._maxDataChannelProcessingTimeMs;
-            set => Instance._maxDataChannelProcessingTimeMs = value;
-        }
 
         // ── Events ──────────────────────────────────────────────────
 
@@ -237,26 +228,70 @@ namespace ConduitNet {
 
         /// <summary>Registers a handler for receiving named signals.</summary>
         public static void RegisterSignalHandler(string signalName, SignalHandler handler) {
-            Instance._handler.signalHandlers[signalName] += handler;
+            // TryGetValue를 사용하여 KeyNotFoundException 방지 및 해시 조회 1회로 단축
+            if (Instance._handler.signalHandlers.TryGetValue(signalName, out var existingHandler)) 
+            {
+                Instance._handler.signalHandlers[signalName] = existingHandler + handler;
+            } 
+            else 
+            {
+                Instance._handler.signalHandlers[signalName] = handler;
+            }
         }
 
         /// <summary>Unregisters a signal handler.</summary>
         public static bool UnregisterSignalHandler(string signalName, SignalHandler handler) {
-            Instance._handler.signalHandlers[signalName] -= handler;
-            return true;
+            if (Instance._handler.signalHandlers.TryGetValue(signalName, out var existingHandler)) 
+            {
+                // 델리게이트에서 핸들러 제거
+                var newHandler = (SignalHandler)Delegate.Remove(existingHandler, handler);
+                
+                if (newHandler == null) 
+                {
+                    // 더 이상 연결된 핸들러가 없으면 딕셔너리에서 키를 완전히 제거 (메모리 누수 방지)
+                    Instance._handler.signalHandlers.Remove(signalName);
+                } 
+                else 
+                {
+                    Instance._handler.signalHandlers[signalName] = newHandler;
+                }
+                return true;
+            }
+            
+            // 애초에 등록된 적 없는 시그널이라면 false 반환
+            return false;
         }
 
         /// <summary>Registers a handler for receiving strongly-typed packets.</summary>
-        public static void RegisterPacketHandler<T>(PacketHandler<T> handler) where T : INetworkPacket {
+        public static void RegisterPacketHandler<T>(PacketHandler<T> handler) where T : INetworkPacket 
+        {
             string packetId = PacketRegistry.GetPacketId(typeof(T));
-            if (packetId == null) throw new Exception($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
+            if (packetId == null) 
+            {
+                throw new ArgumentException($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.", nameof(handler));
+            }
 
-            void wrapper(IUser sender, long timestamp, object packet, SendOption option) {
+            // 로컬 함수 선언 (등록 시점에만 클로저 객체가 생성되므로 성능에 문제 없음)
+            void wrapper(IUser sender, long timestamp, object packet, SendOption option) 
+            {
+                // 주의: PacketContext<T>는 가급적 struct여야 핫 패스에서 GC 할당을 방지할 수 있습니다.
                 handler(new PacketContext<T>(sender, timestamp, (T)packet, option));
             }
 
-            Instance._handler.packetHandlerCache[(packetId, handler)] = wrapper;
-            Instance._handler.packetHandlerWrappers[packetId] += wrapper;
+            // 로컬 함수를 명시적으로 Delegate 인스턴스로 한 번만 변환하여 재사용
+            Action<IUser, long, object, SendOption> typedWrapper = wrapper;
+
+            Instance._handler.packetHandlerCache[(packetId, handler)] = typedWrapper;
+
+            // TryGetValue를 활용한 단일 해시 조회
+            if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + typedWrapper;    
+            } 
+            else 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = typedWrapper;
+            }
         }
 
         /// <summary>Unregisters a typed packet handler.</summary>
@@ -272,19 +307,32 @@ namespace ConduitNet {
             return false;
         }
 
-        public static void RegisterPacketHandler(Type packetType, Delegate handler) {
-            string packetId = PacketRegistry.GetPacketId(packetType);
-            if (packetId == null) throw new Exception($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
+        private static readonly MethodInfo _createPacketWrapperMethod = typeof(Conduit)
+            .GetMethod(nameof(CreatePacketWrapper), BindingFlags.NonPublic | BindingFlags.Static);
 
-            // Reflection is used only once here at registration time.
-            // The returned wrapper is a fully typed delegate with zero reflection on the hot path.
-            var factory = typeof(Conduit)
-                .GetMethod(nameof(CreatePacketWrapper), BindingFlags.NonPublic | BindingFlags.Static)
-                .MakeGenericMethod(packetType);
+        public static void RegisterPacketHandler(Type packetType, Delegate handler) 
+        {
+            string packetId = PacketRegistry.GetPacketId(packetType);
+            if (packetId == null) 
+            {
+                throw new ArgumentException($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.", nameof(packetType));
+            }
+
+            // 1. 매 호출마다 GetMethod를 찾는 비용을 제거하고 캐싱된 MethodInfo를 사용합니다.
+            var factory = _createPacketWrapperMethod.MakeGenericMethod(packetType);
             var wrapper = (Action<IUser, long, object, SendOption>)factory.Invoke(null, new object[] { handler });
 
             Instance._handler.packetHandlerCache[(packetId, handler)] = wrapper;
-            Instance._handler.packetHandlerWrappers[packetId] += wrapper;
+
+            // 2. TryGetValue를 사용하여 딕셔너리 키 조회(해시 계산)를 한 번만 수행합니다.
+            if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + wrapper;    
+            } 
+            else 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = wrapper;
+            }
         }
 
         private static Action<IUser, long, object, SendOption> CreatePacketWrapper<T>(Delegate handler) {
@@ -337,7 +385,6 @@ namespace ConduitNet {
         private ILobby _lobby;
         private IUser _user;
         private bool _isConnectedToServer = false;
-        private float _maxDataChannelProcessingTimeMs = 5f;
 
         private string _socketUrl, _apiUrl;
         private List<RTCIceServer> _iceServers = new();
@@ -396,7 +443,7 @@ namespace ConduitNet {
             while (_dataChannelQueue.TryDequeue(out var msg)) {
                 ProcessDataChannelMessage(msg.rawdata, msg.option, msg.sender, msg.offset);
 
-                if (_dataChannelStopwatch.Elapsed.TotalMilliseconds >= MaxDataChannelProcessingTimeMs)
+                if (_dataChannelStopwatch.Elapsed.TotalMilliseconds >= Config.MaxDataChannelProcessingTimeMs)
                     break;
             }
             _dataChannelStopwatch.Stop();

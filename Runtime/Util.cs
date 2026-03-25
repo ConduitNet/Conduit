@@ -148,7 +148,7 @@ namespace ConduitNet.Utility {
         [IgnoreMember]
         public Type Type {
             get => TypeName == null ? null : Type.GetType(TypeName);
-            set => TypeName = Conduit.UseAssemblyQualifiedNameForTypes ? value.AssemblyQualifiedName : value.FullName;
+            set => TypeName = Conduit.Config.UseAssemblyQualifiedNameForTypes ? value.AssemblyQualifiedName : value.FullName;
         }
 
         public TypeWrapper() { }

@@ -26,14 +26,17 @@ namespace ConduitNet {
                 BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
             foreach (var method in methods) {
-                var senderFilter = method.GetCustomAttribute<SenderFilterAttribute>()?.Filter ?? SenderFilter.Any;
+                var peerFilter = method.GetCustomAttribute<RequireRoleAttribute>();
+                var senderRole   = peerFilter?.Sender   ?? Role.Any;
+                var receiverRole = peerFilter?.Receiver ?? Role.Any;
+                bool hasFilter = senderRole != Role.Any || receiverRole != Role.Any;
 
                 // [BytesHandler]
                 if (method.GetCustomAttribute<BytesHandlerAttribute>() != null) {
                     if (!TryCreateDelegate(method, typeof(BytesHandler), out var handler,
                         "void (BytesContext context)")) continue;
                     var h = (BytesHandler)handler;
-                    BindBytesHandler(senderFilter == SenderFilter.Any ? h : ctx => { if (PassesSenderFilter(ctx.Sender, senderFilter)) h(ctx); });
+                    BindBytesHandler(!hasFilter ? h : ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) h(ctx); });
                     continue;
                 }
 
@@ -43,7 +46,7 @@ namespace ConduitNet {
                     if (!TryCreateDelegate(method, typeof(SignalHandler), out var handler,
                         "void (SignalContext context)")) continue;
                     var h = (SignalHandler)handler;
-                    BindSignalHandler(signalAttr.SignalName, senderFilter == SenderFilter.Any ? h : ctx => { if (PassesSenderFilter(ctx.Sender, senderFilter)) h(ctx); });
+                    BindSignalHandler(signalAttr.SignalName, !hasFilter ? h : ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) h(ctx); });
                     continue;
                 }
 
@@ -55,8 +58,8 @@ namespace ConduitNet {
                     if (!TryCreateDelegate(method, delegateType, out var handler,
                         $"void (PacketContext<{packetType.Name}> context)")) continue;
 
-                    if (senderFilter != SenderFilter.Any) {
-                        handler = WrapPacketHandlerWithFilter(packetType, handler, senderFilter);
+                    if (hasFilter) {
+                        handler = WrapPacketHandlerWithFilter(packetType, handler, senderRole, receiverRole);
                     }
 
                     Conduit.RegisterPacketHandler(packetType, handler);
@@ -134,24 +137,27 @@ namespace ConduitNet {
 
         #endregion
 
-        #region Sender Filter
+        #region Peer Filter
 
-        private static bool PassesSenderFilter(IUser sender, SenderFilter filter) => filter switch {
-            SenderFilter.Host => Conduit.Host != null && sender.Id == Conduit.Host.Id,
-            SenderFilter.Member => Conduit.Host != null && sender.Id != Conduit.Host.Id,
-            _ => true
+        private static bool MatchesRole(IUser user, Role role) => role switch {
+            Role.Host   => Conduit.Host != null && user.Id == Conduit.Host.Id,
+            Role.Member => Conduit.Host != null && user.Id != Conduit.Host.Id,
+            _               => true
         };
 
-        private static Delegate WrapPacketHandlerWithFilter(Type packetType, Delegate handler, SenderFilter filter) {
+        private static bool PassesPeerFilter(IUser sender, Role senderRole, Role receiverRole) =>
+            MatchesRole(sender, senderRole) && (receiverRole == Role.Any || MatchesRole(Conduit.LocalUser, receiverRole));
+
+        private static Delegate WrapPacketHandlerWithFilter(Type packetType, Delegate handler, Role senderRole, Role receiverRole) {
             var method = typeof(ConduitBehaviour)
                 .GetMethod(nameof(CreateFilteredPacketHandler), BindingFlags.NonPublic | BindingFlags.Static)
                 .MakeGenericMethod(packetType);
-            return (Delegate)method.Invoke(null, new object[] { handler, filter });
+            return (Delegate)method.Invoke(null, new object[] { handler, senderRole, receiverRole });
         }
 
-        private static PacketHandler<T> CreateFilteredPacketHandler<T>(Delegate handler, SenderFilter filter) {
+        private static PacketHandler<T> CreateFilteredPacketHandler<T>(Delegate handler, Role senderRole, Role receiverRole) {
             var typed = (PacketHandler<T>)handler;
-            return ctx => { if (PassesSenderFilter(ctx.Sender, filter)) typed(ctx); };
+            return ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) typed(ctx); };
         }
 
         #endregion
