@@ -168,6 +168,22 @@ namespace ConduitNet {
         public static bool SendPacket<T>(IUser user, T packet, SendOption option) where T : IPacket
             => Instance._SendPacket(user, packet, option, LocalUser);
 
+        /// <summary>Sends a byte array to a specified user, outputting the send context.</summary>
+        public static bool SendBytes(IUser user, byte[] data, SendOption option, out BytesContext context) {
+            context = new BytesContext(LocalUser, new ReadOnlyMemory<byte>(data), option);
+            return Instance._SendBytes(user, data, option, LocalUser);
+        }
+        /// <summary>Sends a named signal to a specified user, outputting the send context.</summary>
+        public static bool SendSignal(IUser user, string signalName, SendOption option, out SignalContext context) {
+            context = new SignalContext(LocalUser, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), option);
+            return Instance._SendSignal(user, signalName, option, LocalUser);
+        }
+        /// <summary>Sends a typed packet to a specified user, outputting the send context.</summary>
+        public static bool SendPacket<T>(IUser user, T packet, SendOption option, out PacketContext<T> context) where T : IPacket {
+            context = new PacketContext<T>(LocalUser, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._SendPacket(user, packet, option, LocalUser);
+        }
+
         // ── Broadcast (Host Only) ───────────────────────────────────
 
         /// <summary>Broadcasts a byte array to all connected peers. (Host only)</summary>
@@ -178,9 +194,31 @@ namespace ConduitNet {
         public static bool BroadcastPacket<T>(T packet, SendOption option) where T : IPacket
             => Instance._BroadcastPacket(LocalUser, packet, option);
 
+        /// <summary>Broadcasts a byte array to all connected peers, outputting the send context. (Host only)</summary>
+        public static bool BroadcastBytes(byte[] data, SendOption option, out BytesContext context) {
+            context = new BytesContext(LocalUser, new ReadOnlyMemory<byte>(data), option);
+            return Instance._BroadcastBytes(LocalUser, data, option);
+        }
+        /// <summary>Broadcasts a named signal to all connected peers, outputting the send context. (Host only)</summary>
+        public static bool BroadcastSignal(string signalName, SendOption option, out SignalContext context) {
+            context = new SignalContext(LocalUser, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), option);
+            return Instance._BroadcastSignal(LocalUser, signalName, option);
+        }
+        /// <summary>Broadcasts a typed packet to all connected peers, outputting the send context. (Host only)</summary>
+        public static bool BroadcastPacket<T>(T packet, SendOption option, out PacketContext<T> context) where T : IPacket {
+            context = new PacketContext<T>(LocalUser, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._BroadcastPacket(LocalUser, packet, option);
+        }
+
         /// <summary>Sends an <see cref="IAutoRelayPacket"/> to the host, which will relay it to all peers.</summary>
         public static bool SendAutoRelayPacket<T>(T packet, SendOption option) where T : IAutoRelayPacket
             => Instance._SendAutoRelayPacket(LocalUser, packet, option);
+
+        /// <summary>Sends an <see cref="IAutoRelayPacket"/> to the host, outputting the send context. The host will relay it to all peers.</summary>
+        public static bool SendAutoRelayPacket<T>(T packet, SendOption option, out PacketContext<T> context) where T : IAutoRelayPacket {
+            context = new PacketContext<T>(LocalUser, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._SendAutoRelayPacket(LocalUser, packet, option);
+        }
 
         // ── Spoofed (Host Only) ─────────────────────────────────────
 
@@ -195,6 +233,27 @@ namespace ConduitNet {
         public static bool SendSpoofedAutoRelayPacket<T>(IUser fakeSender, T packet, SendOption option) where T : IAutoRelayPacket
             => Instance._SendAutoRelayPacket(fakeSender, packet, option);
 
+        /// <summary>Sends a byte array to a specified user masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool SendSpoofedBytes(IUser target, IUser fakeSender, byte[] data, SendOption option, out BytesContext context) {
+            context = new BytesContext(fakeSender, new ReadOnlyMemory<byte>(data), option);
+            return Instance._SendBytes(target, data, option, fakeSender);
+        }
+        /// <summary>Sends a named signal to a specified user masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool SendSpoofedSignal(IUser target, IUser fakeSender, string signalName, SendOption option, out SignalContext context) {
+            context = new SignalContext(fakeSender, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), option);
+            return Instance._SendSignal(target, signalName, option, fakeSender);
+        }
+        /// <summary>Sends a typed packet to a specified user masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool SendSpoofedPacket<T>(IUser target, IUser fakeSender, T packet, SendOption option, out PacketContext<T> context) where T : IPacket {
+            context = new PacketContext<T>(fakeSender, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._SendPacket(target, packet, option, fakeSender);
+        }
+        /// <summary>Sends an <see cref="IAutoRelayPacket"/> to the host masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool SendSpoofedAutoRelayPacket<T>(IUser fakeSender, T packet, SendOption option, out PacketContext<T> context) where T : IAutoRelayPacket {
+            context = new PacketContext<T>(fakeSender, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._SendAutoRelayPacket(fakeSender, packet, option);
+        }
+
         /// <summary>Broadcasts a byte array to all peers masquerading as the specified sender. (Host only)</summary>
         public static bool BroadcastSpoofedBytes(IUser fakeSender, byte[] data, SendOption option) => Instance._BroadcastBytes(fakeSender, data, option);
         /// <summary>Broadcasts a named signal to all peers masquerading as the specified sender. (Host only)</summary>
@@ -202,6 +261,22 @@ namespace ConduitNet {
         /// <summary>Broadcasts a typed packet to all peers masquerading as the specified sender. (Host only)</summary>
         public static bool BroadcastSpoofedPacket<T>(IUser fakeSender, T packet, SendOption option) where T : IPacket
             => Instance._BroadcastPacket(fakeSender, packet, option);
+
+        /// <summary>Broadcasts a byte array to all peers masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool BroadcastSpoofedBytes(IUser fakeSender, byte[] data, SendOption option, out BytesContext context) {
+            context = new BytesContext(fakeSender, new ReadOnlyMemory<byte>(data), option);
+            return Instance._BroadcastBytes(fakeSender, data, option);
+        }
+        /// <summary>Broadcasts a named signal to all peers masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool BroadcastSpoofedSignal(IUser fakeSender, string signalName, SendOption option, out SignalContext context) {
+            context = new SignalContext(fakeSender, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), option);
+            return Instance._BroadcastSignal(fakeSender, signalName, option);
+        }
+        /// <summary>Broadcasts a typed packet to all peers masquerading as the specified sender, outputting the send context. (Host only)</summary>
+        public static bool BroadcastSpoofedPacket<T>(IUser fakeSender, T packet, SendOption option, out PacketContext<T> context) where T : IPacket {
+            context = new PacketContext<T>(fakeSender, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(), packet, option);
+            return Instance._BroadcastPacket(fakeSender, packet, option);
+        }
 
         // ── Remote Exception ────────────────────────────────────────
 
