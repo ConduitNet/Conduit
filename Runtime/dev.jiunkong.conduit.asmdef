@@ -5,7 +5,7 @@
   "overrideReferences": false,
   "references": [
     "Unity.WebRTC",
-    "endel.nativewebsocket",
+    "colyseus.nativewebsocket",
     "MessagePack.Unity",
     "dev.jiunkong.conduit.shared"
   ],
