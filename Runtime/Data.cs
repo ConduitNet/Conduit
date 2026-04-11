@@ -169,10 +169,10 @@ namespace ConduitNet {
         public bool UseWss { get; set; } = false;
         /// <summary>Enable debug logging.</summary>
         public bool DebugLog { get; set; } = false;
-        /// <summary>Header key for user ID.</summary>
-        public string UserIdHeader { get; set; } = "user-id";
-        /// <summary>Header key for lobby ID.</summary>
-        public string LobbyIdHeader { get; set; } = "lobby-id";
+        /// <summary>Query key for user ID.</summary>
+        public string UserIdQueryKey { get; set; } = "userId";
+        /// <summary>Query key for lobby ID.</summary>
+        public string LobbyIdQueryKey { get; set; } = "lobbyId";
         /// <summary>Lobby join timeout in seconds.</summary>
         public float JoinTimeout { get; set; } = 10f;
         /// <summary>API path for syncing user. {0} is API URL, {1} is user ID.</summary>
