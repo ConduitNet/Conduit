@@ -108,6 +108,8 @@ namespace ConduitNet {
         public static event Action OnUserAccountStateUpdated;
         /// <summary>Invoked when JoinLobby is cancelled.</summary>
         public static event Action OnJoinCancelled;
+        /// <summary>Invoked when clock synchronization with the host completes. Parameter: Calculated clock offset in milliseconds.</summary>
+        public static event Action<long> OnTimeSynced;
 
         // ── Initialization ──────────────────────────────────────────
 
@@ -155,6 +157,29 @@ namespace ConduitNet {
         public static async Task<double?> GetRTTAsync(string peerId) {
             var task = new TaskCompletionSource<double?>();
             Instance.StartCoroutine(GetRTT(peerId, result => task.SetResult(result)));
+            return await task.Task;
+        }
+
+        // ── Time Sync ──────────────────────────────────────────────
+
+        /// <summary>Clock offset from the host in milliseconds. HostTime ≈ LocalTime + HostClockOffset.</summary>
+        public static long HostClockOffset => Instance._hostClockOffsetMs;
+
+        /// <summary>Whether time synchronization with the host has been completed at least once.</summary>
+        public static bool IsTimeSynced => Instance._isTimeSynced;
+
+        /// <summary>Estimated current host time in UTC Unix milliseconds. Equivalent to local UTC time plus HostClockOffset.</summary>
+        public static long HostTime => DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() + Instance._hostClockOffsetMs;
+
+        /// <summary>Performs clock synchronization with the host. Collects multiple samples and uses the median offset. Coroutine.</summary>
+        /// <param name="onComplete">Optional callback with the calculated offset in milliseconds.</param>
+        public static IEnumerator SyncClock(Action<long> onComplete = null) => Instance._SyncClock(onComplete);
+
+        /// <summary>Performs clock synchronization with the host. Async/await version.</summary>
+        /// <returns>The calculated clock offset in milliseconds.</returns>
+        public static async Task<long> SyncClockAsync() {
+            var task = new TaskCompletionSource<long>();
+            Instance.StartCoroutine(SyncClock(result => task.SetResult(result)));
             return await task.Task;
         }
 
@@ -475,6 +500,14 @@ namespace ConduitNet {
         private Dictionary<string, bool> _isDescriptionReadyMap = new();
         private Dictionary<string, List<RTCDataChannel>> _dataChannelListMap = new();
         private HandlerGroup _handler = new();
+
+        // Time Sync
+        private long _hostClockOffsetMs = 0;
+        private bool _isTimeSynced = false;
+        private bool _timeSyncWaiting = false;
+        private long _timeSyncT1;
+        private long _timeSyncT2;
+        private long _timeSyncT3;
 
         private class HandlerGroup {
             public BytesHandler bytesHandler;
@@ -904,6 +937,9 @@ namespace ConduitNet {
         private void _LeaveLobby() {
             DisconnectAll();
             Lobby = null;
+            _isTimeSynced = false;
+            _hostClockOffsetMs = 0;
+            _timeSyncWaiting = false;
             if (_signaling != null) {
                 _signaling.Close();
                 _signaling = null;
@@ -993,12 +1029,16 @@ namespace ConduitNet {
                         if (Host.Id != lobby.HostId) { // when host changed
                             wasHost = true;
 
+                            // Reset time sync state since the host changed
+                            _isTimeSynced = false;
+                            _hostClockOffsetMs = 0;
+
                             if (lobby.HostId != LocalUser.Id) {
                                 // Reconnect
                                 DisconnectPeer(Host.Id);
                                 StartCoroutine(ConnectPeerAsync(lobby.HostId));
+                                // Auto time sync will be triggered by OnPeerConnected
                             }
-
 
                             OnHostChanged?.Invoke(Host, lobby.Host);
                         }
@@ -1127,6 +1167,11 @@ namespace ConduitNet {
                             _isJoining = false;
                             OnPeerConnected?.Invoke(peerId);
                             isConnected = true;
+
+                            // Auto time sync: when a non-host peer connects to the host
+                            if (!IsHost && peerId == Host?.Id) {
+                                StartCoroutine(_SyncClock(null));
+                            }
                         }
                         break;
                     case RTCIceConnectionState.Disconnected:
@@ -1291,8 +1336,23 @@ namespace ConduitNet {
             if (senderUser == null) return;
 
             int contentStart = offset; // position right after the DataEndPoint header
+            byte prefixByte = rawdata[offset++];
 
-            switch (rawdata[offset++] >> 6) {
+            // Internal system message (bit 5 set) — route to system handler, skip user handlers
+            if ((prefixByte & InternalFlag.Mask) != 0) {
+                var internalType = (InternalMsgType)(prefixByte >> 6);
+                switch (internalType) {
+                    case InternalMsgType.TimeSyncRequest:
+                        _HandleTimeSyncRequest(rawdata, offset, sender);
+                        break;
+                    case InternalMsgType.TimeSyncResponse:
+                        _HandleTimeSyncResponse(rawdata, offset);
+                        break;
+                }
+                return;
+            }
+
+            switch (prefixByte >> 6) {
                 case (byte)DataType.Byte:
                     _handler.bytesHandler?.Invoke(new BytesContext(senderUser, new ReadOnlyMemory<byte>(rawdata, offset, rawdata.Length - offset), option));
                     break;
@@ -1377,6 +1437,114 @@ namespace ConduitNet {
             Utils.InsertData(data, endpoint);
             channel.Send(data.ToArray());
             return true;
+        }
+
+        #endregion
+
+        #region Time Sync
+
+        private IEnumerator _SyncClock(Action<long> onComplete) {
+            // Host's offset is always 0
+            if (IsHost) {
+                _hostClockOffsetMs = 0;
+                _isTimeSynced = true;
+                onComplete?.Invoke(0);
+                OnTimeSynced?.Invoke(0);
+                yield break;
+            }
+
+            if (Host == null || !_peerConnectionMap.ContainsKey(Host.Id)) {
+                Debug.LogWarning("Cannot sync clock: not connected to host.");
+                yield break;
+            }
+
+            int sampleCount = Config.TimeSyncSamples;
+            float interval = Config.TimeSyncInterval;
+            float timeout = Config.TimeSyncTimeout;
+
+            List<long> offsets = new(sampleCount);
+
+            for (int i = 0; i < sampleCount; i++) {
+                // Send request
+                _timeSyncWaiting = true;
+                _timeSyncT1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                _SendTimeSyncRequest(Host.Id);
+
+                // Wait for response
+                float elapsed = 0f;
+                while (_timeSyncWaiting && elapsed < timeout) {
+                    yield return null;
+                    elapsed += Time.unscaledDeltaTime;
+                }
+
+                if (!_timeSyncWaiting) {
+                    // Response received — compute offset for this sample
+                    long t4 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                    long sampleOffset = ((_timeSyncT2 - _timeSyncT1) + (_timeSyncT3 - t4)) / 2;
+                    offsets.Add(sampleOffset);
+                }
+                else {
+                    if (_debugLog) Debug.LogWarning($"Time sync sample {i} timed out.");
+                    _timeSyncWaiting = false;
+                }
+
+                if (i < sampleCount - 1)
+                    yield return new WaitForSeconds(interval);
+            }
+
+            if (offsets.Count > 0) {
+                // Use median for robustness against outliers
+                offsets.Sort();
+                _hostClockOffsetMs = offsets[offsets.Count / 2];
+                _isTimeSynced = true;
+
+                if (_debugLog) Debug.Log($"Time sync complete. Offset: {_hostClockOffsetMs}ms ({offsets.Count}/{sampleCount} samples)");
+
+                onComplete?.Invoke(_hostClockOffsetMs);
+                OnTimeSynced?.Invoke(_hostClockOffsetMs);
+            }
+            else {
+                Debug.LogWarning("Time sync failed: no valid samples collected.");
+            }
+        }
+
+        private void _SendTimeSyncRequest(string peerId) {
+            byte prefix = (byte)(((byte)InternalMsgType.TimeSyncRequest << 6) | InternalFlag.Mask);
+
+            List<byte> data = new() { prefix };
+            data.AddRange(BitConverter.GetBytes(_timeSyncT1));
+
+            SendData(peerId, data, SendOption.OrderedReliable);
+        }
+
+        private void _HandleTimeSyncRequest(byte[] rawdata, int offset, string senderPeerId) {
+            // Host only: read t1, record t2, send response with t1, t2, t3
+            if (!IsHost) return;
+
+            long t1 = Utils.ReadInt64(rawdata, offset);
+            long t2 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            byte prefix = (byte)(((byte)InternalMsgType.TimeSyncResponse << 6) | InternalFlag.Mask);
+            long t3 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            List<byte> data = new() { prefix };
+            data.AddRange(BitConverter.GetBytes(t1));
+            data.AddRange(BitConverter.GetBytes(t2));
+            data.AddRange(BitConverter.GetBytes(t3));
+
+            SendData(senderPeerId, data, SendOption.OrderedReliable);
+        }
+
+        private void _HandleTimeSyncResponse(byte[] rawdata, int offset) {
+            if (!_timeSyncWaiting) return;
+
+            _timeSyncT1 = Utils.ReadInt64(rawdata, offset);
+            offset += sizeof(long);
+            _timeSyncT2 = Utils.ReadInt64(rawdata, offset);
+            offset += sizeof(long);
+            _timeSyncT3 = Utils.ReadInt64(rawdata, offset);
+
+            _timeSyncWaiting = false;
         }
 
         #endregion

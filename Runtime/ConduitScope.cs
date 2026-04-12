@@ -129,6 +129,7 @@ namespace ConduitNet {
             Conduit.OnLobbyStateUpdated       += OnLobbyStateUpdated;
             Conduit.OnUserAccountStateUpdated += OnUserAccountStateUpdated;
             Conduit.OnJoinCancelled           += OnJoinCancelled;
+            Conduit.OnTimeSynced              += OnTimeSynced;
         }
 
         private void UnsubscribeEvents() {
@@ -143,6 +144,7 @@ namespace ConduitNet {
             Conduit.OnLobbyStateUpdated       -= OnLobbyStateUpdated;
             Conduit.OnUserAccountStateUpdated -= OnUserAccountStateUpdated;
             Conduit.OnJoinCancelled           -= OnJoinCancelled;
+            Conduit.OnTimeSynced              -= OnTimeSynced;
         }
 
         /// <summary>Called when a user joins the lobby.</summary>
@@ -167,6 +169,8 @@ namespace ConduitNet {
         protected virtual void OnUserAccountStateUpdated() {}
         /// <summary>Called when JoinLobby is cancelled.</summary>
         protected virtual void OnJoinCancelled() {}
+        /// <summary>Called when clock synchronization with the host completes.</summary>
+        protected virtual void OnTimeSynced(long offsetMs) {}
 
         #endregion
 

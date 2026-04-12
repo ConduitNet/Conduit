@@ -122,6 +122,17 @@ namespace ConduitNet {
         Error = 0b11,
     }
 
+    /// <summary>Internal system message flag. When bit 0 of the prefix byte is set, the message is an internal system message.</summary>
+    internal static class InternalFlag {
+        public const byte Mask = 0b0000_0001;
+    }
+
+    /// <summary>Sub-types for internal system messages (stored in upper 2 bits of the prefix byte, same position as DataType).</summary>
+    internal enum InternalMsgType : byte {
+        TimeSyncRequest = 0b00,
+        TimeSyncResponse = 0b01,
+    }
+
     [MessagePackObject]
     public struct DataEndPoint {
         [Key(0)]
@@ -188,6 +199,13 @@ namespace ConduitNet {
         public bool UseAssemblyQualifiedNameForTypes = false;
         /// <summary>Maximum time(ms) allowed to process data channel messages per frame.</summary>
         public float MaxDataChannelProcessingTimeMs { get; set; } = 5f;
+
+        /// <summary>Number of samples to collect during time synchronization (default: 5).</summary>
+        public int TimeSyncSamples { get; set; } = 5;
+        /// <summary>Interval between time sync samples in seconds (default: 0.1).</summary>
+        public float TimeSyncInterval { get; set; } = 0.1f;
+        /// <summary>Timeout for time sync response in seconds (default: 5).</summary>
+        public float TimeSyncTimeout { get; set; } = 5f;
 
         public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null) {
             ServerUrl = serverUrl ?? throw new ArgumentNullException(nameof(serverUrl));
