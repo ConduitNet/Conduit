@@ -1170,7 +1170,7 @@ namespace ConduitNet {
 
                             // Auto time sync: when a non-host peer connects to the host
                             if (!IsHost && peerId == Host?.Id) {
-                                StartCoroutine(_SyncClock(null));
+                                StartCoroutine(_AutoSyncClock());
                             }
                         }
                         break;
@@ -1458,6 +1458,13 @@ namespace ConduitNet {
                 yield break;
             }
 
+            if (!_dataChannelListMap.TryGetValue(Host.Id, out var channels)
+                || channels[(byte)SendOption.OrderedReliable] == null
+                || channels[(byte)SendOption.OrderedReliable].ReadyState != RTCDataChannelState.Open) {
+                Debug.LogWarning("Cannot sync clock: data channel is not open. Wait for the channel to be ready before calling SyncClock.");
+                yield break;
+            }
+
             int sampleCount = Config.TimeSyncSamples;
             float interval = Config.TimeSyncInterval;
             float timeout = Config.TimeSyncTimeout;
@@ -1515,6 +1522,22 @@ namespace ConduitNet {
             data.AddRange(BitConverter.GetBytes(_timeSyncT1));
 
             SendData(peerId, data, SendOption.OrderedReliable);
+        }
+
+        private IEnumerator _AutoSyncClock() {
+            // Wait indefinitely for the data channel to open (bail if disconnected)
+            while (true) {
+                if (Host == null || !_peerConnectionMap.ContainsKey(Host.Id)) yield break;
+
+                if (_dataChannelListMap.TryGetValue(Host.Id, out var ch)
+                    && ch[(byte)SendOption.OrderedReliable] != null
+                    && ch[(byte)SendOption.OrderedReliable].ReadyState == RTCDataChannelState.Open) {
+                    break;
+                }
+                yield return null;
+            }
+
+            yield return _SyncClock(null);
         }
 
         private void _HandleTimeSyncRequest(byte[] rawdata, int offset, string senderPeerId) {
