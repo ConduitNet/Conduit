@@ -104,9 +104,9 @@ namespace ConduitNet.Utility {
         }
 
         /// <summary>
-        /// List&lt;byte&gt;의 맨 앞에 MessagePack 직렬화된 데이터를 삽입합니다.
+        /// 데이터를 MessagePack으로 직렬화하고 4바이트 길이 prefix를 붙인 byte[]를 반환합니다.
         /// </summary>
-        public static void InsertData<T>(List<byte> seq, T data) {
+        public static byte[] SerializeHeader<T>(T data) {
             byte[] bytes = MessagePackSerializer.Serialize(data);
             byte[] header = new byte[sizeof(int) + bytes.Length];
             header[0] = (byte)bytes.Length;
@@ -114,7 +114,7 @@ namespace ConduitNet.Utility {
             header[2] = (byte)(bytes.Length >> 16);
             header[3] = (byte)(bytes.Length >> 24);
             Buffer.BlockCopy(bytes, 0, header, sizeof(int), bytes.Length);
-            seq.InsertRange(0, header);
+            return header;
         }
 
         public static T ParseData<T>(ref int offset, byte[] rawdata) {

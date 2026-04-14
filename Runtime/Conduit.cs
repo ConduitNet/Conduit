@@ -1434,8 +1434,16 @@ namespace ConduitNet {
                 receiver = userId
             };
 
-            Utils.InsertData(data, endpoint);
-            channel.Send(data.ToArray());
+            // 원본 data List를 수정하지 않고 헤더를 별도로 직렬화하여 합침.
+            // (Broadcast 시 동일한 List를 여러 peer에 반복 사용하므로 InsertRange로
+            //  원본을 변경하면 두 번째 peer부터 헤더가 중첩되어 파싱 오류가 발생함.)
+            byte[] header = Utils.SerializeHeader(endpoint);
+            byte[] payload = data.ToArray();
+            byte[] packet = new byte[header.Length + payload.Length];
+            Buffer.BlockCopy(header, 0, packet, 0, header.Length);
+            Buffer.BlockCopy(payload, 0, packet, header.Length, payload.Length);
+
+            channel.Send(packet);
             return true;
         }
 
