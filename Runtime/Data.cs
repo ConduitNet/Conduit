@@ -21,6 +21,11 @@ namespace ConduitNet {
         UnorderedUnreliable = 0b11
     }
 
+    public enum TargetGroup {
+        Others,
+        All
+    }
+
     public readonly struct BytesContext {
         public readonly IUser Sender;
         public readonly ReadOnlyMemory<byte> Data;
