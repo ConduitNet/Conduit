@@ -381,7 +381,7 @@ namespace ConduitNet {
             // 로컬 함수를 명시적으로 Delegate 인스턴스로 한 번만 변환하여 재사용
             Action<IUser, long, object, SendOption> typedWrapper = wrapper;
 
-            Instance._handler.packetHandlerCache[(packetId, handler)] = typedWrapper;
+            Instance._handler.packetHandlerCache[(packetId, (object)handler)] = typedWrapper;
 
             // TryGetValue를 활용한 단일 해시 조회
             if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
@@ -399,16 +399,13 @@ namespace ConduitNet {
             string packetId = PacketRegistry.GetPacketId(typeof(T));
             if (packetId == null) throw new Exception($"Type {typeof(T).FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
 
-            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, handler), out var wrapper)) {
+            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, (object)handler), out var wrapper)) {
                 Instance._handler.packetHandlerWrappers[packetId] -= wrapper;
-                Instance._handler.packetHandlerCache.Remove((packetId, handler));
+                Instance._handler.packetHandlerCache.Remove((packetId, (object)handler));
                 return true;
             }
             return false;
         }
-
-        private static readonly MethodInfo _createPacketWrapperMethod = typeof(Conduit)
-            .GetMethod(nameof(CreatePacketWrapper), BindingFlags.NonPublic | BindingFlags.Static);
 
         public static void RegisterPacketHandler(Type packetType, Delegate handler) 
         {
@@ -418,13 +415,15 @@ namespace ConduitNet {
                 throw new ArgumentException($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.", nameof(packetType));
             }
 
-            // 1. 매 호출마다 GetMethod를 찾는 비용을 제거하고 캐싱된 MethodInfo를 사용합니다.
-            var factory = _createPacketWrapperMethod.MakeGenericMethod(packetType);
-            var wrapper = (Action<IUser, long, object, SendOption>)factory.Invoke(null, new object[] { handler });
+            Type contextType = typeof(PacketContext<>).MakeGenericType(packetType);
+            Action<IUser, long, object, SendOption> wrapper = (sender, timestamp, packet, option) => 
+            {
+                object context = Activator.CreateInstance(contextType, sender, timestamp, packet, option);
+                handler.DynamicInvoke(context);
+            };
 
-            Instance._handler.packetHandlerCache[(packetId, handler)] = wrapper;
+            Instance._handler.packetHandlerCache[(packetId, (object)handler)] = wrapper;
 
-            // 2. TryGetValue를 사용하여 딕셔너리 키 조회(해시 계산)를 한 번만 수행합니다.
             if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
             {
                 Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + wrapper;    
@@ -435,19 +434,42 @@ namespace ConduitNet {
             }
         }
 
-        private static Action<IUser, long, object, SendOption> CreatePacketWrapper<T>(Delegate handler) {
-            var typed = (PacketHandler<T>)handler;
-            return (sender, timestamp, packet, option) =>
-                typed(new PacketContext<T>(sender, timestamp, (T)packet, option));
+        public static void RegisterRawPacketHandler(Type packetType, Action<IUser, long, object, SendOption> wrapper, object token) 
+        {
+            string packetId = PacketRegistry.GetPacketId(packetType);
+            if (packetId == null) throw new ArgumentException($"Type {packetType.FullName} is not a packet...");
+
+            Instance._handler.packetHandlerCache[(packetId, token)] = wrapper;
+
+            if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + wrapper;    
+            } 
+            else 
+            {
+                Instance._handler.packetHandlerWrappers[packetId] = wrapper;
+            }
         }
 
         public static bool UnregisterPacketHandler(Type packetType, Delegate handler) {
             string packetId = PacketRegistry.GetPacketId(packetType);
             if (packetId == null) throw new Exception($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
 
-            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, handler), out var wrapper)) {
+            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, (object)handler), out var wrapper)) {
                 Instance._handler.packetHandlerWrappers[packetId] -= wrapper;
-                Instance._handler.packetHandlerCache.Remove((packetId, handler));
+                Instance._handler.packetHandlerCache.Remove((packetId, (object)handler));
+                return true;
+            }
+            return false;
+        }
+
+        public static bool UnregisterRawPacketHandler(Type packetType, object token) {
+            string packetId = PacketRegistry.GetPacketId(packetType);
+            if (packetId == null) return false;
+
+            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, token), out var wrapper)) {
+                Instance._handler.packetHandlerWrappers[packetId] -= wrapper;
+                Instance._handler.packetHandlerCache.Remove((packetId, token));
                 return true;
             }
             return false;
@@ -513,7 +535,7 @@ namespace ConduitNet {
             public BytesHandler bytesHandler;
             public Dictionary<string, SignalHandler> signalHandlers = new();
             public Dictionary<string, Action<IUser, long, object, SendOption>> packetHandlerWrappers = new();
-            public Dictionary<(string, Delegate), Action<IUser, long, object, SendOption>> packetHandlerCache = new();
+            public Dictionary<(string, object), Action<IUser, long, object, SendOption>> packetHandlerCache = new();
         }
 
         internal struct DataChannelMessage {

@@ -1,6 +1,6 @@
 {
     "name": "dev.jiunkong.conduit",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "description": "A lightweight P2P networking library for Unity",
     "displayName": "Conduit",
     "unity": "6000.0",

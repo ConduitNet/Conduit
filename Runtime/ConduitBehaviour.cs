@@ -54,16 +54,16 @@ namespace ConduitNet {
                 var packetAttr = method.GetCustomAttribute<PacketHandlerAttribute>();
                 if (packetAttr != null) {
                     Type packetType = packetAttr.PacketType;
-                    Type delegateType = typeof(PacketHandler<>).MakeGenericType(packetType);
-                    if (!TryCreateDelegate(method, delegateType, out var handler,
-                        $"void (PacketContext<{packetType.Name}> context)")) continue;
+                    Type contextType = typeof(PacketContext<>).MakeGenericType(packetType);
 
-                    if (hasFilter) {
-                        handler = WrapPacketHandlerWithFilter(packetType, handler, senderRole, receiverRole);
-                    }
+                    Action<IUser, long, object, SendOption> typedWrapper = (sender, timestamp, packet, option) => {
+                        if (hasFilter && !PassesPeerFilter(sender, senderRole, receiverRole)) return;
+                        object context = Activator.CreateInstance(contextType, sender, timestamp, packet, option);
+                        method.Invoke(this, new object[] { context });
+                    };
 
-                    Conduit.RegisterPacketHandler(packetType, handler);
-                    _unregisterActions.Add(() => Conduit.UnregisterPacketHandler(packetType, handler));
+                    Conduit.RegisterRawPacketHandler(packetType, typedWrapper, method);
+                    _unregisterActions.Add(() => Conduit.UnregisterRawPacketHandler(packetType, method));
                 }
             }
         }
@@ -152,17 +152,7 @@ namespace ConduitNet {
         private static bool PassesPeerFilter(IUser sender, Role senderRole, Role receiverRole) =>
             MatchesRole(sender, senderRole) && (receiverRole == Role.Any || MatchesRole(Conduit.LocalUser, receiverRole));
 
-        private static Delegate WrapPacketHandlerWithFilter(Type packetType, Delegate handler, Role senderRole, Role receiverRole) {
-            var method = typeof(ConduitBehaviour)
-                .GetMethod(nameof(CreateFilteredPacketHandler), BindingFlags.NonPublic | BindingFlags.Static)
-                .MakeGenericMethod(packetType);
-            return (Delegate)method.Invoke(null, new object[] { handler, senderRole, receiverRole });
-        }
 
-        private static PacketHandler<T> CreateFilteredPacketHandler<T>(Delegate handler, Role senderRole, Role receiverRole) {
-            var typed = (PacketHandler<T>)handler;
-            return ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) typed(ctx); };
-        }
 
         #endregion
 
