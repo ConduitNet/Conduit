@@ -60,13 +60,13 @@ namespace ConduitNet.SourceGenerator
                     if (roleAttr != null)
                     {
                         if (roleAttr.ConstructorArguments.Length > 0)
-                            senderRole = "ConduitNet.Role." + roleAttr.ConstructorArguments[0].Value;
+                            senderRole = "((ConduitNet.Role)" + roleAttr.ConstructorArguments[0].Value + ")";
                         if (roleAttr.ConstructorArguments.Length > 1)
-                            receiverRole = "ConduitNet.Role." + roleAttr.ConstructorArguments[1].Value;
+                            receiverRole = "((ConduitNet.Role)" + roleAttr.ConstructorArguments[1].Value + ")";
                         
                         foreach(var named in roleAttr.NamedArguments) {
-                            if (named.Key == "sender") senderRole = "ConduitNet.Role." + named.Value.Value;
-                            if (named.Key == "receiver") receiverRole = "ConduitNet.Role." + named.Value.Value;
+                            if (named.Key == "sender") senderRole = "((ConduitNet.Role)" + named.Value.Value + ")";
+                            if (named.Key == "receiver") receiverRole = "((ConduitNet.Role)" + named.Value.Value + ")";
                         }
                     }
 
