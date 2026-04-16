@@ -62,8 +62,8 @@ namespace ConduitNet {
                         method.Invoke(this, new object[] { context });
                     };
 
-                    Conduit.RegisterRawPacketHandler(packetType, typedWrapper, method);
-                    _unregisterActions.Add(() => Conduit.UnregisterRawPacketHandler(packetType, method));
+                    Conduit.RegisterRawPacketHandler(packetType, typedWrapper, typedWrapper);
+                    _unregisterActions.Add(() => Conduit.UnregisterRawPacketHandler(packetType, typedWrapper));
                 }
             }
         }
