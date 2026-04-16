@@ -31,5 +31,5 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  assetLabels:
-  - RoslynAnalyzer
+labels:
+- RoslynAnalyzer

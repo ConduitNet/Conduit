@@ -105,7 +105,7 @@ namespace ConduitNet.SourceGenerator
                     }
                     sb.AppendLine("                }");
                 }
-                sb.AppendLine("            });");
+                sb.AppendLine("            };");
             }
 
             sb.AppendLine("        }");

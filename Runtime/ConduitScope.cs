@@ -36,7 +36,8 @@ namespace ConduitNet {
         #region Source Generator Bindings
 
         // Called by Source Generator (Internal use only)
-        internal void InternalBindGeneratedBytesHandler(BytesHandler handler, Role senderRole, Role receiverRole) {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public void InternalBindGeneratedBytesHandler(BytesHandler handler, Role senderRole, Role receiverRole) {
             if (senderRole != Role.Any || receiverRole != Role.Any) {
                 var original = handler;
                 handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };
@@ -45,7 +46,8 @@ namespace ConduitNet {
         }
 
         // Called by Source Generator (Internal use only)
-        internal void InternalBindGeneratedSignalHandler(string signalName, SignalHandler handler, Role senderRole, Role receiverRole) {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public void InternalBindGeneratedSignalHandler(string signalName, SignalHandler handler, Role senderRole, Role receiverRole) {
             if (senderRole != Role.Any || receiverRole != Role.Any) {
                 var original = handler;
                 handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };
@@ -54,7 +56,8 @@ namespace ConduitNet {
         }
 
         // Called by Source Generator (Internal use only)
-        internal void InternalBindGeneratedPacketHandler<T>(PacketHandler<T> handler, Role senderRole, Role receiverRole) where T : INetworkPacket {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public void InternalBindGeneratedPacketHandler<T>(PacketHandler<T> handler, Role senderRole, Role receiverRole) where T : INetworkPacket {
             if (senderRole != Role.Any || receiverRole != Role.Any) {
                 var original = handler;
                 handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };

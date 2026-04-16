@@ -17,7 +17,9 @@ using Unity.WebRTC;
 using UnityEngine;
 
 namespace ConduitNet {
-    internal static class ConduitRegistry {
+    // Hidden from IDE IntelliSense but accessible globally by Source Generators
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+    public static class ConduitRegistry {
         public static readonly Dictionary<Type, Action<object>> GeneratedBinders = new();
     }
 
