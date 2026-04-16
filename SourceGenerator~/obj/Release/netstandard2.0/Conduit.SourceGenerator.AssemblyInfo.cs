@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Conduit.SourceGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+531fd5ed1cb519e14b453fffdcf1df95d1183025")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e7bd75f05491b482ef5fd1bed3fb5488529ca4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Conduit.SourceGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Conduit.SourceGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
