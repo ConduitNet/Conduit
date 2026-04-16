@@ -62,6 +62,8 @@ namespace ConduitNet {
             BindPacketHandler(handler);
         }
 
+        #endregion
+        
         #region Peer Filter
 
         private static bool MatchesRole(IUser user, Role role) => role switch {
