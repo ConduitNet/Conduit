@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Conduit | Conduit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Conduit | Conduit ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jiunkong/litep2pnet/new/develop/apiSpec/new?filename=ConduitNet_Conduit.md&amp;value=---%0Auid%3A%20ConduitNet.Conduit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Conduit">
+            Conduit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ConduitNet.Conduit">
+
+
+
+  <h1 id="ConduitNet_Conduit" data-uid="ConduitNet.Conduit" class="text-break">
+Class Conduit  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ConduitNet.html">ConduitNet</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Conduit : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Conduit</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ConduitNet_Conduit_OnConnectionFailed" data-uid="ConduitNet.Conduit.OnConnectionFailed">
+  OnConnectionFailed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a connection attempt fails. Parameter: Failure reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;ConnectionFailedReason&gt; OnConnectionFailed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="ConduitNet.ConnectionFailedReason.html">ConnectionFailedReason</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnHostChanged" data-uid="ConduitNet.Conduit.OnHostChanged">
+  OnHostChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the lobby host changes. Parameters: (Previous host, New host).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;IUser, IUser&gt; OnHostChanged</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="ConduitNet.IUser.html">IUser</a>, <a class="xref" href="ConduitNet.IUser.html">IUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnJoinCancelled" data-uid="ConduitNet.Conduit.OnJoinCancelled">
+  OnJoinCancelled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when JoinLobby is cancelled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action OnJoinCancelled</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnLobbyInitialized" data-uid="ConduitNet.Conduit.OnLobbyInitialized">
+  OnLobbyInitialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when lobby initialization completes successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action OnLobbyInitialized</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnLobbyMetadataUpdated" data-uid="ConduitNet.Conduit.OnLobbyMetadataUpdated">
+  OnLobbyMetadataUpdated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when lobby metadata (e.g., name, max players) changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action OnLobbyMetadataUpdated</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnLobbyStateUpdated" data-uid="ConduitNet.Conduit.OnLobbyStateUpdated">
+  OnLobbyStateUpdated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the custom lobby state (TLobbyState) changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action OnLobbyStateUpdated</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnPeerConnected" data-uid="ConduitNet.Conduit.OnPeerConnected">
+  OnPeerConnected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a P2P connection to a peer is established. Parameter: Peer ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;string&gt; OnPeerConnected</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnPeerDisconnected" data-uid="ConduitNet.Conduit.OnPeerDisconnected">
+  OnPeerDisconnected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a P2P connection to a peer is lost. Parameter: Peer ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;string&gt; OnPeerDisconnected</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnUserAccountStateUpdated" data-uid="ConduitNet.Conduit.OnUserAccountStateUpdated">
+  OnUserAccountStateUpdated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the user account state (TAccountState) changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action OnUserAccountStateUpdated</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnUserJoined" data-uid="ConduitNet.Conduit.OnUserJoined">
+  OnUserJoined
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a user joins the lobby. Parameter: The newly joined user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;IUser&gt; OnUserJoined</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="ConduitNet.IUser.html">IUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_OnUserLeft" data-uid="ConduitNet.Conduit.OnUserLeft">
+  OnUserLeft
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a user leaves the lobby. Parameters: (The leaving user, Whether the host changed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;IUser, bool&gt; OnUserLeft</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="ConduitNet.IUser.html">IUser</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConduitNet_Conduit_UseAssemblyQualifiedNameForTypes" data-uid="ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes">
+  UseAssemblyQualifiedNameForTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to use AssemblyQualifiedName for type serialization (default: false -&gt; FullName).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UseAssemblyQualifiedNameForTypes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ConduitNet_Conduit_Config_" data-uid="ConduitNet.Conduit.Config*"></a>
+
+  <h3 id="ConduitNet_Conduit_Config" data-uid="ConduitNet.Conduit.Config">
+  Config
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Global configuration for Conduit. Must be set before calling Init.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConduitConfig Config { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.ConduitConfig.html">ConduitConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Host_" data-uid="ConduitNet.Conduit.Host*"></a>
+
+  <h3 id="ConduitNet_Conduit_Host" data-uid="ConduitNet.Conduit.Host">
+  Host
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The host of the current lobby.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IUser Host { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_IsConnected_" data-uid="ConduitNet.Conduit.IsConnected*"></a>
+
+  <h3 id="ConduitNet_Conduit_IsConnected" data-uid="ConduitNet.Conduit.IsConnected">
+  IsConnected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether connected to both the signaling server and at least one peer (or is host).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConnected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_IsConnectedToServer_" data-uid="ConduitNet.Conduit.IsConnectedToServer*"></a>
+
+  <h3 id="ConduitNet_Conduit_IsConnectedToServer" data-uid="ConduitNet.Conduit.IsConnectedToServer">
+  IsConnectedToServer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether connected to the signaling server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsConnectedToServer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_IsHost_" data-uid="ConduitNet.Conduit.IsHost*"></a>
+
+  <h3 id="ConduitNet_Conduit_IsHost" data-uid="ConduitNet.Conduit.IsHost">
+  IsHost
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the local user is the host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsHost { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_IsJoining_" data-uid="ConduitNet.Conduit.IsJoining*"></a>
+
+  <h3 id="ConduitNet_Conduit_IsJoining" data-uid="ConduitNet.Conduit.IsJoining">
+  IsJoining
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a lobby join operation is currently in progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsJoining { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Lobby_" data-uid="ConduitNet.Conduit.Lobby*"></a>
+
+  <h3 id="ConduitNet_Conduit_Lobby" data-uid="ConduitNet.Conduit.Lobby">
+  Lobby
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The currently joined lobby.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILobby Lobby { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.ILobby.html">ILobby</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_LobbyService_" data-uid="ConduitNet.Conduit.LobbyService*"></a>
+
+  <h3 id="ConduitNet_Conduit_LobbyService" data-uid="ConduitNet.Conduit.LobbyService">
+  LobbyService
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Service for handling lobby-related server requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILobbyService LobbyService { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.ILobbyService.html">ILobbyService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_LocalUser_" data-uid="ConduitNet.Conduit.LocalUser*"></a>
+
+  <h3 id="ConduitNet_Conduit_LocalUser" data-uid="ConduitNet.Conduit.LocalUser">
+  LocalUser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Local user information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IUser LocalUser { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_MaxDataChannelProcessingTimeMs_" data-uid="ConduitNet.Conduit.MaxDataChannelProcessingTimeMs*"></a>
+
+  <h3 id="ConduitNet_Conduit_MaxDataChannelProcessingTimeMs" data-uid="ConduitNet.Conduit.MaxDataChannelProcessingTimeMs">
+  MaxDataChannelProcessingTimeMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum time(ms) allowed to process data channel messages per frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MaxDataChannelProcessingTimeMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Members_" data-uid="ConduitNet.Conduit.Members*"></a>
+
+  <h3 id="ConduitNet_Conduit_Members" data-uid="ConduitNet.Conduit.Members">
+  Members
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of lobby members (excluding host).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;IUser&gt; Members { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="ConduitNet.IUser.html">IUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Participants_" data-uid="ConduitNet.Conduit.Participants*"></a>
+
+  <h3 id="ConduitNet_Conduit_Participants" data-uid="ConduitNet.Conduit.Participants">
+  Participants
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of all participants including host and members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IUser&gt; Participants { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ConduitNet.IUser.html">IUser</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Peers_" data-uid="ConduitNet.Conduit.Peers*"></a>
+
+  <h3 id="ConduitNet_Conduit_Peers" data-uid="ConduitNet.Conduit.Peers">
+  Peers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Array of currently connected peer IDs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] Peers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UserService_" data-uid="ConduitNet.Conduit.UserService*"></a>
+
+  <h3 id="ConduitNet_Conduit_UserService" data-uid="ConduitNet.Conduit.UserService">
+  UserService
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Service for handling user-related server requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IUserService UserService { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.IUserService.html">IUserService</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ConduitNet_Conduit_CancelJoin_" data-uid="ConduitNet.Conduit.CancelJoin*"></a>
+
+  <h3 id="ConduitNet_Conduit_CancelJoin" data-uid="ConduitNet.Conduit.CancelJoin">
+  CancelJoin()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels an ongoing lobby join operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CancelJoin()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_GetRTT_" data-uid="ConduitNet.Conduit.GetRTT*"></a>
+
+  <h3 id="ConduitNet_Conduit_GetRTT_System_String_System_Action_System_Nullable_System_Double___" data-uid="ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})">
+  GetRTT(string, Action&lt;double?&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures the Round-Trip Time (RTT) to a specific peer in milliseconds using Coroutine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerator GetRTT(string peerId, Action&lt;double?&gt; onResult)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onResult</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_GetRTTAsync_" data-uid="ConduitNet.Conduit.GetRTTAsync*"></a>
+
+  <h3 id="ConduitNet_Conduit_GetRTTAsync_System_String_" data-uid="ConduitNet.Conduit.GetRTTAsync(System.String)">
+  GetRTTAsync(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures the Round-Trip Time (RTT) to a specific peer async/await.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; GetRTTAsync(string peerId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_Init_" data-uid="ConduitNet.Conduit.Init*"></a>
+
+  <h3 id="ConduitNet_Conduit_Init__3_System_String___1_System_Action_" data-uid="ConduitNet.Conduit.Init``3(System.String,``1,System.Action)">
+  Init&lt;TLobbyState, TUserProfile, TAccountState&gt;(string, TUserProfile, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes Conduit. Ensure Config is set prior to calling this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Init&lt;TLobbyState, TUserProfile, TAccountState&gt;(string userId, TUserProfile userProfile, Action onUserSynced = null) where TLobbyState : class where TUserProfile : class where TAccountState : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Local user ID (max 256 chars).</p>
+</dd>
+    <dt><code>userProfile</code> <span class="xref">TUserProfile</span></dt>
+    <dd><p>Local user profile data.</p>
+</dd>
+    <dt><code>onUserSynced</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Callback invoked after syncing local user state with the server.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLobbyState</code></dt>
+    <dd></dd>
+    <dt><code>TUserProfile</code></dt>
+    <dd></dd>
+    <dt><code>TAccountState</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_JoinLobby_" data-uid="ConduitNet.Conduit.JoinLobby*"></a>
+
+  <h3 id="ConduitNet_Conduit_JoinLobby_ConduitNet_ILobby_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})">
+  JoinLobby(ILobby, Dictionary&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Joins a lobby. Establishes connection to the signaling server and connects to peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerator JoinLobby(ILobby lobby, Dictionary&lt;string, string&gt; headers = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lobby</code> <a class="xref" href="ConduitNet.ILobby.html">ILobby</a></dt>
+    <dd><p>The lobby to join.</p>
+</dd>
+    <dt><code>headers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Optional HTTP headers to send with the WebSocket connection request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_LeaveLobby_" data-uid="ConduitNet.Conduit.LeaveLobby*"></a>
+
+  <h3 id="ConduitNet_Conduit_LeaveLobby" data-uid="ConduitNet.Conduit.LeaveLobby">
+  LeaveLobby()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Leaves the current lobby and disconnects from all peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LeaveLobby()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_RegisterBytesHandler_" data-uid="ConduitNet.Conduit.RegisterBytesHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_RegisterBytesHandler_ConduitNet_BytesHandler_" data-uid="ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)">
+  RegisterBytesHandler(BytesHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a handler for receiving byte array data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterBytesHandler(BytesHandler handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.BytesHandler.html">BytesHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_RegisterPacketHandler_" data-uid="ConduitNet.Conduit.RegisterPacketHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_RegisterPacketHandler_System_Type_System_Delegate_" data-uid="ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)">
+  RegisterPacketHandler(Type, Delegate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterPacketHandler(Type packetType, Delegate handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>packetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Delegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_RegisterPacketHandler_" data-uid="ConduitNet.Conduit.RegisterPacketHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_RegisterPacketHandler__1_ConduitNet_PacketHandler___0__" data-uid="ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})">
+  RegisterPacketHandler&lt;T&gt;(PacketHandler&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a handler for receiving strongly-typed packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterPacketHandler&lt;T&gt;(PacketHandler&lt;T&gt; handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.PacketHandler-1.html">PacketHandler</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_RegisterSignalHandler_" data-uid="ConduitNet.Conduit.RegisterSignalHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_RegisterSignalHandler_System_String_ConduitNet_SignalHandler_" data-uid="ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)">
+  RegisterSignalHandler(string, SignalHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a handler for receiving named signals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RegisterSignalHandler(string signalName, SignalHandler handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>signalName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.SignalHandler.html">SignalHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_ResetEvents_" data-uid="ConduitNet.Conduit.ResetEvents*"></a>
+
+  <h3 id="ConduitNet_Conduit_ResetEvents" data-uid="ConduitNet.Conduit.ResetEvents">
+  ResetEvents()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all registered static event handlers. Recommended to call during scene transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetEvents()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_SendBytes_" data-uid="ConduitNet.Conduit.SendBytes*"></a>
+
+  <h3 id="ConduitNet_Conduit_SendBytes_ConduitNet_IUser_System_Byte___ConduitNet_SendOption_" data-uid="ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)">
+  SendBytes(IUser, byte[], SendOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a byte array to a specified user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SendBytes(IUser user, byte[] data, SendOption option)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="ConduitNet.SendOption.html">SendOption</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_SendPacket_" data-uid="ConduitNet.Conduit.SendPacket*"></a>
+
+  <h3 id="ConduitNet_Conduit_SendPacket__1_ConduitNet_IUser___0_ConduitNet_SendOption_" data-uid="ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)">
+  SendPacket&lt;T&gt;(IUser, T, SendOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a typed packet (decorated with [Packet]) to a specified user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SendPacket&lt;T&gt;(IUser user, T packet, SendOption option)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd></dd>
+    <dt><code>packet</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="ConduitNet.SendOption.html">SendOption</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_SendSignal_" data-uid="ConduitNet.Conduit.SendSignal*"></a>
+
+  <h3 id="ConduitNet_Conduit_SendSignal_ConduitNet_IUser_System_String_ConduitNet_SendOption_" data-uid="ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)">
+  SendSignal(IUser, string, SendOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a named signal to a specified user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SendSignal(IUser user, string signalName, SendOption option)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd></dd>
+    <dt><code>signalName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>option</code> <a class="xref" href="ConduitNet.SendOption.html">SendOption</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_ThrowOnRemote_" data-uid="ConduitNet.Conduit.ThrowOnRemote*"></a>
+
+  <h3 id="ConduitNet_Conduit_ThrowOnRemote__1_ConduitNet_IUser_System_String_ConduitNet_SendOption_" data-uid="ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)">
+  ThrowOnRemote&lt;TException&gt;(IUser, string, SendOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws an exception on a remote peer. The receiver will unconditionally throw the exception of the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ThrowOnRemote&lt;TException&gt;(IUser user, string message, SendOption option = SendOption.OrderedReliable) where TException : Exception</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="ConduitNet.IUser.html">IUser</a></dt>
+    <dd><p>The target user to send the exception to.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The exception message.</p>
+</dd>
+    <dt><code>option</code> <a class="xref" href="ConduitNet.SendOption.html">SendOption</a></dt>
+    <dd><p>Send option (default: OrderedReliable).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TException</code></dt>
+    <dd><p>The type of Exception to throw remotely.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UnregisterBytesHandler_" data-uid="ConduitNet.Conduit.UnregisterBytesHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_UnregisterBytesHandler_ConduitNet_BytesHandler_" data-uid="ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)">
+  UnregisterBytesHandler(BytesHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a byte data handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnregisterBytesHandler(BytesHandler handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.BytesHandler.html">BytesHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UnregisterPacketHandler_" data-uid="ConduitNet.Conduit.UnregisterPacketHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_UnregisterPacketHandler_System_Type_System_Delegate_" data-uid="ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)">
+  UnregisterPacketHandler(Type, Delegate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnregisterPacketHandler(Type packetType, Delegate handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>packetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Delegate</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UnregisterPacketHandler_" data-uid="ConduitNet.Conduit.UnregisterPacketHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_UnregisterPacketHandler__1_ConduitNet_PacketHandler___0__" data-uid="ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})">
+  UnregisterPacketHandler&lt;T&gt;(PacketHandler&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a typed packet handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnregisterPacketHandler&lt;T&gt;(PacketHandler&lt;T&gt; handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.PacketHandler-1.html">PacketHandler</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UnregisterSignalHandler_" data-uid="ConduitNet.Conduit.UnregisterSignalHandler*"></a>
+
+  <h3 id="ConduitNet_Conduit_UnregisterSignalHandler_System_String_ConduitNet_SignalHandler_" data-uid="ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)">
+  UnregisterSignalHandler(string, SignalHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregisters a signal handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnregisterSignalHandler(string signalName, SignalHandler handler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>signalName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>handler</code> <a class="xref" href="ConduitNet.SignalHandler.html">SignalHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UseCustomPacketSerializer_" data-uid="ConduitNet.Conduit.UseCustomPacketSerializer*"></a>
+
+  <h3 id="ConduitNet_Conduit_UseCustomPacketSerializer_ConduitNet_Packets_IPacketSerializer_" data-uid="ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)">
+  UseCustomPacketSerializer(IPacketSerializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a custom packet serializer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseCustomPacketSerializer(IPacketSerializer serializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serializer</code> <a class="xref" href="ConduitNet.Packets.IPacketSerializer.html">IPacketSerializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_Conduit_UseJsonPacketSerializer_" data-uid="ConduitNet.Conduit.UseJsonPacketSerializer*"></a>
+
+  <h3 id="ConduitNet_Conduit_UseJsonPacketSerializer" data-uid="ConduitNet.Conduit.UseJsonPacketSerializer">
+  UseJsonPacketSerializer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures Conduit to use JSON for packet serialization (default).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UseJsonPacketSerializer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Conduit.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

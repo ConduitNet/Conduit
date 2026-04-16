@@ -1,0 +1,620 @@
+{
+  "source_base_path": "C:/Users/jiun11/Desktop/Conduit/Client/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.BytesHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.BytesHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.BytesHandler",
+      "Summary": "<p sourcefile=\"api/ConduitNet.BytesHandler.yml\" sourcestartlinenumber=\"1\">Handler for receiving byte array data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.BytesHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.BytesHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.BytesHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/ConduitNet.BytesHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Marks a method as a byte data handler.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Conduit-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Conduit-3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Conduit-3.yml\" sourcestartlinenumber=\"1\">Typed accessor for Conduit. Use with a using alias for convenience:</p>\n<pre><code class=\"lang-csharp\">using Net = ConduitNet.Conduit&lt;MyLobbyState, MyProfile, MyAccount&gt;;</code></pre>\n<p sourcefile=\"api/ConduitNet.Conduit-3.yml\" sourcestartlinenumber=\"5\">Then access typed properties directly: <code>Net.LocalUser.Profile</code>, <code>Net.Lobby.State</code></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Conduit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Conduit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Conduit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.ConduitBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.ConduitBehaviour.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.ConduitBehaviour",
+      "Summary": "<p sourcefile=\"api/ConduitNet.ConduitBehaviour.yml\" sourcestartlinenumber=\"1\">Base class that inherits MonoBehaviour to register Network handlers\nand automatically unregister them upon OnDestroy.\nSupports both attribute-based automatic registration and manual method registration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.ConduitConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.ConduitConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.ConduitConfig",
+      "Summary": "<p sourcefile=\"api/ConduitNet.ConduitConfig.yml\" sourcestartlinenumber=\"1\">Global configuration for Conduit. Must be set before calling Init.\n'serverUrl' and 'stunServers' are required.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.ConnectionFailedReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.ConnectionFailedReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.ConnectionFailedReason",
+      "Summary": "<p sourcefile=\"api/ConduitNet.ConnectionFailedReason.yml\" sourcestartlinenumber=\"1\">Reasons for connection failure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.DataEndPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.DataEndPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.DataEndPoint",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Http.HttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Http.HttpRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Http.HttpRequest",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Http.HttpRequest.yml\" sourcestartlinenumber=\"1\">Fluent builder for UnityWebRequest.</p>\n<pre><code class=\"lang-csharp\">yield return HttpRequest.Get(\"https://api.example.com/users\")\n    .SetHeader(\"X-Custom\", \"value\")\n    .SetBearerToken(token)\n    .SetQueryParams(new() { [\"page\"] = 1, [\"limit\"] = 10 })\n    .Send(onSuccess: res =&gt; Debug.Log(res.Text),\n          onError: err =&gt; Debug.LogError(err));</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Http.HttpResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Http.HttpResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Http.HttpResponse",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Http.HttpResponse.yml\" sourcestartlinenumber=\"1\">Wrapper for an HTTP response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Http.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Http",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.ILobby.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.ILobby.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.ILobby",
+      "Summary": "<p sourcefile=\"api/ConduitNet.ILobby.yml\" sourcestartlinenumber=\"1\">Interface for lobby data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.ILobbyService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.ILobbyService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.ILobbyService",
+      "Summary": "<p sourcefile=\"api/ConduitNet.ILobbyService.yml\" sourcestartlinenumber=\"1\">Interface for lobby-related server requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.IUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.IUser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.IUser",
+      "Summary": "<p sourcefile=\"api/ConduitNet.IUser.yml\" sourcestartlinenumber=\"1\">Interface for user data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.IUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.IUserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.IUserService",
+      "Summary": "<p sourcefile=\"api/ConduitNet.IUserService.yml\" sourcestartlinenumber=\"1\">Interface for user-related server requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Lobby-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Lobby-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Lobby<TLobbyState>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Lobby-1.yml\" sourcestartlinenumber=\"1\">Typed lobby implementation containing generic custom state data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.LobbyExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.LobbyExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.LobbyExtension",
+      "Summary": "<p sourcefile=\"api/ConduitNet.LobbyExtension.yml\" sourcestartlinenumber=\"1\">Extension methods for casting ILobby.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.LobbyService-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.LobbyService-3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.LobbyService-3.yml\" sourcestartlinenumber=\"1\">Implementation of the typed lobby service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.PacketHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.PacketHandler-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.PacketHandler<T>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.PacketHandler-1.yml\" sourcestartlinenumber=\"1\">Handler for receiving strongly-typed packets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.PacketHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.PacketHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.PacketHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/ConduitNet.PacketHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Marks a method as a packet handler for a specific packet type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Packets.IPacketSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Packets.IPacketSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Packets.IPacketSerializer",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Packets.IPacketSerializer.yml\" sourcestartlinenumber=\"1\">Interface for packet serialization and deserialization.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Packets.JsonPacketSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Packets.JsonPacketSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Packets.JsonPacketSerializer",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Packets.JsonPacketSerializer.yml\" sourcestartlinenumber=\"1\">Default JSON-based packet serializer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Packets.PacketAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Packets.PacketAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Packets.PacketAttribute",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Packets.PacketAttribute.yml\" sourcestartlinenumber=\"1\">Registers a class or struct as a network packet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Packets.PacketRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Packets.PacketRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Packets.PacketRegistry",
+      "Summary": "<p sourcefile=\"api/ConduitNet.Packets.PacketRegistry.yml\" sourcestartlinenumber=\"1\">Automatically scans and manages ID-to-Type mappings for classes decorated with the [Packet] attribute.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Packets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Packets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Packets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.RemoteException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.RemoteException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.RemoteException",
+      "Summary": "<p sourcefile=\"api/ConduitNet.RemoteException.yml\" sourcestartlinenumber=\"1\">Exception received from a remote peer. Thrown if the original exception type\ncannot be resolved or instantiated on the receiving side.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.SendOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.SendOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.SendOption",
+      "Summary": "<p sourcefile=\"api/ConduitNet.SendOption.yml\" sourcestartlinenumber=\"1\">Data channel send options combining ordering and reliability guarantees.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.SignalHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.SignalHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.SignalHandler",
+      "Summary": "<p sourcefile=\"api/ConduitNet.SignalHandler.yml\" sourcestartlinenumber=\"1\">Handler for receiving named signals.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.SignalHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.SignalHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.SignalHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/ConduitNet.SignalHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Marks a method as a signal handler for a specific signal name.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.StunServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.StunServer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.StunServer",
+      "Summary": "<p sourcefile=\"api/ConduitNet.StunServer.yml\" sourcestartlinenumber=\"1\">STUN server configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.TurnServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.TurnServer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.TurnServer",
+      "Summary": "<p sourcefile=\"api/ConduitNet.TurnServer.yml\" sourcestartlinenumber=\"1\">TURN server configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.User-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.User-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.User<TUserProfile, TAccountState>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.User-2.yml\" sourcestartlinenumber=\"1\">Typed user implementation containing generic profile and account state data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.UserExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.UserExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.UserExtension",
+      "Summary": "<p sourcefile=\"api/ConduitNet.UserExtension.yml\" sourcestartlinenumber=\"1\">Extension methods for casting IUser.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.UserService-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.UserService-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.UserService<TUserProfile, TAccountState>",
+      "Summary": "<p sourcefile=\"api/ConduitNet.UserService-2.yml\" sourcestartlinenumber=\"1\">Implementation of the typed user service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Utility.QueryParamBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Utility.QueryParamBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Utility.QueryParamBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Utility.TypeWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Utility.TypeWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Utility.TypeWrapper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.Utility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.Utility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet.Utility",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConduitNet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConduitNet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConduitNet",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,2765 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: ConduitNet
+  name: ConduitNet
+  href: api/ConduitNet.html
+  commentId: N:ConduitNet
+  fullName: ConduitNet
+  nameWithType: ConduitNet
+- uid: ConduitNet.BytesHandler
+  name: BytesHandler
+  href: api/ConduitNet.BytesHandler.html
+  commentId: T:ConduitNet.BytesHandler
+  fullName: ConduitNet.BytesHandler
+  nameWithType: BytesHandler
+- uid: ConduitNet.BytesHandlerAttribute
+  name: BytesHandlerAttribute
+  href: api/ConduitNet.BytesHandlerAttribute.html
+  commentId: T:ConduitNet.BytesHandlerAttribute
+  fullName: ConduitNet.BytesHandlerAttribute
+  nameWithType: BytesHandlerAttribute
+- uid: ConduitNet.Conduit
+  name: Conduit
+  href: api/ConduitNet.Conduit.html
+  commentId: T:ConduitNet.Conduit
+  fullName: ConduitNet.Conduit
+  nameWithType: Conduit
+- uid: ConduitNet.Conduit.CancelJoin
+  name: CancelJoin()
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_CancelJoin
+  commentId: M:ConduitNet.Conduit.CancelJoin
+  fullName: ConduitNet.Conduit.CancelJoin()
+  nameWithType: Conduit.CancelJoin()
+- uid: ConduitNet.Conduit.CancelJoin*
+  name: CancelJoin
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_CancelJoin_
+  commentId: Overload:ConduitNet.Conduit.CancelJoin
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.CancelJoin
+  nameWithType: Conduit.CancelJoin
+- uid: ConduitNet.Conduit.Config
+  name: Config
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Config
+  commentId: P:ConduitNet.Conduit.Config
+  fullName: ConduitNet.Conduit.Config
+  nameWithType: Conduit.Config
+- uid: ConduitNet.Conduit.Config*
+  name: Config
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Config_
+  commentId: Overload:ConduitNet.Conduit.Config
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Config
+  nameWithType: Conduit.Config
+- uid: ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  name: GetRTT(string, Action<double?>)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTT_System_String_System_Action_System_Nullable_System_Double___
+  commentId: M:ConduitNet.Conduit.GetRTT(System.String,System.Action{System.Nullable{System.Double}})
+  name.vb: GetRTT(String, Action(Of Double?))
+  fullName: ConduitNet.Conduit.GetRTT(string, System.Action<double?>)
+  fullName.vb: ConduitNet.Conduit.GetRTT(String, System.Action(Of Double?))
+  nameWithType: Conduit.GetRTT(string, Action<double?>)
+  nameWithType.vb: Conduit.GetRTT(String, Action(Of Double?))
+- uid: ConduitNet.Conduit.GetRTT*
+  name: GetRTT
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTT_
+  commentId: Overload:ConduitNet.Conduit.GetRTT
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.GetRTT
+  nameWithType: Conduit.GetRTT
+- uid: ConduitNet.Conduit.GetRTTAsync(System.String)
+  name: GetRTTAsync(string)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTTAsync_System_String_
+  commentId: M:ConduitNet.Conduit.GetRTTAsync(System.String)
+  name.vb: GetRTTAsync(String)
+  fullName: ConduitNet.Conduit.GetRTTAsync(string)
+  fullName.vb: ConduitNet.Conduit.GetRTTAsync(String)
+  nameWithType: Conduit.GetRTTAsync(string)
+  nameWithType.vb: Conduit.GetRTTAsync(String)
+- uid: ConduitNet.Conduit.GetRTTAsync*
+  name: GetRTTAsync
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_GetRTTAsync_
+  commentId: Overload:ConduitNet.Conduit.GetRTTAsync
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.GetRTTAsync
+  nameWithType: Conduit.GetRTTAsync
+- uid: ConduitNet.Conduit.Host
+  name: Host
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Host
+  commentId: P:ConduitNet.Conduit.Host
+  fullName: ConduitNet.Conduit.Host
+  nameWithType: Conduit.Host
+- uid: ConduitNet.Conduit.Host*
+  name: Host
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Host_
+  commentId: Overload:ConduitNet.Conduit.Host
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Host
+  nameWithType: Conduit.Host
+- uid: ConduitNet.Conduit.Init*
+  name: Init
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Init_
+  commentId: Overload:ConduitNet.Conduit.Init
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Init
+  nameWithType: Conduit.Init
+- uid: ConduitNet.Conduit.Init``3(System.String,``1,System.Action)
+  name: Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, Action)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Init__3_System_String___1_System_Action_
+  commentId: M:ConduitNet.Conduit.Init``3(System.String,``1,System.Action)
+  name.vb: Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, Action)
+  fullName: ConduitNet.Conduit.Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, System.Action)
+  fullName.vb: ConduitNet.Conduit.Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, System.Action)
+  nameWithType: Conduit.Init<TLobbyState, TUserProfile, TAccountState>(string, TUserProfile, Action)
+  nameWithType.vb: Conduit.Init(Of TLobbyState, TUserProfile, TAccountState)(String, TUserProfile, Action)
+- uid: ConduitNet.Conduit.IsConnected
+  name: IsConnected
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnected
+  commentId: P:ConduitNet.Conduit.IsConnected
+  fullName: ConduitNet.Conduit.IsConnected
+  nameWithType: Conduit.IsConnected
+- uid: ConduitNet.Conduit.IsConnected*
+  name: IsConnected
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnected_
+  commentId: Overload:ConduitNet.Conduit.IsConnected
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.IsConnected
+  nameWithType: Conduit.IsConnected
+- uid: ConduitNet.Conduit.IsConnectedToServer
+  name: IsConnectedToServer
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnectedToServer
+  commentId: P:ConduitNet.Conduit.IsConnectedToServer
+  fullName: ConduitNet.Conduit.IsConnectedToServer
+  nameWithType: Conduit.IsConnectedToServer
+- uid: ConduitNet.Conduit.IsConnectedToServer*
+  name: IsConnectedToServer
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsConnectedToServer_
+  commentId: Overload:ConduitNet.Conduit.IsConnectedToServer
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.IsConnectedToServer
+  nameWithType: Conduit.IsConnectedToServer
+- uid: ConduitNet.Conduit.IsHost
+  name: IsHost
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsHost
+  commentId: P:ConduitNet.Conduit.IsHost
+  fullName: ConduitNet.Conduit.IsHost
+  nameWithType: Conduit.IsHost
+- uid: ConduitNet.Conduit.IsHost*
+  name: IsHost
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsHost_
+  commentId: Overload:ConduitNet.Conduit.IsHost
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.IsHost
+  nameWithType: Conduit.IsHost
+- uid: ConduitNet.Conduit.IsJoining
+  name: IsJoining
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsJoining
+  commentId: P:ConduitNet.Conduit.IsJoining
+  fullName: ConduitNet.Conduit.IsJoining
+  nameWithType: Conduit.IsJoining
+- uid: ConduitNet.Conduit.IsJoining*
+  name: IsJoining
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_IsJoining_
+  commentId: Overload:ConduitNet.Conduit.IsJoining
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.IsJoining
+  nameWithType: Conduit.IsJoining
+- uid: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  name: JoinLobby(ILobby, Dictionary<string, string>)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_JoinLobby_ConduitNet_ILobby_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby,System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: JoinLobby(ILobby, Dictionary(Of String, String))
+  fullName: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby, System.Collections.Generic.Dictionary<string, string>)
+  fullName.vb: ConduitNet.Conduit.JoinLobby(ConduitNet.ILobby, System.Collections.Generic.Dictionary(Of String, String))
+  nameWithType: Conduit.JoinLobby(ILobby, Dictionary<string, string>)
+  nameWithType.vb: Conduit.JoinLobby(ILobby, Dictionary(Of String, String))
+- uid: ConduitNet.Conduit.JoinLobby*
+  name: JoinLobby
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_JoinLobby_
+  commentId: Overload:ConduitNet.Conduit.JoinLobby
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.JoinLobby
+  nameWithType: Conduit.JoinLobby
+- uid: ConduitNet.Conduit.LeaveLobby
+  name: LeaveLobby()
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LeaveLobby
+  commentId: M:ConduitNet.Conduit.LeaveLobby
+  fullName: ConduitNet.Conduit.LeaveLobby()
+  nameWithType: Conduit.LeaveLobby()
+- uid: ConduitNet.Conduit.LeaveLobby*
+  name: LeaveLobby
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LeaveLobby_
+  commentId: Overload:ConduitNet.Conduit.LeaveLobby
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.LeaveLobby
+  nameWithType: Conduit.LeaveLobby
+- uid: ConduitNet.Conduit.Lobby
+  name: Lobby
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Lobby
+  commentId: P:ConduitNet.Conduit.Lobby
+  fullName: ConduitNet.Conduit.Lobby
+  nameWithType: Conduit.Lobby
+- uid: ConduitNet.Conduit.Lobby*
+  name: Lobby
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Lobby_
+  commentId: Overload:ConduitNet.Conduit.Lobby
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Lobby
+  nameWithType: Conduit.Lobby
+- uid: ConduitNet.Conduit.LobbyService
+  name: LobbyService
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LobbyService
+  commentId: P:ConduitNet.Conduit.LobbyService
+  fullName: ConduitNet.Conduit.LobbyService
+  nameWithType: Conduit.LobbyService
+- uid: ConduitNet.Conduit.LobbyService*
+  name: LobbyService
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LobbyService_
+  commentId: Overload:ConduitNet.Conduit.LobbyService
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.LobbyService
+  nameWithType: Conduit.LobbyService
+- uid: ConduitNet.Conduit.LocalUser
+  name: LocalUser
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LocalUser
+  commentId: P:ConduitNet.Conduit.LocalUser
+  fullName: ConduitNet.Conduit.LocalUser
+  nameWithType: Conduit.LocalUser
+- uid: ConduitNet.Conduit.LocalUser*
+  name: LocalUser
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_LocalUser_
+  commentId: Overload:ConduitNet.Conduit.LocalUser
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.LocalUser
+  nameWithType: Conduit.LocalUser
+- uid: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  name: MaxDataChannelProcessingTimeMs
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_MaxDataChannelProcessingTimeMs
+  commentId: P:ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  fullName: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  nameWithType: Conduit.MaxDataChannelProcessingTimeMs
+- uid: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs*
+  name: MaxDataChannelProcessingTimeMs
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_MaxDataChannelProcessingTimeMs_
+  commentId: Overload:ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.MaxDataChannelProcessingTimeMs
+  nameWithType: Conduit.MaxDataChannelProcessingTimeMs
+- uid: ConduitNet.Conduit.Members
+  name: Members
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Members
+  commentId: P:ConduitNet.Conduit.Members
+  fullName: ConduitNet.Conduit.Members
+  nameWithType: Conduit.Members
+- uid: ConduitNet.Conduit.Members*
+  name: Members
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Members_
+  commentId: Overload:ConduitNet.Conduit.Members
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Members
+  nameWithType: Conduit.Members
+- uid: ConduitNet.Conduit.OnConnectionFailed
+  name: OnConnectionFailed
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnConnectionFailed
+  commentId: F:ConduitNet.Conduit.OnConnectionFailed
+  fullName: ConduitNet.Conduit.OnConnectionFailed
+  nameWithType: Conduit.OnConnectionFailed
+- uid: ConduitNet.Conduit.OnHostChanged
+  name: OnHostChanged
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnHostChanged
+  commentId: F:ConduitNet.Conduit.OnHostChanged
+  fullName: ConduitNet.Conduit.OnHostChanged
+  nameWithType: Conduit.OnHostChanged
+- uid: ConduitNet.Conduit.OnJoinCancelled
+  name: OnJoinCancelled
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnJoinCancelled
+  commentId: F:ConduitNet.Conduit.OnJoinCancelled
+  fullName: ConduitNet.Conduit.OnJoinCancelled
+  nameWithType: Conduit.OnJoinCancelled
+- uid: ConduitNet.Conduit.OnLobbyInitialized
+  name: OnLobbyInitialized
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnLobbyInitialized
+  commentId: F:ConduitNet.Conduit.OnLobbyInitialized
+  fullName: ConduitNet.Conduit.OnLobbyInitialized
+  nameWithType: Conduit.OnLobbyInitialized
+- uid: ConduitNet.Conduit.OnLobbyMetadataUpdated
+  name: OnLobbyMetadataUpdated
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnLobbyMetadataUpdated
+  commentId: F:ConduitNet.Conduit.OnLobbyMetadataUpdated
+  fullName: ConduitNet.Conduit.OnLobbyMetadataUpdated
+  nameWithType: Conduit.OnLobbyMetadataUpdated
+- uid: ConduitNet.Conduit.OnLobbyStateUpdated
+  name: OnLobbyStateUpdated
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnLobbyStateUpdated
+  commentId: F:ConduitNet.Conduit.OnLobbyStateUpdated
+  fullName: ConduitNet.Conduit.OnLobbyStateUpdated
+  nameWithType: Conduit.OnLobbyStateUpdated
+- uid: ConduitNet.Conduit.OnPeerConnected
+  name: OnPeerConnected
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnPeerConnected
+  commentId: F:ConduitNet.Conduit.OnPeerConnected
+  fullName: ConduitNet.Conduit.OnPeerConnected
+  nameWithType: Conduit.OnPeerConnected
+- uid: ConduitNet.Conduit.OnPeerDisconnected
+  name: OnPeerDisconnected
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnPeerDisconnected
+  commentId: F:ConduitNet.Conduit.OnPeerDisconnected
+  fullName: ConduitNet.Conduit.OnPeerDisconnected
+  nameWithType: Conduit.OnPeerDisconnected
+- uid: ConduitNet.Conduit.OnUserAccountStateUpdated
+  name: OnUserAccountStateUpdated
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnUserAccountStateUpdated
+  commentId: F:ConduitNet.Conduit.OnUserAccountStateUpdated
+  fullName: ConduitNet.Conduit.OnUserAccountStateUpdated
+  nameWithType: Conduit.OnUserAccountStateUpdated
+- uid: ConduitNet.Conduit.OnUserJoined
+  name: OnUserJoined
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnUserJoined
+  commentId: F:ConduitNet.Conduit.OnUserJoined
+  fullName: ConduitNet.Conduit.OnUserJoined
+  nameWithType: Conduit.OnUserJoined
+- uid: ConduitNet.Conduit.OnUserLeft
+  name: OnUserLeft
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_OnUserLeft
+  commentId: F:ConduitNet.Conduit.OnUserLeft
+  fullName: ConduitNet.Conduit.OnUserLeft
+  nameWithType: Conduit.OnUserLeft
+- uid: ConduitNet.Conduit.Participants
+  name: Participants
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Participants
+  commentId: P:ConduitNet.Conduit.Participants
+  fullName: ConduitNet.Conduit.Participants
+  nameWithType: Conduit.Participants
+- uid: ConduitNet.Conduit.Participants*
+  name: Participants
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Participants_
+  commentId: Overload:ConduitNet.Conduit.Participants
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Participants
+  nameWithType: Conduit.Participants
+- uid: ConduitNet.Conduit.Peers
+  name: Peers
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Peers
+  commentId: P:ConduitNet.Conduit.Peers
+  fullName: ConduitNet.Conduit.Peers
+  nameWithType: Conduit.Peers
+- uid: ConduitNet.Conduit.Peers*
+  name: Peers
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_Peers_
+  commentId: Overload:ConduitNet.Conduit.Peers
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.Peers
+  nameWithType: Conduit.Peers
+- uid: ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  name: RegisterBytesHandler(BytesHandler)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterBytesHandler_ConduitNet_BytesHandler_
+  commentId: M:ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  fullName: ConduitNet.Conduit.RegisterBytesHandler(ConduitNet.BytesHandler)
+  nameWithType: Conduit.RegisterBytesHandler(BytesHandler)
+- uid: ConduitNet.Conduit.RegisterBytesHandler*
+  name: RegisterBytesHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterBytesHandler_
+  commentId: Overload:ConduitNet.Conduit.RegisterBytesHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.RegisterBytesHandler
+  nameWithType: Conduit.RegisterBytesHandler
+- uid: ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)
+  name: RegisterPacketHandler(Type, Delegate)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterPacketHandler_System_Type_System_Delegate_
+  commentId: M:ConduitNet.Conduit.RegisterPacketHandler(System.Type,System.Delegate)
+  fullName: ConduitNet.Conduit.RegisterPacketHandler(System.Type, System.Delegate)
+  nameWithType: Conduit.RegisterPacketHandler(Type, Delegate)
+- uid: ConduitNet.Conduit.RegisterPacketHandler*
+  name: RegisterPacketHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterPacketHandler_
+  commentId: Overload:ConduitNet.Conduit.RegisterPacketHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.RegisterPacketHandler
+  nameWithType: Conduit.RegisterPacketHandler
+- uid: ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name: RegisterPacketHandler<T>(PacketHandler<T>)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterPacketHandler__1_ConduitNet_PacketHandler___0__
+  commentId: M:ConduitNet.Conduit.RegisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name.vb: RegisterPacketHandler(Of T)(PacketHandler(Of T))
+  fullName: ConduitNet.Conduit.RegisterPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  fullName.vb: ConduitNet.Conduit.RegisterPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  nameWithType: Conduit.RegisterPacketHandler<T>(PacketHandler<T>)
+  nameWithType.vb: Conduit.RegisterPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  name: RegisterSignalHandler(string, SignalHandler)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterSignalHandler_System_String_ConduitNet_SignalHandler_
+  commentId: M:ConduitNet.Conduit.RegisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  name.vb: RegisterSignalHandler(String, SignalHandler)
+  fullName: ConduitNet.Conduit.RegisterSignalHandler(string, ConduitNet.SignalHandler)
+  fullName.vb: ConduitNet.Conduit.RegisterSignalHandler(String, ConduitNet.SignalHandler)
+  nameWithType: Conduit.RegisterSignalHandler(string, SignalHandler)
+  nameWithType.vb: Conduit.RegisterSignalHandler(String, SignalHandler)
+- uid: ConduitNet.Conduit.RegisterSignalHandler*
+  name: RegisterSignalHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_RegisterSignalHandler_
+  commentId: Overload:ConduitNet.Conduit.RegisterSignalHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.RegisterSignalHandler
+  nameWithType: Conduit.RegisterSignalHandler
+- uid: ConduitNet.Conduit.ResetEvents
+  name: ResetEvents()
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_ResetEvents
+  commentId: M:ConduitNet.Conduit.ResetEvents
+  fullName: ConduitNet.Conduit.ResetEvents()
+  nameWithType: Conduit.ResetEvents()
+- uid: ConduitNet.Conduit.ResetEvents*
+  name: ResetEvents
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_ResetEvents_
+  commentId: Overload:ConduitNet.Conduit.ResetEvents
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.ResetEvents
+  nameWithType: Conduit.ResetEvents
+- uid: ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  name: SendBytes(IUser, byte[], SendOption)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendBytes_ConduitNet_IUser_System_Byte___ConduitNet_SendOption_
+  commentId: M:ConduitNet.Conduit.SendBytes(ConduitNet.IUser,System.Byte[],ConduitNet.SendOption)
+  name.vb: SendBytes(IUser, Byte(), SendOption)
+  fullName: ConduitNet.Conduit.SendBytes(ConduitNet.IUser, byte[], ConduitNet.SendOption)
+  fullName.vb: ConduitNet.Conduit.SendBytes(ConduitNet.IUser, Byte(), ConduitNet.SendOption)
+  nameWithType: Conduit.SendBytes(IUser, byte[], SendOption)
+  nameWithType.vb: Conduit.SendBytes(IUser, Byte(), SendOption)
+- uid: ConduitNet.Conduit.SendBytes*
+  name: SendBytes
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendBytes_
+  commentId: Overload:ConduitNet.Conduit.SendBytes
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.SendBytes
+  nameWithType: Conduit.SendBytes
+- uid: ConduitNet.Conduit.SendPacket*
+  name: SendPacket
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendPacket_
+  commentId: Overload:ConduitNet.Conduit.SendPacket
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.SendPacket
+  nameWithType: Conduit.SendPacket
+- uid: ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  name: SendPacket<T>(IUser, T, SendOption)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendPacket__1_ConduitNet_IUser___0_ConduitNet_SendOption_
+  commentId: M:ConduitNet.Conduit.SendPacket``1(ConduitNet.IUser,``0,ConduitNet.SendOption)
+  name.vb: SendPacket(Of T)(IUser, T, SendOption)
+  fullName: ConduitNet.Conduit.SendPacket<T>(ConduitNet.IUser, T, ConduitNet.SendOption)
+  fullName.vb: ConduitNet.Conduit.SendPacket(Of T)(ConduitNet.IUser, T, ConduitNet.SendOption)
+  nameWithType: Conduit.SendPacket<T>(IUser, T, SendOption)
+  nameWithType.vb: Conduit.SendPacket(Of T)(IUser, T, SendOption)
+- uid: ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  name: SendSignal(IUser, string, SendOption)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendSignal_ConduitNet_IUser_System_String_ConduitNet_SendOption_
+  commentId: M:ConduitNet.Conduit.SendSignal(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  name.vb: SendSignal(IUser, String, SendOption)
+  fullName: ConduitNet.Conduit.SendSignal(ConduitNet.IUser, string, ConduitNet.SendOption)
+  fullName.vb: ConduitNet.Conduit.SendSignal(ConduitNet.IUser, String, ConduitNet.SendOption)
+  nameWithType: Conduit.SendSignal(IUser, string, SendOption)
+  nameWithType.vb: Conduit.SendSignal(IUser, String, SendOption)
+- uid: ConduitNet.Conduit.SendSignal*
+  name: SendSignal
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_SendSignal_
+  commentId: Overload:ConduitNet.Conduit.SendSignal
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.SendSignal
+  nameWithType: Conduit.SendSignal
+- uid: ConduitNet.Conduit.ThrowOnRemote*
+  name: ThrowOnRemote
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_ThrowOnRemote_
+  commentId: Overload:ConduitNet.Conduit.ThrowOnRemote
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.ThrowOnRemote
+  nameWithType: Conduit.ThrowOnRemote
+- uid: ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  name: ThrowOnRemote<TException>(IUser, string, SendOption)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_ThrowOnRemote__1_ConduitNet_IUser_System_String_ConduitNet_SendOption_
+  commentId: M:ConduitNet.Conduit.ThrowOnRemote``1(ConduitNet.IUser,System.String,ConduitNet.SendOption)
+  name.vb: ThrowOnRemote(Of TException)(IUser, String, SendOption)
+  fullName: ConduitNet.Conduit.ThrowOnRemote<TException>(ConduitNet.IUser, string, ConduitNet.SendOption)
+  fullName.vb: ConduitNet.Conduit.ThrowOnRemote(Of TException)(ConduitNet.IUser, String, ConduitNet.SendOption)
+  nameWithType: Conduit.ThrowOnRemote<TException>(IUser, string, SendOption)
+  nameWithType.vb: Conduit.ThrowOnRemote(Of TException)(IUser, String, SendOption)
+- uid: ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  name: UnregisterBytesHandler(BytesHandler)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterBytesHandler_ConduitNet_BytesHandler_
+  commentId: M:ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  fullName: ConduitNet.Conduit.UnregisterBytesHandler(ConduitNet.BytesHandler)
+  nameWithType: Conduit.UnregisterBytesHandler(BytesHandler)
+- uid: ConduitNet.Conduit.UnregisterBytesHandler*
+  name: UnregisterBytesHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterBytesHandler_
+  commentId: Overload:ConduitNet.Conduit.UnregisterBytesHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UnregisterBytesHandler
+  nameWithType: Conduit.UnregisterBytesHandler
+- uid: ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)
+  name: UnregisterPacketHandler(Type, Delegate)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterPacketHandler_System_Type_System_Delegate_
+  commentId: M:ConduitNet.Conduit.UnregisterPacketHandler(System.Type,System.Delegate)
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler(System.Type, System.Delegate)
+  nameWithType: Conduit.UnregisterPacketHandler(Type, Delegate)
+- uid: ConduitNet.Conduit.UnregisterPacketHandler*
+  name: UnregisterPacketHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterPacketHandler_
+  commentId: Overload:ConduitNet.Conduit.UnregisterPacketHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler
+  nameWithType: Conduit.UnregisterPacketHandler
+- uid: ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name: UnregisterPacketHandler<T>(PacketHandler<T>)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterPacketHandler__1_ConduitNet_PacketHandler___0__
+  commentId: M:ConduitNet.Conduit.UnregisterPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name.vb: UnregisterPacketHandler(Of T)(PacketHandler(Of T))
+  fullName: ConduitNet.Conduit.UnregisterPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  fullName.vb: ConduitNet.Conduit.UnregisterPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  nameWithType: Conduit.UnregisterPacketHandler<T>(PacketHandler<T>)
+  nameWithType.vb: Conduit.UnregisterPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  name: UnregisterSignalHandler(string, SignalHandler)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterSignalHandler_System_String_ConduitNet_SignalHandler_
+  commentId: M:ConduitNet.Conduit.UnregisterSignalHandler(System.String,ConduitNet.SignalHandler)
+  name.vb: UnregisterSignalHandler(String, SignalHandler)
+  fullName: ConduitNet.Conduit.UnregisterSignalHandler(string, ConduitNet.SignalHandler)
+  fullName.vb: ConduitNet.Conduit.UnregisterSignalHandler(String, ConduitNet.SignalHandler)
+  nameWithType: Conduit.UnregisterSignalHandler(string, SignalHandler)
+  nameWithType.vb: Conduit.UnregisterSignalHandler(String, SignalHandler)
+- uid: ConduitNet.Conduit.UnregisterSignalHandler*
+  name: UnregisterSignalHandler
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UnregisterSignalHandler_
+  commentId: Overload:ConduitNet.Conduit.UnregisterSignalHandler
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UnregisterSignalHandler
+  nameWithType: Conduit.UnregisterSignalHandler
+- uid: ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  name: UseAssemblyQualifiedNameForTypes
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UseAssemblyQualifiedNameForTypes
+  commentId: F:ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  fullName: ConduitNet.Conduit.UseAssemblyQualifiedNameForTypes
+  nameWithType: Conduit.UseAssemblyQualifiedNameForTypes
+- uid: ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  name: UseCustomPacketSerializer(IPacketSerializer)
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UseCustomPacketSerializer_ConduitNet_Packets_IPacketSerializer_
+  commentId: M:ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  fullName: ConduitNet.Conduit.UseCustomPacketSerializer(ConduitNet.Packets.IPacketSerializer)
+  nameWithType: Conduit.UseCustomPacketSerializer(IPacketSerializer)
+- uid: ConduitNet.Conduit.UseCustomPacketSerializer*
+  name: UseCustomPacketSerializer
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UseCustomPacketSerializer_
+  commentId: Overload:ConduitNet.Conduit.UseCustomPacketSerializer
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UseCustomPacketSerializer
+  nameWithType: Conduit.UseCustomPacketSerializer
+- uid: ConduitNet.Conduit.UseJsonPacketSerializer
+  name: UseJsonPacketSerializer()
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UseJsonPacketSerializer
+  commentId: M:ConduitNet.Conduit.UseJsonPacketSerializer
+  fullName: ConduitNet.Conduit.UseJsonPacketSerializer()
+  nameWithType: Conduit.UseJsonPacketSerializer()
+- uid: ConduitNet.Conduit.UseJsonPacketSerializer*
+  name: UseJsonPacketSerializer
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UseJsonPacketSerializer_
+  commentId: Overload:ConduitNet.Conduit.UseJsonPacketSerializer
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UseJsonPacketSerializer
+  nameWithType: Conduit.UseJsonPacketSerializer
+- uid: ConduitNet.Conduit.UserService
+  name: UserService
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UserService
+  commentId: P:ConduitNet.Conduit.UserService
+  fullName: ConduitNet.Conduit.UserService
+  nameWithType: Conduit.UserService
+- uid: ConduitNet.Conduit.UserService*
+  name: UserService
+  href: api/ConduitNet.Conduit.html#ConduitNet_Conduit_UserService_
+  commentId: Overload:ConduitNet.Conduit.UserService
+  isSpec: "True"
+  fullName: ConduitNet.Conduit.UserService
+  nameWithType: Conduit.UserService
+- uid: ConduitNet.ConduitBehaviour
+  name: ConduitBehaviour
+  href: api/ConduitNet.ConduitBehaviour.html
+  commentId: T:ConduitNet.ConduitBehaviour
+  fullName: ConduitNet.ConduitBehaviour
+  nameWithType: ConduitBehaviour
+- uid: ConduitNet.ConduitBehaviour.Awake
+  name: Awake()
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_Awake
+  commentId: M:ConduitNet.ConduitBehaviour.Awake
+  fullName: ConduitNet.ConduitBehaviour.Awake()
+  nameWithType: ConduitBehaviour.Awake()
+- uid: ConduitNet.ConduitBehaviour.Awake*
+  name: Awake
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_Awake_
+  commentId: Overload:ConduitNet.ConduitBehaviour.Awake
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.Awake
+  nameWithType: ConduitBehaviour.Awake
+- uid: ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  name: BindBytesHandler(BytesHandler)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindBytesHandler_ConduitNet_BytesHandler_
+  commentId: M:ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  fullName: ConduitNet.ConduitBehaviour.BindBytesHandler(ConduitNet.BytesHandler)
+  nameWithType: ConduitBehaviour.BindBytesHandler(BytesHandler)
+- uid: ConduitNet.ConduitBehaviour.BindBytesHandler*
+  name: BindBytesHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindBytesHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindBytesHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.BindBytesHandler
+  nameWithType: ConduitBehaviour.BindBytesHandler
+- uid: ConduitNet.ConduitBehaviour.BindPacketHandler*
+  name: BindPacketHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindPacketHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindPacketHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.BindPacketHandler
+  nameWithType: ConduitBehaviour.BindPacketHandler
+- uid: ConduitNet.ConduitBehaviour.BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name: BindPacketHandler<T>(PacketHandler<T>)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindPacketHandler__1_ConduitNet_PacketHandler___0__
+  commentId: M:ConduitNet.ConduitBehaviour.BindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name.vb: BindPacketHandler(Of T)(PacketHandler(Of T))
+  fullName: ConduitNet.ConduitBehaviour.BindPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  fullName.vb: ConduitNet.ConduitBehaviour.BindPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  nameWithType: ConduitBehaviour.BindPacketHandler<T>(PacketHandler<T>)
+  nameWithType.vb: ConduitBehaviour.BindPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.ConduitBehaviour.BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  name: BindSignalHandler(string, SignalHandler)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindSignalHandler_System_String_ConduitNet_SignalHandler_
+  commentId: M:ConduitNet.ConduitBehaviour.BindSignalHandler(System.String,ConduitNet.SignalHandler)
+  name.vb: BindSignalHandler(String, SignalHandler)
+  fullName: ConduitNet.ConduitBehaviour.BindSignalHandler(string, ConduitNet.SignalHandler)
+  fullName.vb: ConduitNet.ConduitBehaviour.BindSignalHandler(String, ConduitNet.SignalHandler)
+  nameWithType: ConduitBehaviour.BindSignalHandler(string, SignalHandler)
+  nameWithType.vb: ConduitBehaviour.BindSignalHandler(String, SignalHandler)
+- uid: ConduitNet.ConduitBehaviour.BindSignalHandler*
+  name: BindSignalHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_BindSignalHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.BindSignalHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.BindSignalHandler
+  nameWithType: ConduitBehaviour.BindSignalHandler
+- uid: ConduitNet.ConduitBehaviour.OnDestroy
+  name: OnDestroy()
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_OnDestroy
+  commentId: M:ConduitNet.ConduitBehaviour.OnDestroy
+  fullName: ConduitNet.ConduitBehaviour.OnDestroy()
+  nameWithType: ConduitBehaviour.OnDestroy()
+- uid: ConduitNet.ConduitBehaviour.OnDestroy*
+  name: OnDestroy
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_OnDestroy_
+  commentId: Overload:ConduitNet.ConduitBehaviour.OnDestroy
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.OnDestroy
+  nameWithType: ConduitBehaviour.OnDestroy
+- uid: ConduitNet.ConduitBehaviour.UnbindAll
+  name: UnbindAll()
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindAll
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindAll
+  fullName: ConduitNet.ConduitBehaviour.UnbindAll()
+  nameWithType: ConduitBehaviour.UnbindAll()
+- uid: ConduitNet.ConduitBehaviour.UnbindAll*
+  name: UnbindAll
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindAll_
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindAll
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.UnbindAll
+  nameWithType: ConduitBehaviour.UnbindAll
+- uid: ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  name: UnbindBytesHandler(BytesHandler)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindBytesHandler_ConduitNet_BytesHandler_
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  fullName: ConduitNet.ConduitBehaviour.UnbindBytesHandler(ConduitNet.BytesHandler)
+  nameWithType: ConduitBehaviour.UnbindBytesHandler(BytesHandler)
+- uid: ConduitNet.ConduitBehaviour.UnbindBytesHandler*
+  name: UnbindBytesHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindBytesHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindBytesHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.UnbindBytesHandler
+  nameWithType: ConduitBehaviour.UnbindBytesHandler
+- uid: ConduitNet.ConduitBehaviour.UnbindPacketHandler*
+  name: UnbindPacketHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindPacketHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindPacketHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.UnbindPacketHandler
+  nameWithType: ConduitBehaviour.UnbindPacketHandler
+- uid: ConduitNet.ConduitBehaviour.UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name: UnbindPacketHandler<T>(PacketHandler<T>)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindPacketHandler__1_ConduitNet_PacketHandler___0__
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindPacketHandler``1(ConduitNet.PacketHandler{``0})
+  name.vb: UnbindPacketHandler(Of T)(PacketHandler(Of T))
+  fullName: ConduitNet.ConduitBehaviour.UnbindPacketHandler<T>(ConduitNet.PacketHandler<T>)
+  fullName.vb: ConduitNet.ConduitBehaviour.UnbindPacketHandler(Of T)(ConduitNet.PacketHandler(Of T))
+  nameWithType: ConduitBehaviour.UnbindPacketHandler<T>(PacketHandler<T>)
+  nameWithType.vb: ConduitBehaviour.UnbindPacketHandler(Of T)(PacketHandler(Of T))
+- uid: ConduitNet.ConduitBehaviour.UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  name: UnbindSignalHandler(string, SignalHandler)
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindSignalHandler_System_String_ConduitNet_SignalHandler_
+  commentId: M:ConduitNet.ConduitBehaviour.UnbindSignalHandler(System.String,ConduitNet.SignalHandler)
+  name.vb: UnbindSignalHandler(String, SignalHandler)
+  fullName: ConduitNet.ConduitBehaviour.UnbindSignalHandler(string, ConduitNet.SignalHandler)
+  fullName.vb: ConduitNet.ConduitBehaviour.UnbindSignalHandler(String, ConduitNet.SignalHandler)
+  nameWithType: ConduitBehaviour.UnbindSignalHandler(string, SignalHandler)
+  nameWithType.vb: ConduitBehaviour.UnbindSignalHandler(String, SignalHandler)
+- uid: ConduitNet.ConduitBehaviour.UnbindSignalHandler*
+  name: UnbindSignalHandler
+  href: api/ConduitNet.ConduitBehaviour.html#ConduitNet_ConduitBehaviour_UnbindSignalHandler_
+  commentId: Overload:ConduitNet.ConduitBehaviour.UnbindSignalHandler
+  isSpec: "True"
+  fullName: ConduitNet.ConduitBehaviour.UnbindSignalHandler
+  nameWithType: ConduitBehaviour.UnbindSignalHandler
+- uid: ConduitNet.ConduitConfig
+  name: ConduitConfig
+  href: api/ConduitNet.ConduitConfig.html
+  commentId: T:ConduitNet.ConduitConfig
+  fullName: ConduitNet.ConduitConfig
+  nameWithType: ConduitConfig
+- uid: ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])
+  name: ConduitConfig(string, StunServer[], TurnServer[])
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig__ctor_System_String_ConduitNet_StunServer___ConduitNet_TurnServer___
+  commentId: M:ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])
+  name.vb: New(String, StunServer(), TurnServer())
+  fullName: ConduitNet.ConduitConfig.ConduitConfig(string, ConduitNet.StunServer[], ConduitNet.TurnServer[])
+  fullName.vb: ConduitNet.ConduitConfig.New(String, ConduitNet.StunServer(), ConduitNet.TurnServer())
+  nameWithType: ConduitConfig.ConduitConfig(string, StunServer[], TurnServer[])
+  nameWithType.vb: ConduitConfig.New(String, StunServer(), TurnServer())
+- uid: ConduitNet.ConduitConfig.#ctor*
+  name: ConduitConfig
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig__ctor_
+  commentId: Overload:ConduitNet.ConduitConfig.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.ConduitConfig.ConduitConfig
+  fullName.vb: ConduitNet.ConduitConfig.New
+  nameWithType: ConduitConfig.ConduitConfig
+  nameWithType.vb: ConduitConfig.New
+- uid: ConduitNet.ConduitConfig.DebugLog
+  name: DebugLog
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_DebugLog
+  commentId: P:ConduitNet.ConduitConfig.DebugLog
+  fullName: ConduitNet.ConduitConfig.DebugLog
+  nameWithType: ConduitConfig.DebugLog
+- uid: ConduitNet.ConduitConfig.DebugLog*
+  name: DebugLog
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_DebugLog_
+  commentId: Overload:ConduitNet.ConduitConfig.DebugLog
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.DebugLog
+  nameWithType: ConduitConfig.DebugLog
+- uid: ConduitNet.ConduitConfig.HealthPath
+  name: HealthPath
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_HealthPath
+  commentId: P:ConduitNet.ConduitConfig.HealthPath
+  fullName: ConduitNet.ConduitConfig.HealthPath
+  nameWithType: ConduitConfig.HealthPath
+- uid: ConduitNet.ConduitConfig.HealthPath*
+  name: HealthPath
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_HealthPath_
+  commentId: Overload:ConduitNet.ConduitConfig.HealthPath
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.HealthPath
+  nameWithType: ConduitConfig.HealthPath
+- uid: ConduitNet.ConduitConfig.JoinTimeout
+  name: JoinTimeout
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_JoinTimeout
+  commentId: P:ConduitNet.ConduitConfig.JoinTimeout
+  fullName: ConduitNet.ConduitConfig.JoinTimeout
+  nameWithType: ConduitConfig.JoinTimeout
+- uid: ConduitNet.ConduitConfig.JoinTimeout*
+  name: JoinTimeout
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_JoinTimeout_
+  commentId: Overload:ConduitNet.ConduitConfig.JoinTimeout
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.JoinTimeout
+  nameWithType: ConduitConfig.JoinTimeout
+- uid: ConduitNet.ConduitConfig.LobbyIdHeader
+  name: LobbyIdHeader
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_LobbyIdHeader
+  commentId: P:ConduitNet.ConduitConfig.LobbyIdHeader
+  fullName: ConduitNet.ConduitConfig.LobbyIdHeader
+  nameWithType: ConduitConfig.LobbyIdHeader
+- uid: ConduitNet.ConduitConfig.LobbyIdHeader*
+  name: LobbyIdHeader
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_LobbyIdHeader_
+  commentId: Overload:ConduitNet.ConduitConfig.LobbyIdHeader
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.LobbyIdHeader
+  nameWithType: ConduitConfig.LobbyIdHeader
+- uid: ConduitNet.ConduitConfig.ServerUrl
+  name: ServerUrl
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_ServerUrl
+  commentId: P:ConduitNet.ConduitConfig.ServerUrl
+  fullName: ConduitNet.ConduitConfig.ServerUrl
+  nameWithType: ConduitConfig.ServerUrl
+- uid: ConduitNet.ConduitConfig.ServerUrl*
+  name: ServerUrl
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_ServerUrl_
+  commentId: Overload:ConduitNet.ConduitConfig.ServerUrl
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.ServerUrl
+  nameWithType: ConduitConfig.ServerUrl
+- uid: ConduitNet.ConduitConfig.StunServers
+  name: StunServers
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_StunServers
+  commentId: P:ConduitNet.ConduitConfig.StunServers
+  fullName: ConduitNet.ConduitConfig.StunServers
+  nameWithType: ConduitConfig.StunServers
+- uid: ConduitNet.ConduitConfig.StunServers*
+  name: StunServers
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_StunServers_
+  commentId: Overload:ConduitNet.ConduitConfig.StunServers
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.StunServers
+  nameWithType: ConduitConfig.StunServers
+- uid: ConduitNet.ConduitConfig.SyncUserPath
+  name: SyncUserPath
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_SyncUserPath
+  commentId: P:ConduitNet.ConduitConfig.SyncUserPath
+  fullName: ConduitNet.ConduitConfig.SyncUserPath
+  nameWithType: ConduitConfig.SyncUserPath
+- uid: ConduitNet.ConduitConfig.SyncUserPath*
+  name: SyncUserPath
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_SyncUserPath_
+  commentId: Overload:ConduitNet.ConduitConfig.SyncUserPath
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.SyncUserPath
+  nameWithType: ConduitConfig.SyncUserPath
+- uid: ConduitNet.ConduitConfig.TurnServers
+  name: TurnServers
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_TurnServers
+  commentId: P:ConduitNet.ConduitConfig.TurnServers
+  fullName: ConduitNet.ConduitConfig.TurnServers
+  nameWithType: ConduitConfig.TurnServers
+- uid: ConduitNet.ConduitConfig.TurnServers*
+  name: TurnServers
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_TurnServers_
+  commentId: Overload:ConduitNet.ConduitConfig.TurnServers
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.TurnServers
+  nameWithType: ConduitConfig.TurnServers
+- uid: ConduitNet.ConduitConfig.UseHttps
+  name: UseHttps
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseHttps
+  commentId: P:ConduitNet.ConduitConfig.UseHttps
+  fullName: ConduitNet.ConduitConfig.UseHttps
+  nameWithType: ConduitConfig.UseHttps
+- uid: ConduitNet.ConduitConfig.UseHttps*
+  name: UseHttps
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseHttps_
+  commentId: Overload:ConduitNet.ConduitConfig.UseHttps
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.UseHttps
+  nameWithType: ConduitConfig.UseHttps
+- uid: ConduitNet.ConduitConfig.UseWss
+  name: UseWss
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseWss
+  commentId: P:ConduitNet.ConduitConfig.UseWss
+  fullName: ConduitNet.ConduitConfig.UseWss
+  nameWithType: ConduitConfig.UseWss
+- uid: ConduitNet.ConduitConfig.UseWss*
+  name: UseWss
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UseWss_
+  commentId: Overload:ConduitNet.ConduitConfig.UseWss
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.UseWss
+  nameWithType: ConduitConfig.UseWss
+- uid: ConduitNet.ConduitConfig.UserIdHeader
+  name: UserIdHeader
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UserIdHeader
+  commentId: P:ConduitNet.ConduitConfig.UserIdHeader
+  fullName: ConduitNet.ConduitConfig.UserIdHeader
+  nameWithType: ConduitConfig.UserIdHeader
+- uid: ConduitNet.ConduitConfig.UserIdHeader*
+  name: UserIdHeader
+  href: api/ConduitNet.ConduitConfig.html#ConduitNet_ConduitConfig_UserIdHeader_
+  commentId: Overload:ConduitNet.ConduitConfig.UserIdHeader
+  isSpec: "True"
+  fullName: ConduitNet.ConduitConfig.UserIdHeader
+  nameWithType: ConduitConfig.UserIdHeader
+- uid: ConduitNet.Conduit`3
+  name: Conduit<TLobbyState, TUserProfile, TAccountState>
+  href: api/ConduitNet.Conduit-3.html
+  commentId: T:ConduitNet.Conduit`3
+  name.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState)
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState)
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState)
+- uid: ConduitNet.Conduit`3.Host
+  name: Host
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Host
+  commentId: P:ConduitNet.Conduit`3.Host
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Host
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Host
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Host
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Host
+- uid: ConduitNet.Conduit`3.Host*
+  name: Host
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Host_
+  commentId: Overload:ConduitNet.Conduit`3.Host
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Host
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Host
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Host
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Host
+- uid: ConduitNet.Conduit`3.Lobby
+  name: Lobby
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Lobby
+  commentId: P:ConduitNet.Conduit`3.Lobby
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Lobby
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Lobby
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Lobby
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Lobby
+- uid: ConduitNet.Conduit`3.Lobby*
+  name: Lobby
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Lobby_
+  commentId: Overload:ConduitNet.Conduit`3.Lobby
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Lobby
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Lobby
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Lobby
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Lobby
+- uid: ConduitNet.Conduit`3.LobbyService
+  name: LobbyService
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_LobbyService
+  commentId: P:ConduitNet.Conduit`3.LobbyService
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.LobbyService
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).LobbyService
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.LobbyService
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).LobbyService
+- uid: ConduitNet.Conduit`3.LobbyService*
+  name: LobbyService
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_LobbyService_
+  commentId: Overload:ConduitNet.Conduit`3.LobbyService
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.LobbyService
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).LobbyService
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.LobbyService
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).LobbyService
+- uid: ConduitNet.Conduit`3.LocalUser
+  name: LocalUser
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_LocalUser
+  commentId: P:ConduitNet.Conduit`3.LocalUser
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.LocalUser
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).LocalUser
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.LocalUser
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).LocalUser
+- uid: ConduitNet.Conduit`3.LocalUser*
+  name: LocalUser
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_LocalUser_
+  commentId: Overload:ConduitNet.Conduit`3.LocalUser
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.LocalUser
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).LocalUser
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.LocalUser
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).LocalUser
+- uid: ConduitNet.Conduit`3.Members
+  name: Members
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Members
+  commentId: P:ConduitNet.Conduit`3.Members
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Members
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Members
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Members
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Members
+- uid: ConduitNet.Conduit`3.Members*
+  name: Members
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Members_
+  commentId: Overload:ConduitNet.Conduit`3.Members
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Members
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Members
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Members
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Members
+- uid: ConduitNet.Conduit`3.Participants
+  name: Participants
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Participants
+  commentId: P:ConduitNet.Conduit`3.Participants
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Participants
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Participants
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Participants
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Participants
+- uid: ConduitNet.Conduit`3.Participants*
+  name: Participants
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_Participants_
+  commentId: Overload:ConduitNet.Conduit`3.Participants
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.Participants
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).Participants
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.Participants
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).Participants
+- uid: ConduitNet.Conduit`3.UserService
+  name: UserService
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_UserService
+  commentId: P:ConduitNet.Conduit`3.UserService
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.UserService
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).UserService
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.UserService
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).UserService
+- uid: ConduitNet.Conduit`3.UserService*
+  name: UserService
+  href: api/ConduitNet.Conduit-3.html#ConduitNet_Conduit_3_UserService_
+  commentId: Overload:ConduitNet.Conduit`3.UserService
+  isSpec: "True"
+  fullName: ConduitNet.Conduit<TLobbyState, TUserProfile, TAccountState>.UserService
+  fullName.vb: ConduitNet.Conduit(Of TLobbyState, TUserProfile, TAccountState).UserService
+  nameWithType: Conduit<TLobbyState, TUserProfile, TAccountState>.UserService
+  nameWithType.vb: Conduit(Of TLobbyState, TUserProfile, TAccountState).UserService
+- uid: ConduitNet.ConnectionFailedReason
+  name: ConnectionFailedReason
+  href: api/ConduitNet.ConnectionFailedReason.html
+  commentId: T:ConduitNet.ConnectionFailedReason
+  fullName: ConduitNet.ConnectionFailedReason
+  nameWithType: ConnectionFailedReason
+- uid: ConduitNet.ConnectionFailedReason.BadConnection
+  name: BadConnection
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_BadConnection
+  commentId: F:ConduitNet.ConnectionFailedReason.BadConnection
+  fullName: ConduitNet.ConnectionFailedReason.BadConnection
+  nameWithType: ConnectionFailedReason.BadConnection
+- uid: ConduitNet.ConnectionFailedReason.HostNotFound
+  name: HostNotFound
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_HostNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.HostNotFound
+  fullName: ConduitNet.ConnectionFailedReason.HostNotFound
+  nameWithType: ConnectionFailedReason.HostNotFound
+- uid: ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  name: IceConnectionFailed
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_IceConnectionFailed
+  commentId: F:ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  fullName: ConduitNet.ConnectionFailedReason.IceConnectionFailed
+  nameWithType: ConnectionFailedReason.IceConnectionFailed
+- uid: ConduitNet.ConnectionFailedReason.LobbyIsFull
+  name: LobbyIsFull
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_LobbyIsFull
+  commentId: F:ConduitNet.ConnectionFailedReason.LobbyIsFull
+  fullName: ConduitNet.ConnectionFailedReason.LobbyIsFull
+  nameWithType: ConnectionFailedReason.LobbyIsFull
+- uid: ConduitNet.ConnectionFailedReason.LobbyNotFound
+  name: LobbyNotFound
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_LobbyNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.LobbyNotFound
+  fullName: ConduitNet.ConnectionFailedReason.LobbyNotFound
+  nameWithType: ConnectionFailedReason.LobbyNotFound
+- uid: ConduitNet.ConnectionFailedReason.UserNotFound
+  name: UserNotFound
+  href: api/ConduitNet.ConnectionFailedReason.html#ConduitNet_ConnectionFailedReason_UserNotFound
+  commentId: F:ConduitNet.ConnectionFailedReason.UserNotFound
+  fullName: ConduitNet.ConnectionFailedReason.UserNotFound
+  nameWithType: ConnectionFailedReason.UserNotFound
+- uid: ConduitNet.DataEndPoint
+  name: DataEndPoint
+  href: api/ConduitNet.DataEndPoint.html
+  commentId: T:ConduitNet.DataEndPoint
+  fullName: ConduitNet.DataEndPoint
+  nameWithType: DataEndPoint
+- uid: ConduitNet.DataEndPoint.receiver
+  name: receiver
+  href: api/ConduitNet.DataEndPoint.html#ConduitNet_DataEndPoint_receiver
+  commentId: F:ConduitNet.DataEndPoint.receiver
+  fullName: ConduitNet.DataEndPoint.receiver
+  nameWithType: DataEndPoint.receiver
+- uid: ConduitNet.DataEndPoint.sender
+  name: sender
+  href: api/ConduitNet.DataEndPoint.html#ConduitNet_DataEndPoint_sender
+  commentId: F:ConduitNet.DataEndPoint.sender
+  fullName: ConduitNet.DataEndPoint.sender
+  nameWithType: DataEndPoint.sender
+- uid: ConduitNet.Http
+  name: ConduitNet.Http
+  href: api/ConduitNet.Http.html
+  commentId: N:ConduitNet.Http
+  fullName: ConduitNet.Http
+  nameWithType: ConduitNet.Http
+- uid: ConduitNet.Http.HttpRequest
+  name: HttpRequest
+  href: api/ConduitNet.Http.HttpRequest.html
+  commentId: T:ConduitNet.Http.HttpRequest
+  fullName: ConduitNet.Http.HttpRequest
+  nameWithType: HttpRequest
+- uid: ConduitNet.Http.HttpRequest.Delete(System.String)
+  name: Delete(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Delete_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.Delete(System.String)
+  name.vb: Delete(String)
+  fullName: ConduitNet.Http.HttpRequest.Delete(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.Delete(String)
+  nameWithType: HttpRequest.Delete(string)
+  nameWithType.vb: HttpRequest.Delete(String)
+- uid: ConduitNet.Http.HttpRequest.Delete*
+  name: Delete
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Delete_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Delete
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Delete
+  nameWithType: HttpRequest.Delete
+- uid: ConduitNet.Http.HttpRequest.Get(System.String)
+  name: Get(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Get_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.Get(System.String)
+  name.vb: Get(String)
+  fullName: ConduitNet.Http.HttpRequest.Get(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.Get(String)
+  nameWithType: HttpRequest.Get(string)
+  nameWithType.vb: HttpRequest.Get(String)
+- uid: ConduitNet.Http.HttpRequest.Get*
+  name: Get
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Get_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Get
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Get
+  nameWithType: HttpRequest.Get
+- uid: ConduitNet.Http.HttpRequest.Patch(System.String)
+  name: Patch(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Patch_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.Patch(System.String)
+  name.vb: Patch(String)
+  fullName: ConduitNet.Http.HttpRequest.Patch(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.Patch(String)
+  nameWithType: HttpRequest.Patch(string)
+  nameWithType.vb: HttpRequest.Patch(String)
+- uid: ConduitNet.Http.HttpRequest.Patch*
+  name: Patch
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Patch_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Patch
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Patch
+  nameWithType: HttpRequest.Patch
+- uid: ConduitNet.Http.HttpRequest.Post(System.String)
+  name: Post(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Post_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.Post(System.String)
+  name.vb: Post(String)
+  fullName: ConduitNet.Http.HttpRequest.Post(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.Post(String)
+  nameWithType: HttpRequest.Post(string)
+  nameWithType.vb: HttpRequest.Post(String)
+- uid: ConduitNet.Http.HttpRequest.Post*
+  name: Post
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Post_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Post
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Post
+  nameWithType: HttpRequest.Post
+- uid: ConduitNet.Http.HttpRequest.Put(System.String)
+  name: Put(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Put_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.Put(System.String)
+  name.vb: Put(String)
+  fullName: ConduitNet.Http.HttpRequest.Put(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.Put(String)
+  nameWithType: HttpRequest.Put(string)
+  nameWithType.vb: HttpRequest.Put(String)
+- uid: ConduitNet.Http.HttpRequest.Put*
+  name: Put
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Put_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Put
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Put
+  nameWithType: HttpRequest.Put
+- uid: ConduitNet.Http.HttpRequest.Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  name: Send(Action<HttpResponse>, Action<string>)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Send_System_Action_ConduitNet_Http_HttpResponse__System_Action_System_String__
+  commentId: M:ConduitNet.Http.HttpRequest.Send(System.Action{ConduitNet.Http.HttpResponse},System.Action{System.String})
+  name.vb: Send(Action(Of HttpResponse), Action(Of String))
+  fullName: ConduitNet.Http.HttpRequest.Send(System.Action<ConduitNet.Http.HttpResponse>, System.Action<string>)
+  fullName.vb: ConduitNet.Http.HttpRequest.Send(System.Action(Of ConduitNet.Http.HttpResponse), System.Action(Of String))
+  nameWithType: HttpRequest.Send(Action<HttpResponse>, Action<string>)
+  nameWithType.vb: HttpRequest.Send(Action(Of HttpResponse), Action(Of String))
+- uid: ConduitNet.Http.HttpRequest.Send*
+  name: Send
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Send_
+  commentId: Overload:ConduitNet.Http.HttpRequest.Send
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.Send
+  nameWithType: HttpRequest.Send
+- uid: ConduitNet.Http.HttpRequest.Send``1(System.Action{``0},System.Action{System.String})
+  name: Send<T>(Action<T>, Action<string>)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_Send__1_System_Action___0__System_Action_System_String__
+  commentId: M:ConduitNet.Http.HttpRequest.Send``1(System.Action{``0},System.Action{System.String})
+  name.vb: Send(Of T)(Action(Of T), Action(Of String))
+  fullName: ConduitNet.Http.HttpRequest.Send<T>(System.Action<T>, System.Action<string>)
+  fullName.vb: ConduitNet.Http.HttpRequest.Send(Of T)(System.Action(Of T), System.Action(Of String))
+  nameWithType: HttpRequest.Send<T>(Action<T>, Action<string>)
+  nameWithType.vb: HttpRequest.Send(Of T)(Action(Of T), Action(Of String))
+- uid: ConduitNet.Http.HttpRequest.SetBasicAuth(System.String,System.String)
+  name: SetBasicAuth(string, string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBasicAuth_System_String_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetBasicAuth(System.String,System.String)
+  name.vb: SetBasicAuth(String, String)
+  fullName: ConduitNet.Http.HttpRequest.SetBasicAuth(string, string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBasicAuth(String, String)
+  nameWithType: HttpRequest.SetBasicAuth(string, string)
+  nameWithType.vb: HttpRequest.SetBasicAuth(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetBasicAuth*
+  name: SetBasicAuth
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBasicAuth_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBasicAuth
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetBasicAuth
+  nameWithType: HttpRequest.SetBasicAuth
+- uid: ConduitNet.Http.HttpRequest.SetBearerToken(System.String)
+  name: SetBearerToken(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBearerToken_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetBearerToken(System.String)
+  name.vb: SetBearerToken(String)
+  fullName: ConduitNet.Http.HttpRequest.SetBearerToken(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBearerToken(String)
+  nameWithType: HttpRequest.SetBearerToken(string)
+  nameWithType.vb: HttpRequest.SetBearerToken(String)
+- uid: ConduitNet.Http.HttpRequest.SetBearerToken*
+  name: SetBearerToken
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBearerToken_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBearerToken
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetBearerToken
+  nameWithType: HttpRequest.SetBearerToken
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.Byte[],System.String)
+  name: SetBody(byte[], string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBody_System_Byte___System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.Byte[],System.String)
+  name.vb: SetBody(Byte(), String)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(byte[], string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(Byte(), String)
+  nameWithType: HttpRequest.SetBody(byte[], string)
+  nameWithType.vb: HttpRequest.SetBody(Byte(), String)
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.Object)
+  name: SetBody(object)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBody_System_Object_
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.Object)
+  name.vb: SetBody(Object)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(object)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(Object)
+  nameWithType: HttpRequest.SetBody(object)
+  nameWithType.vb: HttpRequest.SetBody(Object)
+- uid: ConduitNet.Http.HttpRequest.SetBody(System.String,System.String)
+  name: SetBody(string, string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBody_System_String_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetBody(System.String,System.String)
+  name.vb: SetBody(String, String)
+  fullName: ConduitNet.Http.HttpRequest.SetBody(string, string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetBody(String, String)
+  nameWithType: HttpRequest.SetBody(string, string)
+  nameWithType.vb: HttpRequest.SetBody(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetBody*
+  name: SetBody
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetBody_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetBody
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetBody
+  nameWithType: HttpRequest.SetBody
+- uid: ConduitNet.Http.HttpRequest.SetContentType(System.String)
+  name: SetContentType(string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetContentType_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetContentType(System.String)
+  name.vb: SetContentType(String)
+  fullName: ConduitNet.Http.HttpRequest.SetContentType(string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetContentType(String)
+  nameWithType: HttpRequest.SetContentType(string)
+  nameWithType.vb: HttpRequest.SetContentType(String)
+- uid: ConduitNet.Http.HttpRequest.SetContentType*
+  name: SetContentType
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetContentType_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetContentType
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetContentType
+  nameWithType: HttpRequest.SetContentType
+- uid: ConduitNet.Http.HttpRequest.SetHeader(System.String,System.String)
+  name: SetHeader(string, string)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeader_System_String_System_String_
+  commentId: M:ConduitNet.Http.HttpRequest.SetHeader(System.String,System.String)
+  name.vb: SetHeader(String, String)
+  fullName: ConduitNet.Http.HttpRequest.SetHeader(string, string)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetHeader(String, String)
+  nameWithType: HttpRequest.SetHeader(string, string)
+  nameWithType.vb: HttpRequest.SetHeader(String, String)
+- uid: ConduitNet.Http.HttpRequest.SetHeader*
+  name: SetHeader
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeader_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetHeader
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetHeader
+  nameWithType: HttpRequest.SetHeader
+- uid: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  name: SetHeaders(Dictionary<string, string>)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeaders_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: SetHeaders(Dictionary(Of String, String))
+  fullName: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary<string, string>)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetHeaders(System.Collections.Generic.Dictionary(Of String, String))
+  nameWithType: HttpRequest.SetHeaders(Dictionary<string, string>)
+  nameWithType.vb: HttpRequest.SetHeaders(Dictionary(Of String, String))
+- uid: ConduitNet.Http.HttpRequest.SetHeaders*
+  name: SetHeaders
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetHeaders_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetHeaders
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetHeaders
+  nameWithType: HttpRequest.SetHeaders
+- uid: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: SetQueryParams(IDictionary<string, object>)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetQueryParams_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: SetQueryParams(IDictionary(Of String, Object))
+  fullName: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetQueryParams(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: HttpRequest.SetQueryParams(IDictionary<string, object>)
+  nameWithType.vb: HttpRequest.SetQueryParams(IDictionary(Of String, Object))
+- uid: ConduitNet.Http.HttpRequest.SetQueryParams*
+  name: SetQueryParams
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetQueryParams_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetQueryParams
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetQueryParams
+  nameWithType: HttpRequest.SetQueryParams
+- uid: ConduitNet.Http.HttpRequest.SetTimeout(System.Int32)
+  name: SetTimeout(int)
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetTimeout_System_Int32_
+  commentId: M:ConduitNet.Http.HttpRequest.SetTimeout(System.Int32)
+  name.vb: SetTimeout(Integer)
+  fullName: ConduitNet.Http.HttpRequest.SetTimeout(int)
+  fullName.vb: ConduitNet.Http.HttpRequest.SetTimeout(Integer)
+  nameWithType: HttpRequest.SetTimeout(int)
+  nameWithType.vb: HttpRequest.SetTimeout(Integer)
+- uid: ConduitNet.Http.HttpRequest.SetTimeout*
+  name: SetTimeout
+  href: api/ConduitNet.Http.HttpRequest.html#ConduitNet_Http_HttpRequest_SetTimeout_
+  commentId: Overload:ConduitNet.Http.HttpRequest.SetTimeout
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpRequest.SetTimeout
+  nameWithType: HttpRequest.SetTimeout
+- uid: ConduitNet.Http.HttpResponse
+  name: HttpResponse
+  href: api/ConduitNet.Http.HttpResponse.html
+  commentId: T:ConduitNet.Http.HttpResponse
+  fullName: ConduitNet.Http.HttpResponse
+  nameWithType: HttpResponse
+- uid: ConduitNet.Http.HttpResponse.Bytes
+  name: Bytes
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Bytes
+  commentId: P:ConduitNet.Http.HttpResponse.Bytes
+  fullName: ConduitNet.Http.HttpResponse.Bytes
+  nameWithType: HttpResponse.Bytes
+- uid: ConduitNet.Http.HttpResponse.Bytes*
+  name: Bytes
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Bytes_
+  commentId: Overload:ConduitNet.Http.HttpResponse.Bytes
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpResponse.Bytes
+  nameWithType: HttpResponse.Bytes
+- uid: ConduitNet.Http.HttpResponse.Deserialize*
+  name: Deserialize
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Deserialize_
+  commentId: Overload:ConduitNet.Http.HttpResponse.Deserialize
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpResponse.Deserialize
+  nameWithType: HttpResponse.Deserialize
+- uid: ConduitNet.Http.HttpResponse.Deserialize``1
+  name: Deserialize<T>()
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Deserialize__1
+  commentId: M:ConduitNet.Http.HttpResponse.Deserialize``1
+  name.vb: Deserialize(Of T)()
+  fullName: ConduitNet.Http.HttpResponse.Deserialize<T>()
+  fullName.vb: ConduitNet.Http.HttpResponse.Deserialize(Of T)()
+  nameWithType: HttpResponse.Deserialize<T>()
+  nameWithType.vb: HttpResponse.Deserialize(Of T)()
+- uid: ConduitNet.Http.HttpResponse.Headers
+  name: Headers
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Headers
+  commentId: P:ConduitNet.Http.HttpResponse.Headers
+  fullName: ConduitNet.Http.HttpResponse.Headers
+  nameWithType: HttpResponse.Headers
+- uid: ConduitNet.Http.HttpResponse.Headers*
+  name: Headers
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Headers_
+  commentId: Overload:ConduitNet.Http.HttpResponse.Headers
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpResponse.Headers
+  nameWithType: HttpResponse.Headers
+- uid: ConduitNet.Http.HttpResponse.StatusCode
+  name: StatusCode
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_StatusCode
+  commentId: P:ConduitNet.Http.HttpResponse.StatusCode
+  fullName: ConduitNet.Http.HttpResponse.StatusCode
+  nameWithType: HttpResponse.StatusCode
+- uid: ConduitNet.Http.HttpResponse.StatusCode*
+  name: StatusCode
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_StatusCode_
+  commentId: Overload:ConduitNet.Http.HttpResponse.StatusCode
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpResponse.StatusCode
+  nameWithType: HttpResponse.StatusCode
+- uid: ConduitNet.Http.HttpResponse.Text
+  name: Text
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Text
+  commentId: P:ConduitNet.Http.HttpResponse.Text
+  fullName: ConduitNet.Http.HttpResponse.Text
+  nameWithType: HttpResponse.Text
+- uid: ConduitNet.Http.HttpResponse.Text*
+  name: Text
+  href: api/ConduitNet.Http.HttpResponse.html#ConduitNet_Http_HttpResponse_Text_
+  commentId: Overload:ConduitNet.Http.HttpResponse.Text
+  isSpec: "True"
+  fullName: ConduitNet.Http.HttpResponse.Text
+  nameWithType: HttpResponse.Text
+- uid: ConduitNet.ILobby
+  name: ILobby
+  href: api/ConduitNet.ILobby.html
+  commentId: T:ConduitNet.ILobby
+  fullName: ConduitNet.ILobby
+  nameWithType: ILobby
+- uid: ConduitNet.ILobby.Apply(ConduitNet.ILobby)
+  name: Apply(ILobby)
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Apply_ConduitNet_ILobby_
+  commentId: M:ConduitNet.ILobby.Apply(ConduitNet.ILobby)
+  fullName: ConduitNet.ILobby.Apply(ConduitNet.ILobby)
+  nameWithType: ILobby.Apply(ILobby)
+- uid: ConduitNet.ILobby.Apply*
+  name: Apply
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Apply_
+  commentId: Overload:ConduitNet.ILobby.Apply
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.Apply
+  nameWithType: ILobby.Apply
+- uid: ConduitNet.ILobby.CreatedAt
+  name: CreatedAt
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_CreatedAt
+  commentId: P:ConduitNet.ILobby.CreatedAt
+  fullName: ConduitNet.ILobby.CreatedAt
+  nameWithType: ILobby.CreatedAt
+- uid: ConduitNet.ILobby.CreatedAt*
+  name: CreatedAt
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_CreatedAt_
+  commentId: Overload:ConduitNet.ILobby.CreatedAt
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.CreatedAt
+  nameWithType: ILobby.CreatedAt
+- uid: ConduitNet.ILobby.CurrentPlayers
+  name: CurrentPlayers
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_CurrentPlayers
+  commentId: P:ConduitNet.ILobby.CurrentPlayers
+  fullName: ConduitNet.ILobby.CurrentPlayers
+  nameWithType: ILobby.CurrentPlayers
+- uid: ConduitNet.ILobby.CurrentPlayers*
+  name: CurrentPlayers
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_CurrentPlayers_
+  commentId: Overload:ConduitNet.ILobby.CurrentPlayers
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.CurrentPlayers
+  nameWithType: ILobby.CurrentPlayers
+- uid: ConduitNet.ILobby.Host
+  name: Host
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Host
+  commentId: P:ConduitNet.ILobby.Host
+  fullName: ConduitNet.ILobby.Host
+  nameWithType: ILobby.Host
+- uid: ConduitNet.ILobby.Host*
+  name: Host
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Host_
+  commentId: Overload:ConduitNet.ILobby.Host
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.Host
+  nameWithType: ILobby.Host
+- uid: ConduitNet.ILobby.HostId
+  name: HostId
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_HostId
+  commentId: P:ConduitNet.ILobby.HostId
+  fullName: ConduitNet.ILobby.HostId
+  nameWithType: ILobby.HostId
+- uid: ConduitNet.ILobby.HostId*
+  name: HostId
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_HostId_
+  commentId: Overload:ConduitNet.ILobby.HostId
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.HostId
+  nameWithType: ILobby.HostId
+- uid: ConduitNet.ILobby.Id
+  name: Id
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Id
+  commentId: P:ConduitNet.ILobby.Id
+  fullName: ConduitNet.ILobby.Id
+  nameWithType: ILobby.Id
+- uid: ConduitNet.ILobby.Id*
+  name: Id
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Id_
+  commentId: Overload:ConduitNet.ILobby.Id
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.Id
+  nameWithType: ILobby.Id
+- uid: ConduitNet.ILobby.IsPlaying
+  name: IsPlaying
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_IsPlaying
+  commentId: P:ConduitNet.ILobby.IsPlaying
+  fullName: ConduitNet.ILobby.IsPlaying
+  nameWithType: ILobby.IsPlaying
+- uid: ConduitNet.ILobby.IsPlaying*
+  name: IsPlaying
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_IsPlaying_
+  commentId: Overload:ConduitNet.ILobby.IsPlaying
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.IsPlaying
+  nameWithType: ILobby.IsPlaying
+- uid: ConduitNet.ILobby.IsPrivate
+  name: IsPrivate
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_IsPrivate
+  commentId: P:ConduitNet.ILobby.IsPrivate
+  fullName: ConduitNet.ILobby.IsPrivate
+  nameWithType: ILobby.IsPrivate
+- uid: ConduitNet.ILobby.IsPrivate*
+  name: IsPrivate
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_IsPrivate_
+  commentId: Overload:ConduitNet.ILobby.IsPrivate
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.IsPrivate
+  nameWithType: ILobby.IsPrivate
+- uid: ConduitNet.ILobby.MaxPlayers
+  name: MaxPlayers
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_MaxPlayers
+  commentId: P:ConduitNet.ILobby.MaxPlayers
+  fullName: ConduitNet.ILobby.MaxPlayers
+  nameWithType: ILobby.MaxPlayers
+- uid: ConduitNet.ILobby.MaxPlayers*
+  name: MaxPlayers
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_MaxPlayers_
+  commentId: Overload:ConduitNet.ILobby.MaxPlayers
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.MaxPlayers
+  nameWithType: ILobby.MaxPlayers
+- uid: ConduitNet.ILobby.Members
+  name: Members
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Members
+  commentId: P:ConduitNet.ILobby.Members
+  fullName: ConduitNet.ILobby.Members
+  nameWithType: ILobby.Members
+- uid: ConduitNet.ILobby.Members*
+  name: Members
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Members_
+  commentId: Overload:ConduitNet.ILobby.Members
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.Members
+  nameWithType: ILobby.Members
+- uid: ConduitNet.ILobby.Name
+  name: Name
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Name
+  commentId: P:ConduitNet.ILobby.Name
+  fullName: ConduitNet.ILobby.Name
+  nameWithType: ILobby.Name
+- uid: ConduitNet.ILobby.Name*
+  name: Name
+  href: api/ConduitNet.ILobby.html#ConduitNet_ILobby_Name_
+  commentId: Overload:ConduitNet.ILobby.Name
+  isSpec: "True"
+  fullName: ConduitNet.ILobby.Name
+  nameWithType: ILobby.Name
+- uid: ConduitNet.ILobbyService
+  name: ILobbyService
+  href: api/ConduitNet.ILobbyService.html
+  commentId: T:ConduitNet.ILobbyService
+  fullName: ConduitNet.ILobbyService
+  nameWithType: ILobbyService
+- uid: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  name: ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyMetadata_ConduitNet_ILobby_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__
+  commentId: M:ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  name.vb: ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+  fullName: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby, string, bool?, bool?, int?)
+  fullName.vb: ConduitNet.ILobbyService.ApplyMetadata(ConduitNet.ILobby, String, Boolean?, Boolean?, Integer?)
+  nameWithType: ILobbyService.ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  nameWithType.vb: ILobbyService.ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+- uid: ConduitNet.ILobbyService.ApplyMetadata*
+  name: ApplyMetadata
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyMetadata_
+  commentId: Overload:ConduitNet.ILobbyService.ApplyMetadata
+  isSpec: "True"
+  fullName: ConduitNet.ILobbyService.ApplyMetadata
+  nameWithType: ILobbyService.ApplyMetadata
+- uid: ConduitNet.ILobbyService.ApplyState*
+  name: ApplyState
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyState_
+  commentId: Overload:ConduitNet.ILobbyService.ApplyState
+  isSpec: "True"
+  fullName: ConduitNet.ILobbyService.ApplyState
+  nameWithType: ILobbyService.ApplyState
+- uid: ConduitNet.ILobbyService.ApplyState``1(ConduitNet.ILobby,``0)
+  name: ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_ApplyState__1_ConduitNet_ILobby___0_
+  commentId: M:ConduitNet.ILobbyService.ApplyState``1(ConduitNet.ILobby,``0)
+  name.vb: ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+  fullName: ConduitNet.ILobbyService.ApplyState<TLobbyStatePatch>(ConduitNet.ILobby, TLobbyStatePatch)
+  fullName.vb: ConduitNet.ILobbyService.ApplyState(Of TLobbyStatePatch)(ConduitNet.ILobby, TLobbyStatePatch)
+  nameWithType: ILobbyService.ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  nameWithType.vb: ILobbyService.ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+- uid: ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby,System.Action)
+  name: Fetch(ILobby, Action)
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_Fetch_ConduitNet_ILobby_System_Action_
+  commentId: M:ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby,System.Action)
+  fullName: ConduitNet.ILobbyService.Fetch(ConduitNet.ILobby, System.Action)
+  nameWithType: ILobbyService.Fetch(ILobby, Action)
+- uid: ConduitNet.ILobbyService.Fetch*
+  name: Fetch
+  href: api/ConduitNet.ILobbyService.html#ConduitNet_ILobbyService_Fetch_
+  commentId: Overload:ConduitNet.ILobbyService.Fetch
+  isSpec: "True"
+  fullName: ConduitNet.ILobbyService.Fetch
+  nameWithType: ILobbyService.Fetch
+- uid: ConduitNet.IUser
+  name: IUser
+  href: api/ConduitNet.IUser.html
+  commentId: T:ConduitNet.IUser
+  fullName: ConduitNet.IUser
+  nameWithType: IUser
+- uid: ConduitNet.IUser.Apply(ConduitNet.IUser)
+  name: Apply(IUser)
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Apply_ConduitNet_IUser_
+  commentId: M:ConduitNet.IUser.Apply(ConduitNet.IUser)
+  fullName: ConduitNet.IUser.Apply(ConduitNet.IUser)
+  nameWithType: IUser.Apply(IUser)
+- uid: ConduitNet.IUser.Apply*
+  name: Apply
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Apply_
+  commentId: Overload:ConduitNet.IUser.Apply
+  isSpec: "True"
+  fullName: ConduitNet.IUser.Apply
+  nameWithType: IUser.Apply
+- uid: ConduitNet.IUser.Equals(ConduitNet.IUser)
+  name: Equals(IUser)
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Equals_ConduitNet_IUser_
+  commentId: M:ConduitNet.IUser.Equals(ConduitNet.IUser)
+  fullName: ConduitNet.IUser.Equals(ConduitNet.IUser)
+  nameWithType: IUser.Equals(IUser)
+- uid: ConduitNet.IUser.Equals*
+  name: Equals
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Equals_
+  commentId: Overload:ConduitNet.IUser.Equals
+  isSpec: "True"
+  fullName: ConduitNet.IUser.Equals
+  nameWithType: IUser.Equals
+- uid: ConduitNet.IUser.HostedLobbyId
+  name: HostedLobbyId
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_HostedLobbyId
+  commentId: P:ConduitNet.IUser.HostedLobbyId
+  fullName: ConduitNet.IUser.HostedLobbyId
+  nameWithType: IUser.HostedLobbyId
+- uid: ConduitNet.IUser.HostedLobbyId*
+  name: HostedLobbyId
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_HostedLobbyId_
+  commentId: Overload:ConduitNet.IUser.HostedLobbyId
+  isSpec: "True"
+  fullName: ConduitNet.IUser.HostedLobbyId
+  nameWithType: IUser.HostedLobbyId
+- uid: ConduitNet.IUser.Id
+  name: Id
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Id
+  commentId: P:ConduitNet.IUser.Id
+  fullName: ConduitNet.IUser.Id
+  nameWithType: IUser.Id
+- uid: ConduitNet.IUser.Id*
+  name: Id
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_Id_
+  commentId: Overload:ConduitNet.IUser.Id
+  isSpec: "True"
+  fullName: ConduitNet.IUser.Id
+  nameWithType: IUser.Id
+- uid: ConduitNet.IUser.JoinedLobbyId
+  name: JoinedLobbyId
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_JoinedLobbyId
+  commentId: P:ConduitNet.IUser.JoinedLobbyId
+  fullName: ConduitNet.IUser.JoinedLobbyId
+  nameWithType: IUser.JoinedLobbyId
+- uid: ConduitNet.IUser.JoinedLobbyId*
+  name: JoinedLobbyId
+  href: api/ConduitNet.IUser.html#ConduitNet_IUser_JoinedLobbyId_
+  commentId: Overload:ConduitNet.IUser.JoinedLobbyId
+  isSpec: "True"
+  fullName: ConduitNet.IUser.JoinedLobbyId
+  nameWithType: IUser.JoinedLobbyId
+- uid: ConduitNet.IUserService
+  name: IUserService
+  href: api/ConduitNet.IUserService.html
+  commentId: T:ConduitNet.IUserService
+  fullName: ConduitNet.IUserService
+  nameWithType: IUserService
+- uid: ConduitNet.IUserService.ApplyAccountState*
+  name: ApplyAccountState
+  href: api/ConduitNet.IUserService.html#ConduitNet_IUserService_ApplyAccountState_
+  commentId: Overload:ConduitNet.IUserService.ApplyAccountState
+  isSpec: "True"
+  fullName: ConduitNet.IUserService.ApplyAccountState
+  nameWithType: IUserService.ApplyAccountState
+- uid: ConduitNet.IUserService.ApplyAccountState``1(ConduitNet.IUser,``0)
+  name: ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  href: api/ConduitNet.IUserService.html#ConduitNet_IUserService_ApplyAccountState__1_ConduitNet_IUser___0_
+  commentId: M:ConduitNet.IUserService.ApplyAccountState``1(ConduitNet.IUser,``0)
+  name.vb: ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+  fullName: ConduitNet.IUserService.ApplyAccountState<TAccountStatePatch>(ConduitNet.IUser, TAccountStatePatch)
+  fullName.vb: ConduitNet.IUserService.ApplyAccountState(Of TAccountStatePatch)(ConduitNet.IUser, TAccountStatePatch)
+  nameWithType: IUserService.ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  nameWithType.vb: IUserService.ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+- uid: ConduitNet.IUserService.Fetch(ConduitNet.IUser,System.Action)
+  name: Fetch(IUser, Action)
+  href: api/ConduitNet.IUserService.html#ConduitNet_IUserService_Fetch_ConduitNet_IUser_System_Action_
+  commentId: M:ConduitNet.IUserService.Fetch(ConduitNet.IUser,System.Action)
+  fullName: ConduitNet.IUserService.Fetch(ConduitNet.IUser, System.Action)
+  nameWithType: IUserService.Fetch(IUser, Action)
+- uid: ConduitNet.IUserService.Fetch*
+  name: Fetch
+  href: api/ConduitNet.IUserService.html#ConduitNet_IUserService_Fetch_
+  commentId: Overload:ConduitNet.IUserService.Fetch
+  isSpec: "True"
+  fullName: ConduitNet.IUserService.Fetch
+  nameWithType: IUserService.Fetch
+- uid: ConduitNet.LobbyExtension
+  name: LobbyExtension
+  href: api/ConduitNet.LobbyExtension.html
+  commentId: T:ConduitNet.LobbyExtension
+  fullName: ConduitNet.LobbyExtension
+  nameWithType: LobbyExtension
+- uid: ConduitNet.LobbyExtension.As*
+  name: As
+  href: api/ConduitNet.LobbyExtension.html#ConduitNet_LobbyExtension_As_
+  commentId: Overload:ConduitNet.LobbyExtension.As
+  isSpec: "True"
+  fullName: ConduitNet.LobbyExtension.As
+  nameWithType: LobbyExtension.As
+- uid: ConduitNet.LobbyExtension.As``1(ConduitNet.ILobby)
+  name: As<TLobbyState>(ILobby)
+  href: api/ConduitNet.LobbyExtension.html#ConduitNet_LobbyExtension_As__1_ConduitNet_ILobby_
+  commentId: M:ConduitNet.LobbyExtension.As``1(ConduitNet.ILobby)
+  name.vb: As(Of TLobbyState)(ILobby)
+  fullName: ConduitNet.LobbyExtension.As<TLobbyState>(ConduitNet.ILobby)
+  fullName.vb: ConduitNet.LobbyExtension.As(Of TLobbyState)(ConduitNet.ILobby)
+  nameWithType: LobbyExtension.As<TLobbyState>(ILobby)
+  nameWithType.vb: LobbyExtension.As(Of TLobbyState)(ILobby)
+- uid: ConduitNet.LobbyExtension.TryCast*
+  name: TryCast
+  href: api/ConduitNet.LobbyExtension.html#ConduitNet_LobbyExtension_TryCast_
+  commentId: Overload:ConduitNet.LobbyExtension.TryCast
+  isSpec: "True"
+  fullName: ConduitNet.LobbyExtension.TryCast
+  nameWithType: LobbyExtension.TryCast
+- uid: ConduitNet.LobbyExtension.TryCast``1(ConduitNet.ILobby,ConduitNet.Lobby{``0}@)
+  name: TryCast<TLobbyState>(ILobby, out Lobby<TLobbyState>)
+  href: api/ConduitNet.LobbyExtension.html#ConduitNet_LobbyExtension_TryCast__1_ConduitNet_ILobby_ConduitNet_Lobby___0___
+  commentId: M:ConduitNet.LobbyExtension.TryCast``1(ConduitNet.ILobby,ConduitNet.Lobby{``0}@)
+  name.vb: TryCast(Of TLobbyState)(ILobby, Lobby(Of TLobbyState))
+  fullName: ConduitNet.LobbyExtension.TryCast<TLobbyState>(ConduitNet.ILobby, out ConduitNet.Lobby<TLobbyState>)
+  fullName.vb: ConduitNet.LobbyExtension.TryCast(Of TLobbyState)(ConduitNet.ILobby, ConduitNet.Lobby(Of TLobbyState))
+  nameWithType: LobbyExtension.TryCast<TLobbyState>(ILobby, out Lobby<TLobbyState>)
+  nameWithType.vb: LobbyExtension.TryCast(Of TLobbyState)(ILobby, Lobby(Of TLobbyState))
+- uid: ConduitNet.LobbyService`3
+  name: LobbyService<TLobbyState, TUserProfile, TAccountState>
+  href: api/ConduitNet.LobbyService-3.html
+  commentId: T:ConduitNet.LobbyService`3
+  name.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState)
+- uid: ConduitNet.LobbyService`3.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  name: ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_ApplyMetadata_ConduitNet_ILobby_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__
+  commentId: M:ConduitNet.LobbyService`3.ApplyMetadata(ConduitNet.ILobby,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})
+  name.vb: ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyMetadata(ConduitNet.ILobby, string, bool?, bool?, int?)
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyMetadata(ConduitNet.ILobby, String, Boolean?, Boolean?, Integer?)
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyMetadata(ILobby, string, bool?, bool?, int?)
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyMetadata(ILobby, String, Boolean?, Boolean?, Integer?)
+- uid: ConduitNet.LobbyService`3.ApplyMetadata*
+  name: ApplyMetadata
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_ApplyMetadata_
+  commentId: Overload:ConduitNet.LobbyService`3.ApplyMetadata
+  isSpec: "True"
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyMetadata
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyMetadata
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyMetadata
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyMetadata
+- uid: ConduitNet.LobbyService`3.ApplyState*
+  name: ApplyState
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_ApplyState_
+  commentId: Overload:ConduitNet.LobbyService`3.ApplyState
+  isSpec: "True"
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyState
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyState
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyState
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyState
+- uid: ConduitNet.LobbyService`3.ApplyState``1(ConduitNet.ILobby,``0)
+  name: ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_ApplyState__1_ConduitNet_ILobby___0_
+  commentId: M:ConduitNet.LobbyService`3.ApplyState``1(ConduitNet.ILobby,``0)
+  name.vb: ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyState<TLobbyStatePatch>(ConduitNet.ILobby, TLobbyStatePatch)
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyState(Of TLobbyStatePatch)(ConduitNet.ILobby, TLobbyStatePatch)
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.ApplyState<TLobbyStatePatch>(ILobby, TLobbyStatePatch)
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).ApplyState(Of TLobbyStatePatch)(ILobby, TLobbyStatePatch)
+- uid: ConduitNet.LobbyService`3.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_Deserialize_System_String_
+  commentId: M:ConduitNet.LobbyService`3.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.Deserialize(string)
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).Deserialize(String)
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.Deserialize(string)
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).Deserialize(String)
+- uid: ConduitNet.LobbyService`3.Deserialize*
+  name: Deserialize
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_Deserialize_
+  commentId: Overload:ConduitNet.LobbyService`3.Deserialize
+  isSpec: "True"
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.Deserialize
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).Deserialize
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.Deserialize
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).Deserialize
+- uid: ConduitNet.LobbyService`3.Fetch(ConduitNet.ILobby,System.Action)
+  name: Fetch(ILobby, Action)
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_Fetch_ConduitNet_ILobby_System_Action_
+  commentId: M:ConduitNet.LobbyService`3.Fetch(ConduitNet.ILobby,System.Action)
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.Fetch(ConduitNet.ILobby, System.Action)
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).Fetch(ConduitNet.ILobby, System.Action)
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.Fetch(ILobby, Action)
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).Fetch(ILobby, Action)
+- uid: ConduitNet.LobbyService`3.Fetch*
+  name: Fetch
+  href: api/ConduitNet.LobbyService-3.html#ConduitNet_LobbyService_3_Fetch_
+  commentId: Overload:ConduitNet.LobbyService`3.Fetch
+  isSpec: "True"
+  fullName: ConduitNet.LobbyService<TLobbyState, TUserProfile, TAccountState>.Fetch
+  fullName.vb: ConduitNet.LobbyService(Of TLobbyState, TUserProfile, TAccountState).Fetch
+  nameWithType: LobbyService<TLobbyState, TUserProfile, TAccountState>.Fetch
+  nameWithType.vb: LobbyService(Of TLobbyState, TUserProfile, TAccountState).Fetch
+- uid: ConduitNet.Lobby`1
+  name: Lobby<TLobbyState>
+  href: api/ConduitNet.Lobby-1.html
+  commentId: T:ConduitNet.Lobby`1
+  name.vb: Lobby(Of TLobbyState)
+  fullName: ConduitNet.Lobby<TLobbyState>
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState)
+  nameWithType: Lobby<TLobbyState>
+  nameWithType.vb: Lobby(Of TLobbyState)
+- uid: ConduitNet.Lobby`1.Apply(ConduitNet.ILobby)
+  name: Apply(ILobby)
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Apply_ConduitNet_ILobby_
+  commentId: M:ConduitNet.Lobby`1.Apply(ConduitNet.ILobby)
+  fullName: ConduitNet.Lobby<TLobbyState>.Apply(ConduitNet.ILobby)
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Apply(ConduitNet.ILobby)
+  nameWithType: Lobby<TLobbyState>.Apply(ILobby)
+  nameWithType.vb: Lobby(Of TLobbyState).Apply(ILobby)
+- uid: ConduitNet.Lobby`1.Apply*
+  name: Apply
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Apply_
+  commentId: Overload:ConduitNet.Lobby`1.Apply
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.Apply
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Apply
+  nameWithType: Lobby<TLobbyState>.Apply
+  nameWithType.vb: Lobby(Of TLobbyState).Apply
+- uid: ConduitNet.Lobby`1.CreatedAt
+  name: CreatedAt
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_CreatedAt
+  commentId: P:ConduitNet.Lobby`1.CreatedAt
+  fullName: ConduitNet.Lobby<TLobbyState>.CreatedAt
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).CreatedAt
+  nameWithType: Lobby<TLobbyState>.CreatedAt
+  nameWithType.vb: Lobby(Of TLobbyState).CreatedAt
+- uid: ConduitNet.Lobby`1.CreatedAt*
+  name: CreatedAt
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_CreatedAt_
+  commentId: Overload:ConduitNet.Lobby`1.CreatedAt
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.CreatedAt
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).CreatedAt
+  nameWithType: Lobby<TLobbyState>.CreatedAt
+  nameWithType.vb: Lobby(Of TLobbyState).CreatedAt
+- uid: ConduitNet.Lobby`1.CurrentPlayers
+  name: CurrentPlayers
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_CurrentPlayers
+  commentId: P:ConduitNet.Lobby`1.CurrentPlayers
+  fullName: ConduitNet.Lobby<TLobbyState>.CurrentPlayers
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).CurrentPlayers
+  nameWithType: Lobby<TLobbyState>.CurrentPlayers
+  nameWithType.vb: Lobby(Of TLobbyState).CurrentPlayers
+- uid: ConduitNet.Lobby`1.CurrentPlayers*
+  name: CurrentPlayers
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_CurrentPlayers_
+  commentId: Overload:ConduitNet.Lobby`1.CurrentPlayers
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.CurrentPlayers
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).CurrentPlayers
+  nameWithType: Lobby<TLobbyState>.CurrentPlayers
+  nameWithType.vb: Lobby(Of TLobbyState).CurrentPlayers
+- uid: ConduitNet.Lobby`1.FromJson*
+  name: FromJson
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_FromJson_
+  commentId: Overload:ConduitNet.Lobby`1.FromJson
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.FromJson
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).FromJson
+  nameWithType: Lobby<TLobbyState>.FromJson
+  nameWithType.vb: Lobby(Of TLobbyState).FromJson
+- uid: ConduitNet.Lobby`1.FromJson``2(System.String)
+  name: FromJson<TUserProfile, TAccountState>(string)
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_FromJson__2_System_String_
+  commentId: M:ConduitNet.Lobby`1.FromJson``2(System.String)
+  name.vb: FromJson(Of TUserProfile, TAccountState)(String)
+  fullName: ConduitNet.Lobby<TLobbyState>.FromJson<TUserProfile, TAccountState>(string)
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).FromJson(Of TUserProfile, TAccountState)(String)
+  nameWithType: Lobby<TLobbyState>.FromJson<TUserProfile, TAccountState>(string)
+  nameWithType.vb: Lobby(Of TLobbyState).FromJson(Of TUserProfile, TAccountState)(String)
+- uid: ConduitNet.Lobby`1.Host
+  name: Host
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Host
+  commentId: P:ConduitNet.Lobby`1.Host
+  fullName: ConduitNet.Lobby<TLobbyState>.Host
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Host
+  nameWithType: Lobby<TLobbyState>.Host
+  nameWithType.vb: Lobby(Of TLobbyState).Host
+- uid: ConduitNet.Lobby`1.Host*
+  name: Host
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Host_
+  commentId: Overload:ConduitNet.Lobby`1.Host
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.Host
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Host
+  nameWithType: Lobby<TLobbyState>.Host
+  nameWithType.vb: Lobby(Of TLobbyState).Host
+- uid: ConduitNet.Lobby`1.HostId
+  name: HostId
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_HostId
+  commentId: P:ConduitNet.Lobby`1.HostId
+  fullName: ConduitNet.Lobby<TLobbyState>.HostId
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).HostId
+  nameWithType: Lobby<TLobbyState>.HostId
+  nameWithType.vb: Lobby(Of TLobbyState).HostId
+- uid: ConduitNet.Lobby`1.HostId*
+  name: HostId
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_HostId_
+  commentId: Overload:ConduitNet.Lobby`1.HostId
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.HostId
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).HostId
+  nameWithType: Lobby<TLobbyState>.HostId
+  nameWithType.vb: Lobby(Of TLobbyState).HostId
+- uid: ConduitNet.Lobby`1.Id
+  name: Id
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Id
+  commentId: P:ConduitNet.Lobby`1.Id
+  fullName: ConduitNet.Lobby<TLobbyState>.Id
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Id
+  nameWithType: Lobby<TLobbyState>.Id
+  nameWithType.vb: Lobby(Of TLobbyState).Id
+- uid: ConduitNet.Lobby`1.Id*
+  name: Id
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Id_
+  commentId: Overload:ConduitNet.Lobby`1.Id
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.Id
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Id
+  nameWithType: Lobby<TLobbyState>.Id
+  nameWithType.vb: Lobby(Of TLobbyState).Id
+- uid: ConduitNet.Lobby`1.IsPlaying
+  name: IsPlaying
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_IsPlaying
+  commentId: P:ConduitNet.Lobby`1.IsPlaying
+  fullName: ConduitNet.Lobby<TLobbyState>.IsPlaying
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).IsPlaying
+  nameWithType: Lobby<TLobbyState>.IsPlaying
+  nameWithType.vb: Lobby(Of TLobbyState).IsPlaying
+- uid: ConduitNet.Lobby`1.IsPlaying*
+  name: IsPlaying
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_IsPlaying_
+  commentId: Overload:ConduitNet.Lobby`1.IsPlaying
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.IsPlaying
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).IsPlaying
+  nameWithType: Lobby<TLobbyState>.IsPlaying
+  nameWithType.vb: Lobby(Of TLobbyState).IsPlaying
+- uid: ConduitNet.Lobby`1.IsPrivate
+  name: IsPrivate
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_IsPrivate
+  commentId: P:ConduitNet.Lobby`1.IsPrivate
+  fullName: ConduitNet.Lobby<TLobbyState>.IsPrivate
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).IsPrivate
+  nameWithType: Lobby<TLobbyState>.IsPrivate
+  nameWithType.vb: Lobby(Of TLobbyState).IsPrivate
+- uid: ConduitNet.Lobby`1.IsPrivate*
+  name: IsPrivate
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_IsPrivate_
+  commentId: Overload:ConduitNet.Lobby`1.IsPrivate
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.IsPrivate
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).IsPrivate
+  nameWithType: Lobby<TLobbyState>.IsPrivate
+  nameWithType.vb: Lobby(Of TLobbyState).IsPrivate
+- uid: ConduitNet.Lobby`1.MaxPlayers
+  name: MaxPlayers
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_MaxPlayers
+  commentId: P:ConduitNet.Lobby`1.MaxPlayers
+  fullName: ConduitNet.Lobby<TLobbyState>.MaxPlayers
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).MaxPlayers
+  nameWithType: Lobby<TLobbyState>.MaxPlayers
+  nameWithType.vb: Lobby(Of TLobbyState).MaxPlayers
+- uid: ConduitNet.Lobby`1.MaxPlayers*
+  name: MaxPlayers
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_MaxPlayers_
+  commentId: Overload:ConduitNet.Lobby`1.MaxPlayers
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.MaxPlayers
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).MaxPlayers
+  nameWithType: Lobby<TLobbyState>.MaxPlayers
+  nameWithType.vb: Lobby(Of TLobbyState).MaxPlayers
+- uid: ConduitNet.Lobby`1.Members
+  name: Members
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Members
+  commentId: P:ConduitNet.Lobby`1.Members
+  fullName: ConduitNet.Lobby<TLobbyState>.Members
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Members
+  nameWithType: Lobby<TLobbyState>.Members
+  nameWithType.vb: Lobby(Of TLobbyState).Members
+- uid: ConduitNet.Lobby`1.Members*
+  name: Members
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Members_
+  commentId: Overload:ConduitNet.Lobby`1.Members
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.Members
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Members
+  nameWithType: Lobby<TLobbyState>.Members
+  nameWithType.vb: Lobby(Of TLobbyState).Members
+- uid: ConduitNet.Lobby`1.Name
+  name: Name
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Name
+  commentId: P:ConduitNet.Lobby`1.Name
+  fullName: ConduitNet.Lobby<TLobbyState>.Name
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Name
+  nameWithType: Lobby<TLobbyState>.Name
+  nameWithType.vb: Lobby(Of TLobbyState).Name
+- uid: ConduitNet.Lobby`1.Name*
+  name: Name
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_Name_
+  commentId: Overload:ConduitNet.Lobby`1.Name
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.Name
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).Name
+  nameWithType: Lobby<TLobbyState>.Name
+  nameWithType.vb: Lobby(Of TLobbyState).Name
+- uid: ConduitNet.Lobby`1.State
+  name: State
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_State
+  commentId: P:ConduitNet.Lobby`1.State
+  fullName: ConduitNet.Lobby<TLobbyState>.State
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).State
+  nameWithType: Lobby<TLobbyState>.State
+  nameWithType.vb: Lobby(Of TLobbyState).State
+- uid: ConduitNet.Lobby`1.State*
+  name: State
+  href: api/ConduitNet.Lobby-1.html#ConduitNet_Lobby_1_State_
+  commentId: Overload:ConduitNet.Lobby`1.State
+  isSpec: "True"
+  fullName: ConduitNet.Lobby<TLobbyState>.State
+  fullName.vb: ConduitNet.Lobby(Of TLobbyState).State
+  nameWithType: Lobby<TLobbyState>.State
+  nameWithType.vb: Lobby(Of TLobbyState).State
+- uid: ConduitNet.PacketHandlerAttribute
+  name: PacketHandlerAttribute
+  href: api/ConduitNet.PacketHandlerAttribute.html
+  commentId: T:ConduitNet.PacketHandlerAttribute
+  fullName: ConduitNet.PacketHandlerAttribute
+  nameWithType: PacketHandlerAttribute
+- uid: ConduitNet.PacketHandlerAttribute.#ctor(System.Type)
+  name: PacketHandlerAttribute(Type)
+  href: api/ConduitNet.PacketHandlerAttribute.html#ConduitNet_PacketHandlerAttribute__ctor_System_Type_
+  commentId: M:ConduitNet.PacketHandlerAttribute.#ctor(System.Type)
+  name.vb: New(Type)
+  fullName: ConduitNet.PacketHandlerAttribute.PacketHandlerAttribute(System.Type)
+  fullName.vb: ConduitNet.PacketHandlerAttribute.New(System.Type)
+  nameWithType: PacketHandlerAttribute.PacketHandlerAttribute(Type)
+  nameWithType.vb: PacketHandlerAttribute.New(Type)
+- uid: ConduitNet.PacketHandlerAttribute.#ctor*
+  name: PacketHandlerAttribute
+  href: api/ConduitNet.PacketHandlerAttribute.html#ConduitNet_PacketHandlerAttribute__ctor_
+  commentId: Overload:ConduitNet.PacketHandlerAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.PacketHandlerAttribute.PacketHandlerAttribute
+  fullName.vb: ConduitNet.PacketHandlerAttribute.New
+  nameWithType: PacketHandlerAttribute.PacketHandlerAttribute
+  nameWithType.vb: PacketHandlerAttribute.New
+- uid: ConduitNet.PacketHandlerAttribute.PacketType
+  name: PacketType
+  href: api/ConduitNet.PacketHandlerAttribute.html#ConduitNet_PacketHandlerAttribute_PacketType
+  commentId: P:ConduitNet.PacketHandlerAttribute.PacketType
+  fullName: ConduitNet.PacketHandlerAttribute.PacketType
+  nameWithType: PacketHandlerAttribute.PacketType
+- uid: ConduitNet.PacketHandlerAttribute.PacketType*
+  name: PacketType
+  href: api/ConduitNet.PacketHandlerAttribute.html#ConduitNet_PacketHandlerAttribute_PacketType_
+  commentId: Overload:ConduitNet.PacketHandlerAttribute.PacketType
+  isSpec: "True"
+  fullName: ConduitNet.PacketHandlerAttribute.PacketType
+  nameWithType: PacketHandlerAttribute.PacketType
+- uid: ConduitNet.PacketHandler`1
+  name: PacketHandler<T>
+  href: api/ConduitNet.PacketHandler-1.html
+  commentId: T:ConduitNet.PacketHandler`1
+  name.vb: PacketHandler(Of T)
+  fullName: ConduitNet.PacketHandler<T>
+  fullName.vb: ConduitNet.PacketHandler(Of T)
+  nameWithType: PacketHandler<T>
+  nameWithType.vb: PacketHandler(Of T)
+- uid: ConduitNet.Packets
+  name: ConduitNet.Packets
+  href: api/ConduitNet.Packets.html
+  commentId: N:ConduitNet.Packets
+  fullName: ConduitNet.Packets
+  nameWithType: ConduitNet.Packets
+- uid: ConduitNet.Packets.IPacketSerializer
+  name: IPacketSerializer
+  href: api/ConduitNet.Packets.IPacketSerializer.html
+  commentId: T:ConduitNet.Packets.IPacketSerializer
+  fullName: ConduitNet.Packets.IPacketSerializer
+  nameWithType: IPacketSerializer
+- uid: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  name: Deserialize(ReadOnlyMemory<byte>, Type)
+  href: api/ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  name.vb: Deserialize(ReadOnlyMemory(Of Byte), Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory<byte>, System.Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Deserialize(System.ReadOnlyMemory(Of Byte), System.Type)
+  nameWithType: IPacketSerializer.Deserialize(ReadOnlyMemory<byte>, Type)
+  nameWithType.vb: IPacketSerializer.Deserialize(ReadOnlyMemory(Of Byte), Type)
+- uid: ConduitNet.Packets.IPacketSerializer.Deserialize*
+  name: Deserialize
+  href: api/ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Deserialize_
+  commentId: Overload:ConduitNet.Packets.IPacketSerializer.Deserialize
+  isSpec: "True"
+  fullName: ConduitNet.Packets.IPacketSerializer.Deserialize
+  nameWithType: IPacketSerializer.Deserialize
+- uid: ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  name: Serialize(object, Type)
+  href: api/ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_System_Object_System_Type_
+  commentId: M:ConduitNet.Packets.IPacketSerializer.Serialize(System.Object,System.Type)
+  name.vb: Serialize(Object, Type)
+  fullName: ConduitNet.Packets.IPacketSerializer.Serialize(object, System.Type)
+  fullName.vb: ConduitNet.Packets.IPacketSerializer.Serialize(Object, System.Type)
+  nameWithType: IPacketSerializer.Serialize(object, Type)
+  nameWithType.vb: IPacketSerializer.Serialize(Object, Type)
+- uid: ConduitNet.Packets.IPacketSerializer.Serialize*
+  name: Serialize
+  href: api/ConduitNet.Packets.IPacketSerializer.html#ConduitNet_Packets_IPacketSerializer_Serialize_
+  commentId: Overload:ConduitNet.Packets.IPacketSerializer.Serialize
+  isSpec: "True"
+  fullName: ConduitNet.Packets.IPacketSerializer.Serialize
+  nameWithType: IPacketSerializer.Serialize
+- uid: ConduitNet.Packets.JsonPacketSerializer
+  name: JsonPacketSerializer
+  href: api/ConduitNet.Packets.JsonPacketSerializer.html
+  commentId: T:ConduitNet.Packets.JsonPacketSerializer
+  fullName: ConduitNet.Packets.JsonPacketSerializer
+  nameWithType: JsonPacketSerializer
+- uid: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  name: Deserialize(ReadOnlyMemory<byte>, Type)
+  href: api/ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Deserialize_System_ReadOnlyMemory_System_Byte__System_Type_
+  commentId: M:ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory{System.Byte},System.Type)
+  name.vb: Deserialize(ReadOnlyMemory(Of Byte), Type)
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory<byte>, System.Type)
+  fullName.vb: ConduitNet.Packets.JsonPacketSerializer.Deserialize(System.ReadOnlyMemory(Of Byte), System.Type)
+  nameWithType: JsonPacketSerializer.Deserialize(ReadOnlyMemory<byte>, Type)
+  nameWithType.vb: JsonPacketSerializer.Deserialize(ReadOnlyMemory(Of Byte), Type)
+- uid: ConduitNet.Packets.JsonPacketSerializer.Deserialize*
+  name: Deserialize
+  href: api/ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Deserialize_
+  commentId: Overload:ConduitNet.Packets.JsonPacketSerializer.Deserialize
+  isSpec: "True"
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Deserialize
+  nameWithType: JsonPacketSerializer.Deserialize
+- uid: ConduitNet.Packets.JsonPacketSerializer.Serialize(System.Object,System.Type)
+  name: Serialize(object, Type)
+  href: api/ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Serialize_System_Object_System_Type_
+  commentId: M:ConduitNet.Packets.JsonPacketSerializer.Serialize(System.Object,System.Type)
+  name.vb: Serialize(Object, Type)
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Serialize(object, System.Type)
+  fullName.vb: ConduitNet.Packets.JsonPacketSerializer.Serialize(Object, System.Type)
+  nameWithType: JsonPacketSerializer.Serialize(object, Type)
+  nameWithType.vb: JsonPacketSerializer.Serialize(Object, Type)
+- uid: ConduitNet.Packets.JsonPacketSerializer.Serialize*
+  name: Serialize
+  href: api/ConduitNet.Packets.JsonPacketSerializer.html#ConduitNet_Packets_JsonPacketSerializer_Serialize_
+  commentId: Overload:ConduitNet.Packets.JsonPacketSerializer.Serialize
+  isSpec: "True"
+  fullName: ConduitNet.Packets.JsonPacketSerializer.Serialize
+  nameWithType: JsonPacketSerializer.Serialize
+- uid: ConduitNet.Packets.PacketAttribute
+  name: PacketAttribute
+  href: api/ConduitNet.Packets.PacketAttribute.html
+  commentId: T:ConduitNet.Packets.PacketAttribute
+  fullName: ConduitNet.Packets.PacketAttribute
+  nameWithType: PacketAttribute
+- uid: ConduitNet.Packets.PacketAttribute.#ctor(System.String)
+  name: PacketAttribute(string)
+  href: api/ConduitNet.Packets.PacketAttribute.html#ConduitNet_Packets_PacketAttribute__ctor_System_String_
+  commentId: M:ConduitNet.Packets.PacketAttribute.#ctor(System.String)
+  name.vb: New(String)
+  fullName: ConduitNet.Packets.PacketAttribute.PacketAttribute(string)
+  fullName.vb: ConduitNet.Packets.PacketAttribute.New(String)
+  nameWithType: PacketAttribute.PacketAttribute(string)
+  nameWithType.vb: PacketAttribute.New(String)
+- uid: ConduitNet.Packets.PacketAttribute.#ctor*
+  name: PacketAttribute
+  href: api/ConduitNet.Packets.PacketAttribute.html#ConduitNet_Packets_PacketAttribute__ctor_
+  commentId: Overload:ConduitNet.Packets.PacketAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.Packets.PacketAttribute.PacketAttribute
+  fullName.vb: ConduitNet.Packets.PacketAttribute.New
+  nameWithType: PacketAttribute.PacketAttribute
+  nameWithType.vb: PacketAttribute.New
+- uid: ConduitNet.Packets.PacketAttribute.Id
+  name: Id
+  href: api/ConduitNet.Packets.PacketAttribute.html#ConduitNet_Packets_PacketAttribute_Id
+  commentId: P:ConduitNet.Packets.PacketAttribute.Id
+  fullName: ConduitNet.Packets.PacketAttribute.Id
+  nameWithType: PacketAttribute.Id
+- uid: ConduitNet.Packets.PacketAttribute.Id*
+  name: Id
+  href: api/ConduitNet.Packets.PacketAttribute.html#ConduitNet_Packets_PacketAttribute_Id_
+  commentId: Overload:ConduitNet.Packets.PacketAttribute.Id
+  isSpec: "True"
+  fullName: ConduitNet.Packets.PacketAttribute.Id
+  nameWithType: PacketAttribute.Id
+- uid: ConduitNet.Packets.PacketRegistry
+  name: PacketRegistry
+  href: api/ConduitNet.Packets.PacketRegistry.html
+  commentId: T:ConduitNet.Packets.PacketRegistry
+  fullName: ConduitNet.Packets.PacketRegistry
+  nameWithType: PacketRegistry
+- uid: ConduitNet.Packets.PacketRegistry.GetPacketId(System.Type)
+  name: GetPacketId(Type)
+  href: api/ConduitNet.Packets.PacketRegistry.html#ConduitNet_Packets_PacketRegistry_GetPacketId_System_Type_
+  commentId: M:ConduitNet.Packets.PacketRegistry.GetPacketId(System.Type)
+  fullName: ConduitNet.Packets.PacketRegistry.GetPacketId(System.Type)
+  nameWithType: PacketRegistry.GetPacketId(Type)
+- uid: ConduitNet.Packets.PacketRegistry.GetPacketId*
+  name: GetPacketId
+  href: api/ConduitNet.Packets.PacketRegistry.html#ConduitNet_Packets_PacketRegistry_GetPacketId_
+  commentId: Overload:ConduitNet.Packets.PacketRegistry.GetPacketId
+  isSpec: "True"
+  fullName: ConduitNet.Packets.PacketRegistry.GetPacketId
+  nameWithType: PacketRegistry.GetPacketId
+- uid: ConduitNet.Packets.PacketRegistry.GetPacketType(System.String)
+  name: GetPacketType(string)
+  href: api/ConduitNet.Packets.PacketRegistry.html#ConduitNet_Packets_PacketRegistry_GetPacketType_System_String_
+  commentId: M:ConduitNet.Packets.PacketRegistry.GetPacketType(System.String)
+  name.vb: GetPacketType(String)
+  fullName: ConduitNet.Packets.PacketRegistry.GetPacketType(string)
+  fullName.vb: ConduitNet.Packets.PacketRegistry.GetPacketType(String)
+  nameWithType: PacketRegistry.GetPacketType(string)
+  nameWithType.vb: PacketRegistry.GetPacketType(String)
+- uid: ConduitNet.Packets.PacketRegistry.GetPacketType*
+  name: GetPacketType
+  href: api/ConduitNet.Packets.PacketRegistry.html#ConduitNet_Packets_PacketRegistry_GetPacketType_
+  commentId: Overload:ConduitNet.Packets.PacketRegistry.GetPacketType
+  isSpec: "True"
+  fullName: ConduitNet.Packets.PacketRegistry.GetPacketType
+  nameWithType: PacketRegistry.GetPacketType
+- uid: ConduitNet.RemoteException
+  name: RemoteException
+  href: api/ConduitNet.RemoteException.html
+  commentId: T:ConduitNet.RemoteException
+  fullName: ConduitNet.RemoteException
+  nameWithType: RemoteException
+- uid: ConduitNet.RemoteException.#ctor(ConduitNet.IUser,System.Exception)
+  name: RemoteException(IUser, Exception)
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException__ctor_ConduitNet_IUser_System_Exception_
+  commentId: M:ConduitNet.RemoteException.#ctor(ConduitNet.IUser,System.Exception)
+  name.vb: New(IUser, Exception)
+  fullName: ConduitNet.RemoteException.RemoteException(ConduitNet.IUser, System.Exception)
+  fullName.vb: ConduitNet.RemoteException.New(ConduitNet.IUser, System.Exception)
+  nameWithType: RemoteException.RemoteException(IUser, Exception)
+  nameWithType.vb: RemoteException.New(IUser, Exception)
+- uid: ConduitNet.RemoteException.#ctor(ConduitNet.IUser,System.String,System.String)
+  name: RemoteException(IUser, string, string)
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException__ctor_ConduitNet_IUser_System_String_System_String_
+  commentId: M:ConduitNet.RemoteException.#ctor(ConduitNet.IUser,System.String,System.String)
+  name.vb: New(IUser, String, String)
+  fullName: ConduitNet.RemoteException.RemoteException(ConduitNet.IUser, string, string)
+  fullName.vb: ConduitNet.RemoteException.New(ConduitNet.IUser, String, String)
+  nameWithType: RemoteException.RemoteException(IUser, string, string)
+  nameWithType.vb: RemoteException.New(IUser, String, String)
+- uid: ConduitNet.RemoteException.#ctor*
+  name: RemoteException
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException__ctor_
+  commentId: Overload:ConduitNet.RemoteException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.RemoteException.RemoteException
+  fullName.vb: ConduitNet.RemoteException.New
+  nameWithType: RemoteException.RemoteException
+  nameWithType.vb: RemoteException.New
+- uid: ConduitNet.RemoteException.RemoteTypeName
+  name: RemoteTypeName
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException_RemoteTypeName
+  commentId: P:ConduitNet.RemoteException.RemoteTypeName
+  fullName: ConduitNet.RemoteException.RemoteTypeName
+  nameWithType: RemoteException.RemoteTypeName
+- uid: ConduitNet.RemoteException.RemoteTypeName*
+  name: RemoteTypeName
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException_RemoteTypeName_
+  commentId: Overload:ConduitNet.RemoteException.RemoteTypeName
+  isSpec: "True"
+  fullName: ConduitNet.RemoteException.RemoteTypeName
+  nameWithType: RemoteException.RemoteTypeName
+- uid: ConduitNet.RemoteException.Sender
+  name: Sender
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException_Sender
+  commentId: P:ConduitNet.RemoteException.Sender
+  fullName: ConduitNet.RemoteException.Sender
+  nameWithType: RemoteException.Sender
+- uid: ConduitNet.RemoteException.Sender*
+  name: Sender
+  href: api/ConduitNet.RemoteException.html#ConduitNet_RemoteException_Sender_
+  commentId: Overload:ConduitNet.RemoteException.Sender
+  isSpec: "True"
+  fullName: ConduitNet.RemoteException.Sender
+  nameWithType: RemoteException.Sender
+- uid: ConduitNet.SendOption
+  name: SendOption
+  href: api/ConduitNet.SendOption.html
+  commentId: T:ConduitNet.SendOption
+  fullName: ConduitNet.SendOption
+  nameWithType: SendOption
+- uid: ConduitNet.SendOption.OrderedReliable
+  name: OrderedReliable
+  href: api/ConduitNet.SendOption.html#ConduitNet_SendOption_OrderedReliable
+  commentId: F:ConduitNet.SendOption.OrderedReliable
+  fullName: ConduitNet.SendOption.OrderedReliable
+  nameWithType: SendOption.OrderedReliable
+- uid: ConduitNet.SendOption.OrderedUnreliable
+  name: OrderedUnreliable
+  href: api/ConduitNet.SendOption.html#ConduitNet_SendOption_OrderedUnreliable
+  commentId: F:ConduitNet.SendOption.OrderedUnreliable
+  fullName: ConduitNet.SendOption.OrderedUnreliable
+  nameWithType: SendOption.OrderedUnreliable
+- uid: ConduitNet.SendOption.UnorderedReliable
+  name: UnorderedReliable
+  href: api/ConduitNet.SendOption.html#ConduitNet_SendOption_UnorderedReliable
+  commentId: F:ConduitNet.SendOption.UnorderedReliable
+  fullName: ConduitNet.SendOption.UnorderedReliable
+  nameWithType: SendOption.UnorderedReliable
+- uid: ConduitNet.SendOption.UnorderedUnreliable
+  name: UnorderedUnreliable
+  href: api/ConduitNet.SendOption.html#ConduitNet_SendOption_UnorderedUnreliable
+  commentId: F:ConduitNet.SendOption.UnorderedUnreliable
+  fullName: ConduitNet.SendOption.UnorderedUnreliable
+  nameWithType: SendOption.UnorderedUnreliable
+- uid: ConduitNet.SignalHandler
+  name: SignalHandler
+  href: api/ConduitNet.SignalHandler.html
+  commentId: T:ConduitNet.SignalHandler
+  fullName: ConduitNet.SignalHandler
+  nameWithType: SignalHandler
+- uid: ConduitNet.SignalHandlerAttribute
+  name: SignalHandlerAttribute
+  href: api/ConduitNet.SignalHandlerAttribute.html
+  commentId: T:ConduitNet.SignalHandlerAttribute
+  fullName: ConduitNet.SignalHandlerAttribute
+  nameWithType: SignalHandlerAttribute
+- uid: ConduitNet.SignalHandlerAttribute.#ctor(System.String)
+  name: SignalHandlerAttribute(string)
+  href: api/ConduitNet.SignalHandlerAttribute.html#ConduitNet_SignalHandlerAttribute__ctor_System_String_
+  commentId: M:ConduitNet.SignalHandlerAttribute.#ctor(System.String)
+  name.vb: New(String)
+  fullName: ConduitNet.SignalHandlerAttribute.SignalHandlerAttribute(string)
+  fullName.vb: ConduitNet.SignalHandlerAttribute.New(String)
+  nameWithType: SignalHandlerAttribute.SignalHandlerAttribute(string)
+  nameWithType.vb: SignalHandlerAttribute.New(String)
+- uid: ConduitNet.SignalHandlerAttribute.#ctor*
+  name: SignalHandlerAttribute
+  href: api/ConduitNet.SignalHandlerAttribute.html#ConduitNet_SignalHandlerAttribute__ctor_
+  commentId: Overload:ConduitNet.SignalHandlerAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.SignalHandlerAttribute.SignalHandlerAttribute
+  fullName.vb: ConduitNet.SignalHandlerAttribute.New
+  nameWithType: SignalHandlerAttribute.SignalHandlerAttribute
+  nameWithType.vb: SignalHandlerAttribute.New
+- uid: ConduitNet.SignalHandlerAttribute.SignalName
+  name: SignalName
+  href: api/ConduitNet.SignalHandlerAttribute.html#ConduitNet_SignalHandlerAttribute_SignalName
+  commentId: P:ConduitNet.SignalHandlerAttribute.SignalName
+  fullName: ConduitNet.SignalHandlerAttribute.SignalName
+  nameWithType: SignalHandlerAttribute.SignalName
+- uid: ConduitNet.SignalHandlerAttribute.SignalName*
+  name: SignalName
+  href: api/ConduitNet.SignalHandlerAttribute.html#ConduitNet_SignalHandlerAttribute_SignalName_
+  commentId: Overload:ConduitNet.SignalHandlerAttribute.SignalName
+  isSpec: "True"
+  fullName: ConduitNet.SignalHandlerAttribute.SignalName
+  nameWithType: SignalHandlerAttribute.SignalName
+- uid: ConduitNet.StunServer
+  name: StunServer
+  href: api/ConduitNet.StunServer.html
+  commentId: T:ConduitNet.StunServer
+  fullName: ConduitNet.StunServer
+  nameWithType: StunServer
+- uid: ConduitNet.StunServer.urls
+  name: urls
+  href: api/ConduitNet.StunServer.html#ConduitNet_StunServer_urls
+  commentId: F:ConduitNet.StunServer.urls
+  fullName: ConduitNet.StunServer.urls
+  nameWithType: StunServer.urls
+- uid: ConduitNet.TurnServer
+  name: TurnServer
+  href: api/ConduitNet.TurnServer.html
+  commentId: T:ConduitNet.TurnServer
+  fullName: ConduitNet.TurnServer
+  nameWithType: TurnServer
+- uid: ConduitNet.TurnServer.credential
+  name: credential
+  href: api/ConduitNet.TurnServer.html#ConduitNet_TurnServer_credential
+  commentId: F:ConduitNet.TurnServer.credential
+  fullName: ConduitNet.TurnServer.credential
+  nameWithType: TurnServer.credential
+- uid: ConduitNet.TurnServer.urls
+  name: urls
+  href: api/ConduitNet.TurnServer.html#ConduitNet_TurnServer_urls
+  commentId: F:ConduitNet.TurnServer.urls
+  fullName: ConduitNet.TurnServer.urls
+  nameWithType: TurnServer.urls
+- uid: ConduitNet.TurnServer.username
+  name: username
+  href: api/ConduitNet.TurnServer.html#ConduitNet_TurnServer_username
+  commentId: F:ConduitNet.TurnServer.username
+  fullName: ConduitNet.TurnServer.username
+  nameWithType: TurnServer.username
+- uid: ConduitNet.UserExtension
+  name: UserExtension
+  href: api/ConduitNet.UserExtension.html
+  commentId: T:ConduitNet.UserExtension
+  fullName: ConduitNet.UserExtension
+  nameWithType: UserExtension
+- uid: ConduitNet.UserExtension.As*
+  name: As
+  href: api/ConduitNet.UserExtension.html#ConduitNet_UserExtension_As_
+  commentId: Overload:ConduitNet.UserExtension.As
+  isSpec: "True"
+  fullName: ConduitNet.UserExtension.As
+  nameWithType: UserExtension.As
+- uid: ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  name: As<TUserProfile, TAccountState>(IUser)
+  href: api/ConduitNet.UserExtension.html#ConduitNet_UserExtension_As__2_ConduitNet_IUser_
+  commentId: M:ConduitNet.UserExtension.As``2(ConduitNet.IUser)
+  name.vb: As(Of TUserProfile, TAccountState)(IUser)
+  fullName: ConduitNet.UserExtension.As<TUserProfile, TAccountState>(ConduitNet.IUser)
+  fullName.vb: ConduitNet.UserExtension.As(Of TUserProfile, TAccountState)(ConduitNet.IUser)
+  nameWithType: UserExtension.As<TUserProfile, TAccountState>(IUser)
+  nameWithType.vb: UserExtension.As(Of TUserProfile, TAccountState)(IUser)
+- uid: ConduitNet.UserExtension.TryCast*
+  name: TryCast
+  href: api/ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast_
+  commentId: Overload:ConduitNet.UserExtension.TryCast
+  isSpec: "True"
+  fullName: ConduitNet.UserExtension.TryCast
+  nameWithType: UserExtension.TryCast
+- uid: ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  name: TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  href: api/ConduitNet.UserExtension.html#ConduitNet_UserExtension_TryCast__2_ConduitNet_IUser_ConduitNet_User___0___1___
+  commentId: M:ConduitNet.UserExtension.TryCast``2(ConduitNet.IUser,ConduitNet.User{``0,``1}@)
+  name.vb: TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+  fullName: ConduitNet.UserExtension.TryCast<TUserProfile, TAccountState>(ConduitNet.IUser, out ConduitNet.User<TUserProfile, TAccountState>)
+  fullName.vb: ConduitNet.UserExtension.TryCast(Of TUserProfile, TAccountState)(ConduitNet.IUser, ConduitNet.User(Of TUserProfile, TAccountState))
+  nameWithType: UserExtension.TryCast<TUserProfile, TAccountState>(IUser, out User<TUserProfile, TAccountState>)
+  nameWithType.vb: UserExtension.TryCast(Of TUserProfile, TAccountState)(IUser, User(Of TUserProfile, TAccountState))
+- uid: ConduitNet.UserService`2
+  name: UserService<TUserProfile, TAccountState>
+  href: api/ConduitNet.UserService-2.html
+  commentId: T:ConduitNet.UserService`2
+  name.vb: UserService(Of TUserProfile, TAccountState)
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState)
+  nameWithType: UserService<TUserProfile, TAccountState>
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState)
+- uid: ConduitNet.UserService`2.ApplyAccountState*
+  name: ApplyAccountState
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_ApplyAccountState_
+  commentId: Overload:ConduitNet.UserService`2.ApplyAccountState
+  isSpec: "True"
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.ApplyAccountState
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).ApplyAccountState
+  nameWithType: UserService<TUserProfile, TAccountState>.ApplyAccountState
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).ApplyAccountState
+- uid: ConduitNet.UserService`2.ApplyAccountState``1(ConduitNet.IUser,``0)
+  name: ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_ApplyAccountState__1_ConduitNet_IUser___0_
+  commentId: M:ConduitNet.UserService`2.ApplyAccountState``1(ConduitNet.IUser,``0)
+  name.vb: ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.ApplyAccountState<TAccountStatePatch>(ConduitNet.IUser, TAccountStatePatch)
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).ApplyAccountState(Of TAccountStatePatch)(ConduitNet.IUser, TAccountStatePatch)
+  nameWithType: UserService<TUserProfile, TAccountState>.ApplyAccountState<TAccountStatePatch>(IUser, TAccountStatePatch)
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).ApplyAccountState(Of TAccountStatePatch)(IUser, TAccountStatePatch)
+- uid: ConduitNet.UserService`2.Deserialize(System.String)
+  name: Deserialize(string)
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_Deserialize_System_String_
+  commentId: M:ConduitNet.UserService`2.Deserialize(System.String)
+  name.vb: Deserialize(String)
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.Deserialize(string)
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).Deserialize(String)
+  nameWithType: UserService<TUserProfile, TAccountState>.Deserialize(string)
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).Deserialize(String)
+- uid: ConduitNet.UserService`2.Deserialize*
+  name: Deserialize
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_Deserialize_
+  commentId: Overload:ConduitNet.UserService`2.Deserialize
+  isSpec: "True"
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.Deserialize
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).Deserialize
+  nameWithType: UserService<TUserProfile, TAccountState>.Deserialize
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).Deserialize
+- uid: ConduitNet.UserService`2.Fetch(ConduitNet.IUser,System.Action)
+  name: Fetch(IUser, Action)
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_Fetch_ConduitNet_IUser_System_Action_
+  commentId: M:ConduitNet.UserService`2.Fetch(ConduitNet.IUser,System.Action)
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.Fetch(ConduitNet.IUser, System.Action)
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).Fetch(ConduitNet.IUser, System.Action)
+  nameWithType: UserService<TUserProfile, TAccountState>.Fetch(IUser, Action)
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).Fetch(IUser, Action)
+- uid: ConduitNet.UserService`2.Fetch*
+  name: Fetch
+  href: api/ConduitNet.UserService-2.html#ConduitNet_UserService_2_Fetch_
+  commentId: Overload:ConduitNet.UserService`2.Fetch
+  isSpec: "True"
+  fullName: ConduitNet.UserService<TUserProfile, TAccountState>.Fetch
+  fullName.vb: ConduitNet.UserService(Of TUserProfile, TAccountState).Fetch
+  nameWithType: UserService<TUserProfile, TAccountState>.Fetch
+  nameWithType.vb: UserService(Of TUserProfile, TAccountState).Fetch
+- uid: ConduitNet.User`2
+  name: User<TUserProfile, TAccountState>
+  href: api/ConduitNet.User-2.html
+  commentId: T:ConduitNet.User`2
+  name.vb: User(Of TUserProfile, TAccountState)
+  fullName: ConduitNet.User<TUserProfile, TAccountState>
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState)
+  nameWithType: User<TUserProfile, TAccountState>
+  nameWithType.vb: User(Of TUserProfile, TAccountState)
+- uid: ConduitNet.User`2.Account
+  name: Account
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Account
+  commentId: P:ConduitNet.User`2.Account
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Account
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Account
+  nameWithType: User<TUserProfile, TAccountState>.Account
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Account
+- uid: ConduitNet.User`2.Account*
+  name: Account
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Account_
+  commentId: Overload:ConduitNet.User`2.Account
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Account
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Account
+  nameWithType: User<TUserProfile, TAccountState>.Account
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Account
+- uid: ConduitNet.User`2.Apply(ConduitNet.IUser)
+  name: Apply(IUser)
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Apply_ConduitNet_IUser_
+  commentId: M:ConduitNet.User`2.Apply(ConduitNet.IUser)
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Apply(ConduitNet.IUser)
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Apply(ConduitNet.IUser)
+  nameWithType: User<TUserProfile, TAccountState>.Apply(IUser)
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Apply(IUser)
+- uid: ConduitNet.User`2.Apply*
+  name: Apply
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Apply_
+  commentId: Overload:ConduitNet.User`2.Apply
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Apply
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Apply
+  nameWithType: User<TUserProfile, TAccountState>.Apply
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Apply
+- uid: ConduitNet.User`2.Equals(ConduitNet.IUser)
+  name: Equals(IUser)
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Equals_ConduitNet_IUser_
+  commentId: M:ConduitNet.User`2.Equals(ConduitNet.IUser)
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Equals(ConduitNet.IUser)
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Equals(ConduitNet.IUser)
+  nameWithType: User<TUserProfile, TAccountState>.Equals(IUser)
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Equals(IUser)
+- uid: ConduitNet.User`2.Equals*
+  name: Equals
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Equals_
+  commentId: Overload:ConduitNet.User`2.Equals
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Equals
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Equals
+  nameWithType: User<TUserProfile, TAccountState>.Equals
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Equals
+- uid: ConduitNet.User`2.FromJson(System.String)
+  name: FromJson(string)
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_FromJson_System_String_
+  commentId: M:ConduitNet.User`2.FromJson(System.String)
+  name.vb: FromJson(String)
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.FromJson(string)
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).FromJson(String)
+  nameWithType: User<TUserProfile, TAccountState>.FromJson(string)
+  nameWithType.vb: User(Of TUserProfile, TAccountState).FromJson(String)
+- uid: ConduitNet.User`2.FromJson*
+  name: FromJson
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_FromJson_
+  commentId: Overload:ConduitNet.User`2.FromJson
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.FromJson
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).FromJson
+  nameWithType: User<TUserProfile, TAccountState>.FromJson
+  nameWithType.vb: User(Of TUserProfile, TAccountState).FromJson
+- uid: ConduitNet.User`2.HostedLobbyId
+  name: HostedLobbyId
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_HostedLobbyId
+  commentId: P:ConduitNet.User`2.HostedLobbyId
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.HostedLobbyId
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).HostedLobbyId
+  nameWithType: User<TUserProfile, TAccountState>.HostedLobbyId
+  nameWithType.vb: User(Of TUserProfile, TAccountState).HostedLobbyId
+- uid: ConduitNet.User`2.HostedLobbyId*
+  name: HostedLobbyId
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_HostedLobbyId_
+  commentId: Overload:ConduitNet.User`2.HostedLobbyId
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.HostedLobbyId
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).HostedLobbyId
+  nameWithType: User<TUserProfile, TAccountState>.HostedLobbyId
+  nameWithType.vb: User(Of TUserProfile, TAccountState).HostedLobbyId
+- uid: ConduitNet.User`2.Id
+  name: Id
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Id
+  commentId: P:ConduitNet.User`2.Id
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Id
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Id
+  nameWithType: User<TUserProfile, TAccountState>.Id
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Id
+- uid: ConduitNet.User`2.Id*
+  name: Id
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Id_
+  commentId: Overload:ConduitNet.User`2.Id
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Id
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Id
+  nameWithType: User<TUserProfile, TAccountState>.Id
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Id
+- uid: ConduitNet.User`2.JoinedLobbyId
+  name: JoinedLobbyId
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_JoinedLobbyId
+  commentId: P:ConduitNet.User`2.JoinedLobbyId
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.JoinedLobbyId
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).JoinedLobbyId
+  nameWithType: User<TUserProfile, TAccountState>.JoinedLobbyId
+  nameWithType.vb: User(Of TUserProfile, TAccountState).JoinedLobbyId
+- uid: ConduitNet.User`2.JoinedLobbyId*
+  name: JoinedLobbyId
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_JoinedLobbyId_
+  commentId: Overload:ConduitNet.User`2.JoinedLobbyId
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.JoinedLobbyId
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).JoinedLobbyId
+  nameWithType: User<TUserProfile, TAccountState>.JoinedLobbyId
+  nameWithType.vb: User(Of TUserProfile, TAccountState).JoinedLobbyId
+- uid: ConduitNet.User`2.Profile
+  name: Profile
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Profile
+  commentId: P:ConduitNet.User`2.Profile
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Profile
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Profile
+  nameWithType: User<TUserProfile, TAccountState>.Profile
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Profile
+- uid: ConduitNet.User`2.Profile*
+  name: Profile
+  href: api/ConduitNet.User-2.html#ConduitNet_User_2_Profile_
+  commentId: Overload:ConduitNet.User`2.Profile
+  isSpec: "True"
+  fullName: ConduitNet.User<TUserProfile, TAccountState>.Profile
+  fullName.vb: ConduitNet.User(Of TUserProfile, TAccountState).Profile
+  nameWithType: User<TUserProfile, TAccountState>.Profile
+  nameWithType.vb: User(Of TUserProfile, TAccountState).Profile
+- uid: ConduitNet.Utility
+  name: ConduitNet.Utility
+  href: api/ConduitNet.Utility.html
+  commentId: N:ConduitNet.Utility
+  fullName: ConduitNet.Utility
+  nameWithType: ConduitNet.Utility
+- uid: ConduitNet.Utility.QueryParamBuilder
+  name: QueryParamBuilder
+  href: api/ConduitNet.Utility.QueryParamBuilder.html
+  commentId: T:ConduitNet.Utility.QueryParamBuilder
+  fullName: ConduitNet.Utility.QueryParamBuilder
+  nameWithType: QueryParamBuilder
+- uid: ConduitNet.Utility.QueryParamBuilder.BuildUrl(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: BuildUrl(string, IDictionary<string, object>)
+  href: api/ConduitNet.Utility.QueryParamBuilder.html#ConduitNet_Utility_QueryParamBuilder_BuildUrl_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:ConduitNet.Utility.QueryParamBuilder.BuildUrl(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: BuildUrl(String, IDictionary(Of String, Object))
+  fullName: ConduitNet.Utility.QueryParamBuilder.BuildUrl(string, System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: ConduitNet.Utility.QueryParamBuilder.BuildUrl(String, System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: QueryParamBuilder.BuildUrl(string, IDictionary<string, object>)
+  nameWithType.vb: QueryParamBuilder.BuildUrl(String, IDictionary(Of String, Object))
+- uid: ConduitNet.Utility.QueryParamBuilder.BuildUrl*
+  name: BuildUrl
+  href: api/ConduitNet.Utility.QueryParamBuilder.html#ConduitNet_Utility_QueryParamBuilder_BuildUrl_
+  commentId: Overload:ConduitNet.Utility.QueryParamBuilder.BuildUrl
+  isSpec: "True"
+  fullName: ConduitNet.Utility.QueryParamBuilder.BuildUrl
+  nameWithType: QueryParamBuilder.BuildUrl
+- uid: ConduitNet.Utility.TypeWrapper
+  name: TypeWrapper
+  href: api/ConduitNet.Utility.TypeWrapper.html
+  commentId: T:ConduitNet.Utility.TypeWrapper
+  fullName: ConduitNet.Utility.TypeWrapper
+  nameWithType: TypeWrapper
+- uid: ConduitNet.Utility.TypeWrapper.#ctor
+  name: TypeWrapper()
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper__ctor
+  commentId: M:ConduitNet.Utility.TypeWrapper.#ctor
+  name.vb: New()
+  fullName: ConduitNet.Utility.TypeWrapper.TypeWrapper()
+  fullName.vb: ConduitNet.Utility.TypeWrapper.New()
+  nameWithType: TypeWrapper.TypeWrapper()
+  nameWithType.vb: TypeWrapper.New()
+- uid: ConduitNet.Utility.TypeWrapper.#ctor(System.Type)
+  name: TypeWrapper(Type)
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper__ctor_System_Type_
+  commentId: M:ConduitNet.Utility.TypeWrapper.#ctor(System.Type)
+  name.vb: New(Type)
+  fullName: ConduitNet.Utility.TypeWrapper.TypeWrapper(System.Type)
+  fullName.vb: ConduitNet.Utility.TypeWrapper.New(System.Type)
+  nameWithType: TypeWrapper.TypeWrapper(Type)
+  nameWithType.vb: TypeWrapper.New(Type)
+- uid: ConduitNet.Utility.TypeWrapper.#ctor*
+  name: TypeWrapper
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper__ctor_
+  commentId: Overload:ConduitNet.Utility.TypeWrapper.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConduitNet.Utility.TypeWrapper.TypeWrapper
+  fullName.vb: ConduitNet.Utility.TypeWrapper.New
+  nameWithType: TypeWrapper.TypeWrapper
+  nameWithType.vb: TypeWrapper.New
+- uid: ConduitNet.Utility.TypeWrapper.Type
+  name: Type
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper_Type
+  commentId: P:ConduitNet.Utility.TypeWrapper.Type
+  fullName: ConduitNet.Utility.TypeWrapper.Type
+  nameWithType: TypeWrapper.Type
+- uid: ConduitNet.Utility.TypeWrapper.Type*
+  name: Type
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper_Type_
+  commentId: Overload:ConduitNet.Utility.TypeWrapper.Type
+  isSpec: "True"
+  fullName: ConduitNet.Utility.TypeWrapper.Type
+  nameWithType: TypeWrapper.Type
+- uid: ConduitNet.Utility.TypeWrapper.TypeName
+  name: TypeName
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper_TypeName
+  commentId: P:ConduitNet.Utility.TypeWrapper.TypeName
+  fullName: ConduitNet.Utility.TypeWrapper.TypeName
+  nameWithType: TypeWrapper.TypeName
+- uid: ConduitNet.Utility.TypeWrapper.TypeName*
+  name: TypeName
+  href: api/ConduitNet.Utility.TypeWrapper.html#ConduitNet_Utility_TypeWrapper_TypeName_
+  commentId: Overload:ConduitNet.Utility.TypeWrapper.TypeName
+  isSpec: "True"
+  fullName: ConduitNet.Utility.TypeWrapper.TypeName
+  nameWithType: TypeWrapper.TypeName

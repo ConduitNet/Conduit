@@ -27,67 +27,39 @@ namespace ConduitNet {
         /// Creates a new scope. Automatically registers attribute-decorated handlers on this instance.
         /// </summary>
         public ConduitScope() {
-            RegisterAttributeHandlers(this);
+            if (ConduitRegistry.GeneratedBinders.TryGetValue(this.GetType(), out var binder)) {
+                binder(this);
+            }
             SubscribeEvents();
         }
 
-        private void RegisterAttributeHandlers(object target) {
-            var methods = target.GetType().GetMethods(
-                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        #region Source Generator Bindings
 
-            foreach (var method in methods) {
-                var peerFilter = method.GetCustomAttribute<RequireRoleAttribute>();
-                var senderRole   = peerFilter?.Sender   ?? Role.Any;
-                var receiverRole = peerFilter?.Receiver ?? Role.Any;
-                bool hasFilter = senderRole != Role.Any || receiverRole != Role.Any;
-
-                // [BytesHandler]
-                if (method.GetCustomAttribute<BytesHandlerAttribute>() != null) {
-                    if (!TryCreateDelegate(target, method, typeof(BytesHandler), out var handler,
-                        "void (BytesContext context)")) continue;
-                    var h = (BytesHandler)handler;
-                    BindBytesHandler(!hasFilter ? h : ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) h(ctx); });
-                    continue;
-                }
-
-                // [SignalHandler("name")]
-                var signalAttr = method.GetCustomAttribute<SignalHandlerAttribute>();
-                if (signalAttr != null) {
-                    if (!TryCreateDelegate(target, method, typeof(SignalHandler), out var handler,
-                        "void (SignalContext context)")) continue;
-                    var h = (SignalHandler)handler;
-                    BindSignalHandler(signalAttr.SignalName, !hasFilter ? h : ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) h(ctx); });
-                    continue;
-                }
-
-                // [PacketHandler(typeof(T))]
-                var packetAttr = method.GetCustomAttribute<PacketHandlerAttribute>();
-                if (packetAttr != null) {
-                    Type packetType = packetAttr.PacketType;
-                    Type contextType = typeof(PacketContext<>).MakeGenericType(packetType);
-
-                    Action<IUser, long, object, SendOption> typedWrapper = (sender, timestamp, packet, option) => {
-                        if (hasFilter && !PassesPeerFilter(sender, senderRole, receiverRole)) return;
-                        object context = Activator.CreateInstance(contextType, sender, timestamp, packet, option);
-                        method.Invoke(target, new object[] { context });
-                    };
-
-                    Conduit.RegisterRawPacketHandler(packetType, typedWrapper, typedWrapper);
-                    _unregisterActions.Add(() => Conduit.UnregisterRawPacketHandler(packetType, typedWrapper));
-                }
+        // Called by Source Generator (Internal use only)
+        internal void InternalBindGeneratedBytesHandler(BytesHandler handler, Role senderRole, Role receiverRole) {
+            if (senderRole != Role.Any || receiverRole != Role.Any) {
+                var original = handler;
+                handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };
             }
+            BindBytesHandler(handler);
         }
 
-        private static bool TryCreateDelegate(object target, MethodInfo method, Type delegateType, out Delegate result, string expectedSignature) {
-            result = Delegate.CreateDelegate(delegateType, target, method, false);
-            if (result == null) {
-                UnityEngine.Debug.LogError(
-                    $"[ConduitObject] Method '{target.GetType().Name}.{method.Name}' has an invalid signature.\n" +
-                    $"  Expected: {expectedSignature}\n" +
-                    $"  Actual:   {Utils.GetMethodSignature(method)}");
-                return false;
+        // Called by Source Generator (Internal use only)
+        internal void InternalBindGeneratedSignalHandler(string signalName, SignalHandler handler, Role senderRole, Role receiverRole) {
+            if (senderRole != Role.Any || receiverRole != Role.Any) {
+                var original = handler;
+                handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };
             }
-            return true;
+            BindSignalHandler(signalName, handler);
+        }
+
+        // Called by Source Generator (Internal use only)
+        internal void InternalBindGeneratedPacketHandler<T>(PacketHandler<T> handler, Role senderRole, Role receiverRole) where T : INetworkPacket {
+            if (senderRole != Role.Any || receiverRole != Role.Any) {
+                var original = handler;
+                handler = ctx => { if (PassesPeerFilter(ctx.Sender, senderRole, receiverRole)) original(ctx); };
+            }
+            BindPacketHandler(handler);
         }
 
         #region Peer Filter

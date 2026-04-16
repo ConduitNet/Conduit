@@ -17,6 +17,10 @@ using Unity.WebRTC;
 using UnityEngine;
 
 namespace ConduitNet {
+    internal static class ConduitRegistry {
+        public static readonly Dictionary<Type, Action<object>> GeneratedBinders = new();
+    }
+
     public class Conduit : MonoBehaviour {
 
         #region Public Static API
@@ -407,73 +411,7 @@ namespace ConduitNet {
             return false;
         }
 
-        public static void RegisterPacketHandler(Type packetType, Delegate handler) 
-        {
-            string packetId = PacketRegistry.GetPacketId(packetType);
-            if (packetId == null) 
-            {
-                throw new ArgumentException($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.", nameof(packetType));
-            }
 
-            Type contextType = typeof(PacketContext<>).MakeGenericType(packetType);
-            Action<IUser, long, object, SendOption> wrapper = (sender, timestamp, packet, option) => 
-            {
-                object context = Activator.CreateInstance(contextType, sender, timestamp, packet, option);
-                handler.DynamicInvoke(context);
-            };
-
-            Instance._handler.packetHandlerCache[(packetId, (object)handler)] = wrapper;
-
-            if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
-            {
-                Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + wrapper;    
-            } 
-            else 
-            {
-                Instance._handler.packetHandlerWrappers[packetId] = wrapper;
-            }
-        }
-
-        public static void RegisterRawPacketHandler(Type packetType, Action<IUser, long, object, SendOption> wrapper, object token) 
-        {
-            string packetId = PacketRegistry.GetPacketId(packetType);
-            if (packetId == null) throw new ArgumentException($"Type {packetType.FullName} is not a packet...");
-
-            Instance._handler.packetHandlerCache[(packetId, token)] = wrapper;
-
-            if (Instance._handler.packetHandlerWrappers.TryGetValue(packetId, out var existingWrapper)) 
-            {
-                Instance._handler.packetHandlerWrappers[packetId] = existingWrapper + wrapper;    
-            } 
-            else 
-            {
-                Instance._handler.packetHandlerWrappers[packetId] = wrapper;
-            }
-        }
-
-        public static bool UnregisterPacketHandler(Type packetType, Delegate handler) {
-            string packetId = PacketRegistry.GetPacketId(packetType);
-            if (packetId == null) throw new Exception($"Type {packetType.FullName} is not a packet. Make sure it is decorated with [Packet] attribute.");
-
-            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, (object)handler), out var wrapper)) {
-                Instance._handler.packetHandlerWrappers[packetId] -= wrapper;
-                Instance._handler.packetHandlerCache.Remove((packetId, (object)handler));
-                return true;
-            }
-            return false;
-        }
-
-        public static bool UnregisterRawPacketHandler(Type packetType, object token) {
-            string packetId = PacketRegistry.GetPacketId(packetType);
-            if (packetId == null) return false;
-
-            if (Instance._handler.packetHandlerCache.TryGetValue((packetId, token), out var wrapper)) {
-                Instance._handler.packetHandlerWrappers[packetId] -= wrapper;
-                Instance._handler.packetHandlerCache.Remove((packetId, token));
-                return true;
-            }
-            return false;
-        }
 
         internal static void SendSignalingMessage(SignalingMsgType type, string to, object data) {
             Instance._SendSignalingMessage(type, to, data);

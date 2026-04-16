@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConduitConfig | Conduit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConduitConfig | Conduit ">
+      
+      <meta name="description" content="Global configuration for Conduit. Must be set before calling Init. &#39;serverUrl&#39; and &#39;stunServers&#39; are required.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/jiunkong/litep2pnet/new/develop/apiSpec/new?filename=ConduitNet_ConduitConfig.md&amp;value=---%0Auid%3A%20ConduitNet.ConduitConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Conduit">
+            Conduit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ConduitNet.ConduitConfig">
+
+
+
+  <h1 id="ConduitNet_ConduitConfig" data-uid="ConduitNet.ConduitConfig" class="text-break">
+Class ConduitConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ConduitNet.html">ConduitNet</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Global configuration for Conduit. Must be set before calling Init.
+'serverUrl' and 'stunServers' are required.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConduitConfig</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ConduitConfig</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ConduitNet_ConduitConfig__ctor_" data-uid="ConduitNet.ConduitConfig.#ctor*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig__ctor_System_String_ConduitNet_StunServer___ConduitNet_TurnServer___" data-uid="ConduitNet.ConduitConfig.#ctor(System.String,ConduitNet.StunServer[],ConduitNet.TurnServer[])">
+  ConduitConfig(string, StunServer[], TurnServer[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConduitConfig(string serverUrl, StunServer[] stunServers, TurnServer[] turnServers = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serverUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>stunServers</code> <a class="xref" href="ConduitNet.StunServer.html">StunServer</a>[]</dt>
+    <dd></dd>
+    <dt><code>turnServers</code> <a class="xref" href="ConduitNet.TurnServer.html">TurnServer</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ConduitNet_ConduitConfig_DebugLog_" data-uid="ConduitNet.ConduitConfig.DebugLog*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_DebugLog" data-uid="ConduitNet.ConduitConfig.DebugLog">
+  DebugLog
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable debug logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DebugLog { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_HealthPath_" data-uid="ConduitNet.ConduitConfig.HealthPath*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_HealthPath" data-uid="ConduitNet.ConduitConfig.HealthPath">
+  HealthPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>API path for health check. {0} is API URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HealthPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_JoinTimeout_" data-uid="ConduitNet.ConduitConfig.JoinTimeout*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_JoinTimeout" data-uid="ConduitNet.ConduitConfig.JoinTimeout">
+  JoinTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lobby join timeout in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float JoinTimeout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_LobbyIdHeader_" data-uid="ConduitNet.ConduitConfig.LobbyIdHeader*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_LobbyIdHeader" data-uid="ConduitNet.ConduitConfig.LobbyIdHeader">
+  LobbyIdHeader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Header key for lobby ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LobbyIdHeader { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_ServerUrl_" data-uid="ConduitNet.ConduitConfig.ServerUrl*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_ServerUrl" data-uid="ConduitNet.ConduitConfig.ServerUrl">
+  ServerUrl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>URL of the signaling/API server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerUrl { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_StunServers_" data-uid="ConduitNet.ConduitConfig.StunServers*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_StunServers" data-uid="ConduitNet.ConduitConfig.StunServers">
+  StunServers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of STUN servers (required).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StunServer[] StunServers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.StunServer.html">StunServer</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_SyncUserPath_" data-uid="ConduitNet.ConduitConfig.SyncUserPath*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_SyncUserPath" data-uid="ConduitNet.ConduitConfig.SyncUserPath">
+  SyncUserPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>API path for syncing user. {0} is API URL, {1} is user ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SyncUserPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_TurnServers_" data-uid="ConduitNet.ConduitConfig.TurnServers*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_TurnServers" data-uid="ConduitNet.ConduitConfig.TurnServers">
+  TurnServers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of TURN servers (optional).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TurnServer[] TurnServers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConduitNet.TurnServer.html">TurnServer</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_UseHttps_" data-uid="ConduitNet.ConduitConfig.UseHttps*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_UseHttps" data-uid="ConduitNet.ConduitConfig.UseHttps">
+  UseHttps
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to use HTTPS for API requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseHttps { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_UseWss_" data-uid="ConduitNet.ConduitConfig.UseWss*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_UseWss" data-uid="ConduitNet.ConduitConfig.UseWss">
+  UseWss
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to use WSS for WebSocket connections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseWss { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ConduitNet_ConduitConfig_UserIdHeader_" data-uid="ConduitNet.ConduitConfig.UserIdHeader*"></a>
+
+  <h3 id="ConduitNet_ConduitConfig_UserIdHeader" data-uid="ConduitNet.ConduitConfig.UserIdHeader">
+  UserIdHeader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Header key for user ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UserIdHeader { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/jiunkong/litep2pnet/blob/develop/Runtime/Data.cs/#L92" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
