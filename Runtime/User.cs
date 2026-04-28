@@ -39,6 +39,16 @@ namespace ConduitNet {
 
             if (!Conduit.IsHost) UnityEngine.Debug.LogWarning("ApplyAccountState in UserService can only be called by the host");
 
+            // Immediately patch local user and fire event (1st of 2 invocations).
+            if (user.TryCast<TUserProfile, TAccountState>(out var typedUser)) {
+                if (state is TAccountState) {
+                    typedUser.Account = state as TAccountState;
+                } else {
+                    JsonConvert.PopulateObject(JsonConvert.SerializeObject(state), typedUser.Account);
+                }
+                Conduit.OnUserAccountStateUpdated?.Invoke();
+            }
+
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {
                 type = DataChangeType.UserAccount,
                 target = user.Id,

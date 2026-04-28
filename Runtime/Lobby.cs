@@ -30,6 +30,15 @@ namespace ConduitNet {
 
             if (!Conduit.IsHost) UnityEngine.Debug.LogWarning("ApplyMetadata in LobbyService can only be called by the host");
 
+            // Immediately patch local lobby and fire event (1st of 2 invocations).
+            if (lobby.TryCast(out Lobby<TLobbyState> typedLobby)) {
+                if (name != null)        typedLobby.Name       = name;
+                if (isPlaying.HasValue)  typedLobby.IsPlaying  = isPlaying.Value;
+                if (isPrivate.HasValue)  typedLobby.IsPrivate  = isPrivate.Value;
+                if (maxPlayers.HasValue) typedLobby.MaxPlayers = maxPlayers.Value;
+                Conduit.OnLobbyMetadataUpdated?.Invoke();
+            }
+
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {
                 type = DataChangeType.LobbyMetadata,
                 target = lobby.Id,
@@ -46,6 +55,16 @@ namespace ConduitNet {
             if (state == null) return;
 
             if (!Conduit.IsHost) UnityEngine.Debug.LogWarning("ApplyState in LobbyService can only be called by the host");
+
+            // Immediately patch local lobby and fire event (1st of 2 invocations).
+            if (lobby.TryCast(out Lobby<TLobbyState> typedLobby)) {
+                if (state is TLobbyState) {
+                    typedLobby.State = state as TLobbyState;
+                } else {
+                    JsonConvert.PopulateObject(JsonConvert.SerializeObject(state), typedLobby.State);
+                }
+                Conduit.OnLobbyStateUpdated?.Invoke();
+            }
 
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {
                 type = DataChangeType.LobbyState,
