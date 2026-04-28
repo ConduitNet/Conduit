@@ -36,7 +36,7 @@ namespace ConduitNet {
                 if (isPlaying.HasValue)  typedLobby.IsPlaying  = isPlaying.Value;
                 if (isPrivate.HasValue)  typedLobby.IsPrivate  = isPrivate.Value;
                 if (maxPlayers.HasValue) typedLobby.MaxPlayers = maxPlayers.Value;
-                Conduit.OnLobbyMetadataUpdated?.Invoke();
+                Conduit.TriggerLobbyMetadataUpdated();
             }
 
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {
@@ -63,7 +63,7 @@ namespace ConduitNet {
                 } else {
                     JsonConvert.PopulateObject(JsonConvert.SerializeObject(state), typedLobby.State);
                 }
-                Conduit.OnLobbyStateUpdated?.Invoke();
+                Conduit.TriggerLobbyStateUpdated();
             }
 
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {

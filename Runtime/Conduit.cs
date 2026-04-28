@@ -117,6 +117,10 @@ namespace ConduitNet {
         /// <summary>Invoked when clock synchronization with the host completes. Parameter: Calculated clock offset in milliseconds.</summary>
         public static event Action<long> OnTimeSynced;
 
+        internal static void TriggerLobbyMetadataUpdated() => OnLobbyMetadataUpdated?.Invoke();
+        internal static void TriggerLobbyStateUpdated() => OnLobbyStateUpdated?.Invoke();
+        internal static void TriggerUserAccountStateUpdated() => OnUserAccountStateUpdated?.Invoke();
+
         // ── Initialization ──────────────────────────────────────────
 
         /// <summary>

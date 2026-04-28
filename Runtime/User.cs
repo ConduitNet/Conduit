@@ -46,7 +46,7 @@ namespace ConduitNet {
                 } else {
                     JsonConvert.PopulateObject(JsonConvert.SerializeObject(state), typedUser.Account);
                 }
-                Conduit.OnUserAccountStateUpdated?.Invoke();
+                Conduit.TriggerUserAccountStateUpdated();
             }
 
             Conduit.SendSignalingMessage(SignalingMsgType.ApplyData, "server", new DataApplyDTO {
