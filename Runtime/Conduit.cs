@@ -144,12 +144,12 @@ namespace ConduitNet {
         /// <param name="headers">Optional HTTP headers to send with the WebSocket connection request.</param>
         public static IEnumerator JoinLobby(ILobby lobby)
         {
-            Instance._JoinLobby(lobby);  
+            yield return Instance._JoinLobby(lobby);  
         }
 
         public static IEnumerator JoinLobby(string lobbyCode)
         {
-            Instance._JoinLobby(lobbyCode);
+            yield return Instance._JoinLobby(lobbyCode);
         }
 
         /// <summary>Cancels an ongoing lobby join operation.</summary>
