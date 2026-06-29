@@ -870,6 +870,8 @@ namespace ConduitNet {
                 { Config.UserIdQueryKey, LocalUser.Id },
                 { Config.LobbyIdQueryKey, lobby.Id }
             });
+
+            yield return _ProcessJoinLobby(url);
         }
 
         private IEnumerator _JoinLobby(string lobbyCode)
@@ -880,6 +882,8 @@ namespace ConduitNet {
                 { Config.UserIdQueryKey, LocalUser.Id },
                 { Config.LobbyCodeQueryKey, lobbyCode }
             });
+
+            yield return _ProcessJoinLobby(url);
         }
 
         private IEnumerator _ProcessJoinLobby(string url)
