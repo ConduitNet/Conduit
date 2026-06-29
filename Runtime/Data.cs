@@ -189,6 +189,7 @@ namespace ConduitNet {
         public string UserIdQueryKey { get; set; } = "userId";
         /// <summary>Query key for lobby ID.</summary>
         public string LobbyIdQueryKey { get; set; } = "lobbyId";
+        public string LobbyCodeQueryKey { get; set; } = "lobbyCode";
         /// <summary>Lobby join timeout in seconds.</summary>
         public float JoinTimeout { get; set; } = 10f;
         /// <summary>API path for syncing user. {0} is API URL, {1} is user ID.</summary>

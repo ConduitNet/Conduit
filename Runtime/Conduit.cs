@@ -142,7 +142,23 @@ namespace ConduitNet {
         /// <summary>Joins a lobby. Establishes connection to the signaling server and connects to peers.</summary>
         /// <param name="lobby">The lobby to join.</param>
         /// <param name="headers">Optional HTTP headers to send with the WebSocket connection request.</param>
-        public static IEnumerator JoinLobby(ILobby lobby) => Instance._JoinLobby(lobby);
+        public static IEnumerator JoinLobby(ILobby lobby)
+        {
+            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
+                { Config.UserIdQueryKey, LocalUser.Id },
+                { Config.LobbyIdQueryKey, lobby.Id }
+            });
+            Instance._JoinLobby(url);  
+        }
+
+        public static IEnumerator JoinLobby(string lobbyCode)
+        {
+            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
+                { Config.UserIdQueryKey, LocalUser.Id },
+                { Config.LobbyCodeQueryKey, lobbyCode }
+            });
+            Instance._JoinLobby(url);
+        }
 
         /// <summary>Cancels an ongoing lobby join operation.</summary>
         public static void CancelJoin() {
@@ -855,13 +871,9 @@ namespace ConduitNet {
 
         private bool _isJoining = false;
 
-        private IEnumerator _JoinLobby(ILobby lobby) {
+        private IEnumerator _JoinLobby(string url) {
             _isJoining = true;
-
-            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
-                { Config.UserIdQueryKey, LocalUser.Id },
-                { Config.LobbyIdQueryKey, lobby.Id }
-            });
+ 
             _signaling = new WebSocket(url);
 
             _dataChannelListMap = new();
