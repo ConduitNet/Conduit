@@ -144,20 +144,12 @@ namespace ConduitNet {
         /// <param name="headers">Optional HTTP headers to send with the WebSocket connection request.</param>
         public static IEnumerator JoinLobby(ILobby lobby)
         {
-            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
-                { Config.UserIdQueryKey, LocalUser.Id },
-                { Config.LobbyIdQueryKey, lobby.Id }
-            });
-            Instance._JoinLobby(url);  
+            Instance._JoinLobby(lobby);  
         }
 
         public static IEnumerator JoinLobby(string lobbyCode)
         {
-            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
-                { Config.UserIdQueryKey, LocalUser.Id },
-                { Config.LobbyCodeQueryKey, lobbyCode }
-            });
-            Instance._JoinLobby(url);
+            Instance._JoinLobby(lobbyCode);
         }
 
         /// <summary>Cancels an ongoing lobby join operation.</summary>
@@ -871,9 +863,27 @@ namespace ConduitNet {
 
         private bool _isJoining = false;
 
-        private IEnumerator _JoinLobby(string url) {
+        private IEnumerator _JoinLobby(ILobby lobby) {
             _isJoining = true;
  
+            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
+                { Config.UserIdQueryKey, LocalUser.Id },
+                { Config.LobbyIdQueryKey, lobby.Id }
+            });
+        }
+
+        private IEnumerator _JoinLobby(string lobbyCode)
+        {
+            _isJoining = true;
+
+            var url = QueryParamBuilder.BuildUrl(_socketUrl, new Dictionary<string, object> {
+                { Config.UserIdQueryKey, LocalUser.Id },
+                { Config.LobbyCodeQueryKey, lobbyCode }
+            });
+        }
+
+        private IEnumerator _ProcessJoinLobby(string url)
+        {
             _signaling = new WebSocket(url);
 
             _dataChannelListMap = new();
